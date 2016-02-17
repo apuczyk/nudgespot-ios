@@ -1,0 +1,15 @@
+platform :ios, :deployment_target => '7.1'
+
+inhibit_all_warnings!
+
+pod 'Google/CloudMessaging'
+pod 'Reachability'
+pod 'AFNetworking'
+
+target 'Nudgespot_Example', :exclusive => true do
+  pod 'Nudgespot', :path => '../'
+end
+
+target 'Nudgespot_Tests', :exclusive => true do
+  pod 'Nudgespot', :path => '../'
+end

@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/NudgespotLib/Auth/Nudgespot.h

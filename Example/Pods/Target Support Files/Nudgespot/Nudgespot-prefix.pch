@@ -1,0 +1,14 @@
+#ifdef __OBJC__
+
+#import "NudgespotActivity.h"
+#import "SubscriberContact.h"
+#import "Nudgespot.h"
+#import "NudgespotSubscriber.h"
+#import "SubscriberClient.h"
+#import "NudgespotActivity.h"
+#import "BasicUtils.h"
+#import "Reachability.h"
+#import "SubscriberClient.h"
+#import "NudgespotConstants.h"
+
+#endif

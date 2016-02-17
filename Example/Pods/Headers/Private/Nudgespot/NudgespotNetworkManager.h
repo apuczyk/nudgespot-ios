@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/NudgespotLib/RestClient/NudgespotNetworkManager.h
