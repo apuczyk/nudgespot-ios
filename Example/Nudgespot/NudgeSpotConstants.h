@@ -1,3 +1,4 @@
+
 //
 //  NudgeSpotConstants.h
 //  NudgeSpotiOSProject
@@ -9,5 +10,3 @@
 #define kApiKey @"Api Key"
 
 #define kApiSecretToken @"Secret Token"
-
-#define KUid @"Uid"

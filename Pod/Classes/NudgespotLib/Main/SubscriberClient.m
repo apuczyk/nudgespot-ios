@@ -85,7 +85,13 @@
     self.registrationHandler = registeration;
     
     // initialize subscriber with GCM Client ..
-    [self initGCM];
+    @try {
+        [self initGCM];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@ is exception", exception);
+    }
+    
     
     if (currentSubscriber != nil) {
         
