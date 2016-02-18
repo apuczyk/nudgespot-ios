@@ -69,7 +69,7 @@
 
 + (NSURLSessionDataTask *) createSubscriberWithPostData:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 {
-    NSLog(@"createSubscriber %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString],SUBSCRIBER_CREATE_PATH);
+    DLog(@"createSubscriber %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString],SUBSCRIBER_CREATE_PATH);
     
     return [NudgeRestInstance POST:SUBSCRIBER_CREATE_PATH parameters:postData progress:nil success:success failure:failure];
 
@@ -77,7 +77,7 @@
 
 + (NSURLSessionDataTask *) updateSubscriberWithUrl:(NSString *)urlString withPostData : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 {
-    NSLog(@"updateSubscriber %@ request serviceUrl ::::::::::::::::::::: \n  = %@",postData, urlString);
+    DLog(@"updateSubscriber %@ request serviceUrl ::::::::::::::::::::: \n  = %@",postData, urlString);
     
     return [NudgeRestInstance PUT:urlString parameters:postData success:success failure:failure];
 }
@@ -86,7 +86,7 @@
 {
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@",SUBSCRIBER_FIND_PATH, uid];
     
-    NSLog(@"getSubscriber search path %@ ::::::::::::::::::::: \n request Url %@%@", requestUrl, [[[self manager] baseURL]absoluteString],SUBSCRIBER_FIND_PATH);
+    DLog(@"getSubscriber search path %@ ::::::::::::::::::::: \n request Url %@%@", requestUrl, [[[self manager] baseURL]absoluteString],SUBSCRIBER_FIND_PATH);
     
     return [NudgeRestInstance GET:requestUrl parameters:nil progress:nil success:success failure:failure];
 }
@@ -100,7 +100,7 @@
 
 + (NSURLSessionDataTask *)sendNudgespotMessageEventWithData:(NSMutableDictionary *) postData  success:(successCallback)success failure:(failureCallback)failure {
     
-    NSLog(@"message %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString],TRACK_API_ENDPOINT);
+    DLog(@"message %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString],TRACK_API_ENDPOINT);
     
     return [NudgeRestInstance POST:TRACK_API_ENDPOINT parameters:postData progress:nil success:success failure:failure];
 
@@ -114,7 +114,7 @@
 
 + (NSURLSessionDataTask *) createActivityWithPostData : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure {
     
-    NSLog(@"createActivity %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString], ACTIVITY_CREATE_PATH);
+    DLog(@"createActivity %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString], ACTIVITY_CREATE_PATH);
     
     return [NudgeRestInstance POST:ACTIVITY_CREATE_PATH parameters:postData progress:nil success:success failure:failure];
 }

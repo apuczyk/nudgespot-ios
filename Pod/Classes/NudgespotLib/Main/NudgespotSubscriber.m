@@ -69,7 +69,7 @@
     }
     @catch (NSException *exception) {
         
-        NSLog(@"Exception:%@",exception);
+        DLog(@"Exception:%@",exception);
         
     }
     return self;
@@ -196,7 +196,7 @@
     }
     @catch (NSException *exception) {
         
-        NSLog(@"Exception:%@",exception);
+        DLog(@"Exception:%@",exception);
         
     }
     return subscriberDict;

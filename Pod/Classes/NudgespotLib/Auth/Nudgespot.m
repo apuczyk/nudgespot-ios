@@ -85,13 +85,13 @@
     if (deviceToken) {
         [self loadDeviceToken:deviceToken];
     }else{
-        NSLog(@"Error: Device Token Not Found!!");
+        DLog(@"Error: Device Token Not Found!!");
         return;
     }
     
     [self  connectWithGCM];
     
-    NSLog(@"runRegistrationInBackgroundWithToken starts here");
+    DLog(@"runRegistrationInBackgroundWithToken starts here");
     
     [self registerForNotifications:[Nudge deviceToken] registrationHandler:registeration];
     
@@ -123,7 +123,7 @@
         
     }
     @catch (NSException *exception) {
-        NSLog(@"Exception:%@",exception);
+        DLog(@"Exception:%@",exception);
     }
 }
 
@@ -140,11 +140,11 @@
         
         if (error) {
             
-            NSLog(@"Could not connect to GCM: %@", error.localizedDescription);
+            DLog(@"Could not connect to GCM: %@", error.localizedDescription);
             
         } else {
             
-            NSLog(@"Connected to GCM");
+            DLog(@"Connected to GCM");
         }
     }];
 }
@@ -183,7 +183,7 @@
             
             [[NSUserDefaults standardUserDefaults] synchronize];
             
-            NSLog(@"Cleared all registration data on the application");
+            DLog(@"Cleared all registration data on the application");
             
         }
     }];
@@ -204,13 +204,13 @@
     
     if ([regid isEqualToString:@""]) {
         
-        NSLog(@"Registration not found.");
+        DLog(@"Registration not found.");
         
         return @"";
         
     } else {
         
-        NSLog(@"Registration found: %@", regid);
+        DLog(@"Registration found: %@", regid);
         
     }
     
@@ -223,7 +223,7 @@
     
     if (registeredVersion != currentVersion) {
         
-        NSLog(@"App version changed from %d to %d. Need to re-register", registeredVersion, currentVersion);
+        DLog(@"App version changed from %d to %d. Need to re-register", registeredVersion, currentVersion);
         
         return @"";
         
@@ -245,11 +245,11 @@
     
     if ([subuid isEqualToString:@""]) {
         
-        NSLog(@"Subscriber UID not found.");
+        DLog(@"Subscriber UID not found.");
         
     } else {
         
-        NSLog(@"Subscriber UID found: %@", subuid);
+        DLog(@"Subscriber UID found: %@", subuid);
         
     }
     
@@ -376,8 +376,8 @@
                                                       options:[Nudge registrationOptions]
                                                       handler:^(NSString *token, NSError *error){
                                                           
-                                                          NSLog(@"GCM Registration token = %@",token);
-                                                          NSLog(@"GCM Registration error = %@",error);
+                                                          DLog(@"GCM Registration token = %@",token);
+                                                          DLog(@"GCM Registration error = %@",error);
                                                           
                                                           if (![token isEqualToString:@""] && token != nil) {
                                                               
@@ -395,15 +395,15 @@
 {
     // A rotation of the registration tokens is happening, so the app needs to request a new token.
     
-    NSLog(@"The GCM registration token needs to be changed.");
+    DLog(@"The GCM registration token needs to be changed.");
     
     [[GGLInstanceID sharedInstance] tokenWithAuthorizedEntity:self.gcmSenderID
                                                         scope:kGGLInstanceIDScopeGCM
                                                       options:_registrationOptions
                                                       handler:^(NSString *token, NSError *error) {
                                                           
-                                                          NSLog(@"GCM Registration token Refresh = %@",token);
-                                                          NSLog(@"GCM Registration Refresh error = %@",error);
+                                                          DLog(@"GCM Registration token Refresh = %@",token);
+                                                          DLog(@"GCM Registration Refresh error = %@",error);
                                                           
                                                           if (![token isEqualToString:@""] && token != nil) {
                                                               
@@ -423,7 +423,7 @@
 
 - (void)gotSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *, NSError *))registeration
 {
-    NSLog(@"%@ is notification", currentSubscriber);
+    DLog(@"%@ is notification", currentSubscriber);
     
     if (currentSubscriber) {
         [Nudgespot runRegistrationInBackgroundWithToken:self.deviceToken registrationHandler:registeration];
@@ -452,11 +452,11 @@
                 
                 // Complete completion Block for initlize client
                 if (registeration) {
-                    NSLog(@"%@ is reg", registeration);
+                    DLog(@"%@ is reg", registeration);
                     registeration([Nudge registrationId], error);
                 }
                 
-                NSLog(@"Registration sent to Nudgespot: %@", [Nudge registrationId]);
+                DLog(@"Registration sent to Nudgespot: %@", [Nudge registrationId]);
             }];
             
         } else {
@@ -466,7 +466,7 @@
                 registeration([Nudge registrationId], nil);
             }
             
-            NSLog(@"Registration already exists in Nudgespot: %@", [Nudge registrationId]);
+            DLog(@"Registration already exists in Nudgespot: %@", [Nudge registrationId]);
         }
         
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:SHARED_PROP_REGISTRATION_SENT];
@@ -475,7 +475,7 @@
     } else {
         
         // Subscriber was not ready, unable to register
-        NSLog(@"Unable to send registration to Nudgespot as subscriber was not created successfully.");
+        DLog(@"Unable to send registration to Nudgespot as subscriber was not created successfully.");
         
         // Complete Registeration Block Error for NudgespotClient
         if (registeration) {
@@ -529,7 +529,7 @@
 
 + (void)sendNudgespotMessageEvent:(NSString *)messageId andEvent:(NSString *)event {
     
-    NSLog(@"Sending the message %@ event",event);
+    DLog(@"Sending the message %@ event",event);
     
     @try {
         
@@ -543,19 +543,19 @@
         
         [NudgespotNetworkManager sendNudgespotMessageEventWithData:postDic success:^(NSURLSessionDataTask *operation, id responseObject) {
             
-            NSLog(@"message %@ json Response Object ::::::::::::::::::::: \n  = %@", postDic, responseObject);
+            DLog(@"message %@ json Response Object ::::::::::::::::::::: \n  = %@", postDic, responseObject);
             
             [weakSelf setSubscriber:[Nudge convertDictionaryToModel:responseObject]];
             
         } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             
-            NSLog(@"%@ is failure \n %@", error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey], error);
+            DLog(@"%@ is failure \n %@", error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey], error);
         }];
         
     }
     @catch (NSException *exception) {
         
-        NSLog(@"Exception:%@",exception);
+        DLog(@"Exception:%@",exception);
         
     }
     
@@ -584,7 +584,7 @@
     }
     @catch (NSException *exception) {
         
-        NSLog(@"Exception:%@",exception);
+        DLog(@"Exception:%@",exception);
         
     }
     

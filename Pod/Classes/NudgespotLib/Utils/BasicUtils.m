@@ -95,7 +95,7 @@
                                                                                                  (CFStringRef)@"!*'\"();:@&=+$,/?%#[]% ",
                                                                                                  kCFStringEncodingUTF8));
     
-    NSLog(@"encoded = %@",encodedUID);
+    DLog(@"encoded = %@",encodedUID);
     
     return encodedUID;
 }
@@ -254,9 +254,9 @@
         
         NSDictionary *alert = [aps objectForKey:@"alert"];
         
-        NSLog(@"Notification received: %@", [alert objectForKey:@"title"]);
+        DLog(@"Notification received: %@", [alert objectForKey:@"title"]);
         
-        NSLog(@"launch_activity name: %@", [alert objectForKey:@"launch_activity"]);
+        DLog(@"launch_activity name: %@", [alert objectForKey:@"launch_activity"]);
         
         UINavigationController *nc = (UINavigationController*)window.rootViewController;
         
@@ -269,7 +269,7 @@
         }
     }
     
-    NSLog(@"messageId = %@",messageId);
+    DLog(@"messageId = %@",messageId);
     
     if (messageId != nil) {
         // call the method on a background thread

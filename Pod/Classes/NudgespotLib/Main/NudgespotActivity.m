@@ -121,7 +121,7 @@
         }
         @catch (NSException *exception) {
             
-            NSLog(@"Exception:%@",exception);
+            DLog(@"Exception:%@",exception);
             
         }
     }
