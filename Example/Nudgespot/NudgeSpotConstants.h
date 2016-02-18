@@ -6,10 +6,8 @@
 //  Copyright (c) 2016 Nudgespot. All rights reserved.
 //
 
-#define kApiKey @"api"
+#define kApiKey @"Api Key"
 
-#define kApiSecretToken @"cc2454ad148608657deba8af89a0aff4"
+#define kApiSecretToken @"Secret Token"
 
-#define kApiEndPoints @"http://phoenix.nudgespot.com/201507"
-
-#define KUid @"maheep@nudgespot.com"
+#define KUid @"Uid"
