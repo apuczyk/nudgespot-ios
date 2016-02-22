@@ -11,6 +11,9 @@
 #import "SubscriberClient.h"
 #import "NudgespotConstants.h"
 
+#import <AdSupport/AdSupport.h>
+#import "SSKeychain.h"
+
 #endif
 
 #ifdef DEBUG

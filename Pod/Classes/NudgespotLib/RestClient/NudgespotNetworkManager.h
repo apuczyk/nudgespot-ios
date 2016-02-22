@@ -47,3 +47,13 @@ typedef void(^failureCallback)(NSURLSessionDataTask *operation, NSError *error);
 
 @end
 
+
+#pragma mark - Helper methods for Anynomous User
+
+@interface NudgespotNetworkManager (Anynomous)
+
++ (NSURLSessionDataTask *) loginWithAnynomousUser : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
+
+@end
+
+

@@ -19,35 +19,111 @@
 #import "SubscriberClient.h"
 
 @interface Nudgespot : SubscriberClient <SubscriberClientDelegate>
-{
-    NSString *registrationId;
-}
+
+/**
+ *  @brief registration id. This will use once we got registration token from GCM, later will will store that local. so, 
+ *         that we don't have to get registration token from GCM.
+ */
 
 @property (nonatomic , retain) NSString *registrationId;
+
+/**
+ *  @brief check if Registeration is done successfully or not.
+ */
+
 @property (nonatomic , assign) BOOL isRegisterForNotification;
+
+/**
+ *  @brief registration options for GCM.
+ */
+
 @property (nonatomic , retain) NSMutableDictionary* registrationOptions;
+
+/**
+ *  @brief device token from appdelegate file, which requires to register GCM.
+ */
+
 @property (nonatomic , retain) NSData *deviceToken;
+
+/**
+ *  @brief api key from Nudgespot account settings.
+ */
+
 @property (nonatomic , retain) NSString *apiKey;
+
+/**
+ *  @brief secret token from Nudgespot account settings.
+ */
+
 @property (nonatomic , retain) NSString *secretToken;
+
+/**
+ *  @brief sharedInstance which will work as singleton.
+ */
 
 + (id) sharedInstance;
 
+/**
+ *  @brief Method will initialize Nudgespot Client.
+ *  @param pass api key from Nudgespot account settings and secrettoken from Nudgespot account settings.
+ *  @return completion handler will return Token from GCM and error in case anyting missing.
+ */
+
 + (id)setApiKey:(NSString *)key andSecretToken:(NSString *)token;
+
+/**
+ *  @brief Method will register user with unique uid and pass endpointurl.
+ *  @param pass unique uid and endpointurl.
+ *  @return completion handler will return Token from GCM and error in case anyting missing.
+ */
 
 + (id) setEndpoint:(NSString *)endpointUrl andUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
+/**
+ *  @brief Method will register user with unique uid.
+ *  @param pass unique uid.
+ *  @return completion handler will return Token from GCM and error in case anyting missing.
+ */
+
 + (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
+
+/**
+ *  @brief Method will register user with subscriber and pass endpointurl.
+ *  @param pass subscriber object and endpointurl.
+ *  @return completion handler will return Token from GCM and error in case anyting missing.
+ */
 
 + (id) setWithEndpoint:(NSString *)endpointUrl andSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
+/**
+ *  @brief Method will register user with subscriber.
+ *  @param pass subscriber object in that case.
+ *  @return completion handler will return Token from GCM and error in case anyting missing.
+ */
+
 + (id) setWithSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
+/**
+ *  @brief Method runs for getting GCM registeration token.
+ *  @param device token from appdelegate file.
+ *  @return completion handler will return Token from GCM and error in case anyting missing.
+ */
+
 + (void)runRegistrationInBackgroundWithToken:(NSData *)deviceToken registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
+
+/**
+ *  @brief Method which will use if we want to call it as anynomous users.
+ *  @return Completion handler will give you response and error if any.
+ */
+
++ (id) sendRegistrationForAnynomousUserWithCompletionBlock: (void (^)(id response, NSError *error))completionBlock;
 
 #pragma mark - Helper Method to Device Token from Appdelegate
 
 /**
- * @return Application's version code from the Application Bundle.
+ *  @brief Method for loading Device token to Nudgespot.
+ *  @param pass device token from appdelegate file.
+ *  @return Application's version code from the Application Bundle.
  */
 
 + (void) loadDeviceToken : (NSData *)deviceToken;
@@ -113,7 +189,6 @@
  */
 
 + (void) storeRegistrationId:(NSString *)regid;
-
 
 /**
  * Sends the registration ID to Nudgespot server over HTTP along with the user id.

@@ -10,7 +10,7 @@
 //  PROD CONFIG
 
 
-static NSString *const REST_API_ENDPOINT = @"http://phoenix.nudgespot.com/201507";
+static NSString * REST_API_ENDPOINT = @"http://phoenix.nudgespot.com/201507";
 
 static NSString *const TRACK_API_ENDPOINT = @"http://track.sphinx.nudgespot.com/android/message_events";
 
@@ -39,6 +39,17 @@ static NSString *const SUBSCRIBER_CREATE_PATH = @"subscribers";
 static NSString *const SUBSCRIBER_FIND_PATH = @"subscribers?uid=";
 
 static NSString *const ACTIVITY_CREATE_PATH = @"activities";
+
+
+static NSString *const VISTER_LOGIN = @"visters";
+
+static NSString *const VISTER_UID = @"vister uid";
+
+static NSString *const KEY_VISTOR = @"vistor";
+
+static NSString *const KEY_VISTOR_TIMESTAMP = @"timestamp";
+
+static NSString *const KEY_VISTOR_PROPERTIES = @"properties";
 
 
 static NSString *const KEY_ACTIVITY = @"activity";

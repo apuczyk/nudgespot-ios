@@ -105,6 +105,17 @@
     [Nudge   setTheDelegate:Nudge];
 }
 
+
+/**
+ *  @brief Method which will use if we want to call it as anynomous users.
+ *  @return Completion handler will give you response and error if any.
+ */
+
++ (id) sendRegistrationForAnynomousUserWithCompletionBlock: (void (^)(id response, NSError *error))completionBlock;
+{
+    [Nudge initWithAnynomousUserWithCompletionBlock:completionBlock];
+}
+
 #pragma mark - Helper Method to get App Info
 
 /**
@@ -606,7 +617,9 @@
 #pragma mark - Track Activities ..
 
 /**
- * to acknowledge receipt of that message to the GCM connection server
+ *  @brief Method for track Acitvity.
+ *  @param NudgespotActivity
+ *  @return Completion handler will give you response and error if any.
  */
 
 + (void) trackActivity:(NudgespotActivity *) activity completion:(void (^)(id response, NSError *error))completionBlock;

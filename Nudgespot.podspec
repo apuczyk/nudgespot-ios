@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   }
 
   s.prefix_header_file = "Example/Pods/Target\ Support\ Files/Nudgespot/Nudgespot-Prefix.pch"
-  s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security'
+  s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport'
 
   s.dependency 'Google/CloudMessaging'
   s.dependency 'Reachability'

@@ -65,6 +65,8 @@
 
 -(id) initWithSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
+- (id) initWithAnynomousUserWithCompletionBlock :(void (^)(id response, id error))completionBlock;
+
 -(void) clearSubscriber;
 
 -(BOOL) isSubscriberReady;

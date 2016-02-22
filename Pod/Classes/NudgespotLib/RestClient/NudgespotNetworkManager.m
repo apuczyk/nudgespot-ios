@@ -122,3 +122,16 @@
 @end
 
 
+#pragma mark - Helper methods for Anynomous User
+
+@implementation NudgespotNetworkManager (Anynomous)
+
++ (NSURLSessionDataTask *) loginWithAnynomousUser : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
+{
+    DLog(@"login with Anynomous %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString], VISTER_LOGIN);
+    
+    return [NudgeRestInstance POST:VISTER_LOGIN parameters:postData progress:nil success:success failure:failure];
+}
+
+@end
+

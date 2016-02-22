@@ -4,7 +4,6 @@
   "summary": "nudgespot-ios is Objective-C framework.",
   "description": "Nudgespot provides framework for iOS which allows users to track events.",
   "homepage": "https://github.com/nudgespot/nudgespot-ios",
-  "license": "MIT",
   "authors": {
     "Nudgespot": "dev@nudgespot.com"
   },
@@ -28,7 +27,8 @@
     "Foundation",
     "CoreGraphics",
     "MobileCoreServices",
-    "Security"
+    "Security",
+    "AdSupport"
   ],
   "dependencies": {
     "Google/CloudMessaging": [

@@ -13,6 +13,7 @@
 #import "NudgespotSubscriber.h"
 #import "NudgespotActivity.h"
 #import "NudgespotConstants.h"
+#import "NudgespotVistor.h"
 
 @implementation SubscriberClient
 
@@ -81,6 +82,9 @@
         
         self.endpoint = REST_API_ENDPOINT;
     }
+    else {
+        REST_API_ENDPOINT = self.endpoint;
+    }
     
     self.registrationHandler = registeration;
     
@@ -126,6 +130,48 @@
     }
     
     return self;
+}
+
+- (id) initWithAnynomousUserWithCompletionBlock :(void (^)(id response, id error))completionBlock;
+{
+    DLog(@"self.endpoint = %@",self.endpoint);
+    
+    if ([self.endpoint isEqualToString:@""] || self.endpoint == nil) {
+        
+        self.endpoint = REST_API_ENDPOINT;
+    }
+    
+    @try {
+        [self initGCM];
+    }
+    @catch (NSException *exception) {
+        DLog(@"%@ is exception", exception);
+    }
+    
+    NudgespotVistor *vistor = [[NudgespotVistor alloc] init];
+    
+    if (!vistor.isRegistered) {
+        
+        [NudgespotNetworkManager loginWithAnynomousUser:vistor.toJSON success:^(NSURLSessionDataTask *operation, id responseObject) {
+            
+            if (completionBlock) {
+                completionBlock(responseObject, operation.error);
+            }
+            
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+            
+            if (completionBlock) {
+                completionBlock(operation.response, error);
+            }
+            
+        }];
+    } else {
+        
+        if (completionBlock) {
+            completionBlock (@"Vistor already exits", nil);
+        }
+    }
+    
 }
 
 -(void) clearSubscriber {
