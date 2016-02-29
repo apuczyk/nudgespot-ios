@@ -60,31 +60,24 @@
 
 + (id) setEndpoint:(NSString *)endpointUrl andUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
     
-    [Nudge initWithEndpoint:endpointUrl andUID:uid registrationHandler:registeration];
-    
-    return self;
+    return [Nudge initWithEndpoint:endpointUrl andUID:uid registrationHandler:registeration];
 }
 
 + (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 {
-    [Nudge initWithUID:uid registrationHandler:registeration];
-    
-    return self;
+    return [Nudge initWithUID:uid registrationHandler:registeration];;
 }
 
 + (id) setWithEndpoint:(NSString *)endpointUrl andSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 {
-    [Nudge initWithEndpoint:endpointUrl andSubscriber:currentSubscriber registrationHandler:registeration];
     
-    return self;
+    return [Nudge initWithEndpoint:endpointUrl andSubscriber:currentSubscriber registrationHandler:registeration];;
     
 }
 
 + (id) setWithSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 {
-    [Nudge initWithSubscriber:currentSubscriber registrationHandler:registeration];
-    
-    return self;
+    return [Nudge initWithSubscriber:currentSubscriber registrationHandler:registeration];;
 }
 
 + (void)runRegistrationInBackgroundWithToken:(NSData *)deviceToken registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
@@ -262,14 +255,6 @@
                     [Nudge clearSubscriber];
                     
                     DLog(@"Cleared all registration data on the application");
-                    
-                    NSLog(@"%@ %@ %@ %@ %@ %@", [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_REGISTRATION_SENT],
-                          [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_REGISTRATION_ID],
-                          [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_APP_VERSION],
-                          [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_SUBSCRIBER_UID],
-                          [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_ANON_ID],
-                          [Nudge subscriberUid]);
-                    
                 }
                 
                 if (completionBlock) {
@@ -550,7 +535,7 @@
 
 - (void)gotSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *, NSError *))registeration
 {
-    DLog(@"%@ is notification", currentSubscriber);
+    DLog(@"%@ is currentSubscriber", currentSubscriber);
     
     if (currentSubscriber) {
         [Nudgespot runRegistrationInBackgroundWithToken:self.deviceToken registrationHandler:registeration];
