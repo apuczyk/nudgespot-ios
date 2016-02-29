@@ -12,7 +12,7 @@
 #import "NudgespotConstants.h"
 
 #import <AdSupport/AdSupport.h>
-#import "SSKeychain.h"
+#import "NudgespotVisitor.h"
 
 #endif
 

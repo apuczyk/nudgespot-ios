@@ -13,7 +13,6 @@
 #import "NudgespotSubscriber.h"
 #import "NudgespotActivity.h"
 #import "NudgespotConstants.h"
-#import "NudgespotVistor.h"
 
 @implementation SubscriberClient
 
@@ -38,6 +37,17 @@
         self = [super init];
         
         self.endpoint = @"";
+        
+        // initialize subscriber with GCM Client ..
+        
+        @try {
+            [self initGCM];
+        }
+        @catch (NSException *exception) {
+            DLog(@"%@ is exception", exception);
+        }
+        
+        group = dispatch_group_create();
     }
     
     return self;
@@ -88,22 +98,11 @@
     
     self.registrationHandler = registeration;
     
-    // initialize subscriber with GCM Client ..
-    @try {
-        [self initGCM];
-    }
-    @catch (NSException *exception) {
-        DLog(@"%@ is exception", exception);
-    }
-    
-    
     if (currentSubscriber != nil) {
         
         self.subscriberUid = currentSubscriber.uid;
         
         self.subscriber = currentSubscriber;
-        
-        group = dispatch_group_create();
         
         // call the method on a background thread
         dispatch_group_async(group,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
@@ -118,8 +117,6 @@
                     
                     if ([_theDelegate respondsToSelector:@selector(gotSubscriber:registrationHandler:)]) {
                         
-                        DLog(@"%@ is regsi", registeration);
-                        
                         [_theDelegate gotSubscriber:currentSubsciber registrationHandler:self.registrationHandler];
                     }
                 }
@@ -132,7 +129,7 @@
     return self;
 }
 
-- (id) initWithAnynomousUserWithCompletionBlock :(void (^)(id response, id error))completionBlock;
+- (id) initWithAnynomousUserWithRegistrationToken: (NSString *)registrationToken completionBlock :(void (^)(id response, id error))completionBlock;
 {
     DLog(@"self.endpoint = %@",self.endpoint);
     
@@ -140,19 +137,27 @@
         
         self.endpoint = REST_API_ENDPOINT;
     }
-    
-    @try {
-        [self initGCM];
-    }
-    @catch (NSException *exception) {
-        DLog(@"%@ is exception", exception);
+    else {
+        REST_API_ENDPOINT = self.endpoint;
     }
     
-    NudgespotVistor *vistor = [[NudgespotVistor alloc] init];
+    NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
+    visitor.registrationToken = registrationToken;
     
-    if (!vistor.isRegistered) {
+    NSLog(@"To Json to Vistor %@", visitor.toJSON);
+    
+    [[Nudgespot sharedInstance] setVisitor:visitor];
+    
+    NSString *isRegistered = [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
+    
+    if (!isRegistered.length) {
         
-        [NudgespotNetworkManager loginWithAnynomousUser:vistor.toJSON success:^(NSURLSessionDataTask *operation, id responseObject) {
+        [NudgespotNetworkManager loginWithAnynomousUser:visitor.toJSON success:^(NSURLSessionDataTask *operation, id responseObject) {
+            
+            if (!operation.error) {
+                
+                [BasicUtils setUserDefaultsValue:visitor.anonymousId forKey:SHARED_PROP_IS_ANON_USER_EXISTS];
+            }
             
             if (completionBlock) {
                 completionBlock(responseObject, operation.error);
@@ -171,6 +176,8 @@
             completionBlock (@"Vistor already exits", nil);
         }
     }
+    
+    return self;
     
 }
 
@@ -250,7 +257,7 @@
         NSMutableDictionary *postData =  [currentSubscriber toJSON] ;
         
         [NudgespotNetworkManager updateSubscriberWithUrl:currentSubscriber.resourceLocation withPostData:postData success:^(NSURLSessionDataTask *operation, id responseObject) {
-
+            
             DLog(@"%@ operation Status", operation.response);
             
             DLog(@"url = %@ updateSubscriber %@ json Response Object ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, postData,  responseObject);
@@ -288,8 +295,6 @@
         [NudgespotNetworkManager getSubscriberWithID:encodedUID success:^(NSURLSessionDataTask *operation, id responseObject) {
             
             DLog(@"url = %@ getSubscriber %@ json Response Object ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, encodedUID,  responseObject);
-            
-            DLog(@"%@ operation Status", operation);
             
             NudgespotSubscriber  *getSubsciber = [self convertDictionaryToModel:responseObject];
             
@@ -345,12 +350,12 @@
 
 -(void) trackActivity:(NudgespotActivity *) currentActivity completion:(void (^)(id response, NSError *error))completionBlock {
     
-    if ([self isSubscriberReady]) {
-
+    if ([self isSubscriberReady] || [[Nudgespot sharedInstance] isAnonymousUser]) {
+        
         dispatch_group_async(group,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
-
+            
            __block NSString *message = @"";
-
+            
             @try {
                 
                 if (currentActivity == nil) {
@@ -401,7 +406,6 @@
         
         DLog(@"Unable to track activity to Nudgespot as subscriber was not created successfully.");
     }
-
 
 }
 

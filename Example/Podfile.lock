@@ -45,14 +45,12 @@ PODS:
     - Google/CloudMessaging
     - Reachability
   - Reachability (3.2)
-  - SSKeychain (1.3.1)
 
 DEPENDENCIES:
   - AFNetworking
   - Google/CloudMessaging
   - Nudgespot (from `../`)
   - Reachability
-  - SSKeychain
 
 EXTERNAL SOURCES:
   Nudgespot:
@@ -70,6 +68,5 @@ SPEC CHECKSUMS:
   GoogleUtilities: 8ed9134debe11719097881711464752900668f10
   Nudgespot: 1271beaf5dad08a901773b1fcded01eafde429c7
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SSKeychain: 04c4ec40f4c3deda524e269bc76e5f30e638a174
 
 COCOAPODS: 0.39.0

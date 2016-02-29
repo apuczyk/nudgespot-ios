@@ -11,6 +11,8 @@
 #import "Nudgespot.h"
 #import "NSAppDelegate.h"
 #import "UIAlertController+Alert.h"
+#import "NudgespotVisitor.h"
+#import "NudgeSpotConstants.h"
 
 @interface NSActivityViewController()
 
@@ -19,20 +21,56 @@
 @property (weak, nonatomic) IBOutlet UITextField *orderNumber;
 @property (weak, nonatomic) IBOutlet UITextField *orderAmount;
 @property (weak, nonatomic) IBOutlet UITextField *courseName;
-@property (weak, nonatomic) IBOutlet UILabel *detailTitle;
+@property (weak, nonatomic) IBOutlet UITextField *uid;
+@property (weak, nonatomic) IBOutlet UIButton *loginOrLogout;
 
 @end
 
 @implementation NSActivityViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-    self.detailTitle.text = [NSString stringWithFormat:@"Hi %@", [[[Nudgespot sharedInstance] subscriber] uid]];
     
-    self.navigationItem.hidesBackButton = YES;
+    NSString *uidText = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
+    
+    if (uidText) {
+        [self.uid setText:uidText];
+        [self.loginOrLogout setTitle:@"LOGOUT" forState:UIControlStateNormal];
+    }
+    
 }
 
+- (IBAction)loginPressed:(UIButton *)sender
+{
+    if (!self.uid.text.length)
+    {
+        [UIAlertController alertViewWithTitle:@"Error!!" withMessage:@"Please enter uid" withCancelTile:@"ok" showOnView:self];
+        return;
+    }
+    
+    if ([sender.currentTitle isEqualToString:@"LOGIN"]) {
+        
+        
+        [Nudgespot setWithUID:self.uid.text registrationHandler:^(NSString *registrationToken, NSError *error) {
+            
+            [[NSUserDefaults standardUserDefaults] setObject:self.uid.text forKey:kSubscriberUid];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            NSLog(@"Registration Found %@ and error %@", registrationToken, error);
+            
+            [sender setTitle:@"LOGOUT" forState:UIControlStateNormal];
+        }];
+    }
+    else {
+        
+        [sender setTitle:@"LOGIN" forState:UIControlStateNormal];
+        
+        [self logoutPressed:sender];
+    }
+    
+}
 
 - (IBAction)placeOrderPressed:(id)sender {
     
@@ -47,13 +85,11 @@
                            @"Order Number":self.orderNumber.text
                            };
     
-    _activity = [[NudgespotActivity alloc] initwithNudgespotActivity:@"purchased" andUID:[[[Nudgespot sharedInstance] subscriber] uid] andProperty:(NSMutableDictionary *)dict];
-    
+    _activity = [[NudgespotActivity alloc] initwithNudgespotActivity:@"purchased" andProperty:(NSMutableDictionary *)dict];
+
     [Nudgespot trackActivity:_activity completion:^(id response, NSError *error) {
         
         NSLog(@"%@ is response", response);
-        
-        
     }];
     
 }
@@ -73,25 +109,36 @@
                            @"Course Fee":@"$10,000"
                            };
     
-    _activity = [[NudgespotActivity alloc] initwithNudgespotActivity:@"purchased" andUID:[[[Nudgespot sharedInstance] subscriber] uid] andProperty:(NSMutableDictionary *)dict];
+    _activity = [[NudgespotActivity alloc] initwithNudgespotActivity:@"purchased" andProperty:(NSMutableDictionary *)dict];
     
     [Nudgespot trackActivity:_activity completion:^(id response, NSError *error) {
         
         NSLog(@"%@ is response", response);
-        
     }];
     
 }
 
 
-- (IBAction)logoutPressed:(id)sender {
+- (void)logoutPressed:(id)sender {
     
     [Nudgespot  clearRegistrationWithCompletion:^(id response, NSError *error) {
         
         if (response) {
             
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:kSubscriberUid];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            // Here we are creating Anonymous user again for tracking activites.
+            
+            [Nudgespot sendRegistrationForAnynomousUserWithCompletionBlock:^(id response, NSError *error) {
+                NSLog(@"%@ is response", response);
+            }];
+            
+            // Clear TextField ..
+            
+            self.uid.text = @"";
+            
             NSLog(@"Logout success with response %@", response);
-            [self.navigationController popViewControllerAnimated:YES];
         }
     }];
 }

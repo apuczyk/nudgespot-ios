@@ -7,6 +7,7 @@
 //
 
 #import "NSAppDelegate.h"
+#import "NSActivityViewController.h"
 
 #import "Nudgespot.h"
 #import "NudgeSpotConstants.h"
@@ -44,7 +45,18 @@ static NSUInteger badgeCount = 1;
     // [END register_for_remote_notifications]
     // [START start_gcm_service]
     
-    [Nudgespot  setApiKey:kApiKey andSecretToken:kApiSecretToken];
+    [Nudgespot setApiKey:kApiKey andSecretToken:kApiSecretToken];
+    
+    NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
+    
+    if (!uid) {
+        
+        [Nudgespot sendRegistrationForAnynomousUserWithCompletionBlock:^(id response, NSError *error) {
+            NSLog(@"%@ is response", response);
+        }];
+    } else {
+        [Nudgespot setWithUID:uid registrationHandler:nil];
+    }
     
     return YES;
     

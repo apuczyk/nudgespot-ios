@@ -14,32 +14,28 @@
 
 @synthesize timestamp;
 
-@synthesize subscriberUid;
-
 @synthesize properties;
 
 
--(NudgespotActivity *)initwithNudgespotActivity:(NSString *)currentevent andUID:(NSString *)uID {
+-(NudgespotActivity *)initwithNudgespotActivity:(NSString *)currentevent  {
     
-    [self initwithNudgespotActivity:currentevent andTimestamp:[BasicUtils nowDate] andUID:uID andProperty:nil];
-    
-    return self;
-}
-
--(NudgespotActivity *)initwithNudgespotActivity:(NSString *)currentevent andUID:(NSString *)uID andProperty:(NSMutableDictionary *)activityProperty {
-    
-    [self initwithNudgespotActivity:currentevent andTimestamp:[BasicUtils nowDate] andUID:uID andProperty:activityProperty];
+    [self initwithNudgespotActivity:currentevent andTimestamp:[BasicUtils nowDate] andProperty:nil];
     
     return self;
 }
 
--(NudgespotActivity *)initwithNudgespotActivity:(NSString *)currentevent andTimestamp:(NSDate *)currentTimestamp andUID:(NSString *)uID andProperty:(NSMutableDictionary *)activityProperty {
+-(NudgespotActivity *)initwithNudgespotActivity:(NSString *)currentevent andProperty:(NSMutableDictionary *)activityProperty {
+    
+    [self initwithNudgespotActivity:currentevent andTimestamp:[BasicUtils nowDate] andProperty:activityProperty];
+    
+    return self;
+}
+
+-(NudgespotActivity *)initwithNudgespotActivity:(NSString *)currentevent andTimestamp:(NSDate *)currentTimestamp andProperty:(NSMutableDictionary *)activityProperty{
     
     self.event = currentevent;
 
     self.timestamp = currentTimestamp;
-    
-    self.subscriberUid = uID;
     
     self.properties = activityProperty;
     
@@ -56,16 +52,7 @@
         activityDictionary = responseDictionary;
     }
     
-    
     self.event = [activityDictionary objectForKey:KEY_ACTIVITY_NAME]? [activityDictionary objectForKey:KEY_ACTIVITY_NAME] : @"";
-    
-    NSMutableDictionary *subscriber = [activityDictionary objectForKey:KEY_ACTIVITY_SUBSCRIBER];
-    
-    if (subscriber != nil) {
-        
-        self.subscriberUid = [subscriber objectForKey:KEY_SUBSCRIBER_UID]? [subscriber objectForKey:KEY_SUBSCRIBER_UID] : @"";
-
-    }
     
     self.timestamp = [activityDictionary objectForKey:KEY_ACTIVITY_TIMESTAMP]? [activityDictionary objectForKey:KEY_ACTIVITY_TIMESTAMP] : [BasicUtils nowDate];
     
@@ -90,17 +77,26 @@
                 [dict setObject:self.event forKey:KEY_ACTIVITY_NAME];
                 
             }
-
-            if ([BasicUtils isNonEmpty:self.subscriberUid] && self.subscriberUid != nil) {
+            
+            if ([[Nudgespot sharedInstance] subscriber]) { // Check if subscriber uid is existed.
                 
                 NSMutableDictionary *userDict = [[NSMutableDictionary alloc] init];
-
-                [userDict setObject:self.subscriberUid forKey:KEY_SUBSCRIBER_UID];
+                
+                [userDict setObject:[[[Nudgespot sharedInstance] subscriber] uid] forKey:KEY_SUBSCRIBER_UID];
                 
                 [dict setObject:userDict forKey:KEY_ACTIVITY_SUBSCRIBER];
                 
+            } else { // if subscriber is not existed go for visitor id..
+                
+                NSMutableDictionary *userDict = [[NSMutableDictionary alloc] init];
+                
+                NSLog(@"%@ is visitor uid", [[Nudgespot sharedInstance] visitor]);
+                
+                [userDict setObject:[[[Nudgespot sharedInstance] visitor] anonymousId] forKey:KEY_VISITOR_UID];
+                
+                [dict setObject:userDict forKey:KEY_ACTIVITY_SUBSCRIBER];
             }
-
+            
             if (self.timestamp != nil) {
                 
                 [dict setObject:[BasicUtils getStringValueOfUTC:self.timestamp] forKey:KEY_ACTIVITY_TIMESTAMP];
@@ -115,7 +111,7 @@
                 [dict setObject:self.properties forKey:KEY_ACTIVITY_PROPERTIES];
                 
             }
-
+            
             [activityDict setObject:dict forKey:KEY_ACTIVITY];
             
         }

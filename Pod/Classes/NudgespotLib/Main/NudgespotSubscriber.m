@@ -52,7 +52,7 @@
             
             self.signupTime = [subscriber objectForKey:KEY_SIGNED_UP_AT]? [NSDate date] : [NSDate date];
             
-            self.properties = [subscriber objectForKey:KEY_SUBSCRIBER_PROPERTIES]? [subscriber objectForKey:KEY_SUBSCRIBER_PROPERTIES] : nil;
+            self.properties = [subscriber objectForKey:KEY_SUBSCRIBER_PROPERTIES]? [subscriber objectForKey:KEY_SUBSCRIBER_PROPERTIES] : @{};
 
             
             NSMutableArray *contacts = [subscriber objectForKey:KEY_CONTACT]? [subscriber objectForKey:KEY_CONTACT] : [[NSMutableArray alloc] init];

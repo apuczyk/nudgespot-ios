@@ -14,7 +14,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* NSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* NSAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* NSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* NSViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -55,8 +54,6 @@
 		6003F59B195388D20070C39A /* Nudgespot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nudgespot-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* NSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* NSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* NSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* NSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* Nudgespot_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nudgespot_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -75,6 +72,7 @@
 		CEF0B45B1C749FDA008AF5BF /* NSActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSActivityViewController.h; sourceTree = "<group>"; };
 		CEF0B45C1C749FDA008AF5BF /* NSActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSActivityViewController.m; sourceTree = "<group>"; };
 		CEF0B45E1C74A268008AF5BF /* NudgeSpotConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NudgeSpotConstants.h; path = ../NudgeSpotConstants.h; sourceTree = "<group>"; };
+		CEF6D7901C7C524C0045BAD6 /* Nudgespot_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Nudgespot_Example.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +105,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				CEF6D7901C7C524C0045BAD6 /* Nudgespot_Example.entitlements */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for Nudgespot */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -147,8 +146,6 @@
 				6003F59C195388D20070C39A /* NSAppDelegate.h */,
 				6003F59D195388D20070C39A /* NSAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* NSViewController.h */,
-				6003F5A6195388D20070C39A /* NSViewController.m */,
 				CEF0B45B1C749FDA008AF5BF /* NSActivityViewController.h */,
 				CEF0B45C1C749FDA008AF5BF /* NSActivityViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -277,6 +274,9 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -430,7 +430,6 @@
 				6003F59E195388D20070C39A /* NSAppDelegate.m in Sources */,
 				CEF0B45A1C749FBA008AF5BF /* UIAlertController+Alert.m in Sources */,
 				CEF0B45D1C749FDA008AF5BF /* NSActivityViewController.m in Sources */,
-				6003F5A7195388D20070C39A /* NSViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,14 +17,14 @@
 
 + (BOOL)isEmpty:(NSString *)string {
     
-    return ([string isKindOfClass:[NSNull class]] || string == nil);
+    return ([string isKindOfClass:[NSNull class]] || string == nil || [string isEqualToString:@""]);
     
 }
 
 
 + (BOOL)isNonEmpty:(NSString *)string {
     
-    return (![string isKindOfClass:[NSNull class]] && string != nil );
+    return (![string isKindOfClass:[NSNull class]] && string != nil && ![string isEqualToString:@""] );
     
 }
 
@@ -212,6 +212,8 @@
         [userDefaults setObject:value forKey:key];
     }
     
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
 }
 
 
@@ -236,6 +238,7 @@
         [userDefaults removeObjectForKey:key];
     }
     
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 #pragma mark Navigate To Specific Screen Handler Methods

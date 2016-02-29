@@ -10,7 +10,9 @@
 //  PROD CONFIG
 
 
-static NSString * REST_API_ENDPOINT = @"http://phoenix.nudgespot.com/201507";
+//static NSString * REST_API_ENDPOINT = @"http://phoenix.nudgespot.com/201507";
+
+static NSString * REST_API_ENDPOINT = @"http://sphinx.nudgespot.com/201507";
 
 static NSString *const TRACK_API_ENDPOINT = @"http://track.sphinx.nudgespot.com/android/message_events";
 
@@ -33,6 +35,9 @@ static NSString *const SHARED_PROP_REGISTRATION_SENT = @"nudgespot::registration
 
 static NSString *const SHARED_PROP_APP_VERSION = @"nudgespot::app_version";
 
+static NSString *const SHARED_PROP_ANON_ID = @"anon_Id";
+
+static NSString *const SHARED_PROP_IS_ANON_USER_EXISTS = @"isAnynomousUserExits";
 
 static NSString *const SUBSCRIBER_CREATE_PATH = @"subscribers";
 
@@ -41,15 +46,19 @@ static NSString *const SUBSCRIBER_FIND_PATH = @"subscribers?uid=";
 static NSString *const ACTIVITY_CREATE_PATH = @"activities";
 
 
-static NSString *const VISTER_LOGIN = @"visters";
+static NSString *const VISITOR_REGISTRATION = @"visitors/register";
 
-static NSString *const VISTER_UID = @"vister uid";
+static NSString *const KEY_VISITOR_UID = @"anon_id";
 
-static NSString *const KEY_VISTOR = @"vistor";
+static NSString *const KEY_VISITOR = @"visitor";
 
-static NSString *const KEY_VISTOR_TIMESTAMP = @"timestamp";
+static NSString *const KEY_VISITOR_TYPE = @"type";
 
-static NSString *const KEY_VISTOR_PROPERTIES = @"properties";
+static NSString *const KEY_VISITOR_TYPE_iOS = @"ios";
+
+static NSString *const KEY_VISITOR_PROPERTIES = @"properties";
+
+static NSString *const KEY_VISITOR_DEVICE_INFO = @"device_info";
 
 
 static NSString *const KEY_ACTIVITY = @"activity";

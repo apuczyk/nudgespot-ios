@@ -21,8 +21,14 @@
 @interface Nudgespot : SubscriberClient <SubscriberClientDelegate>
 
 /**
+ *  @brief This is check if its registered user or AnonymousUser.
+ */
+
+@property (nonatomic, assign) BOOL isAnonymousUser;
+
+/**
  *  @brief registration id. This will use once we got registration token from GCM, later will will store that local. so, 
- *         that we don't have to get registration token from GCM.
+ *         that we don't have togetStoredSubscriberUid get registration token from GCM.
  */
 
 @property (nonatomic , retain) NSString *registrationId;
@@ -116,7 +122,7 @@
  *  @return Completion handler will give you response and error if any.
  */
 
-+ (id) sendRegistrationForAnynomousUserWithCompletionBlock: (void (^)(id response, NSError *error))completionBlock;
++ (void) sendRegistrationForAnynomousUserWithCompletionBlock: (void (^)(id response, NSError *error))completionBlock;
 
 #pragma mark - Helper Method to Device Token from Appdelegate
 
@@ -189,6 +195,24 @@
  */
 
 + (void) storeRegistrationId:(NSString *)regid;
+
+
+/**
+ * Retrieves the stored subscriber UID for the application, if there is one
+ *
+ * @param context
+ * @return customer ID, or empty string if there is none.
+ */
++ (NSString *) getStoredSubscriberUid;
+
+/**
+ * Retrieves the stored Visitor for the application, if there is one
+ *
+ * @param context
+ * @return Visitor Anonymous id, or empty string if there is none.
+ */
++ (NSString *) getStoredAnonymousUid;
+
 
 /**
  * Sends the registration ID to Nudgespot server over HTTP along with the user id.

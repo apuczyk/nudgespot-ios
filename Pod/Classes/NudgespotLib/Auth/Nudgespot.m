@@ -11,8 +11,15 @@
 #import <Google/CloudMessaging.h>
 #import "SubscriberClient.h"
 #import "NudgespotNetworkManager.h"
+#import "NudgespotVisitor.h"
 
 #define Nudge [self sharedInstance]
+
+@interface Nudgespot()
+
+@property(nonatomic, strong) void (^anonymousHandler)(id response, NSError *error);
+
+@end
 
 @implementation Nudgespot
 
@@ -89,31 +96,85 @@
         return;
     }
     
-    [self  connectWithGCM];
-    
-    DLog(@"runRegistrationInBackgroundWithToken starts here");
-    
-    [self registerForNotifications:[Nudge deviceToken] registrationHandler:registeration];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // Here we are waiting if our device token not found...
+        NSTimeInterval sleep = 0.01;
+        
+        while (sleep < 100 && ![Nudge deviceToken]) { // we build an exponential wait time for about one minute else give up and wait for the next initialization
+            
+            NSLog(@"%@ is deviceToken", [Nudge deviceToken]);
+            
+            @try {
+                NSLog(@"Sleeping for %lf seconds", sleep);
+                [NSThread sleepForTimeInterval:sleep];
+            }
+            @catch (NSException *exception) {
+                NSLog(@"Exception:%@",exception);
+            }
+            @finally {
+                sleep = sleep * 2;
+            }
+        }
+        
+        if ([Nudge deviceToken]) {
+            
+            [self connectWithGCM];
+            
+            DLog(@"runRegistrationInBackgroundWithToken starts here");
+            
+            [self registerForNotifications:[Nudge deviceToken] registrationHandler:registeration];
+            
+        }
+    });
     
 }
-
-
-+ (void)loadDeviceToken:(NSData *)deviceToken
-{
-    [Nudge   setIsRegisterForNotification:NO];
-    [Nudge   setDeviceToken:deviceToken];
-    [Nudge   setTheDelegate:Nudge];
-}
-
 
 /**
  *  @brief Method which will use if we want to call it as anynomous users.
  *  @return Completion handler will give you response and error if any.
  */
 
-+ (id) sendRegistrationForAnynomousUserWithCompletionBlock: (void (^)(id response, NSError *error))completionBlock;
++ (void) sendRegistrationForAnynomousUserWithCompletionBlock: (void (^)(id response, NSError *error))completionBlock;
 {
-    [Nudge initWithAnynomousUserWithCompletionBlock:completionBlock];
+    [Nudge setIsAnonymousUser:YES];
+    [Nudge setAnonymousHandler:completionBlock];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // Here we are waiting if our device token not found...
+        NSTimeInterval sleep = 0.01;
+        
+        while (sleep < 100 && ![Nudge deviceToken]) { // we build an exponential wait time for about one minute else give up and wait for the next initialization
+            
+            NSLog(@"%@ is deviceToken", [Nudge deviceToken]);
+            
+            @try {
+                NSLog(@"Sleeping for %lf seconds", sleep);
+                [NSThread sleepForTimeInterval:sleep];
+            }
+            @catch (NSException *exception) {
+                NSLog(@"Exception:%@",exception);
+            }
+            @finally {
+                sleep = sleep * 2;
+            }
+        }
+        
+        if ([Nudge deviceToken]) {
+            
+            [self runRegistrationInBackgroundWithToken:[Nudge deviceToken] registrationHandler:completionBlock];
+        } else {
+            [self sendAnonymousRegistrationToNudgespotWithToken:nil];
+        }
+        
+    });
+    
+}
+
++ (void)loadDeviceToken:(NSData *)deviceToken
+{
+    [Nudge   setIsRegisterForNotification:NO];
+    [Nudge   setDeviceToken:deviceToken];
+    [Nudge   setTheDelegate:Nudge];
 }
 
 #pragma mark - Helper Method to get App Info
@@ -182,19 +243,40 @@
         
         if (!error) {
             
-            [self sendUnregistrationToNudgespotWithCompletion:completionBlock];
-            
-            [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_SENT];
-            
-            [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_ID];
-            
-            [BasicUtils removeUserDefaultsForKey:SHARED_PROP_APP_VERSION];
-            
-            [BasicUtils removeUserDefaultsForKey:SHARED_PROP_SUBSCRIBER_UID];
-            
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            
-            DLog(@"Cleared all registration data on the application");
+            [self sendUnregistrationToNudgespotWithCompletion:^(id response, NSError *error) {
+                
+                if (!error) {
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_SENT];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_ID];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_APP_VERSION];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_SUBSCRIBER_UID];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_ANON_ID ];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
+                    
+                    [Nudge clearSubscriber];
+                    
+                    DLog(@"Cleared all registration data on the application");
+                    
+                    NSLog(@"%@ %@ %@ %@ %@ %@", [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_REGISTRATION_SENT],
+                          [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_REGISTRATION_ID],
+                          [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_APP_VERSION],
+                          [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_SUBSCRIBER_UID],
+                          [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_ANON_ID],
+                          [Nudge subscriberUid]);
+                    
+                }
+                
+                if (completionBlock) {
+                    completionBlock (response, error);
+                }
+                
+            }];
             
         }
     }];
@@ -250,7 +332,7 @@
  * @param context
  * @return customer ID, or empty string if there is none.
  */
--(NSString *) getStoredSubscriberUid {
++ (NSString *) getStoredSubscriberUid {
     
     NSString *subuid = [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_SUBSCRIBER_UID];
     
@@ -267,7 +349,28 @@
     return subuid;
 }
 
-
+/**
+ * Retrieves the stored Visitor for the application, if there is one
+ *
+ * @param context
+ * @return Visitor Anonymous id, or empty string if there is none.
+ */
++ (NSString *) getStoredAnonymousUid; {
+    
+    NSString *anon_id = [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_ANON_ID];
+    
+    if ([anon_id isEqualToString:@""]) {
+        
+        DLog(@"Visitor anonymous not found.");
+        
+    } else {
+        
+        DLog(@"Visitor anonymous found: %@", anon_id);
+        
+    }
+    
+    return anon_id;
+}
 
 #pragma mark - Methods to perform local storage
 
@@ -280,8 +383,6 @@
 + (void) storeSubscriberUid:(NSString *)subuid {
     
     [BasicUtils setUserDefaultsValue:subuid forKey:SHARED_PROP_SUBSCRIBER_UID];
-    
-    [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
 
@@ -322,7 +423,19 @@
     
     BOOL registerAfresh = false;
     
-    NSString *subuid = [Nudge getStoredSubscriberUid];
+    NSString *subuid = [self getStoredSubscriberUid];
+    NSString *registrationId =  [Nudge getStoredRegistrationId];
+    
+    [self gcmStartConfig];
+    
+    if ([Nudge isAnonymousUser] && registrationId.length == 0  && subuid.length == 0) { // Get GCM Registration Token for Anyonomous User
+        
+        [self gettingTokenFromGCM:[Nudge deviceToken]];
+        
+    }else if ([Nudge isAnonymousUser] && registrationId.length > 1 && subuid.length == 0) {
+        
+        [self sendAnonymousRegistrationToNudgespotWithToken:registrationId];
+    }
     
     if ([BasicUtils isNonEmpty:[Nudge subscriberUid]]) {
         
@@ -339,7 +452,7 @@
     
     if ([BasicUtils isNonEmpty:[Nudge subscriberUid]]) { // now when we have a subscriber uid, we attempt registration if not already done
         
-        [Nudge setRegistrationId:[Nudge getStoredRegistrationId]];
+        [Nudge setRegistrationId:registrationId];
         
         [self registerAndSendInBackground:data andRegisterAfresh:registerAfresh registrationHandler:registeration];
         
@@ -355,8 +468,6 @@
  * Stores the registration ID and the app version code in the application's shared preferences.
  */
 + (void)registerAndSendInBackground:(NSData *)deviceToken andRegisterAfresh:(BOOL)registerAfresh registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;{
-    
-    [self gcmStartConfig];
     
     if ([[Nudge registrationId] isEqualToString:@""] || registerAfresh) { // either no existing registration ID found or the customer is a new one in which case we re-register
         
@@ -382,22 +493,25 @@
     [Nudge setRegistrationOptions:@{kGGLInstanceIDRegisterAPNSOption:deviceToken,
                                     kGGLInstanceIDAPNSServerTypeSandboxOption:@"YES"}];
     
-    [[GGLInstanceID sharedInstance] tokenWithAuthorizedEntity:[Nudge gcmSenderID]
-                                                        scope:kGGLInstanceIDScopeGCM
-                                                      options:[Nudge registrationOptions]
-                                                      handler:^(NSString *token, NSError *error){
-                                                          
-                                                          DLog(@"GCM Registration token = %@",token);
-                                                          DLog(@"GCM Registration error = %@",error);
-                                                          
-                                                          if (![token isEqualToString:@""] && token != nil) {
-                                                              
-                                                              [self storeRegistrationId:token];
-                                                              
-                                                              [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
-                                                          }
-                                                      }];
+    NSLog(@"%@ %@", [Nudge registrationOptions], [Nudge gcmSenderID]);
     
+        [[GGLInstanceID sharedInstance] tokenWithAuthorizedEntity:[Nudge gcmSenderID]
+                                                            scope:kGGLInstanceIDScopeGCM
+                                                          options:[Nudge registrationOptions]
+                                                          handler:^(NSString *token, NSError *error){
+                                                              
+                                                              DLog(@"GCM Registration token = %@",token);
+                                                              DLog(@"GCM Registration error = %@",error);
+                                                              
+                                                              if (![token isEqualToString:@""] && token != nil) {
+                                                                  
+                                                                  [self storeRegistrationId:token];
+                                                                  
+                                                                  [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
+                                                                  [self sendAnonymousRegistrationToNudgespotWithToken:token];
+                                                              }
+                                                          }];
+            
 }
 
 #pragma mark - GCM When token Needs to Refresh <GGLInstanceIDDelegate>
@@ -419,7 +533,9 @@
                                                           if (![token isEqualToString:@""] && token != nil) {
                                                               
                                                               [Nudgespot storeRegistrationId:token];
+                                                              
                                                               [Nudgespot sendRegistrationToNudgespotWithRegistrationHandler:self.registrationHandler];
+                                                              [[Nudgespot sharedInstance] sendAnonymousRegistrationToNudgespotWithToken:token];
                                                           }
                                                       }];
     
@@ -438,6 +554,18 @@
     
     if (currentSubscriber) {
         [Nudgespot runRegistrationInBackgroundWithToken:self.deviceToken registrationHandler:registeration];
+    }
+}
+
+/**
+ * Sends the registration ID to Nudgespot server over HTTP along with for Anonymous user.
+ * So it can save the registration id for future communication using CCS
+ */
+
++ (void)sendAnonymousRegistrationToNudgespotWithToken: (NSString *)registrationToken {
+    
+    if (registrationToken) {
+        [Nudge initWithAnynomousUserWithRegistrationToken:registrationToken completionBlock:[Nudge anonymousHandler]];
     }
 }
 
@@ -463,7 +591,6 @@
                 
                 // Complete completion Block for initlize client
                 if (registeration) {
-                    DLog(@"%@ is reg", registeration);
                     registeration([Nudge registrationId], error);
                 }
                 

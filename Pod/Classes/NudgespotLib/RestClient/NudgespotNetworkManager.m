@@ -128,9 +128,9 @@
 
 + (NSURLSessionDataTask *) loginWithAnynomousUser : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 {
-    DLog(@"login with Anynomous %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString], VISTER_LOGIN);
+    DLog(@"login with Anynomous %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString], VISITOR_REGISTRATION);
     
-    return [NudgeRestInstance POST:VISTER_LOGIN parameters:postData progress:nil success:success failure:failure];
+    return [NudgeRestInstance POST:VISITOR_REGISTRATION parameters:postData progress:nil success:success failure:failure];
 }
 
 @end

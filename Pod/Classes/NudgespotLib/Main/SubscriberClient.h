@@ -10,6 +10,7 @@
 
 @class NudgespotSubscriber;
 @class NudgespotActivity;
+@class NudgespotVisitor;
 
 @protocol SubscriberClientDelegate <NSObject>
 
@@ -44,6 +45,8 @@
 
 @property (nonatomic , retain) NudgespotSubscriber *subscriber;
 
+@property (nonatomic , retain) NudgespotVisitor *visitor;
+
 @property (nonatomic , retain) NudgespotActivity *activity;
 
 @property (nonatomic , retain) SubscriberClient *client;
@@ -65,7 +68,7 @@
 
 -(id) initWithSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
-- (id) initWithAnynomousUserWithCompletionBlock :(void (^)(id response, id error))completionBlock;
+- (id) initWithAnynomousUserWithRegistrationToken: (NSString *)registrationToken completionBlock :(void (^)(id response, id error))completionBlock;
 
 -(void) clearSubscriber;
 
