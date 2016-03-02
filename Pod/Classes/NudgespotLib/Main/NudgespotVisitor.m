@@ -8,9 +8,6 @@
 
 #import "NudgespotVisitor.h"
 
-#import <ifaddrs.h>
-#import <arpa/inet.h>
-
 @implementation NudgespotVisitor
 
 - (id)init {
@@ -77,8 +74,8 @@
         
         if ([BasicUtils isNonEmpty:self.registrationToken]) {
             
-            NSMutableDictionary *deviceInfo = @{ CONTACT_TYPE_IOS_GCM_REGISTRATION_ID : self.registrationToken,
-                                                 KEY_VISITOR_TYPE  : KEY_VISITOR_TYPE_iOS};
+            NSMutableDictionary *deviceInfo = @{CONTACT_TYPE_IOS_GCM_REGISTRATION_ID : self.registrationToken,
+                                                KEY_VISITOR_TYPE  : KEY_VISITOR_TYPE_iOS};
             
             [dict setObject:deviceInfo forKey:KEY_VISITOR_DEVICE_INFO];
         }

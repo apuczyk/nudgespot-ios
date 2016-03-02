@@ -44,11 +44,28 @@
     static NudgespotNetworkManager *_sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedManager = [NudgespotNetworkManager manager];
+        _sharedManager = [[super allocWithZone:NULL] init];
     });
     
     return _sharedManager;
 }
+
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [self sharedInstance] ;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone
+{
+    return [self copyWithZone:zone];
+}
+
 
 #pragma mark - Load
 + (void)load

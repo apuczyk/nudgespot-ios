@@ -29,16 +29,31 @@
 
 + (id)sharedInstance {
     
-    static Nudgespot *sharedCredentials = nil;
+    static Nudgespot *sharedInstance = nil;
     
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
         
-        sharedCredentials = [[self alloc] init];
+        sharedInstance = [[super allocWithZone:NULL] init];
     });
     
-    return sharedCredentials;
+    return sharedInstance;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [self sharedInstance] ;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone
+{
+    return [self copyWithZone:zone];
 }
 
 + (id)setApiKey:(NSString *)key andSecretToken:(NSString *)token {
@@ -49,15 +64,6 @@
     return self;
 }
 
-- (id)init {
-    
-    if (self = [super init]) {
-        
-    }
-    return self;
-}
-
-
 + (id) setEndpoint:(NSString *)endpointUrl andUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
     
     return [Nudge initWithEndpoint:endpointUrl andUID:uid registrationHandler:registeration];
@@ -65,14 +71,12 @@
 
 + (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 {
-    return [Nudge initWithUID:uid registrationHandler:registeration];;
+    return [Nudge initWithUID:uid registrationHandler:registeration];
 }
 
 + (id) setWithEndpoint:(NSString *)endpointUrl andSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 {
-    
-    return [Nudge initWithEndpoint:endpointUrl andSubscriber:currentSubscriber registrationHandler:registeration];;
-    
+    return [Nudge initWithEndpoint:endpointUrl andSubscriber:currentSubscriber registrationHandler:registeration];
 }
 
 + (id) setWithSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
@@ -82,84 +86,40 @@
 
 + (void)runRegistrationInBackgroundWithToken:(NSData *)deviceToken registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
     
-    if (deviceToken) {
-        [self loadDeviceToken:deviceToken];
-    }else{
-        DLog(@"Error: Device Token Not Found!!");
-        return;
-    }
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // Here we are waiting if our device token not found...
-        NSTimeInterval sleep = 0.01;
+    [self getOrWaitForDeviceTokenWithTime:10 withCompletion:^(id deviceToken, NSError *error) {
         
-        while (sleep < 100 && ![Nudge deviceToken]) { // we build an exponential wait time for about one minute else give up and wait for the next initialization
-            
-            NSLog(@"%@ is deviceToken", [Nudge deviceToken]);
-            
-            @try {
-                NSLog(@"Sleeping for %lf seconds", sleep);
-                [NSThread sleepForTimeInterval:sleep];
-            }
-            @catch (NSException *exception) {
-                NSLog(@"Exception:%@",exception);
-            }
-            @finally {
-                sleep = sleep * 2;
-            }
-        }
-        
-        if ([Nudge deviceToken]) {
-            
+        // As Device Token not found then we don't need to register with GCM. We will only register GCM if we found Device Token..
+        if (!error) {
+         
             [self connectWithGCM];
             
             DLog(@"runRegistrationInBackgroundWithToken starts here");
             
-            [self registerForNotifications:[Nudge deviceToken] registrationHandler:registeration];
-            
+            [self registerForNotifications:deviceToken registrationHandler:registeration];
         }
-    });
-    
+    }];
 }
+
 
 /**
  *  @brief Method which will use if we want to call it as anynomous users.
  *  @return Completion handler will give you response and error if any.
  */
 
-+ (void) sendRegistrationForAnynomousUserWithCompletionBlock: (void (^)(id response, NSError *error))completionBlock;
++ (void) registerAnynomousUser: (void (^)(id response, NSError *error))completionBlock;
 {
     [Nudge setIsAnonymousUser:YES];
     [Nudge setAnonymousHandler:completionBlock];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // Here we are waiting if our device token not found...
-        NSTimeInterval sleep = 0.01;
+    [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
         
-        while (sleep < 100 && ![Nudge deviceToken]) { // we build an exponential wait time for about one minute else give up and wait for the next initialization
-            
-            NSLog(@"%@ is deviceToken", [Nudge deviceToken]);
-            
-            @try {
-                NSLog(@"Sleeping for %lf seconds", sleep);
-                [NSThread sleepForTimeInterval:sleep];
-            }
-            @catch (NSException *exception) {
-                NSLog(@"Exception:%@",exception);
-            }
-            @finally {
-                sleep = sleep * 2;
-            }
-        }
-        
-        if ([Nudge deviceToken]) {
+        if (!error) {
             
             [self runRegistrationInBackgroundWithToken:[Nudge deviceToken] registrationHandler:completionBlock];
         } else {
             [self sendAnonymousRegistrationToNudgespotWithToken:nil];
         }
-        
-    });
+    }];
     
 }
 
@@ -228,7 +188,6 @@
 /**
  * @ Delete the registration id from GCM Server and also clear the local data storage
  */
-
 
 + (void) clearRegistrationWithCompletion:(void (^)(id response, NSError *error))completionBlock {
     
@@ -401,11 +360,6 @@
     
     [Nudge setIsRegisterForNotification:YES];
     
-    BOOL ready = false;
-    
-    if (data == nil)
-        return ready;
-    
     BOOL registerAfresh = false;
     
     NSString *subuid = [self getStoredSubscriberUid];
@@ -440,11 +394,9 @@
         [Nudge setRegistrationId:registrationId];
         
         [self registerAndSendInBackground:data andRegisterAfresh:registerAfresh registrationHandler:registeration];
-        
-        ready = true;
     }
     
-    return ready;
+    return YES;
 }
 
 /**
@@ -478,25 +430,23 @@
     [Nudge setRegistrationOptions:@{kGGLInstanceIDRegisterAPNSOption:deviceToken,
                                     kGGLInstanceIDAPNSServerTypeSandboxOption:@"YES"}];
     
-    NSLog(@"%@ %@", [Nudge registrationOptions], [Nudge gcmSenderID]);
+    [[GGLInstanceID sharedInstance] tokenWithAuthorizedEntity:[Nudge gcmSenderID]
+                                                        scope:kGGLInstanceIDScopeGCM
+                                                      options:[Nudge registrationOptions]
+                                                      handler:^(NSString *token, NSError *error){
+                                                          
+                                                          DLog(@"GCM Registration token = %@",token);
+                                                          DLog(@"GCM Registration error = %@",error);
+                                                          
+                                                          if (![token isEqualToString:@""] && token != nil) {
+                                                              
+                                                              [self storeRegistrationId:token];
+                                                              
+                                                              [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
+                                                              [self sendAnonymousRegistrationToNudgespotWithToken:token];
+                                                          }
+                                                      }];
     
-        [[GGLInstanceID sharedInstance] tokenWithAuthorizedEntity:[Nudge gcmSenderID]
-                                                            scope:kGGLInstanceIDScopeGCM
-                                                          options:[Nudge registrationOptions]
-                                                          handler:^(NSString *token, NSError *error){
-                                                              
-                                                              DLog(@"GCM Registration token = %@",token);
-                                                              DLog(@"GCM Registration error = %@",error);
-                                                              
-                                                              if (![token isEqualToString:@""] && token != nil) {
-                                                                  
-                                                                  [self storeRegistrationId:token];
-                                                                  
-                                                                  [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
-                                                                  [self sendAnonymousRegistrationToNudgespotWithToken:token];
-                                                              }
-                                                          }];
-            
 }
 
 #pragma mark - GCM When token Needs to Refresh <GGLInstanceIDDelegate>
@@ -714,6 +664,41 @@
     return dict;
 }
 
++ (void)getOrWaitForDeviceTokenWithTime:(NSTimeInterval)timeInterval withCompletion : (void (^)(id deviceToken, NSError * error)) completionBlock {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // Here we are waiting if our device token not found...
+        NSTimeInterval sleep = 0.01;
+        
+        while (sleep < timeInterval && ![Nudge deviceToken]) { // we build an exponential wait time for about one minute else give up and wait for the next initialization
+            
+            NSLog(@"%@ is deviceToken", [Nudge deviceToken]);
+            
+            @try {
+                NSLog(@"Sleeping for %lf seconds", sleep);
+                [NSThread sleepForTimeInterval:sleep];
+            }
+            @catch (NSException *exception) {
+                NSLog(@"Exception:%@",exception);
+            }
+            @finally {
+                sleep = sleep * 2;
+            }
+        }
+        
+        if ([Nudge deviceToken]) {
+            if (completionBlock) {
+                completionBlock ([Nudge deviceToken ], nil);
+            }
+        }
+        else {
+            if(completionBlock) {
+                completionBlock (nil, [NSError errorWithDomain:@"Device token not found" code:1001 userInfo:nil]);
+            }
+        }
+    });
+    
+}
 
 #pragma mark - Notification receipt Acknowledgement Methods
 

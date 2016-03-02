@@ -50,10 +50,11 @@ static NSUInteger badgeCount = 1;
     NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
     
     if (!uid) {
-        
-        [Nudgespot sendRegistrationForAnynomousUserWithCompletionBlock:^(id response, NSError *error) {
+
+        [Nudgespot runRegistrationForAnynomousUserWithCompletionBlock:^(id response, NSError *error) {
             NSLog(@"%@ is response", response);
         }];
+        
     } else {
         [Nudgespot setWithUID:uid registrationHandler:nil];
     }

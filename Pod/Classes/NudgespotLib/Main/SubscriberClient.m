@@ -57,9 +57,8 @@
     
     self.endpoint = endpointUrl;
     
-    self = [self initWithUID:uid registrationHandler:registeration];
+    return [self initWithUID:uid registrationHandler:registeration];
     
-    return self;
 }
 
 
@@ -69,9 +68,8 @@
     
     subscriber.uid = uid;
     
-    self = [self initWithSubscriber:subscriber registrationHandler:registeration];
+    return [self initWithSubscriber:subscriber registrationHandler:registeration];
     
-    return self;
 }
 
 
@@ -79,22 +77,14 @@
     
     self.endpoint = endpointUrl;
 
-    self = [self initWithSubscriber:subscriber registrationHandler:registeration];
-    
-    return self;
+    return [self initWithSubscriber:subscriber registrationHandler:registeration];
 }
 
 -(id) initWithSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *, NSError *))registeration {
     
     DLog(@"self.endpoint = %@",self.endpoint);
     
-    if ([self.endpoint isEqualToString:@""] || self.endpoint == nil) {
-        
-        self.endpoint = REST_API_ENDPOINT;
-    }
-    else {
-        REST_API_ENDPOINT = self.endpoint;
-    }
+    [self checkEndPoints];
     
     self.registrationHandler = registeration;
     
@@ -121,9 +111,7 @@
                     }
                 }
             }];
-            
         });
-        
     }
     
     return self;
@@ -133,13 +121,7 @@
 {
     DLog(@"self.endpoint = %@",self.endpoint);
     
-    if ([self.endpoint isEqualToString:@""] || self.endpoint == nil) {
-        
-        self.endpoint = REST_API_ENDPOINT;
-    }
-    else {
-        REST_API_ENDPOINT = self.endpoint;
-    }
+    [self checkEndPoints];
     
     NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
     visitor.registrationToken = registrationToken;
@@ -178,6 +160,17 @@
     }
     
     return self;
+}
+
+- (void)checkEndPoints {
+    
+    if ([self.endpoint isEqualToString:@""] || self.endpoint == nil) {
+        
+        self.endpoint = REST_API_ENDPOINT;
+    }
+    else {
+        REST_API_ENDPOINT = self.endpoint;
+    }
     
 }
 
@@ -257,8 +250,6 @@
         NSMutableDictionary *postData =  [currentSubscriber toJSON] ;
         
         [NudgespotNetworkManager updateSubscriberWithUrl:currentSubscriber.resourceLocation withPostData:postData success:^(NSURLSessionDataTask *operation, id responseObject) {
-            
-            DLog(@"%@ operation Status", operation.response);
             
             DLog(@"url = %@ updateSubscriber %@ json Response Object ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, postData,  responseObject);
             

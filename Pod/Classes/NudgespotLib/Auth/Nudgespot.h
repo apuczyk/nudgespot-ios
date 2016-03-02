@@ -43,7 +43,7 @@
  *  @brief registration options for GCM.
  */
 
-@property (nonatomic , retain) NSMutableDictionary* registrationOptions;
+@property (nonatomic , retain) NSDictionary* registrationOptions;
 
 /**
  *  @brief device token from appdelegate file, which requires to register GCM.
@@ -122,7 +122,7 @@
  *  @return Completion handler will give you response and error if any.
  */
 
-+ (void) sendRegistrationForAnynomousUserWithCompletionBlock: (void (^)(id response, NSError *error))completionBlock;
++ (void) registerAnynomousUser: (void (^)(id response, NSError *error))completionBlock;
 
 #pragma mark - Helper Method to Device Token from Appdelegate
 
