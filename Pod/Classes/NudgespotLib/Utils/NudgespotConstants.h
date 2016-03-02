@@ -35,6 +35,8 @@ static NSString *const SHARED_PROP_REGISTRATION_SENT = @"nudgespot::registration
 
 static NSString *const SHARED_PROP_APP_VERSION = @"nudgespot::app_version";
 
+static NSString *const SHARED_PROP_DEVICE_VERSION = @"version";
+
 static NSString *const SHARED_PROP_ANON_ID = @"anon_Id";
 
 static NSString *const SHARED_PROP_IS_ANON_USER_EXISTS = @"isAnynomousUserExits";
