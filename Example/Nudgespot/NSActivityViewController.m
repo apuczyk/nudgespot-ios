@@ -129,7 +129,7 @@
             [[NSUserDefaults standardUserDefaults] synchronize];
             
             // Here we are creating Anonymous user again for tracking activites.
-            [Nudgespot runRegistrationForAnynomousUserWithCompletionBlock:^(id response, NSError *error) {
+            [Nudgespot registerAnynomousUser:^(id response, NSError *error) {
                 NSLog(@"%@ is response", response);
             }];
             

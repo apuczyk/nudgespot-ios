@@ -50,8 +50,9 @@ static NSUInteger badgeCount = 1;
     NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
     
     if (!uid) {
-
-        [Nudgespot runRegistrationForAnynomousUserWithCompletionBlock:^(id response, NSError *error) {
+        
+        // Here we are creating Anonymous user again for tracking activites.
+        [Nudgespot registerAnynomousUser:^(id response, NSError *error) {
             NSLog(@"%@ is response", response);
         }];
         

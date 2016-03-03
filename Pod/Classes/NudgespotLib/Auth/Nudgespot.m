@@ -86,7 +86,7 @@
 
 + (void)runRegistrationInBackgroundWithToken:(NSData *)deviceToken registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
     
-    [self getOrWaitForDeviceTokenWithTime:10 withCompletion:^(id deviceToken, NSError *error) {
+    [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
         
         // As Device Token not found then we don't need to register with GCM. We will only register GCM if we found Device Token..
         if (!error) {

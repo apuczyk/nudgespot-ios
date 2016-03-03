@@ -29,6 +29,7 @@
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         
         [self.requestSerializer setAuthorizationHeaderFieldWithUsername:[[Nudgespot sharedInstance] apiKey] password:[[Nudgespot sharedInstance] secretToken]];
+        
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [self.requestSerializer setValue: @"application/json" forHTTPHeaderField:@"Accept"];
         [self.requestSerializer setValue:@"Nudgespot::iOS::RestClient" forHTTPHeaderField:@"User-Agent"];
@@ -39,33 +40,18 @@
 }
 
 #pragma mark - Shared Manager
+
 + (NudgespotNetworkManager *)sharedInstance;
 {
     static NudgespotNetworkManager *_sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedManager = [[super allocWithZone:NULL] init];
+        _sharedManager = [NudgespotNetworkManager manager];
+        _sharedManager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     });
     
     return _sharedManager;
 }
-
-
-+ (id)allocWithZone:(NSZone *)zone
-{
-    return [self sharedInstance] ;
-}
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    return self;
-}
-
-- (id)mutableCopyWithZone:(NSZone *)zone
-{
-    return [self copyWithZone:zone];
-}
-
 
 #pragma mark - Load
 + (void)load
@@ -89,7 +75,6 @@
     DLog(@"createSubscriber %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString],SUBSCRIBER_CREATE_PATH);
     
     return [NudgeRestInstance POST:SUBSCRIBER_CREATE_PATH parameters:postData progress:nil success:success failure:failure];
-
 }
 
 + (NSURLSessionDataTask *) updateSubscriberWithUrl:(NSString *)urlString withPostData : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
@@ -102,6 +87,8 @@
 + (NSURLSessionDataTask *) getSubscriberWithID:(NSString *)uid success:(successCallback)success failure:(failureCallback)failure;
 {
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@",SUBSCRIBER_FIND_PATH, uid];
+    
+    DLog(@"%@ %@ are requests %@", [self sharedInstance], [NudgespotNetworkManager manager], [[self alloc] init]);
     
     DLog(@"getSubscriber search path %@ ::::::::::::::::::::: \n request Url %@%@", requestUrl, [[[self manager] baseURL]absoluteString],SUBSCRIBER_FIND_PATH);
     

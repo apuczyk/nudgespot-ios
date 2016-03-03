@@ -14,18 +14,26 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Nudgespot/NSActivityViewController.m"
-            timestampString = "478170538.24079"
+            filePath = "Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m"
+            timestampString = "478683735.683891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "-logoutPressed:"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "+manager"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,29 +43,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Nudgespot/NSActivityViewController.m"
-            timestampString = "478170559.386403"
+            filePath = "Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m"
+            timestampString = "478683737.802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "-logoutPressed:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Nudgespot/NSActivityViewController.m"
-            timestampString = "478170564.656332"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "-logoutPressed:"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
+            landmarkName = "-copyWithZone:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
