@@ -14,6 +14,10 @@
 #import "NudgespotActivity.h"
 #import "NudgespotConstants.h"
 
+#import <AWSCore/AWSCore.h>
+#import <AWSSNS/AWSSNS.h>
+#import <AWSCognito/AWSCognito.h>
+
 @implementation SubscriberClient
 
 @synthesize endpoint;
@@ -93,6 +97,41 @@
         self.subscriberUid = currentSubscriber.uid;
         
         self.subscriber = currentSubscriber;
+        
+        NSString * vistitorUid = [self getStoredAnonymousUid];
+        
+        if (vistitorUid.length) {
+            
+            AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1 identityPoolId:@"us-east-1:927bd403-dff8-4d50-93e6-68921b91e82c"];
+            
+            AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSEast1 credentialsProvider:credentialsProvider];
+            
+            AWSServiceManager.defaultServiceManager.defaultServiceConfiguration = configuration;
+            
+            NSDictionary * message = @{KEY_SUBSCRIBER_UID : subscriber.uid,
+                                       KEY_VISITOR_UID: vistitorUid,
+                                       @"api_key": [[Nudgespot sharedInstance] apiKey]};
+            
+            NSError *error;
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:message
+                                                               options:NSJSONWritingPrettyPrinted
+                                                                 error:&error];
+            NSString * jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            
+            AWSSNS *sns = [AWSSNS defaultSNS];
+            
+            AWSSNSPublishInput *request = [AWSSNSPublishInput new];
+            request.topicArn = @"arn:aws:sns:us-east-1:544373798971:AnonymousSubscriberIdentification";
+            request.message = jsonString;
+            
+            [sns publish:request completionHandler:^(AWSSNSPublishResponse * _Nullable response, NSError * _Nullable error) {
+                
+                DLog(@"%@ is response", response);
+                
+            }];
+            
+            
+        }
         
         // call the method on a background thread
         dispatch_group_async(group,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
@@ -464,6 +503,30 @@
     
     return curSubscriber;
 }
+
+/**
+ * Retrieves the stored Visitor for the application, if there is one
+ *
+ * @param context
+ * @return Visitor Anonymous id, or empty string if there is none.
+ */
+- (NSString *) getStoredAnonymousUid {
+    
+    NSString *anon_id = [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_ANON_ID];
+    
+    if ([anon_id isEqualToString:@""]) {
+        
+        DLog(@"Visitor anonymous not found.");
+        
+    } else {
+        
+        DLog(@"Visitor anonymous found: %@", anon_id);
+        
+    }
+    
+    return anon_id;
+}
+
 
 
 @end

@@ -60,6 +60,7 @@
     
     [Nudge setApiKey:key];
     [Nudge setSecretToken:token];
+    [Nudge setRestUser:@"api"];
     
     return self;
 }
@@ -293,28 +294,6 @@
     return subuid;
 }
 
-/**
- * Retrieves the stored Visitor for the application, if there is one
- *
- * @param context
- * @return Visitor Anonymous id, or empty string if there is none.
- */
-+ (NSString *) getStoredAnonymousUid; {
-    
-    NSString *anon_id = [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_ANON_ID];
-    
-    if ([anon_id isEqualToString:@""]) {
-        
-        DLog(@"Visitor anonymous not found.");
-        
-    } else {
-        
-        DLog(@"Visitor anonymous found: %@", anon_id);
-        
-    }
-    
-    return anon_id;
-}
 
 #pragma mark - Methods to perform local storage
 

@@ -58,6 +58,12 @@
 @property (nonatomic , retain) NSString *apiKey;
 
 /**
+ *  @brief api key from Nudgespot account settings.
+ */
+
+@property (nonatomic , retain) NSString *restUser;
+
+/**
  *  @brief secret token from Nudgespot account settings.
  */
 
@@ -195,15 +201,6 @@
  */
 
 + (void) storeRegistrationId:(NSString *)regid;
-
-
-/**
- * Retrieves the stored subscriber UID for the application, if there is one
- *
- * @param context
- * @return customer ID, or empty string if there is none.
- */
-+ (NSString *) getStoredSubscriberUid;
 
 /**
  * Retrieves the stored Visitor for the application, if there is one

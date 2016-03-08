@@ -1,3 +1,7 @@
+# 2016-01-25 -- v1.2.0
+
+Add Bitcode markers.
+
 # 2016-01-25 -- v1.1.3
 
 - Bug fixes.

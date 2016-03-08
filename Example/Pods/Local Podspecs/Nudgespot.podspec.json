@@ -28,7 +28,8 @@
     "CoreGraphics",
     "MobileCoreServices",
     "Security",
-    "AdSupport"
+    "AdSupport",
+    "CFNetwork"
   ],
   "dependencies": {
     "Google/CloudMessaging": [
@@ -38,6 +39,15 @@
 
     ],
     "AFNetworking": [
+
+    ],
+    "AWSCognito": [
+
+    ],
+    "AWSCore": [
+
+    ],
+    "AWSSNS": [
 
     ]
   }

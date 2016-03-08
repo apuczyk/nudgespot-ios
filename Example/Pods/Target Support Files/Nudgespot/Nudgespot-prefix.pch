@@ -10,9 +10,9 @@
 #import "Reachability.h"
 #import "SubscriberClient.h"
 #import "NudgespotConstants.h"
+#import "NudgespotVisitor.h"
 
 #import <AdSupport/AdSupport.h>
-#import "NudgespotVisitor.h"
 
 #endif
 

@@ -14,6 +14,11 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - AWSCognito (2.3.5):
+    - AWSCore (= 2.3.5)
+  - AWSCore (2.3.5)
+  - AWSSNS (2.3.5):
+    - AWSCore (= 2.3.5)
   - GGLInstanceID (1.1.6)
   - Google/CloudMessaging (1.3.2):
     - GGLInstanceID (~> 1.0)
@@ -24,15 +29,13 @@ PODS:
     - GoogleNetworkingUtilities (~> 1.0)
     - GoogleSymbolUtilities (~> 1.0)
     - GoogleUtilities (~> 1.1)
-  - GoogleCloudMessaging (1.1.3):
+  - GoogleCloudMessaging (1.2.0):
     - GoogleInterchangeUtilities (~> 1.0)
     - GoogleIPhoneUtilities (~> 1.0)
-    - GoogleNetworkingUtilities (~> 1.0)
     - GoogleSymbolUtilities (~> 1.0)
-    - GoogleUtilities (~> 1.0)
   - GoogleInterchangeUtilities (1.1.0):
     - GoogleSymbolUtilities (~> 1.0)
-  - GoogleIPhoneUtilities (1.1.1):
+  - GoogleIPhoneUtilities (1.2.0):
     - GoogleSymbolUtilities (~> 1.0)
     - GoogleUtilities (~> 1.0)
   - GoogleNetworkingUtilities (1.0.0):
@@ -42,31 +45,40 @@ PODS:
     - GoogleSymbolUtilities (~> 1.0.0)
   - Nudgespot (0.1.0):
     - AFNetworking
+    - AWSCognito
+    - AWSCore
+    - AWSSNS
     - Google/CloudMessaging
     - Reachability
   - Reachability (3.2)
 
 DEPENDENCIES:
   - AFNetworking
+  - AWSCognito
+  - AWSCore
+  - AWSSNS
   - Google/CloudMessaging
   - Nudgespot (from `../`)
   - Reachability
 
 EXTERNAL SOURCES:
   Nudgespot:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  AWSCognito: f12700b4781897b2913544b36d6283f04ae72a44
+  AWSCore: 8022eda5778fd7b87c9182709d8a27388e1a31fb
+  AWSSNS: d95b17f039776ec0dd9cd9237313779d174b0215
   GGLInstanceID: f92465924a9b8a48f712829d22e223653ab8dc72
   Google: 97618e118111b998cce1d8dd1bd98b82301d72db
-  GoogleCloudMessaging: d1f06cd70691b8c53b3eefd66a0b42b34daeedcc
+  GoogleCloudMessaging: f37ea14dd0f41d4d889c10b5559dd35bbfd9ac26
   GoogleInterchangeUtilities: d7f7174176fbcf9710f696f1acebad4dbd98ac03
-  GoogleIPhoneUtilities: 3252d20d075b902e37a08036dcc9f74828cf5595
+  GoogleIPhoneUtilities: 1c2996078f079d2fc54453dbd13eaf5523666550
   GoogleNetworkingUtilities: 292992ab31b7b4ba32809a0e8b40e324cdfb2c0c
   GoogleSymbolUtilities: 82ad9f93d3615244b3f4ce440f5ab2515e8b4f56
   GoogleUtilities: 8ed9134debe11719097881711464752900668f10
-  Nudgespot: 1271beaf5dad08a901773b1fcded01eafde429c7
+  Nudgespot: da68965188980e26761330def25414b830c7a216
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
 COCOAPODS: 0.39.0

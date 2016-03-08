@@ -89,4 +89,13 @@
 -(NudgespotSubscriber *)convertDictionaryToModel:(NSMutableDictionary *)responseDictionary;
 
 
+/**
+ * Retrieves the stored subscriber UID for the application, if there is one
+ *
+ * @param context
+ * @return customer ID, or empty string if there is none.
+ */
+- (NSString *) getStoredSubscriberUid;
+
+
 @end
