@@ -88,8 +88,6 @@
 {
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@",SUBSCRIBER_FIND_PATH, uid];
     
-    DLog(@"%@ %@ are requests %@", [self sharedInstance], [NudgespotNetworkManager manager], [[self alloc] init]);
-    
     DLog(@"getSubscriber search path %@ ::::::::::::::::::::: \n request Url %@%@", requestUrl, [[[self manager] baseURL]absoluteString],SUBSCRIBER_FIND_PATH);
     
     return [NudgeRestInstance GET:requestUrl parameters:nil progress:nil success:success failure:failure];

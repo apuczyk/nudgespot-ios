@@ -137,8 +137,6 @@
     NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
     visitor.registrationToken = registrationToken;
     
-    NSLog(@"To Json to Vistor %@", visitor.toJSON);
-    
     [[Nudgespot sharedInstance] setVisitor:visitor];
     
     NSString *isRegistered = [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_IS_ANON_USER_EXISTS];

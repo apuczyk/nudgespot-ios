@@ -651,14 +651,14 @@
         
         while (sleep < timeInterval && ![Nudge deviceToken]) { // we build an exponential wait time for about one minute else give up and wait for the next initialization
             
-            NSLog(@"%@ is deviceToken", [Nudge deviceToken]);
+            DLog(@"%@ is deviceToken", [Nudge deviceToken]);
             
             @try {
-                NSLog(@"Sleeping for %lf seconds", sleep);
+                DLog(@"Sleeping for %lf seconds", sleep);
                 [NSThread sleepForTimeInterval:sleep];
             }
             @catch (NSException *exception) {
-                NSLog(@"Exception:%@",exception);
+                DLog(@"Exception:%@",exception);
             }
             @finally {
                 sleep = sleep * 2;

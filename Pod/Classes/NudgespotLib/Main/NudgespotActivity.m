@@ -89,9 +89,7 @@
             } else { // if subscriber is not existed go for visitor id..
                 
                 NSMutableDictionary *userDict = [[NSMutableDictionary alloc] init];
-                
-                NSLog(@"%@ is visitor uid", [[Nudgespot sharedInstance] visitor]);
-                
+                                
                 [userDict setObject:[[[Nudgespot sharedInstance] visitor] anonymousId] forKey:KEY_VISITOR_UID];
                 
                 [dict setObject:userDict forKey:KEY_ACTIVITY_SUBSCRIBER];
