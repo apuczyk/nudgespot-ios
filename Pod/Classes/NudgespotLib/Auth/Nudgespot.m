@@ -24,8 +24,8 @@
 @implementation Nudgespot
 
 @synthesize registrationId;
-@synthesize apiKey;
-@synthesize secretToken;
+@synthesize JavascriptAPIkey;
+@synthesize RESTAPIkey;
 
 + (id)sharedInstance {
     
@@ -56,10 +56,10 @@
     return [self copyWithZone:zone];
 }
 
-+ (id)setApiKey:(NSString *)key andSecretToken:(NSString *)token {
++ (id)setJavascriptAPIkey:(NSString *)key andRESTAPIkey:(NSString *)token {
     
-    [Nudge setApiKey:key];
-    [Nudge setSecretToken:token];
+    [Nudge setJavascriptAPIkey:key];
+    [Nudge setRESTAPIkey:token];
     [Nudge setRestUser:@"api"];
     
     return self;

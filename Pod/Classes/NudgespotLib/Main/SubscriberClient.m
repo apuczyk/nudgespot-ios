@@ -225,7 +225,7 @@
     
     NSDictionary * message = @{KEY_SUBSCRIBER_UID : subscriber.uid,
                                KEY_VISITOR_UID: vistitorUid,
-                               @"api_key": [[Nudgespot sharedInstance] apiKey]};
+                               @"api_key": [[Nudgespot sharedInstance] JavascriptAPIkey]};
     
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:message

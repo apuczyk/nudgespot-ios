@@ -7,8 +7,8 @@
 //  Copyright (c) 2016 Nudgespot. All rights reserved.
 //
 
-#define kApiKey @"kApiKey"
+#define kSubscriberUid @"SubscriberUid"
 
-#define kApiSecretToken @"kApiSecretToken"
+#define kJavascriptAPIkey @""
 
-#define kSubscriberUid @"kSubscriberUid"
+#define kRESTAPIkey @""

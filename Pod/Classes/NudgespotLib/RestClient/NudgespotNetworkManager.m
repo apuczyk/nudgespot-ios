@@ -28,7 +28,7 @@
         self.requestSerializer = [AFJSONRequestSerializer serializer];
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         
-        [self.requestSerializer setAuthorizationHeaderFieldWithUsername:[[Nudgespot sharedInstance] restUser] password:[[Nudgespot sharedInstance] secretToken]];
+        [self.requestSerializer setAuthorizationHeaderFieldWithUsername:[[Nudgespot sharedInstance] restUser] password:[[Nudgespot sharedInstance] RESTAPIkey]];
         
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [self.requestSerializer setValue: @"application/json" forHTTPHeaderField:@"Accept"];

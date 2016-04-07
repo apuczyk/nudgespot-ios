@@ -55,7 +55,7 @@
  *  @brief api key from Nudgespot account settings.
  */
 
-@property (nonatomic , retain) NSString *apiKey;
+@property (nonatomic , retain) NSString *JavascriptAPIkey;
 
 /**
  *  @brief api key from Nudgespot account settings.
@@ -67,7 +67,7 @@
  *  @brief secret token from Nudgespot account settings.
  */
 
-@property (nonatomic , retain) NSString *secretToken;
+@property (nonatomic , retain) NSString *RESTAPIkey;
 
 /**
  *  @brief sharedInstance which will work as singleton.
@@ -81,7 +81,7 @@
  *  @return completion handler will return Token from GCM and error in case anyting missing.
  */
 
-+ (id)setApiKey:(NSString *)key andSecretToken:(NSString *)token;
++ (id)setJavascriptAPIkey:(NSString *)key andRESTAPIkey:(NSString *)token;
 
 /**
  *  @brief Method will register user with unique uid and pass endpointurl.

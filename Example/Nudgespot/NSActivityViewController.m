@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *courseName;
 @property (weak, nonatomic) IBOutlet UITextField *uid;
 @property (weak, nonatomic) IBOutlet UIButton *loginOrLogout;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 
 @end
 
@@ -52,22 +53,32 @@
     
     if ([sender.currentTitle isEqualToString:@"LOGIN"]) {
         
+        [sender setEnabled:NO];
+        
+        [self.activityIndicatorView startAnimating];
+        
+        __weak NSActivityViewController *weak = self;
         
         [Nudgespot setWithUID:self.uid.text registrationHandler:^(NSString *registrationToken, NSError *error) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [sender setEnabled:YES];
+                [weak.activityIndicatorView stopAnimating];
+                [sender setTitle:@"LOGOUT" forState:UIControlStateNormal];
+            });
             
             [[NSUserDefaults standardUserDefaults] setObject:self.uid.text forKey:kSubscriberUid];
             [[NSUserDefaults standardUserDefaults] synchronize];
             
             NSLog(@"Registration Found %@ and error %@", registrationToken, error);
             
-            [sender setTitle:@"LOGOUT" forState:UIControlStateNormal];
         }];
     }
     else {
         
-        [sender setTitle:@"LOGIN" forState:UIControlStateNormal];
-        
+        [sender setEnabled:NO];
         [self logoutPressed:sender];
+        
     }
     
 }
@@ -121,6 +132,10 @@
 
 - (void)logoutPressed:(id)sender {
     
+    [self.activityIndicatorView startAnimating];
+    
+    __weak NSActivityViewController *weak = self;
+
     [Nudgespot  clearRegistrationWithCompletion:^(id response, NSError *error) {
         
         if (response) {
@@ -130,6 +145,14 @@
             
             // Here we are creating Anonymous user again for tracking activites.
             [Nudgespot registerAnynomousUser:^(id response, NSError *error) {
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [sender setEnabled:YES];
+                    [weak.activityIndicatorView stopAnimating];
+                    [sender setTitle:@"LOGIN" forState:UIControlStateNormal];
+                    
+                });
+                
                 NSLog(@"%@ is response", response);
             }];
             

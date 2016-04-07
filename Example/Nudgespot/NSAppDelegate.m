@@ -45,7 +45,7 @@ static NSUInteger badgeCount = 1;
     // [END register_for_remote_notifications]
     // [START start_gcm_service]
     
-    [Nudgespot setApiKey:kApiKey andSecretToken:kApiSecretToken];
+    [Nudgespot setJavascriptAPIkey:kJavascriptAPIkey andRESTAPIkey:kRESTAPIkey];
     
     NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
     
