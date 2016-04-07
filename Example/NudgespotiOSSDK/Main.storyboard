@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Vz-Jh-vR6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nudgespot iOS Demostrate-->
+        <scene sceneID="zsq-MH-g5Y">
+            <objects>
+                <viewController id="0Vz-Jh-vR6" customClass="NSActivityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19a-W9-UeQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="YmR-hi-oS5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sid-Ne-WfR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Order Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLA-OR-FS2">
+                                <rect key="frame" x="20" y="126" width="452" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6PR-aL-3O9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Vz-Jh-vR6" id="bMC-yn-xkw"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Course Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nay-2J-Zyw">
+                                <rect key="frame" x="20" y="226" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vyq-PV-RGn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Vz-Jh-vR6" id="vNQ-j2-Sbo"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Order Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dt-Xq-3XP">
+                                <rect key="frame" x="480" y="126" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Vvo-B3-0V9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Vz-Jh-vR6" id="E8n-aV-ZND"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uc5-ed-hc7">
+                                <rect key="frame" x="236" y="174" width="128" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="6AJ-yc-u3V"/>
+                                    <constraint firstAttribute="height" constant="35" id="dVM-Zd-A4N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="PLACE ORDER">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="placeOrderPressed:" destination="0Vz-Jh-vR6" eventType="touchUpInside" id="W9h-lD-hqu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeF-ey-Scg">
+                                <rect key="frame" x="224" y="273" width="152" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="FxF-n9-oK2"/>
+                                    <constraint firstAttribute="width" constant="152" id="riZ-Tf-4M2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="ENROLL COURSE">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enrollCoursePressed:" destination="0Vz-Jh-vR6" eventType="touchUpInside" id="kIn-Sv-27d"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Uid" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyq-Bi-UBt">
+                                <rect key="frame" x="20" y="338" width="472" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="vmP-xj-Bji"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Vz-Jh-vR6" id="9HV-Pj-oz8"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ3-5f-pJg">
+                                <rect key="frame" x="500" y="337" width="80" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="E9T-OQ-g6q"/>
+                                    <constraint firstAttribute="width" constant="80" id="FCN-hX-3KS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="0Vz-Jh-vR6" eventType="touchUpInside" id="v5u-XD-wzP"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UEd-yQ-g38">
+                                <rect key="frame" x="467" y="346" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="PAY-4t-pLf"/>
+                                    <constraint firstAttribute="width" constant="20" id="uYF-qV-vTh"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6dt-Xq-3XP" firstAttribute="top" secondItem="19a-W9-UeQ" secondAttribute="bottom" constant="62" id="7Fb-85-iOy"/>
+                            <constraint firstItem="GLA-OR-FS2" firstAttribute="leading" secondItem="sid-Ne-WfR" secondAttribute="leadingMargin" id="9PW-iU-mzp"/>
+                            <constraint firstItem="xeF-ey-Scg" firstAttribute="top" secondItem="Nay-2J-Zyw" secondAttribute="bottom" constant="17" id="AV7-w4-BJR"/>
+                            <constraint firstItem="6dt-Xq-3XP" firstAttribute="trailing" secondItem="sid-Ne-WfR" secondAttribute="trailingMargin" id="Brs-dp-MTB"/>
+                            <constraint firstItem="UEd-yQ-g38" firstAttribute="leading" secondItem="Gyq-Bi-UBt" secondAttribute="trailing" constant="-25" id="HC8-bE-DMd"/>
+                            <constraint firstItem="UEd-yQ-g38" firstAttribute="top" secondItem="Gyq-Bi-UBt" secondAttribute="bottom" constant="-27" id="JHV-n6-7Ea"/>
+                            <constraint firstItem="Nay-2J-Zyw" firstAttribute="leading" secondItem="sid-Ne-WfR" secondAttribute="leadingMargin" id="Qpe-I6-ej4"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Gyq-Bi-UBt" secondAttribute="leading" id="RLa-4A-f3k"/>
+                            <constraint firstItem="Gyq-Bi-UBt" firstAttribute="top" secondItem="xeF-ey-Scg" secondAttribute="bottom" constant="30" id="Rrf-fS-nhZ"/>
+                            <constraint firstItem="6dt-Xq-3XP" firstAttribute="leading" secondItem="GLA-OR-FS2" secondAttribute="trailing" constant="8" id="YmH-ys-e0r"/>
+                            <constraint firstItem="Nay-2J-Zyw" firstAttribute="top" secondItem="uc5-ed-hc7" secondAttribute="bottom" constant="17" id="axK-Or-El2"/>
+                            <constraint firstItem="rQ3-5f-pJg" firstAttribute="leading" secondItem="Gyq-Bi-UBt" secondAttribute="trailing" constant="8" id="fNf-11-daF"/>
+                            <constraint firstItem="uc5-ed-hc7" firstAttribute="top" secondItem="GLA-OR-FS2" secondAttribute="bottom" constant="18" id="myS-o5-7Bb"/>
+                            <constraint firstItem="rQ3-5f-pJg" firstAttribute="top" secondItem="xeF-ey-Scg" secondAttribute="bottom" constant="29" id="nIc-oX-JbH"/>
+                            <constraint firstItem="xeF-ey-Scg" firstAttribute="centerX" secondItem="sid-Ne-WfR" secondAttribute="centerX" id="ogR-c5-dje"/>
+                            <constraint firstItem="Nay-2J-Zyw" firstAttribute="trailing" secondItem="sid-Ne-WfR" secondAttribute="trailingMargin" id="rC4-Lh-gvM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rQ3-5f-pJg" secondAttribute="trailing" id="sM5-MM-VPC"/>
+                            <constraint firstItem="GLA-OR-FS2" firstAttribute="top" secondItem="19a-W9-UeQ" secondAttribute="bottom" constant="62" id="vkJ-ey-qSM"/>
+                            <constraint firstItem="uc5-ed-hc7" firstAttribute="centerX" secondItem="sid-Ne-WfR" secondAttribute="centerX" id="ywX-dr-Dt3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nudgespot iOS Demostrate" id="gVc-UU-UD2"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="UEd-yQ-g38" id="Anh-8P-PYE"/>
+                        <outlet property="courseName" destination="Nay-2J-Zyw" id="asf-Bh-9co"/>
+                        <outlet property="loginOrLogout" destination="rQ3-5f-pJg" id="zeX-lU-PaF"/>
+                        <outlet property="orderAmount" destination="6dt-Xq-3XP" id="8Hl-l7-4eh"/>
+                        <outlet property="orderNumber" destination="GLA-OR-FS2" id="ikg-jJ-kqM"/>
+                        <outlet property="uid" destination="Gyq-Bi-UBt" id="dMR-K8-TCN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAV-1D-4hi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="285"/>
+        </scene>
+    </scenes>
+</document>

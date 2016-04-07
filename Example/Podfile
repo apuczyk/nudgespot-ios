@@ -9,10 +9,10 @@ pod 'AWSCognito'
 pod 'AWSCore'
 pod 'AWSSNS'
 
-target 'Nudgespot_Example', :exclusive => true do
-  pod 'Nudgespot', :path => '../'
+target 'NudgespotiOSSDK_Example', :exclusive => true do
+    pod 'NudgespotiOSSDK', :path => '../'
 end
 
-target 'Nudgespot_Tests', :exclusive => true do
-  pod 'Nudgespot', :path => '../'
+target 'NudgespotiOSSDK_Tests', :exclusive => true do
+    pod 'NudgespotiOSSDK', :path => '../'
 end

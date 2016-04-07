@@ -73,19 +73,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0159373B5582F8DF29335441422F2D21</key>
+		<key>01D706DF5BC0F000DAC936E9367C9D5F</key>
 		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E3FF181C77725E983D85DA70DDA95126</string>
-				<string>A4495DEE91C416638EC25EC56D48E637</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
 			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libNudgespotiOSSDK.a</string>
+			<key>path</key>
+			<string>libNudgespotiOSSDK.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>01FD4A443CFC0D74E55C25EEB3D38579</key>
 		<dict>
@@ -130,6 +131,21 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>032405E4939C6BBAA48C0E806D874FFB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FD28CAC91CB34152B9BDE5647D05C645</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>034298263D6B534B32ECC8ECBA3A1452</key>
 		<dict>
 			<key>fileRef</key>
@@ -173,7 +189,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>03ACB48D353AC7E7CBCCF5F01A2BC8B6</key>
+		<key>03ACD1ABF499CAA398648E6DBE373897</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -182,7 +198,7 @@
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>Pods-Nudgespot_Example.debug.xcconfig</string>
+			<string>NudgespotiOSSDK.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -269,23 +285,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>040B583F1AB764679D496BAA70E17E57</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>NudgespotVisitor.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>04D12505E05CE3EA2DB1B0CA2849271E</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>416E5CEFA8C8F6DE1ECFF2EF402983B9</string>
+			<string>8A302B1D632EE3E903CA87569CE476F2</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -326,21 +329,6 @@
 			<string>Reachability-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04E6F7253DF88201CB0E9B20C1960446</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libAWSCognito.a</string>
-			<key>path</key>
-			<string>libAWSCognito.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>0580B10D3D7E7A5782C126C874470D6A</key>
 		<dict>
@@ -417,19 +405,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>066AAFF5896FE2F8ABF75FB0E6D0A3A9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>069304CDC3EE3B33FF0BBFF8BE032DFA</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -444,6 +419,13 @@
 			<string>Cognito/Internal/AWSCognitoDataset_Internal.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>06DC28CDE1F8DC204CFFA15F211378A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6478587FABCD2247A34F4A6D5EEB0CE8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>06F26CF155852CDB9E46D064F3414D70</key>
 		<dict>
@@ -509,30 +491,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>073428E96FC39EA7E99DF39F0102AA70</key>
+		<key>078389AD9F5C5F0838AC8A79644F03F2</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Tests-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>07AB0FB6A363199F6A0C70EEFAD9DE79</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3F7E3D0A5E22D00FE521B74C3D95D94C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
-			</dict>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AWSCore</string>
+			<key>target</key>
+			<string>0E379356BC4A11F545860C016C625E19</string>
+			<key>targetProxy</key>
+			<string>BB5DCADB60E8F3E8B965A1F2392BEBB2</string>
 		</dict>
 		<key>07F6FBCA024B03A9FDD0E6271DBAB898</key>
 		<dict>
@@ -613,6 +581,37 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>0866E918B3AEE608302A022C53DDF54E</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>0F195F1C4F6C9C0B3E112D4B89E4D3C4</string>
+			<key>buildPhases</key>
+			<array>
+				<string>6D609310C5EF94486FA61FDEBEAF7ED9</string>
+				<string>B7090B8C71F2CE78E6F124F5B97E4CB4</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>A2A1B6AA500AB375962964966346DD09</string>
+				<string>59759E96DAA870D93BA060A99D27A43F</string>
+				<string>078389AD9F5C5F0838AC8A79644F03F2</string>
+				<string>D096A98A154CBAA419B751AC54ED9EE1</string>
+				<string>F5D7485D9D6934B4C2A27344DE257EDB</string>
+				<string>5492B0198D690DCFC65193010CE8D34E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NudgespotiOSSDK_Tests</string>
+			<key>productName</key>
+			<string>Pods-NudgespotiOSSDK_Tests</string>
+			<key>productReference</key>
+			<string>B48B99AFF6F309ADB29A0FE212834C47</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
 		<key>0868F2CB5D27BBDE313C4B928616153A</key>
 		<dict>
 			<key>fileRef</key>
@@ -642,17 +641,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>08DB02E47E306CA0D14998211297F7D2</key>
+		<key>09B481C1CFBC138364843E08CDCE4C42</key>
 		<dict>
-			<key>fileRef</key>
-			<string>75E505AFFB6E20339440A594EA5970DF</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D033494E1AA202E6F3A9E071C187C20A</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
-			</dict>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>0A08FC71C4E3B8E0F8734BCDA7CCA7CB</key>
 		<dict>
@@ -691,6 +691,19 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
+		</dict>
+		<key>0B3DAC079DECBEAFBA07D0F78082F316</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Nudgespot.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0B519C5730110C8C1C9A3F78A1D0963B</key>
 		<dict>
@@ -806,19 +819,6 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>0C64462A3D352D446D4F8EE50BCE42A3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Example-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>0CD43A3471D2C3DB3167869DDE291643</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -861,24 +861,20 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>0DE1C5BF8503E16A923376B920B96D82</key>
+		<key>0D61FC50383ACAAB1390EEDA315803FC</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DB18F0BF419B254FA57FD4F8C188CAC8</string>
-				<string>D63659B5EB7E503C7E0F6E03E0CC1697</string>
-				<string>BF04A4C6F1DDA5AE3E2958170079CE4D</string>
-				<string>E6792734808A212BF2491753F855041B</string>
-				<string>D33DC85A4B9F3727AE63F7FECB054FDA</string>
-				<string>28CA23CE34DCD02A0045611A9F0FF78E</string>
-				<string>A20C04945D6EB07A626EEF8DD84EAF6F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
 			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libReachability.a</string>
+			<key>path</key>
+			<string>libReachability.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>0E379356BC4A11F545860C016C625E19</key>
 		<dict>
@@ -901,19 +897,33 @@
 			<key>productName</key>
 			<string>AWSCore</string>
 			<key>productReference</key>
-			<string>1B45F9E98AA4980DAE9949C62709E150</string>
+			<string>9E5E4BDAC2342B643C2BEC5B0590FCDE</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
-		<key>0EC7279CEEF63E5B639356F307CFC7CE</key>
+		<key>0F195F1C4F6C9C0B3E112D4B89E4D3C4</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>73EF12CC383CC48FD0EFC7605F2E2977</string>
+				<string>718FF90864FEE968BB4E97A5D640884F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>0F67641800255B28500310459099B727</key>
 		<dict>
 			<key>buildConfigurationList</key>
-			<string>C76A1DCB014B88DA051C0AF0FD6FAB1A</string>
+			<string>14BB37D5DC4D7082D4015FD01062E401</string>
 			<key>buildPhases</key>
 			<array>
-				<string>95ABE0F24CC31E0D3A671DA05CC4CEC6</string>
-				<string>5F0058A3DF91C10EF9D8D6864E24C2A7</string>
-				<string>D8A877C268A201026F000AC4DD78D9B7</string>
+				<string>DB08E7E35F1A1D4D7BA968CB0B275C2E</string>
+				<string>3D84AED949FEFADB882FB5C9F7D5FF02</string>
+				<string>20FD02FEECDFE9F88916F197915E930D</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -922,15 +932,15 @@
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>Nudgespot-Nudgespot</string>
+			<string>NudgespotiOSSDK-NudgespotiOSSDK</string>
 			<key>productName</key>
-			<string>Nudgespot-Nudgespot</string>
+			<string>NudgespotiOSSDK-NudgespotiOSSDK</string>
 			<key>productReference</key>
-			<string>7922152212DEABE478BBC963A3C30B39</string>
+			<string>B3E8EC3228114C42D20EB72C48DFA594</string>
 			<key>productType</key>
 			<string>com.apple.product-type.bundle</string>
 		</dict>
-		<key>0FD8713D3EEECFE133B91A6E9526C18E</key>
+		<key>0FEEA31F39C907919077B5E3617AE42F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -939,7 +949,7 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>NudgespotActivity.h</string>
+			<string>BasicUtils.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -988,6 +998,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>117C44056A456B248B03654374750F57</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D0430DD85AE87FF119EF23D5FE59765B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Development Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>11CB27A0EBA404C5B08A857FAF2EDAFF</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1002,6 +1025,19 @@
 			<string>AWSCore/FMDB/AWSFMDatabasePool.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>126952FB5617DBD718FFBC60671D0CA9</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B245E430CFFA89FA275EBD91D3330E87</string>
+			<key>remoteInfo</key>
+			<string>AWSCognito</string>
 		</dict>
 		<key>127AB462578823628A088C52D59050A3</key>
 		<dict>
@@ -1064,6 +1100,19 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>1315A34D80713BA65E1C2FD81DE8602B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>33F2760D2683AB4754B1DBFB11B28AD2</string>
+			<key>remoteInfo</key>
+			<string>NudgespotiOSSDK</string>
+		</dict>
 		<key>131630147506B6DFA90DE51876C86455</key>
 		<dict>
 			<key>fileRef</key>
@@ -1092,7 +1141,7 @@
 		<key>1364C48E422E963F24ECBAAF21723FC1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E8CAD1D29AF0057D790F28074570F139</string>
+			<string>446DB1812585B73C1FA101FA2E32335C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1152,19 +1201,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>14232A6BCC65076EEFD3C2F2AF0D544E</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>B245E430CFFA89FA275EBD91D3330E87</string>
-			<key>remoteInfo</key>
-			<string>AWSCognito</string>
-		</dict>
 		<key>146C997ED615D2931D73138FF143E756</key>
 		<dict>
 			<key>children</key>
@@ -1204,6 +1240,20 @@
 				</array>
 			</dict>
 		</dict>
+		<key>14BB37D5DC4D7082D4015FD01062E401</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>337401C7469A0D59C9E907995EAB8AF2</string>
+				<string>F63D659F6019EEBD73BAF66AC18A5852</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
 		<key>14DE6951D0D8503DF3BD35392807BBB2</key>
 		<dict>
 			<key>children</key>
@@ -1242,16 +1292,18 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>15862956F507CEC78B27BD84DF010A4A</key>
+		<key>15A564F03D7F79B33051E156FA2C6587</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1F2F94C851C048838032B97F34C92EAE</string>
+			<string>A25BD0E0452A215133EC896C96D2E98B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
 			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
 			</dict>
 		</dict>
 		<key>16105500403C929EF1377BE3C2781293</key>
@@ -1298,6 +1350,17 @@
 			<string>Cognito/AWSCognitoDataset.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>16F7697BAFB95052228207F73DCED036</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AWSSNS</string>
+			<key>target</key>
+			<string>A5D74149151C19435FBED7862908B355</string>
+			<key>targetProxy</key>
+			<string>79CCCC691D57143DAA71BD97C216CE4C</string>
 		</dict>
 		<key>17D4A53B9603E25D167E2F397BA8D3D1</key>
 		<dict>
@@ -1363,19 +1426,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>19C9B01F47838983C7761F25C93A70F1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Example.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>19E6319F6ECED7539AABBD9A211F7AEC</key>
 		<dict>
 			<key>fileRef</key>
@@ -1389,6 +1439,13 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>1A0FB9AA2C2FBD121F221A4E3383A9E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C05A553523E48BA731E9BAFB60D6D148</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>1A525FB400D3E4DCA8B173E811B615FB</key>
 		<dict>
@@ -1405,27 +1462,55 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1B45F9E98AA4980DAE9949C62709E150</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libAWSCore.a</string>
-			<key>path</key>
-			<string>libAWSCore.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>1BDF0B506FC358B3CFCE41439B4EA689</key>
+		<key>1BADC94A0352B6A20ED99690C6783971</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C23C219B4069F67D98B344D606D7CCDE</string>
+			<string>0B3DAC079DECBEAFBA07D0F78082F316</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>1C3DCF2FF3125D46B17F7D6156A81F2C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>BasicUtils.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C66D8482E42E4EE915C1194F32E66D0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B0D7B9FDD38075B5148E60F0A011E4A4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>1C93B975AA9A084EE476AE1211EA4642</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Tests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>1CB0934D468EF487A89EFC7AFFBA8CBA</key>
 		<dict>
@@ -1540,10 +1625,10 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>1E47B43E6FBF8FBA3D54DC42C13839CD</key>
+		<key>1E2D9173EB6C80B444FFC302FF1A9EFE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C9C994B1CC05CF6505599EC33856E35F</string>
+			<string>B1437D42EAA0AE788B8CFD254C2A9F7A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1556,7 +1641,7 @@
 			<key>proxyType</key>
 			<string>1</string>
 			<key>remoteGlobalIDString</key>
-			<string>84339DBD94F00FE0B37EFF1B37877175</string>
+			<string>C7E22561D8A0A01BC1107D2B920FAA7C</string>
 			<key>remoteInfo</key>
 			<string>Reachability</string>
 		</dict>
@@ -1586,19 +1671,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
-		</dict>
-		<key>1E93E82A447DFE69A1F8F75041C18B48</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Example-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>1EAB7CEAB18DEB14FBE620814E64FBC4</key>
 		<dict>
@@ -1657,26 +1729,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1F0AD6E6E6C40AB77EEF026186704DCD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A5315DFDF7C09479C22035E7A7685CE9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1F2F94C851C048838032B97F34C92EAE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>NudgespotNetworkManager.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>1F44F182C55C5320BFF4F74CB5E4092A</key>
 		<dict>
 			<key>fileRef</key>
@@ -1711,6 +1763,17 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>20FD02FEECDFE9F88916F197915E930D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>2107715C78F29994FE2E56051BCA94EC</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1740,19 +1803,6 @@
 			<string>CognitoSync/AWSCognitoSyncModel.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2145ACB31DC09CA1E034C0018428B059</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>84339DBD94F00FE0B37EFF1B37877175</string>
-			<key>remoteInfo</key>
-			<string>Reachability</string>
 		</dict>
 		<key>2245BA06079AE64B57882CED73E57E01</key>
 		<dict>
@@ -1837,38 +1887,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>236C06C5CDC6382F863C8D867D5F8E74</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>03ACB48D353AC7E7CBCCF5F01A2BC8B6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
 		</dict>
 		<key>241BB1EA1FF4402EAD2D163AF8A1D543</key>
 		<dict>
@@ -1957,6 +1975,33 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>26E40D7E9CB7D1B6CFBF22C38FF488E7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Example-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2780DD66BFEBF9EA4EB03A96B94491C4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>27B57A020F91D7EFACCD4528BEDB940E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>27889B85742A67766F9FC92579AAC0A4</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1967,6 +2012,19 @@
 			<string>sourcecode.c.objc</string>
 			<key>path</key>
 			<string>AWSSNS-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>27B57A020F91D7EFACCD4528BEDB940E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NudgespotNetworkManager.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1985,12 +2043,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>28CA23CE34DCD02A0045611A9F0FF78E</key>
+		<key>2884D14671DBFB4CC3CA2BCC01DC5616</key>
 		<dict>
-			<key>fileRef</key>
-			<string>29D642FB1CE1DBDA1E23ED889D789EEF</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8E0D84295AC2B26A88AF7EB242F7CE14</string>
+				<string>E3E6600B5BAF9FFE27D60FB1E826AF0E</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>290931DC1EE8D0B72C83555DA72253DD</key>
 		<dict>
@@ -2073,30 +2138,17 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2B3302950F9F223F29E11A0B9EDD86A6</key>
+		<key>2B6A551CD76FD9BDBDBB2E1FC0B18F91</key>
 		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E0B7A60E43B997D40148E3B860A729FB</string>
-				<string>A6FEE56CF8599021896EF6A37DBAB5F0</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
+			<key>fileRef</key>
+			<string>75E505AFFB6E20339440A594EA5970DF</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2C616BFBFF988044AD96584A974F3BD5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Reachability</string>
-			<key>target</key>
-			<string>84339DBD94F00FE0B37EFF1B37877175</string>
-			<key>targetProxy</key>
-			<string>57F06F623DC76EA7024E7BC598523147</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
 		</dict>
 		<key>2CDA1380006B420F20274ACC6B56DCA5</key>
 		<dict>
@@ -2170,64 +2222,18 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2E038A31E44F93BB1517B2E3FEBF0C76</key>
+		<key>2DF2880E55F3618DF98C0B902B542478</key>
 		<dict>
-			<key>fileRef</key>
-			<string>56F62DC15B9A1D7B234A572928850ED0</string>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
-			</dict>
-		</dict>
-		<key>2E83F01AD17A32ABFC13D8AD0B41629B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A5FED7071BECA379D19C6B2DE5BE4585</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Nudgespot/Nudgespot-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2E9F89FD161BCFC51A312FF581A8CF3B</key>
-		<dict>
-			<key>includeInIndex</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
 			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Tests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<key>remoteGlobalIDString</key>
+			<string>0F67641800255B28500310459099B727</string>
+			<key>remoteInfo</key>
+			<string>NudgespotiOSSDK-NudgespotiOSSDK</string>
 		</dict>
 		<key>2EAC5917109F6ECC672F34866E4A615D</key>
 		<dict>
@@ -2273,19 +2279,12 @@
 				</array>
 			</dict>
 		</dict>
-		<key>3073FA97F141FA88F747D37EB51CD690</key>
+		<key>30119644ABACF2A82A56C8180FA2B897</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0FD8713D3EEECFE133B91A6E9526C18E</string>
+			<string>3DAD775BB8C33B95AFA9300E80A7ADCD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>30C116FA89A17CBEF2EEBDD5306C523D</key>
 		<dict>
@@ -2312,6 +2311,19 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
+		</dict>
+		<key>30FFBC48CD51767C99D4AC946F421436</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Example-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3190570A0C73DF9DD4BEBF3195AB257C</key>
 		<dict>
@@ -2350,6 +2362,20 @@
 				</array>
 			</dict>
 		</dict>
+		<key>31F92ADFC69E68CC9F631E5F31CD9014</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9F4EBAF28912C59F05992E0D6ECA3EC7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>326A543AD4E39A2DAECA1CD385E3AEA2</key>
 		<dict>
 			<key>fileRef</key>
@@ -2363,6 +2389,22 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>326DEF6C54B78179FE45C115F15BD5CA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>27B57A020F91D7EFACCD4528BEDB940E</string>
+				<string>AA6B29C2C3D49B478F1F46ACC49D0AFF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>RestClient</string>
+			<key>path</key>
+			<string>RestClient</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>32A55F7B09FA489F320DAB06D5390733</key>
 		<dict>
@@ -2400,6 +2442,28 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>337401C7469A0D59C9E907995EAB8AF2</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>03ACD1ABF499CAA398648E6DBE373897</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>NudgespotiOSSDK</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>bundle</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
 		<key>33788C5740B81603CF11A7DB05206207</key>
 		<dict>
 			<key>fileRef</key>
@@ -2414,6 +2478,19 @@
 				</array>
 			</dict>
 		</dict>
+		<key>339CF00A23A110421B86183470B91196</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>33F2760D2683AB4754B1DBFB11B28AD2</string>
+			<key>remoteInfo</key>
+			<string>NudgespotiOSSDK</string>
+		</dict>
 		<key>33B88B40928167ED546CA596727FF511</key>
 		<dict>
 			<key>fileRef</key>
@@ -2427,6 +2504,38 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>33F2760D2683AB4754B1DBFB11B28AD2</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D7FE679C24140A4E7B25F82175DBF554</string>
+			<key>buildPhases</key>
+			<array>
+				<string>583DE7C9612E495349AB1EDA79338017</string>
+				<string>35F7D311B69B378BB2549D958F33DD17</string>
+				<string>B63623BFC17152544632F884349A0A43</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>45FECD3EC04BDEE5DAD7883D0B44F1A2</string>
+				<string>6E1CD77D120F3201D304CFA94A6A6F5F</string>
+				<string>DCD580181953D7758693C58A7CAB4B44</string>
+				<string>53D653BD27D3BF4C39FC9EF9245AC769</string>
+				<string>8DCBD71A4F8B5C35EB2AE74AB41F9601</string>
+				<string>A4FF38BE7002A8868B619EF9B276DF8E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>NudgespotiOSSDK</string>
+			<key>productName</key>
+			<string>NudgespotiOSSDK</string>
+			<key>productReference</key>
+			<string>01D706DF5BC0F000DAC936E9367C9D5F</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>3441029D609263221182B7042071AA24</key>
 		<dict>
@@ -2443,16 +2552,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>34F9961FEE588BA055261F292329D0EB</key>
+		<key>34541F4F96A54E7921771C160B2D4C11</key>
 		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>582992F0EC651ED1CA58DB4FC267B1DE</string>
+				<string>2B6A551CD76FD9BDBDBB2E1FC0B18F91</string>
+			</array>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Reachability</string>
-			<key>target</key>
-			<string>84339DBD94F00FE0B37EFF1B37877175</string>
-			<key>targetProxy</key>
-			<string>2145ACB31DC09CA1E034C0018428B059</string>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>3511AE7ADBB71D05565854F0E70B7D08</key>
 		<dict>
@@ -2480,33 +2592,24 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>3550A123063F1B1D3FA4F15844613E16</key>
+		<key>35F7D311B69B378BB2549D958F33DD17</key>
 		<dict>
-			<key>fileRef</key>
-			<string>140BB35AA69073B5A712461BA576374A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>35827C14E33E9DD32C9F0CEEFEC9D4FD</key>
-		<dict>
-			<key>buildConfigurations</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>A57A0FE97D413A016FB3B82D241CDD83</string>
-				<string>2E83F01AD17A32ABFC13D8AD0B41629B</string>
+				<string>06DC28CDE1F8DC204CFFA15F211378A3</string>
+				<string>1A0FB9AA2C2FBD121F221A4E3383A9E1</string>
+				<string>1E2D9173EB6C80B444FFC302FF1A9EFE</string>
+				<string>840ED40314BE6FA40F6A30C01DA1EBF2</string>
+				<string>47BA7B2B2AEC638EDEC3DBA77301CA27</string>
+				<string>D7BA0694C08C25F0CC17E2965AE0923F</string>
+				<string>DBEF0839817AEBFD50F5A9950C7E64A1</string>
 			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>36454BF84A744CFF6649133E75E35BBB</key>
 		<dict>
@@ -2520,19 +2623,6 @@
 			<string>AWSCredentialsProvider.h</string>
 			<key>path</key>
 			<string>AWSCore/Authentication/AWSCredentialsProvider.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>367F3D16780723F1378291EBE2255E57</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BasicUtils.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2619,6 +2709,20 @@
 			<string>CloudMessaging</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>37C4A12FACA5DF397C69EAA765B66F13</key>
+		<dict>
+			<key>fileRef</key>
+			<string>140BB35AA69073B5A712461BA576374A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>38642139AD99BAF6A7621DE4037F921F</key>
 		<dict>
@@ -2711,34 +2815,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>396170EC755A28B715D7A50102215F2C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>70F4271D5CC63401BA167E0D9A42EBB8</string>
-				<string>F542B19CE90CEE21C10941C8EBA61C0A</string>
-				<string>B60F10B6CAD8DF4207660D37E64DDB30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>39C0C0D016A38298AED66FB0B969C665</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>0EC7279CEEF63E5B639356F307CFC7CE</string>
-			<key>remoteInfo</key>
-			<string>Nudgespot-Nudgespot</string>
-		</dict>
 		<key>3A4D01E66F8988C7AC99BAC87C5DEB62</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2824,19 +2900,6 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>3BDF479B1354A7BD5AE33F071C130EBA</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>84339DBD94F00FE0B37EFF1B37877175</string>
-			<key>remoteInfo</key>
-			<string>Reachability</string>
-		</dict>
 		<key>3C74DD4E19645F3A6EC5F9BD12CCE507</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2859,7 +2922,7 @@
 			<key>name</key>
 			<string>Reachability</string>
 			<key>target</key>
-			<string>84339DBD94F00FE0B37EFF1B37877175</string>
+			<string>C7E22561D8A0A01BC1107D2B920FAA7C</string>
 			<key>targetProxy</key>
 			<string>1E587164504D29D97DFD0CD24CA6E3A9</string>
 		</dict>
@@ -2878,19 +2941,27 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3D65A62AB123BAF46ACCD00C2F046803</key>
+		<key>3D84AED949FEFADB882FB5C9F7D5FF02</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>BE5F7784BD95FB0D9E758D0DC30AE0FC</string>
-				<string>A0455933A80AE7B4C1C6ECCFA6E3DFD4</string>
-			</array>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Nudgespot</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3DAD775BB8C33B95AFA9300E80A7ADCD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>../..</string>
+			<string>NudgespotiOSSDK-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2906,6 +2977,32 @@
 			<string>AWSSTSService.h</string>
 			<key>path</key>
 			<string>AWSCore/STS/AWSSTSService.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E22FBD6876BD19539E89467007DF85A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Tests-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E7DB2927DAA8AD131E044263902CCD3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2962,19 +3059,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3F7E3D0A5E22D00FE521B74C3D95D94C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SubscriberContact.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>3FC29F000E59CA85313D1D33DB4BAF16</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3004,19 +3088,6 @@
 			<string>Support Files</string>
 			<key>path</key>
 			<string>../Target Support Files/Reachability</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>416E5CEFA8C8F6DE1ECFF2EF402983B9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3059,19 +3130,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>41B17435AB1B07E3D13CAEB693DE3971</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CA96C57E94B38DE8AD2FE2208E95B9D8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>422548DA45670CA1460DF48C217CA759</key>
 		<dict>
 			<key>fileRef</key>
@@ -3096,6 +3154,32 @@
 			<string>AFURLResponseSerialization.m</string>
 			<key>path</key>
 			<string>AFNetworking/AFURLResponseSerialization.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4360E8CE2A60098095F02EE40B6BD9F1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>446DB1812585B73C1FA101FA2E32335C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3144,20 +3228,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>44F39EFAA1A21D61C3E1F5157F73E79C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>881467227DC6BFD5FA95EAE8D4C1DB7C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>4538833B4062C70431367FA4C1D32242</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3180,6 +3250,19 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>459CD130D64F9E4F8986AB9C0749596B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>45A76F56438590D00828DF63F1E9EE8C</key>
 		<dict>
 			<key>fileRef</key>
@@ -3192,18 +3275,16 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>4661808B43D81429DF5B8B429CBB5903</key>
+		<key>45FECD3EC04BDEE5DAD7883D0B44F1A2</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BasicUtils.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AFNetworking</string>
+			<key>target</key>
+			<string>928353533005A4198EBDA5B700D37B64</string>
+			<key>targetProxy</key>
+			<string>C8B7DDE6DA06CF76E8EC19CF518E3222</string>
 		</dict>
 		<key>46623912D704A0E9B29203356E4880AF</key>
 		<dict>
@@ -3267,6 +3348,19 @@
 				</array>
 			</dict>
 		</dict>
+		<key>473D466ADE2A6EADFDE17F8A864EC987</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Example-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>4754C9E464DDD406A3A1E6FE96534A33</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3279,19 +3373,6 @@
 			<string>AWSCognitoIdentityService.m</string>
 			<key>path</key>
 			<string>AWSCore/CognitoIdentity/AWSCognitoIdentityService.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>47704554866B6F6A8DAC77051EACDB71</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>NudgespotActivity.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3321,17 +3402,12 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>481706FDB87D28381DBF6037192EF7B3</key>
+		<key>47BA7B2B2AEC638EDEC3DBA77301CA27</key>
 		<dict>
 			<key>fileRef</key>
-			<string>47704554866B6F6A8DAC77051EACDB71</string>
+			<string>38642139AD99BAF6A7621DE4037F921F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
-			</dict>
 		</dict>
 		<key>487534B3A99CD81558F10D627616AC43</key>
 		<dict>
@@ -3349,19 +3425,6 @@
 			<string>../Target Support Files/AWSCore</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4896E02B4F53C3F211A6EE1AFB01FE0C</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>6F0BCC7FBBA0AEC658A628E0093885EE</string>
-			<key>remoteInfo</key>
-			<string>Nudgespot</string>
 		</dict>
 		<key>49170F93C1D3DA8D438F6A68EAB8BBF9</key>
 		<dict>
@@ -3408,6 +3471,17 @@
 			<key>remoteInfo</key>
 			<string>AFNetworking</string>
 		</dict>
+		<key>49AFF6B8D4E99EC0B2F68B7780ED4678</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>NudgespotiOSSDK</string>
+			<key>target</key>
+			<string>33F2760D2683AB4754B1DBFB11B28AD2</string>
+			<key>targetProxy</key>
+			<string>339CF00A23A110421B86183470B91196</string>
+		</dict>
 		<key>49B8C9B895156BE8793F8E87257408B1</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3423,7 +3497,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4A38C0E3E8E18582A27B5F7143B14F14</key>
+		<key>4A6F57ADC95215E712B22CBD90142EE7</key>
 		<dict>
 			<key>containerPortal</key>
 			<string>D41D8CD98F00B204E9800998ECF8427E</string>
@@ -3432,20 +3506,22 @@
 			<key>proxyType</key>
 			<string>1</string>
 			<key>remoteGlobalIDString</key>
-			<string>0E379356BC4A11F545860C016C625E19</string>
+			<string>C7E22561D8A0A01BC1107D2B920FAA7C</string>
 			<key>remoteInfo</key>
-			<string>AWSCore</string>
+			<string>Reachability</string>
 		</dict>
-		<key>4C3D1C3ED2E0ACA7FC9EDCF37D9CD0F4</key>
+		<key>4C6F8FEEC08B9DFFF791D04DC889FCD1</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>AWSCognito</string>
-			<key>target</key>
-			<string>B245E430CFFA89FA275EBD91D3330E87</string>
-			<key>targetProxy</key>
-			<string>D6731CC7CC21A9222F026CE532E097B8</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NudgespotActivity.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>4CEBDDB3358D981079224E519AC63ECB</key>
 		<dict>
@@ -3548,6 +3624,17 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>4E77414F205AE3031C1A91FC0123921F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AWSCognito</string>
+			<key>target</key>
+			<string>B245E430CFFA89FA275EBD91D3330E87</string>
+			<key>targetProxy</key>
+			<string>C679AAF64CA4D9FE462E274CF93C3F2D</string>
+		</dict>
 		<key>4EFD811CBE5C9A26EC56D3FD16D603E8</key>
 		<dict>
 			<key>fileRef</key>
@@ -3577,18 +3664,32 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>505ABA3AFC9D3CE947F50AA1256AA436</key>
+		<key>4FC1D2EB2D601346205B42F4F6FA0E44</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>fileRef</key>
+			<string>1C3DCF2FF3125D46B17F7D6156A81F2C</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>6F0BCC7FBBA0AEC658A628E0093885EE</string>
-			<key>remoteInfo</key>
-			<string>Nudgespot</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
+		<key>506D6869879136BAFB25A6C32BC5535C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libAWSCognito.a</string>
+			<key>path</key>
+			<string>libAWSCognito.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>508C962B3E08E8DA04956BF349A3CDFD</key>
 		<dict>
@@ -3677,6 +3778,21 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>5199D88DAECEA34B5D1335D3A356569A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libAWSSNS.a</string>
+			<key>path</key>
+			<string>libAWSSNS.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>520D9451B7FC1B1BA5FCC0C4C3F031F7</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3706,33 +3822,27 @@
 				</array>
 			</dict>
 		</dict>
-		<key>52D2DD3266FCCD3535C6EC4964A1DCD7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>367F3D16780723F1378291EBE2255E57</string>
-				<string>4661808B43D81429DF5B8B429CBB5903</string>
-				<string>A203A4B4417251275EA59A9332F466DC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Utils</string>
-			<key>path</key>
-			<string>Utils</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>544BDEA42E4814DD95196CBC2D57314E</key>
+		<key>53D653BD27D3BF4C39FC9EF9245AC769</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXTargetDependency</string>
 			<key>name</key>
-			<string>Nudgespot</string>
+			<string>AWSSNS</string>
 			<key>target</key>
-			<string>6F0BCC7FBBA0AEC658A628E0093885EE</string>
+			<string>A5D74149151C19435FBED7862908B355</string>
 			<key>targetProxy</key>
-			<string>505ABA3AFC9D3CE947F50AA1256AA436</string>
+			<string>C30FB5AA4599BD83E136595C52DDA064</string>
+		</dict>
+		<key>5492B0198D690DCFC65193010CE8D34E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Reachability</string>
+			<key>target</key>
+			<string>C7E22561D8A0A01BC1107D2B920FAA7C</string>
+			<key>targetProxy</key>
+			<string>4A6F57ADC95215E712B22CBD90142EE7</string>
 		</dict>
 		<key>54DBADB65831AE4FADBB1EEAB36D4E03</key>
 		<dict>
@@ -3792,19 +3902,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>56F62DC15B9A1D7B234A572928850ED0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Nudgespot.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>575D4D7A58E962A37568006D477C4317</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3847,18 +3944,12 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>57F06F623DC76EA7024E7BC598523147</key>
+		<key>582992F0EC651ED1CA58DB4FC267B1DE</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>fileRef</key>
+			<string>6B8AF45179D0DA3EE27E38A946065546</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>84339DBD94F00FE0B37EFF1B37877175</string>
-			<key>remoteInfo</key>
-			<string>Reachability</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>582C4AC3EBAFE73E170C33DF17DF2FFA</key>
 		<dict>
@@ -3943,6 +4034,27 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>583DE7C9612E495349AB1EDA79338017</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4FC1D2EB2D601346205B42F4F6FA0E44</string>
+				<string>1BADC94A0352B6A20ED99690C6783971</string>
+				<string>881B4E3E331AD73ECB1AC407ED4C965A</string>
+				<string>30119644ABACF2A82A56C8180FA2B897</string>
+				<string>FB506C5D787E4015992FFCBE4F84595F</string>
+				<string>1C66D8482E42E4EE915C1194F32E66D0</string>
+				<string>BEEF111AA6A7491281570254F26BABF9</string>
+				<string>A035C2F86114BEFB1CF765063393C7D9</string>
+				<string>BC83CFD4C80B6A92DCBC8C932BC4D469</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>587F3C64C8ED75BDFF0EAEB44F6BC54C</key>
 		<dict>
 			<key>fileRef</key>
@@ -3970,6 +4082,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>590AC57EC1F968B6E69013BDBDCDB4DD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NudgespotiOSSDK-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>5919C1CAB5E234363B1E297EA992D8A5</key>
 		<dict>
 			<key>fileRef</key>
@@ -3984,18 +4109,19 @@
 				</array>
 			</dict>
 		</dict>
-		<key>591E2A647F0A6CD184F2DC814A260435</key>
+		<key>59206EB3CD441B4A408EA8E04F628241</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C7EC1585399E20D2EE117EBD07417050</string>
+				<string>FA60DEEAFCB6D995AD67333A069E92A1</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>59757FF0CA01CD87CCDFBE4A15BB31C5</key>
 		<dict>
@@ -4011,6 +4137,41 @@
 			<string>Libraries/libGTM_NSStringXML_external.a</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>59759E96DAA870D93BA060A99D27A43F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AWSCognito</string>
+			<key>target</key>
+			<string>B245E430CFFA89FA275EBD91D3330E87</string>
+			<key>targetProxy</key>
+			<string>126952FB5617DBD718FFBC60671D0CA9</string>
+		</dict>
+		<key>59A7BC0A3C3FE7071F19B063FA8AA4A0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NudgespotVisitor.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>59C6CD0E7AF963F0CA464F3E582CD6EE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Reachability</string>
+			<key>target</key>
+			<string>C7E22561D8A0A01BC1107D2B920FAA7C</string>
+			<key>targetProxy</key>
+			<string>A2DB01AD509EF73932E33C6258D52ED4</string>
 		</dict>
 		<key>59D48807B611CA092F9D55016879964B</key>
 		<dict>
@@ -4107,6 +4268,19 @@
 			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
+		</dict>
+		<key>5CE747FC03624ECDD25E49B35B6AA98C</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B245E430CFFA89FA275EBD91D3330E87</string>
+			<key>remoteInfo</key>
+			<string>AWSCognito</string>
 		</dict>
 		<key>5D52DB6DF2E6C24CECB0015A9177A2E1</key>
 		<dict>
@@ -4234,16 +4408,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>5F0058A3DF91C10EF9D8D6864E24C2A7</key>
+		<key>606667E99E6DA07BB1D5ED46F567D43A</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AFNetworking</string>
+			<key>target</key>
+			<string>928353533005A4198EBDA5B700D37B64</string>
+			<key>targetProxy</key>
+			<string>B258C08A691856055EEF88589D4D83E2</string>
 		</dict>
 		<key>6083F51989A0009C740D92767F4DC1FC</key>
 		<dict>
@@ -4251,19 +4425,6 @@
 			<string>C9C994B1CC05CF6505599EC33856E35F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>611DE40F68F9A019148B9556C952D9B6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Tests-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>616DD6587254ACA49B6311D5DB08941E</key>
 		<dict>
@@ -4381,19 +4542,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>632A20B26DCD2F890A6E990B2EE3B752</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>637A5DF321BEF6B06B387C5BA992B0E5</key>
 		<dict>
 			<key>fileRef</key>
@@ -4423,20 +4571,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>640242D9E9657FAE62BB32DCC75E713C</key>
+		<key>641550982A1782A7BAD5EF5BB2E495F3</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
+			<key>fileRef</key>
+			<string>0FEEA31F39C907919077B5E3617AE42F</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>643D69868AC44B8F8891E9A7B54BAC1F</key>
 		<dict>
@@ -4552,6 +4699,32 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>6688E16D80D9D5CF35AA2D54969C32F9</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>A5D74149151C19435FBED7862908B355</string>
+			<key>remoteInfo</key>
+			<string>AWSSNS</string>
+		</dict>
+		<key>66918B3E333E022F1319D879A3650B69</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NudgespotActivity.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>66A4A1F555B3DF63617A1BFC29E7E7DE</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -4567,6 +4740,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>66BEFD6542720564A322AFF61AF808AA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>37C4A12FACA5DF397C69EAA765B66F13</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>66D46BE06BFC9AB9AA945AF615E40630</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -4581,6 +4767,40 @@
 			<string>AWSCore/FMDB/AWSFMResultSet.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67F972F30B846B41330D30C12B50C154</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>03ACD1ABF499CAA398648E6DBE373897</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/NudgespotiOSSDK/NudgespotiOSSDK-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
 		</dict>
 		<key>6835B843AE26D60484A96866AD32C442</key>
 		<dict>
@@ -4607,6 +4827,27 @@
 			<string>AWSSignature.m</string>
 			<key>path</key>
 			<string>AWSCore/Authentication/AWSSignature.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>685CF42CB8AACD5977836D13ABEEFBF0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>30FFBC48CD51767C99D4AC946F421436</string>
+				<string>E2B1E70ED1F8DD02964FFC1FF6E9128D</string>
+				<string>26E40D7E9CB7D1B6CFBF22C38FF488E7</string>
+				<string>473D466ADE2A6EADFDE17F8A864EC987</string>
+				<string>B82E5FA895C3AE2650E5AFF7C98E1C9D</string>
+				<string>75FFC8F1B1AFC67E9BF1C3999A485BA4</string>
+				<string>7F41A48FDC13D5F94AF6493FCCAD4402</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-NudgespotiOSSDK_Example</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-NudgespotiOSSDK_Example</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -4637,6 +4878,27 @@
 			<string>GoogleCloudMessaging.h</string>
 			<key>path</key>
 			<string>Headers/Public/GoogleCloudMessaging.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>692D573C1F9F97C81D5844D9208876DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EDB599A2DEC034386FF5C96EA36EA3C6</string>
+				<string>C17AEA4CA8942C8FD82508052E94D8AF</string>
+				<string>3E22FBD6876BD19539E89467007DF85A</string>
+				<string>ED4E1B71B6B233D6E46BA8FF1AF48B29</string>
+				<string>ADFA153AAFDB772D7EDCB601096E9E94</string>
+				<string>FD95724448B1459EDC41094DBC4F9AFB</string>
+				<string>1C93B975AA9A084EE476AE1211EA4642</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-NudgespotiOSSDK_Tests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-NudgespotiOSSDK_Tests</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -4700,21 +4962,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>69E35B196AE53D0A17A564BD155CBE54</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libNudgespot.a</string>
-			<key>path</key>
-			<string>libNudgespot.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
 		<key>6A08CBF4B579372EC43F96FC0F393FBE</key>
 		<dict>
 			<key>children</key>
@@ -4728,6 +4975,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>6A3FA87ED6F5C9D0C53482A2672236C9</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>C7E22561D8A0A01BC1107D2B920FAA7C</string>
+			<key>remoteInfo</key>
+			<string>Reachability</string>
+		</dict>
 		<key>6A763F71A4345C6685FAC7B8C285D758</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -4740,6 +5000,24 @@
 			<string>AWSMTLJSONAdapter.m</string>
 			<key>path</key>
 			<string>AWSCore/Mantle/AWSMTLJSONAdapter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6B0FD4071351C96264BE35CE3474773C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>89B3D16469FC9CFD1C249B220C3C541C</string>
+				<string>81726B312DF86128FDC10C3C6A26B75D</string>
+				<string>326DEF6C54B78179FE45C115F15BD5CA</string>
+				<string>8F0090F0ED1BB17287586CF5E7029A69</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>NudgespotLib</string>
+			<key>path</key>
+			<string>NudgespotLib</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -4812,6 +5090,19 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>6D609310C5EF94486FA61FDEBEAF7ED9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8E960A764A6AE9DBF1F0D3C5BB8059C4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>6D7068061B93A017010D856BD4E55354</key>
 		<dict>
 			<key>fileRef</key>
@@ -4825,6 +5116,17 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>6E1CD77D120F3201D304CFA94A6A6F5F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AWSCognito</string>
+			<key>target</key>
+			<string>B245E430CFFA89FA275EBD91D3330E87</string>
+			<key>targetProxy</key>
+			<string>5CE747FC03624ECDD25E49B35B6AA98C</string>
 		</dict>
 		<key>6E22FE305D609989513DDDC243C999E1</key>
 		<dict>
@@ -4929,38 +5231,6 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>6F0BCC7FBBA0AEC658A628E0093885EE</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>35827C14E33E9DD32C9F0CEEFEC9D4FD</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F39D5A11A4A510452992305B83869847</string>
-				<string>0DE1C5BF8503E16A923376B920B96D82</string>
-				<string>73A939AF9BA882A26281A6AEC61C106E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>BF62443E8B4F38659562F2EF54E1F5D5</string>
-				<string>4C3D1C3ED2E0ACA7FC9EDCF37D9CD0F4</string>
-				<string>EF2B9A2C6135D8C266A761D693BE7520</string>
-				<string>C8DC9066E58B8379AF685D57591F75BE</string>
-				<string>9DFE7FC71E2FC7C2B87A1A46C8F5921F</string>
-				<string>34F9961FEE588BA055261F292329D0EB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Nudgespot</string>
-			<key>productName</key>
-			<string>Nudgespot</string>
-			<key>productReference</key>
-			<string>69E35B196AE53D0A17A564BD155CBE54</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
 		<key>6F3A9FC0166D42CCF3F251EF68E7CCB9</key>
 		<dict>
 			<key>containerPortal</key>
@@ -4973,19 +5243,6 @@
 			<string>0E379356BC4A11F545860C016C625E19</string>
 			<key>remoteInfo</key>
 			<string>AWSCore</string>
-		</dict>
-		<key>6F90D1AE906821F205D9E9A89F854043</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Tests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>702153CC4A1B191668DBF1041BD70776</key>
 		<dict>
@@ -5016,27 +5273,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>70F4271D5CC63401BA167E0D9A42EBB8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>591E2A647F0A6CD184F2DC814A260435</string>
-				<string>FF43665D90B2BE8B4B69B7EFEFEAE5BF</string>
-				<string>E8CAD1D29AF0057D790F28074570F139</string>
-				<string>632A20B26DCD2F890A6E990B2EE3B752</string>
-				<string>066AAFF5896FE2F8ABF75FB0E6D0A3A9</string>
-				<string>416E5CEFA8C8F6DE1ECFF2EF402983B9</string>
-				<string>A1E51E1DEB90EE18E5309F63F6DA4ACB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>path</key>
-			<string>Target Support Files/Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>7113AEF57D21855F49FFF2FBE4B49D2F</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5051,6 +5287,38 @@
 			<string>AWSCore/Mantle/extobjc/AWSmetamacros.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>718FF90864FEE968BB4E97A5D640884F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1C93B975AA9A084EE476AE1211EA4642</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
 		</dict>
 		<key>71C594DC5F2A507FE16790029AF3B33F</key>
 		<dict>
@@ -5117,17 +5385,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>72DA7E6B199E08F2A40C7F4C54B3FD3A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>AWSCore</string>
-			<key>target</key>
-			<string>0E379356BC4A11F545860C016C625E19</string>
-			<key>targetProxy</key>
-			<string>4A38C0E3E8E18582A27B5F7143B14F14</string>
-		</dict>
 		<key>73A7B9CFE11E3FEAA14DCB52CC673CCB</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5143,26 +5400,37 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>73A939AF9BA882A26281A6AEC61C106E</key>
+		<key>73EF12CC383CC48FD0EFC7605F2E2977</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B006E4271E25733A371056523C8077BA</string>
-				<string>D488827E9B41EC42B2BA1E0101021AAA</string>
-				<string>3073FA97F141FA88F747D37EB51CD690</string>
-				<string>FCF82E6036B3884FED3DA16B763C001F</string>
-				<string>95E95559E182CEB3B8BE6C5003D235F7</string>
-				<string>F2F66A831AF61503DAB8C9A9C2AA223C</string>
-				<string>E50ADA797D5DF546FBA9E83EDD578B83</string>
-				<string>44F39EFAA1A21D61C3E1F5157F73E79C</string>
-				<string>9186B0E003DB9F90C6DBA16AE899A027</string>
-			</array>
+			<key>baseConfigurationReference</key>
+			<string>FD95724448B1459EDC41094DBC4F9AFB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
 		</dict>
 		<key>7496517E2726B7620C3D36FC917A02A5</key>
 		<dict>
@@ -5233,6 +5501,19 @@
 			<string>sourcecode.c.objc</string>
 			<key>path</key>
 			<string>Reachability.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75FFC8F1B1AFC67E9BF1C3999A485BA4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Example.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -5352,6 +5633,37 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>7849C1F8A4B35815CCE076B5BE1D1AC5</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>AC39ECE332D41F1F5D63597F2B2A69E3</string>
+			<key>buildPhases</key>
+			<array>
+				<string>09B481C1CFBC138364843E08CDCE4C42</string>
+				<string>BF31AB390A61D59AB8F3D1F906416F04</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>606667E99E6DA07BB1D5ED46F567D43A</string>
+				<string>4E77414F205AE3031C1A91FC0123921F</string>
+				<string>935002777E0C2FDD416A15027A884178</string>
+				<string>16F7697BAFB95052228207F73DCED036</string>
+				<string>49AFF6B8D4E99EC0B2F68B7780ED4678</string>
+				<string>59C6CD0E7AF963F0CA464F3E582CD6EE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-NudgespotiOSSDK_Example</string>
+			<key>productName</key>
+			<string>Pods-NudgespotiOSSDK_Example</string>
+			<key>productReference</key>
+			<string>8C6167B7232C5EB0D0CD29D915820C4E</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
 		<key>785553737B06AFC3DA711DDEB7D56194</key>
 		<dict>
 			<key>children</key>
@@ -5365,7 +5677,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>78B9E152F346E59B273C9AA7B8DA2C5E</key>
+		<key>79CCCC691D57143DAA71BD97C216CE4C</key>
 		<dict>
 			<key>containerPortal</key>
 			<string>D41D8CD98F00B204E9800998ECF8427E</string>
@@ -5377,21 +5689,6 @@
 			<string>A5D74149151C19435FBED7862908B355</string>
 			<key>remoteInfo</key>
 			<string>AWSSNS</string>
-		</dict>
-		<key>7922152212DEABE478BBC963A3C30B39</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Nudgespot.bundle</string>
-			<key>path</key>
-			<string>Nudgespot.bundle</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>7A1B68190C73EC308FB8602038C4A407</key>
 		<dict>
@@ -5421,19 +5718,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>7B216C146FEDBBFEF2A6F1C0410FBA5D</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>0E379356BC4A11F545860C016C625E19</string>
-			<key>remoteInfo</key>
-			<string>AWSCore</string>
 		</dict>
 		<key>7B587D11B8F1C27D203B42139FA7FAB5</key>
 		<dict>
@@ -5479,6 +5763,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>7CD1857BD01F2961B03066E57618CAF8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>80EBBCB6B96BEEE0C1A0695A740DF8E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>7DA7554727C86670ABFFABC9E5DCD8BB</key>
 		<dict>
 			<key>fileRef</key>
@@ -5498,11 +5796,11 @@
 			<key>children</key>
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>A21B874D3A1169BFF88D9192ED6FF0F3</string>
+				<string>117C44056A456B248B03654374750F57</string>
 				<string>785553737B06AFC3DA711DDEB7D56194</string>
 				<string>146C997ED615D2931D73138FF143E756</string>
-				<string>941E02B5BE95FE829D1F0F9C9142066F</string>
-				<string>396170EC755A28B715D7A50102215F2C</string>
+				<string>A52BF901646154E51B6C0EE2330BC1C7</string>
+				<string>BD879D75096783148B4282DD851AFE18</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -5536,6 +5834,19 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>7F41A48FDC13D5F94AF6493FCCAD4402</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Example.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>80DD11EE72F842B0C104EC8755CF6521</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5548,6 +5859,19 @@
 			<string>Core.h</string>
 			<key>path</key>
 			<string>Headers/GGLCore/Public/Core.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>80EBBCB6B96BEEE0C1A0695A740DF8E2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NudgespotSubscriber.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -5577,6 +5901,30 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>81726B312DF86128FDC10C3C6A26B75D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>66918B3E333E022F1319D879A3650B69</string>
+				<string>4C6F8FEEC08B9DFFF791D04DC889FCD1</string>
+				<string>80EBBCB6B96BEEE0C1A0695A740DF8E2</string>
+				<string>B0D7B9FDD38075B5148E60F0A011E4A4</string>
+				<string>9A90665ADA9B53A18233E19D61B3BA8B</string>
+				<string>59A7BC0A3C3FE7071F19B063FA8AA4A0</string>
+				<string>9F4EBAF28912C59F05992E0D6ECA3EC7</string>
+				<string>A70FFBAC37C1B891DB9662C125AC11F4</string>
+				<string>C8ABCBB6B24C36AB22B032A377ED87CB</string>
+				<string>FA87DC52C6F586C814CC5C807321E41E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Main</string>
+			<key>path</key>
+			<string>Main</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>81A201CDA465C8DE0A4CA0B347C0AC42</key>
 		<dict>
@@ -5648,17 +5996,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>83197A3FDD0D870126AD8440FFC56975</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>AWSCognito</string>
-			<key>target</key>
-			<string>B245E430CFFA89FA275EBD91D3330E87</string>
-			<key>targetProxy</key>
-			<string>CAC67DBCE9715F855CC36D42C5AF0758</string>
-		</dict>
 		<key>831BC9F88A1BA1E9F3BF20361005FB8C</key>
 		<dict>
 			<key>fileRef</key>
@@ -5686,24 +6023,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8382F244A2BC9DAA4EBA6C5356A0D469</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Reachability</string>
-			<key>target</key>
-			<string>84339DBD94F00FE0B37EFF1B37877175</string>
-			<key>targetProxy</key>
-			<string>3BDF479B1354A7BD5AE33F071C130EBA</string>
-		</dict>
-		<key>83ADCA9E5D136A3B11F6BE8A09E9FE38</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E16EC1202636AC811C0FAD76C911F6CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>83B89B495B02FB96269513CDF4443A8F</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5719,43 +6038,12 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>84339DBD94F00FE0B37EFF1B37877175</key>
+		<key>840ED40314BE6FA40F6A30C01DA1EBF2</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>2B3302950F9F223F29E11A0B9EDD86A6</string>
-			<key>buildPhases</key>
-			<array>
-				<string>ABFE48150629204C631AFDC27BC40CE3</string>
-				<string>D20EBD42F86C3DAC9BF5269FA0BC9FD7</string>
-				<string>C9ADDE31290CCB1DA286AEC69F8131DB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
+			<key>fileRef</key>
+			<string>C9C994B1CC05CF6505599EC33856E35F</string>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Reachability</string>
-			<key>productName</key>
-			<string>Reachability</string>
-			<key>productReference</key>
-			<string>F72961837DAD0F161C1537E6DE7A6FC2</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>8553B33A1E4CF25919BA0B0DF57F0860</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Nudgespot-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>85764374184EC2477AACD1ECF9A5A390</key>
 		<dict>
@@ -5812,37 +6100,6 @@
 			<string>AWSCore/Serialization/AWSValidation.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>86A10A0BB2E80ED56532B03F37679316</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>0159373B5582F8DF29335441422F2D21</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F30DDF7CA45D93F88DFA5AFB5DDFA302</string>
-				<string>E135879D525F73B07DA801A6DA79AA52</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>F63EF041F22D83D64FE493DF243B58D4</string>
-				<string>83197A3FDD0D870126AD8440FFC56975</string>
-				<string>D3E0212C9F26607488634C4420E6EBDD</string>
-				<string>C61F25B12DBE1772E116E7D95E4EAC0F</string>
-				<string>544BDEA42E4814DD95196CBC2D57314E</string>
-				<string>2C616BFBFF988044AD96584A974F3BD5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Nudgespot_Tests</string>
-			<key>productName</key>
-			<string>Pods-Nudgespot_Tests</string>
-			<key>productReference</key>
-			<string>90241146E8F496B1B9590D504CC58021</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>86D52ED7604E47EC97C8AF7B14CE62C5</key>
 		<dict>
@@ -5901,18 +6158,17 @@
 				</array>
 			</dict>
 		</dict>
-		<key>881467227DC6BFD5FA95EAE8D4C1DB7C</key>
+		<key>881B4E3E331AD73ECB1AC407ED4C965A</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>4C6F8FEEC08B9DFFF791D04DC889FCD1</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SubscriberClient.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
 		</dict>
 		<key>8927BCD1BD19BD292CED687ECD3964AD</key>
 		<dict>
@@ -5926,16 +6182,34 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>8A79A7D201E489B5E3138F3B9AD07DC1</key>
+		<key>89B3D16469FC9CFD1C249B220C3C541C</key>
 		<dict>
+			<key>children</key>
+			<array>
+				<string>9DA7FBE3C1DAEB42F4464BC3D33E3549</string>
+				<string>0B3DAC079DECBEAFBA07D0F78082F316</string>
+			</array>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>AWSCognito</string>
-			<key>target</key>
-			<string>B245E430CFFA89FA275EBD91D3330E87</string>
-			<key>targetProxy</key>
-			<string>14232A6BCC65076EEFD3C2F2AF0D544E</string>
+			<string>Auth</string>
+			<key>path</key>
+			<string>Auth</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8A302B1D632EE3E903CA87569CE476F2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>8B080684A407FBCFC5CA787A55464117</key>
 		<dict>
@@ -5997,6 +6271,21 @@
 				</array>
 			</dict>
 		</dict>
+		<key>8C6167B7232C5EB0D0CD29D915820C4E</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-NudgespotiOSSDK_Example.a</string>
+			<key>path</key>
+			<string>libPods-NudgespotiOSSDK_Example.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>8D78D1133CA22D6ACA2C27E69CD6DBC2</key>
 		<dict>
 			<key>fileRef</key>
@@ -6024,6 +6313,24 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>8DCBD71A4F8B5C35EB2AE74AB41F9601</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>NudgespotiOSSDK-NudgespotiOSSDK</string>
+			<key>target</key>
+			<string>0F67641800255B28500310459099B727</string>
+			<key>targetProxy</key>
+			<string>2DF2880E55F3618DF98C0B902B542478</string>
+		</dict>
+		<key>8E0D84295AC2B26A88AF7EB242F7CE14</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C9C994B1CC05CF6505599EC33856E35F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>8E7D5D13204F0D777AD2746E2AAF80BC</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -6036,6 +6343,13 @@
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>8E960A764A6AE9DBF1F0D3C5BB8059C4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3E22FBD6876BD19539E89467007DF85A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>8EAC70FFEF7A2A116369BE1737B942C6</key>
 		<dict>
@@ -6066,6 +6380,23 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>8F0090F0ED1BB17287586CF5E7029A69</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FEEA31F39C907919077B5E3617AE42F</string>
+				<string>1C3DCF2FF3125D46B17F7D6156A81F2C</string>
+				<string>A25BD0E0452A215133EC896C96D2E98B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Utils</string>
+			<key>path</key>
+			<string>Utils</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>8FD4148A5B7E8858D5B1845B5531D50B</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -6080,21 +6411,6 @@
 			<string>Libraries/libGGLCore.a</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90241146E8F496B1B9590D504CC58021</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods-Nudgespot_Tests.a</string>
-			<key>path</key>
-			<string>libPods-Nudgespot_Tests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>915BA83031B084F42DBFAAE0F79176C3</key>
 		<dict>
@@ -6138,20 +6454,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9186B0E003DB9F90C6DBA16AE899A027</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CB1A1599C9502A7DA460F7D5F91FA486</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>924613F3803606D57D23AC159E6166FF</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -6182,18 +6484,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9276E8762BC2E32A077B710713A99B5F</key>
+		<key>926BE5D9D172F0B9863D7F0A61FFBBAF</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>83ADCA9E5D136A3B11F6BE8A09E9FE38</string>
-			</array>
+			<key>fileRef</key>
+			<string>C8ABCBB6B24C36AB22B032A377ED87CB</string>
 			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
@@ -6216,7 +6519,7 @@
 			<key>productName</key>
 			<string>AFNetworking</string>
 			<key>productReference</key>
-			<string>F471AA6B1C8F5CC666A3BC0E65D444B0</string>
+			<string>CE6A945CB6893B424B52757F454FC0A9</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
@@ -6249,6 +6552,17 @@
 				</array>
 			</dict>
 		</dict>
+		<key>935002777E0C2FDD416A15027A884178</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AWSCore</string>
+			<key>target</key>
+			<string>0E379356BC4A11F545860C016C625E19</string>
+			<key>targetProxy</key>
+			<string>F58479E647CA5D9E2181B37103E15835</string>
+		</dict>
 		<key>936EF60F2137193923528ECDF2B9F5C1</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -6276,28 +6590,6 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>941E02B5BE95FE829D1F0F9C9142066F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F471AA6B1C8F5CC666A3BC0E65D444B0</string>
-				<string>04E6F7253DF88201CB0E9B20C1960446</string>
-				<string>1B45F9E98AA4980DAE9949C62709E150</string>
-				<string>DE1A0D21760E6B63EE9E4941AC56F55A</string>
-				<string>69E35B196AE53D0A17A564BD155CBE54</string>
-				<string>640242D9E9657FAE62BB32DCC75E713C</string>
-				<string>EDAA22B4DEC13E2BE9A318F0ECBB0D7B</string>
-				<string>90241146E8F496B1B9590D504CC58021</string>
-				<string>F72961837DAD0F161C1537E6DE7A6FC2</string>
-				<string>7922152212DEABE478BBC963A3C30B39</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>949423FE60C523B1EE3064B4DC1A08D9</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -6313,6 +6605,38 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>94FDC82FCFC01303764E3DC14B66CE6D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>75FFC8F1B1AFC67E9BF1C3999A485BA4</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
 		<key>956C537D488B300D73C824FE2C299E13</key>
 		<dict>
 			<key>fileRef</key>
@@ -6323,31 +6647,6 @@
 			<dict>
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
-			</dict>
-		</dict>
-		<key>95ABE0F24CC31E0D3A671DA05CC4CEC6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>95E95559E182CEB3B8BE6C5003D235F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E49AE28CE8B5EB3649C5B3D4C0B4F9BB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
 			</dict>
 		</dict>
 		<key>95ED0AF2EAE0AD42850521DFB2651414</key>
@@ -6500,18 +6799,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>994B7B3264E349DD46FCDFB9A421B3E0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C3C06F18B0E4F555155F55B93C0C0376</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
-			</dict>
-		</dict>
 		<key>996EAE7E809A505A7448F636C13CEF06</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -6539,6 +6826,38 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>99EE5E20957E13BCF1C6EFBC26510AC2</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>7F41A48FDC13D5F94AF6493FCCAD4402</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
 		<key>9A0D670D80FE9FE0B4499FC3212F055C</key>
 		<dict>
 			<key>fileRef</key>
@@ -6559,6 +6878,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>9A90665ADA9B53A18233E19D61B3BA8B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NudgespotVisitor.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9AA82F68BC761574A2E0D9B93820673C</key>
 		<dict>
@@ -6662,16 +6994,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9DFE7FC71E2FC7C2B87A1A46C8F5921F</key>
+		<key>9DA7FBE3C1DAEB42F4464BC3D33E3549</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Nudgespot-Nudgespot</string>
-			<key>target</key>
-			<string>0EC7279CEEF63E5B639356F307CFC7CE</string>
-			<key>targetProxy</key>
-			<string>39C0C0D016A38298AED66FB0B969C665</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Nudgespot.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9E469923C06E6EFEDA758F9C9FD8B4BC</key>
 		<dict>
@@ -6684,6 +7018,34 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
+		</dict>
+		<key>9E5E4BDAC2342B643C2BEC5B0590FCDE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libAWSCore.a</string>
+			<key>path</key>
+			<string>libAWSCore.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9F4EBAF28912C59F05992E0D6ECA3EC7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SubscriberClient.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A02D4F2C23840C8BE35720D09CF89D44</key>
 		<dict>
@@ -6699,22 +7061,17 @@
 				</array>
 			</dict>
 		</dict>
-		<key>A0455933A80AE7B4C1C6ECCFA6E3DFD4</key>
+		<key>A035C2F86114BEFB1CF765063393C7D9</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>A5FED7071BECA379D19C6B2DE5BE4585</string>
-				<string>A5315DFDF7C09479C22035E7A7685CE9</string>
-				<string>8553B33A1E4CF25919BA0B0DF57F0860</string>
-			</array>
+			<key>fileRef</key>
+			<string>A70FFBAC37C1B891DB9662C125AC11F4</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/Nudgespot</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
 		</dict>
 		<key>A0607D244405FC139C65F69561717353</key>
 		<dict>
@@ -6731,19 +7088,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A084C7C10EBEAB2F6DE21C06551BAF6D</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>928353533005A4198EBDA5B700D37B64</string>
-			<key>remoteInfo</key>
-			<string>AFNetworking</string>
-		</dict>
 		<key>A0C70BC270E6233E7136A1AF4D3117F0</key>
 		<dict>
 			<key>fileRef</key>
@@ -6756,33 +7100,7 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>A1AAAB9463B04568A691C46694EE6555</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>NudgespotVisitor.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A1E51E1DEB90EE18E5309F63F6DA4ACB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A203A4B4417251275EA59A9332F466DC</key>
+		<key>A25BD0E0452A215133EC896C96D2E98B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -6792,26 +7110,6 @@
 			<string>sourcecode.c.h</string>
 			<key>path</key>
 			<string>NudgespotConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A20C04945D6EB07A626EEF8DD84EAF6F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C23C219B4069F67D98B344D606D7CCDE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A21B874D3A1169BFF88D9192ED6FF0F3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3D65A62AB123BAF46ACCD00C2F046803</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -6829,6 +7127,30 @@
 			<string>AWSCore/XMLWriter/AWSXMLWriter.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2A1B6AA500AB375962964966346DD09</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AFNetworking</string>
+			<key>target</key>
+			<string>928353533005A4198EBDA5B700D37B64</string>
+			<key>targetProxy</key>
+			<string>C7F4AA2AE130AFE9115870544CA43797</string>
+		</dict>
+		<key>A2DB01AD509EF73932E33C6258D52ED4</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>C7E22561D8A0A01BC1107D2B920FAA7C</string>
+			<key>remoteInfo</key>
+			<string>Reachability</string>
 		</dict>
 		<key>A2E9234026C82685783784E65948E9BF</key>
 		<dict>
@@ -6888,38 +7210,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A4495DEE91C416638EC25EC56D48E637</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6F90D1AE906821F205D9E9A89F854043</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
 		<key>A4B0673D0A4EA870FC881EC044D864E5</key>
 		<dict>
 			<key>fileRef</key>
@@ -6947,52 +7237,38 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A5315DFDF7C09479C22035E7A7685CE9</key>
+		<key>A4FF38BE7002A8868B619EF9B276DF8E</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Nudgespot-dummy.m</string>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Reachability</string>
+			<key>target</key>
+			<string>C7E22561D8A0A01BC1107D2B920FAA7C</string>
+			<key>targetProxy</key>
+			<string>6A3FA87ED6F5C9D0C53482A2672236C9</string>
+		</dict>
+		<key>A52BF901646154E51B6C0EE2330BC1C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CE6A945CB6893B424B52757F454FC0A9</string>
+				<string>506D6869879136BAFB25A6C32BC5535C</string>
+				<string>9E5E4BDAC2342B643C2BEC5B0590FCDE</string>
+				<string>5199D88DAECEA34B5D1335D3A356569A</string>
+				<string>01D706DF5BC0F000DAC936E9367C9D5F</string>
+				<string>DBA739B9F1726D1A19E55E53D8DA4F75</string>
+				<string>8C6167B7232C5EB0D0CD29D915820C4E</string>
+				<string>B48B99AFF6F309ADB29A0FE212834C47</string>
+				<string>0D61FC50383ACAAB1390EEDA315803FC</string>
+				<string>B3E8EC3228114C42D20EB72C48DFA594</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A57A0FE97D413A016FB3B82D241CDD83</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A5FED7071BECA379D19C6B2DE5BE4585</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Nudgespot/Nudgespot-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
 		</dict>
 		<key>A5CDAB165A1F292736DE479C5BE7D3A7</key>
 		<dict>
@@ -7029,35 +7305,9 @@
 			<key>productName</key>
 			<string>AWSSNS</string>
 			<key>productReference</key>
-			<string>DE1A0D21760E6B63EE9E4941AC56F55A</string>
+			<string>5199D88DAECEA34B5D1335D3A356569A</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>A5FED7071BECA379D19C6B2DE5BE4585</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Nudgespot.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A65E46BB8D727B8F0416A1E045CA0D01</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Nudgespot.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A683A2507ED56B7FC804946CD019E200</key>
 		<dict>
@@ -7074,39 +7324,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A6FEE56CF8599021896EF6A37DBAB5F0</key>
+		<key>A70FFBAC37C1B891DB9662C125AC11F4</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>80F4DD47DADB8E13E7BC0656FC5590A3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Reachability/Reachability-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SubscriberClient.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A7D971083C7D0446AADC6F8BFFD40F13</key>
 		<dict>
@@ -7122,19 +7351,6 @@
 			<string>GoogleIPhoneUtilities</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A7E731AEC8AB51C37A71C156D08BAD1C</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>0E379356BC4A11F545860C016C625E19</string>
-			<key>remoteInfo</key>
-			<string>AWSCore</string>
 		</dict>
 		<key>A7EE1BBCB4908D029D3468BBC278E6E7</key>
 		<dict>
@@ -7174,31 +7390,6 @@
 			<string>sourcecode.c.h</string>
 			<key>path</key>
 			<string>AWSCognito-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A849E63DAC9C27C1FACCFF202827AEC1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C9C994B1CC05CF6505599EC33856E35F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A8E63D4EC576489C04B719C70CE49401</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C278631465F4A3271A9484FF184C1168</string>
-				<string>DDF9BB3C49C7ED52ED2357812E3A9B93</string>
-				<string>F9C6A30F20FF336B4A41F15B6C793D55</string>
-				<string>52D2DD3266FCCD3535C6EC4964A1DCD7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>NudgespotLib</string>
-			<key>path</key>
-			<string>NudgespotLib</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -7306,18 +7497,18 @@
 			<key>targetProxy</key>
 			<string>A7EE1BBCB4908D029D3468BBC278E6E7</string>
 		</dict>
-		<key>AAC5A3AD39A485EFF89A5289B6109819</key>
+		<key>AA6B29C2C3D49B478F1F46ACC49D0AFF</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
+			<key>includeInIndex</key>
 			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>928353533005A4198EBDA5B700D37B64</string>
-			<key>remoteInfo</key>
-			<string>AFNetworking</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NudgespotNetworkManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>AACC16380ACD9363BE6330484CD5C7E7</key>
 		<dict>
@@ -7380,19 +7571,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>ABFE48150629204C631AFDC27BC40CE3</key>
+		<key>AC39ECE332D41F1F5D63597F2B2A69E3</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>buildConfigurations</key>
 			<array>
-				<string>C5802B2FEBCCF37FE0B4D3B1A374BCE4</string>
-				<string>08DB02E47E306CA0D14998211297F7D2</string>
+				<string>94FDC82FCFC01303764E3DC14B66CE6D</string>
+				<string>99EE5E20957E13BCF1C6EFBC26510AC2</string>
 			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
+			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>ACB6DB25B2F2E4BC7374BA4BE6DB4E4E</key>
 		<dict>
@@ -7434,18 +7625,18 @@
 				</array>
 			</dict>
 		</dict>
-		<key>ADB4BF195EFAB8E18221C1ED09932ED8</key>
+		<key>ADFA153AAFDB772D7EDCB601096E9E94</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
+			<key>includeInIndex</key>
 			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>A5D74149151C19435FBED7862908B355</string>
-			<key>remoteInfo</key>
-			<string>AWSSNS</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Tests-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>AE599DDCC957E8B6AC79CAAF347CF178</key>
 		<dict>
@@ -7470,20 +7661,6 @@
 				<key>ATTRIBUTES</key>
 				<array>
 					<string>Private</string>
-				</array>
-			</dict>
-		</dict>
-		<key>B006E4271E25733A371056523C8077BA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>367F3D16780723F1378291EBE2255E57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
 				</array>
 			</dict>
 		</dict>
@@ -7536,6 +7713,19 @@
 			<string>AWSSNS</string>
 			<key>path</key>
 			<string>AWSSNS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B0D7B9FDD38075B5148E60F0A011E4A4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NudgespotSubscriber.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -7616,9 +7806,22 @@
 			<key>productName</key>
 			<string>AWSCognito</string>
 			<key>productReference</key>
-			<string>04E6F7253DF88201CB0E9B20C1960446</string>
+			<string>506D6869879136BAFB25A6C32BC5535C</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>B258C08A691856055EEF88589D4D83E2</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>928353533005A4198EBDA5B700D37B64</string>
+			<key>remoteInfo</key>
+			<string>AFNetworking</string>
 		</dict>
 		<key>B318A5968FA81DA1650C97B422D37E1B</key>
 		<dict>
@@ -7661,7 +7864,7 @@
 			<key>productName</key>
 			<string>Pods</string>
 			<key>productReference</key>
-			<string>640242D9E9657FAE62BB32DCC75E713C</string>
+			<string>DBA739B9F1726D1A19E55E53D8DA4F75</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
@@ -7677,44 +7880,35 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>B469296FE1A393B89B5E3B05A16BBCBE</key>
+		<key>B3E8EC3228114C42D20EB72C48DFA594</key>
 		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
+			<key>name</key>
+			<string>NudgespotiOSSDK.bundle</string>
 			<key>path</key>
-			<string>Pods-Nudgespot_Tests-acknowledgements.markdown</string>
+			<string>NudgespotiOSSDK.bundle</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>B479636D78FE1F9D42417B32CBDF1FFB</key>
+		<key>B48B99AFF6F309ADB29A0FE212834C47</key>
 		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
+			<key>name</key>
+			<string>libPods-NudgespotiOSSDK_Tests.a</string>
 			<key>path</key>
-			<string>Pods-Nudgespot_Example-resources.sh</string>
+			<string>libPods-NudgespotiOSSDK_Tests.a</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B491BBDD0FB3E46BA60C002F07E289BD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Tests-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>B51AA1F7701DCDBCC9B88A15320F9C2C</key>
 		<dict>
@@ -7759,40 +7953,39 @@
 				</array>
 			</dict>
 		</dict>
-		<key>B60F10B6CAD8DF4207660D37E64DDB30</key>
+		<key>B63623BFC17152544632F884349A0A43</key>
 		<dict>
-			<key>children</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>B469296FE1A393B89B5E3B05A16BBCBE</string>
-				<string>073428E96FC39EA7E99DF39F0102AA70</string>
-				<string>611DE40F68F9A019148B9556C952D9B6</string>
-				<string>B491BBDD0FB3E46BA60C002F07E289BD</string>
-				<string>E61D7B9A8CDCEF4D04620ACCCC137D92</string>
-				<string>2E9F89FD161BCFC51A312FF581A8CF3B</string>
-				<string>6F90D1AE906821F205D9E9A89F854043</string>
+				<string>641550982A1782A7BAD5EF5BB2E495F3</string>
+				<string>BB764FC9A3A314746B814A82A5F97E8F</string>
+				<string>D016533971F394774968DA459CECE95A</string>
+				<string>15A564F03D7F79B33051E156FA2C6587</string>
+				<string>2780DD66BFEBF9EA4EB03A96B94491C4</string>
+				<string>7CD1857BD01F2961B03066E57618CAF8</string>
+				<string>BD365F6937E34A91281B5A5A8BD19575</string>
+				<string>31F92ADFC69E68CC9F631E5F31CD9014</string>
+				<string>926BE5D9D172F0B9863D7F0A61FFBBAF</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-Nudgespot_Tests</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-Nudgespot_Tests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B67ED40C5B47DE5D6BBEF70E08960FC0</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>236C06C5CDC6382F863C8D867D5F8E74</string>
-				<string>D15B64285D8B822788FEFB1E63899963</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
+		</dict>
+		<key>B7090B8C71F2CE78E6F124F5B97E4CB4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D52B44917034362243B87FD4C9361743</string>
+			</array>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>B74D79662808E95B0166973D18812B4E</key>
 		<dict>
@@ -7809,39 +8002,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B77C7546E67DAEC7C02D893248F9DF0E</key>
+		<key>B82E5FA895C3AE2650E5AFF7C98E1C9D</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A5FED7071BECA379D19C6B2DE5BE4585</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Nudgespot</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B7F05EEA24D819DC4A7DACA2ABF73388</key>
-		<dict>
-			<key>fileRef</key>
-			<string>040B583F1AB764679D496BAA70E17E57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Example-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B89E2DC223D1539504C7324BE4F757E8</key>
 		<dict>
@@ -8004,6 +8176,19 @@
 				</array>
 			</dict>
 		</dict>
+		<key>BB5DCADB60E8F3E8B965A1F2392BEBB2</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>0E379356BC4A11F545860C016C625E19</string>
+			<key>remoteInfo</key>
+			<string>AWSCore</string>
+		</dict>
 		<key>BB6CE3C63BDE356EFFB26DE458BBBEE8</key>
 		<dict>
 			<key>buildConfigurations</key>
@@ -8018,10 +8203,24 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>BB764FC9A3A314746B814A82A5F97E8F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DA7FBE3C1DAEB42F4464BC3D33E3549</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>BB800F6C86D4BA1C3E320EA68AD30509</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>A1E51E1DEB90EE18E5309F63F6DA4ACB</string>
+			<string>3E7DB2927DAA8AD131E044263902CCD3</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -8050,6 +8249,18 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>BC83CFD4C80B6A92DCBC8C932BC4D469</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FA87DC52C6F586C814CC5C807321E41E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
+		</dict>
 		<key>BCFD3FD04C313FFC1341601972076D23</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -8076,6 +8287,35 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
+		</dict>
+		<key>BD365F6937E34A91281B5A5A8BD19575</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9A90665ADA9B53A18233E19D61B3BA8B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>BD879D75096783148B4282DD851AFE18</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CAB10246C96A7F238616CF63522CF072</string>
+				<string>685CF42CB8AACD5977836D13ABEEFBF0</string>
+				<string>692D573C1F9F97C81D5844D9208876DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>BDC122A36E07E2855F22DEA72AD155D9</key>
 		<dict>
@@ -8149,21 +8389,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BE5F7784BD95FB0D9E758D0DC30AE0FC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E8F7CD695A609E18578EA7AD278C01B7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pod</string>
-			<key>path</key>
-			<string>Pod</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>BEC24E172EC4E17A68728D8330A7DAF4</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -8179,23 +8404,30 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BF04A4C6F1DDA5AE3E2958170079CE4D</key>
+		<key>BEEF111AA6A7491281570254F26BABF9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B1437D42EAA0AE788B8CFD254C2A9F7A</string>
+			<string>59A7BC0A3C3FE7071F19B063FA8AA4A0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
 		</dict>
-		<key>BF62443E8B4F38659562F2EF54E1F5D5</key>
+		<key>BF31AB390A61D59AB8F3D1F906416F04</key>
 		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>FC9DD518F9426A6B700E1DF029C14A00</string>
+			</array>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>AFNetworking</string>
-			<key>target</key>
-			<string>928353533005A4198EBDA5B700D37B64</string>
-			<key>targetProxy</key>
-			<string>AAC5A3AD39A485EFF89A5289B6109819</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>BFA3CCED0D9E8FE3F1712C50CACF1EFF</key>
 		<dict>
@@ -8293,6 +8525,19 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>C17AEA4CA8942C8FD82508052E94D8AF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Tests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>C19A1E2C1C7A4EF946591F6C90C41FFE</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -8363,21 +8608,18 @@
 				</array>
 			</dict>
 		</dict>
-		<key>C278631465F4A3271A9484FF184C1168</key>
+		<key>C30FB5AA4599BD83E136595C52DDA064</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>A65E46BB8D727B8F0416A1E045CA0D01</string>
-				<string>56F62DC15B9A1D7B234A572928850ED0</string>
-			</array>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Auth</string>
-			<key>path</key>
-			<string>Auth</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>A5D74149151C19435FBED7862908B355</string>
+			<key>remoteInfo</key>
+			<string>AWSSNS</string>
 		</dict>
 		<key>C360824859680AFD37EC2B8058D24D33</key>
 		<dict>
@@ -8421,19 +8663,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C3C06F18B0E4F555155F55B93C0C0376</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SubscriberClient.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>C466D69D77945C4841436C9D2E721001</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -8462,13 +8691,6 @@
 					<string>Private</string>
 				</array>
 			</dict>
-		</dict>
-		<key>C5802B2FEBCCF37FE0B4D3B1A374BCE4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6B8AF45179D0DA3EE27E38A946065546</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>C5E5B09F66CE61EB82EC5A6914C7DE70</key>
 		<dict>
@@ -8515,16 +8737,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C61F25B12DBE1772E116E7D95E4EAC0F</key>
+		<key>C679AAF64CA4D9FE462E274CF93C3F2D</key>
 		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>AWSSNS</string>
-			<key>target</key>
-			<string>A5D74149151C19435FBED7862908B355</string>
-			<key>targetProxy</key>
-			<string>FB5AAA75F92B4346C7735666BA28406F</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B245E430CFFA89FA275EBD91D3330E87</string>
+			<key>remoteInfo</key>
+			<string>AWSCognito</string>
 		</dict>
 		<key>C7559318139AB69A760E7AF76BE3F913</key>
 		<dict>
@@ -8540,20 +8764,6 @@
 			<string>AWSCore/Bolts/AWSCancellationToken.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C76A1DCB014B88DA051C0AF0FD6FAB1A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>D300F813C8C2253632FBE7362833D3D5</string>
-				<string>B77C7546E67DAEC7C02D893248F9DF0E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
 		</dict>
 		<key>C78C06A37DCF4A64AB5DC865C30C82D2</key>
 		<dict>
@@ -8584,35 +8794,103 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C7D90F4835346A1F7C84F5540A42667A</key>
+		<key>C7E22561D8A0A01BC1107D2B920FAA7C</key>
 		<dict>
-			<key>fileRef</key>
-			<string>611DE40F68F9A019148B9556C952D9B6</string>
+			<key>buildConfigurationList</key>
+			<string>59206EB3CD441B4A408EA8E04F628241</string>
+			<key>buildPhases</key>
+			<array>
+				<string>34541F4F96A54E7921771C160B2D4C11</string>
+				<string>2884D14671DBFB4CC3CA2BCC01DC5616</string>
+				<string>66BEFD6542720564A322AFF61AF808AA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C8C49D2053A671395C995411709253E6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4661808B43D81429DF5B8B429CBB5903</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
-			</dict>
-		</dict>
-		<key>C8DC9066E58B8379AF685D57591F75BE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>AWSSNS</string>
-			<key>target</key>
-			<string>A5D74149151C19435FBED7862908B355</string>
-			<key>targetProxy</key>
-			<string>ADB4BF195EFAB8E18221C1ED09932ED8</string>
+			<string>Reachability</string>
+			<key>productName</key>
+			<string>Reachability</string>
+			<key>productReference</key>
+			<string>0D61FC50383ACAAB1390EEDA315803FC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>C7EC1585399E20D2EE117EBD07417050</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>80F4DD47DADB8E13E7BC0656FC5590A3</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Reachability/Reachability-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C7F4AA2AE130AFE9115870544CA43797</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>928353533005A4198EBDA5B700D37B64</string>
+			<key>remoteInfo</key>
+			<string>AFNetworking</string>
+		</dict>
+		<key>C8ABCBB6B24C36AB22B032A377ED87CB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SubscriberContact.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C8B7DDE6DA06CF76E8EC19CF518E3222</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>928353533005A4198EBDA5B700D37B64</string>
+			<key>remoteInfo</key>
+			<string>AFNetworking</string>
 		</dict>
 		<key>C91DD32DA8C1A20840481DA112B1F4FF</key>
 		<dict>
@@ -8653,19 +8931,6 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>C9ADDE31290CCB1DA286AEC69F8131DB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3550A123063F1B1D3FA4F15844613E16</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>C9C994B1CC05CF6505599EC33856E35F</key>
 		<dict>
 			<key>isa</key>
@@ -8693,36 +8958,24 @@
 				</array>
 			</dict>
 		</dict>
-		<key>CA96C57E94B38DE8AD2FE2208E95B9D8</key>
+		<key>CAB10246C96A7F238616CF63522CF072</key>
 		<dict>
-			<key>fileRef</key>
-			<string>C9C994B1CC05CF6505599EC33856E35F</string>
+			<key>children</key>
+			<array>
+				<string>E963657724285E7730E64E9D4DBFFF24</string>
+				<string>EED09B61D305DB85394850DFBEA542D9</string>
+				<string>446DB1812585B73C1FA101FA2E32335C</string>
+				<string>459CD130D64F9E4F8986AB9C0749596B</string>
+				<string>4360E8CE2A60098095F02EE40B6BD9F1</string>
+				<string>8A302B1D632EE3E903CA87569CE476F2</string>
+				<string>3E7DB2927DAA8AD131E044263902CCD3</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAC67DBCE9715F855CC36D42C5AF0758</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>B245E430CFFA89FA275EBD91D3330E87</string>
-			<key>remoteInfo</key>
-			<string>AWSCognito</string>
-		</dict>
-		<key>CB1A1599C9502A7DA460F7D5F91FA486</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
 			<key>path</key>
-			<string>SubscriberContact.h</string>
+			<string>Target Support Files/Pods</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -8825,6 +9078,21 @@
 				</array>
 			</dict>
 		</dict>
+		<key>CE6A945CB6893B424B52757F454FC0A9</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libAFNetworking.a</string>
+			<key>path</key>
+			<string>libAFNetworking.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>CE8965366A3B07A6C0615055A31B8B83</key>
 		<dict>
 			<key>fileRef</key>
@@ -8872,6 +9140,43 @@
 				</array>
 			</dict>
 		</dict>
+		<key>D016533971F394774968DA459CECE95A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>66918B3E333E022F1319D879A3650B69</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>D033494E1AA202E6F3A9E071C187C20A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>26E40D7E9CB7D1B6CFBF22C38FF488E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D0430DD85AE87FF119EF23D5FE59765B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FA9FA576136F814E45A98AEE58F42CDB</string>
+				<string>D8EE3DE93117568743448CAD09F287D6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>NudgespotiOSSDK</string>
+			<key>path</key>
+			<string>../..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>D0773B44861F72EFA885ED08C9954958</key>
 		<dict>
 			<key>children</key>
@@ -8886,6 +9191,17 @@
 			<string>GoogleNetworkingUtilities</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D096A98A154CBAA419B751AC54ED9EE1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AWSSNS</string>
+			<key>target</key>
+			<string>A5D74149151C19435FBED7862908B355</string>
+			<key>targetProxy</key>
+			<string>6688E16D80D9D5CF35AA2D54969C32F9</string>
 		</dict>
 		<key>D0FF9F5D259E166BEDA9DF44F8555D37</key>
 		<dict>
@@ -8916,38 +9232,6 @@
 			<string>AWSCore/Mantle/AWSMTLValueTransformer.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D15B64285D8B822788FEFB1E63899963</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>19C9B01F47838983C7761F25C93A70F1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
 		</dict>
 		<key>D1832487DD9037651C100D47AC6D9214</key>
 		<dict>
@@ -8992,20 +9276,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>D20EBD42F86C3DAC9BF5269FA0BC9FD7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A849E63DAC9C27C1FACCFF202827AEC1</string>
-				<string>1BDF0B506FC358B3CFCE41439B4EA689</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>D23CBDA1CFE7AF62CCB4E247236DC58A</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -9033,35 +9303,6 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>D300F813C8C2253632FBE7362833D3D5</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A5FED7071BECA379D19C6B2DE5BE4585</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Nudgespot</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D33DC85A4B9F3727AE63F7FECB054FDA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38642139AD99BAF6A7621DE4037F921F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>D347A1D817E5067B11E3987F22CA8869</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -9076,17 +9317,6 @@
 			<string>AWSCore/Mantle/NSArray+AWSMTLManipulationAdditions.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D3E0212C9F26607488634C4420E6EBDD</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>AWSCore</string>
-			<key>target</key>
-			<string>0E379356BC4A11F545860C016C625E19</string>
-			<key>targetProxy</key>
-			<string>7B216C146FEDBBFEF2A6F1C0410FBA5D</string>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
@@ -9114,7 +9344,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>941E02B5BE95FE829D1F0F9C9142066F</string>
+			<string>A52BF901646154E51B6C0EE2330BC1C7</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -9127,27 +9357,13 @@
 				<string>B245E430CFFA89FA275EBD91D3330E87</string>
 				<string>0E379356BC4A11F545860C016C625E19</string>
 				<string>A5D74149151C19435FBED7862908B355</string>
-				<string>6F0BCC7FBBA0AEC658A628E0093885EE</string>
-				<string>0EC7279CEEF63E5B639356F307CFC7CE</string>
+				<string>33F2760D2683AB4754B1DBFB11B28AD2</string>
+				<string>0F67641800255B28500310459099B727</string>
 				<string>B3529DA81E3EDA09102B117E324CD66B</string>
-				<string>F5A3F560BEE68657409822FBCCE5CA00</string>
-				<string>86A10A0BB2E80ED56532B03F37679316</string>
-				<string>84339DBD94F00FE0B37EFF1B37877175</string>
+				<string>7849C1F8A4B35815CCE076B5BE1D1AC5</string>
+				<string>0866E918B3AEE608302A022C53DDF54E</string>
+				<string>C7E22561D8A0A01BC1107D2B920FAA7C</string>
 			</array>
-		</dict>
-		<key>D488827E9B41EC42B2BA1E0101021AAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A65E46BB8D727B8F0416A1E045CA0D01</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>D498CE78553692864C32CD984141D350</key>
 		<dict>
@@ -9192,27 +9408,48 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D566654253E6B8A33CD0899ACBFAF452</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>NudgespotSubscriber.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D63659B5EB7E503C7E0F6E03E0CC1697</key>
+		<key>D52B44917034362243B87FD4C9361743</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C05A553523E48BA731E9BAFB60D6D148</string>
+			<string>C9C994B1CC05CF6505599EC33856E35F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>D6731CC7CC21A9222F026CE532E097B8</key>
+		<key>D5DAE151D5089AE94227F39ADEFB71D7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>03ACD1ABF499CAA398648E6DBE373897</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/NudgespotiOSSDK/NudgespotiOSSDK-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D63ACAA3310A75E8EE3A59F0D5F6C7FB</key>
 		<dict>
 			<key>containerPortal</key>
 			<string>D41D8CD98F00B204E9800998ECF8427E</string>
@@ -9221,9 +9458,9 @@
 			<key>proxyType</key>
 			<string>1</string>
 			<key>remoteGlobalIDString</key>
-			<string>B245E430CFFA89FA275EBD91D3330E87</string>
+			<string>0E379356BC4A11F545860C016C625E19</string>
 			<key>remoteInfo</key>
-			<string>AWSCognito</string>
+			<string>AWSCore</string>
 		</dict>
 		<key>D6A5B0C163830848E122EBD4A4CFB3D8</key>
 		<dict>
@@ -9268,6 +9505,27 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>D7BA0694C08C25F0CC17E2965AE0923F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>29D642FB1CE1DBDA1E23ED889D789EEF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D7FE679C24140A4E7B25F82175DBF554</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D5DAE151D5089AE94227F39ADEFB71D7</string>
+				<string>67F972F30B846B41330D30C12B50C154</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
 		<key>D80EB016371513A60427C0DA24552580</key>
 		<dict>
 			<key>fileRef</key>
@@ -9282,17 +9540,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>D8A877C268A201026F000AC4DD78D9B7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>D8AFC49D475C4B235A536B5C8B9F47A2</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -9305,6 +9552,23 @@
 			<string>libGGLCloudMessaging.a</string>
 			<key>path</key>
 			<string>Libraries/libGGLCloudMessaging.a</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D8EE3DE93117568743448CAD09F287D6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>03ACD1ABF499CAA398648E6DBE373897</string>
+				<string>3DAD775BB8C33B95AFA9300E80A7ADCD</string>
+				<string>590AC57EC1F968B6E69013BDBDCDB4DD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>Example/Pods/Target Support Files/NudgespotiOSSDK</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -9428,24 +9692,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DB18F0BF419B254FA57FD4F8C188CAC8</key>
+		<key>DB08E7E35F1A1D4D7BA968CB0B275C2E</key>
 		<dict>
-			<key>fileRef</key>
-			<string>6478587FABCD2247A34F4A6D5EEB0CE8</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DB2D81EEDF469F01808FCF4A83DAB5EA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E3D59518640C0CB93E12FA706BB13A5A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
-			</dict>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>DB3CC335FA5070F688F49A5E88C62B82</key>
 		<dict>
@@ -9476,6 +9732,39 @@
 			<string>Headers/ModuleHeaders/CloudMessaging-Module.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DBA739B9F1726D1A19E55E53D8DA4F75</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods.a</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DBEF0839817AEBFD50F5A9950C7E64A1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C23C219B4069F67D98B344D606D7CCDE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DCD580181953D7758693C58A7CAB4B44</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>AWSCore</string>
+			<key>target</key>
+			<string>0E379356BC4A11F545860C016C625E19</string>
+			<key>targetProxy</key>
+			<string>D63ACAA3310A75E8EE3A59F0D5F6C7FB</string>
 		</dict>
 		<key>DD0F498F1EDB1BE7D0345D4A3C7A3E45</key>
 		<dict>
@@ -9519,30 +9808,6 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>DDF9BB3C49C7ED52ED2357812E3A9B93</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0FD8713D3EEECFE133B91A6E9526C18E</string>
-				<string>47704554866B6F6A8DAC77051EACDB71</string>
-				<string>D566654253E6B8A33CD0899ACBFAF452</string>
-				<string>E3D59518640C0CB93E12FA706BB13A5A</string>
-				<string>A1AAAB9463B04568A691C46694EE6555</string>
-				<string>040B583F1AB764679D496BAA70E17E57</string>
-				<string>881467227DC6BFD5FA95EAE8D4C1DB7C</string>
-				<string>C3C06F18B0E4F555155F55B93C0C0376</string>
-				<string>CB1A1599C9502A7DA460F7D5F91FA486</string>
-				<string>3F7E3D0A5E22D00FE521B74C3D95D94C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Main</string>
-			<key>path</key>
-			<string>Main</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>DE0A933209F0FF6E96B9AEED031848A8</key>
 		<dict>
 			<key>children</key>
@@ -9555,21 +9820,6 @@
 			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DE1A0D21760E6B63EE9E4941AC56F55A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libAWSSNS.a</string>
-			<key>path</key>
-			<string>libAWSSNS.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>DE70AB3854762643E082D726854C971A</key>
 		<dict>
@@ -9709,40 +9959,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E0B7A60E43B997D40148E3B860A729FB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>80F4DD47DADB8E13E7BC0656FC5590A3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Reachability/Reachability-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
 		<key>E0DD006DDB7C6910962E2685342363BC</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -9758,19 +9974,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E135879D525F73B07DA801A6DA79AA52</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1E47B43E6FBF8FBA3D54DC42C13839CD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>E15B22B873CFF6656BE8AEBDCA114A00</key>
 		<dict>
 			<key>fileRef</key>
@@ -9782,19 +9985,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
-		</dict>
-		<key>E16EC1202636AC811C0FAD76C911F6CC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Example-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>E212C2AA95E8F6EFB69A5F1455F291F8</key>
 		<dict>
@@ -9809,6 +9999,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>E2B1E70ED1F8DD02964FFC1FF6E9128D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Example-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>E2CC2023DCFEE84B91937AF1D088AA9D</key>
 		<dict>
@@ -9906,63 +10109,12 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>E3D59518640C0CB93E12FA706BB13A5A</key>
+		<key>E3E6600B5BAF9FFE27D60FB1E826AF0E</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>C23C219B4069F67D98B344D606D7CCDE</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>NudgespotSubscriber.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E3FF181C77725E983D85DA70DDA95126</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>2E9F89FD161BCFC51A312FF581A8CF3B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E4203A8575458FEE4722BDE237B29DB1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>928353533005A4198EBDA5B700D37B64</string>
-			<key>remoteInfo</key>
-			<string>AFNetworking</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>E429B36781C38FDF25916DF596049179</key>
 		<dict>
@@ -9976,46 +10128,6 @@
 			<string>AWSMTLManagedObjectAdapter.h</string>
 			<key>path</key>
 			<string>AWSCore/Mantle/AWSMTLManagedObjectAdapter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E49AE28CE8B5EB3649C5B3D4C0B4F9BB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>NudgespotNetworkManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E50ADA797D5DF546FBA9E83EDD578B83</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A1AAAB9463B04568A691C46694EE6555</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>E53D1D2FE4DD7CF66BAD683EB90D0463</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Example-acknowledgements.markdown</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -10188,19 +10300,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E61D7B9A8CDCEF4D04620ACCCC137D92</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Nudgespot_Tests-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>E66C58C47446D8E6D7E7E5F72AA60A38</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -10213,13 +10312,6 @@
 			<string>AFNetworking.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E6792734808A212BF2491753F855041B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C9C994B1CC05CF6505599EC33856E35F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>E7CF46069FFF11DEE4A76FACEF9B3CA7</key>
 		<dict>
@@ -10251,34 +10343,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E8CAD1D29AF0057D790F28074570F139</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E8F7CD695A609E18578EA7AD278C01B7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A8E63D4EC576489C04B719C70CE49401</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>E9154C0BA0B4332C5D5872FAFF7A65F6</key>
 		<dict>
 			<key>fileRef</key>
@@ -10291,16 +10355,18 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>E927927F82DC52F24549056AC75AB1A2</key>
+		<key>E963657724285E7730E64E9D4DBFFF24</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>AFNetworking</string>
-			<key>target</key>
-			<string>928353533005A4198EBDA5B700D37B64</string>
-			<key>targetProxy</key>
-			<string>E4203A8575458FEE4722BDE237B29DB1</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>E9A028369D333013567787DC72D5D67E</key>
 		<dict>
@@ -10385,17 +10451,6 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>EBB8142D92BF694C325D5049D457CF48</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>AWSSNS</string>
-			<key>target</key>
-			<string>A5D74149151C19435FBED7862908B355</string>
-			<key>targetProxy</key>
-			<string>78B9E152F346E59B273C9AA7B8DA2C5E</string>
-		</dict>
 		<key>EBEDB567CE2CC327E63FEC53B2CB9710</key>
 		<dict>
 			<key>fileRef</key>
@@ -10447,16 +10502,18 @@
 			<key>targetProxy</key>
 			<string>1332CAD962F0390F0DAB96AADEDBA33F</string>
 		</dict>
-		<key>EC63CC8849D0103F086196EC4688F60F</key>
+		<key>ED4E1B71B6B233D6E46BA8FF1AF48B29</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Nudgespot</string>
-			<key>target</key>
-			<string>6F0BCC7FBBA0AEC658A628E0093885EE</string>
-			<key>targetProxy</key>
-			<string>4896E02B4F53C3F211A6EE1AFB01FE0C</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Tests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>ED69D9B5A342FE9BD3F170D5CDDEC948</key>
 		<dict>
@@ -10487,21 +10544,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EDAA22B4DEC13E2BE9A318F0ECBB0D7B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods-Nudgespot_Example.a</string>
-			<key>path</key>
-			<string>libPods-Nudgespot_Example.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
 		<key>EDAF41730EB4AD4E10C0F0DE5E1C59D5</key>
 		<dict>
 			<key>fileRef</key>
@@ -10513,6 +10555,19 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
+		</dict>
+		<key>EDB599A2DEC034386FF5C96EA36EA3C6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Tests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>EDB9360D1FBCEE3608C839FA3584865D</key>
 		<dict>
@@ -10544,6 +10599,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>EED09B61D305DB85394850DFBEA542D9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>EED174A088C415F3932A5B442E8D6E93</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -10558,17 +10626,6 @@
 			<string>Libraries/libGTM_KVO_external.a</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF2B9A2C6135D8C266A761D693BE7520</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>AWSCore</string>
-			<key>target</key>
-			<string>0E379356BC4A11F545860C016C625E19</string>
-			<key>targetProxy</key>
-			<string>A7E731AEC8AB51C37A71C156D08BAD1C</string>
 		</dict>
 		<key>EF4B2E2A42C7C67EAF9A05CA2A3E1B90</key>
 		<dict>
@@ -10694,33 +10751,6 @@
 			<key>targetProxy</key>
 			<string>6F3A9FC0166D42CCF3F251EF68E7CCB9</string>
 		</dict>
-		<key>F2F66A831AF61503DAB8C9A9C2AA223C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D566654253E6B8A33CD0899ACBFAF452</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>F30DDF7CA45D93F88DFA5AFB5DDFA302</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C7D90F4835346A1F7C84F5540A42667A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>F3703D133A0BA4838C53E0C33E9EB308</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -10750,27 +10780,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>F39D5A11A4A510452992305B83869847</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C8C49D2053A671395C995411709253E6</string>
-				<string>1F0AD6E6E6C40AB77EEF026186704DCD</string>
-				<string>2E038A31E44F93BB1517B2E3FEBF0C76</string>
-				<string>481706FDB87D28381DBF6037192EF7B3</string>
-				<string>15862956F507CEC78B27BD84DF010A4A</string>
-				<string>DB2D81EEDF469F01808FCF4A83DAB5EA</string>
-				<string>B7F05EEA24D819DC4A7DACA2ABF73388</string>
-				<string>994B7B3264E349DD46FCDFB9A421B3E0</string>
-				<string>07AB0FB6A363199F6A0C70EEFAD9DE79</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>F3FA012767038F9CFE8131B8DD566919</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -10785,21 +10794,6 @@
 			<string>UIKit+AFNetworking/UIProgressView+AFNetworking.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F471AA6B1C8F5CC666A3BC0E65D444B0</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libAFNetworking.a</string>
-			<key>path</key>
-			<string>libAFNetworking.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>F4A47F3E3A9AF2DB8191CC806F31653D</key>
 		<dict>
@@ -10816,27 +10810,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F542B19CE90CEE21C10941C8EBA61C0A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E53D1D2FE4DD7CF66BAD683EB90D0463</string>
-				<string>0C64462A3D352D446D4F8EE50BCE42A3</string>
-				<string>E16EC1202636AC811C0FAD76C911F6CC</string>
-				<string>1E93E82A447DFE69A1F8F75041C18B48</string>
-				<string>B479636D78FE1F9D42417B32CBDF1FFB</string>
-				<string>03ACB48D353AC7E7CBCCF5F01A2BC8B6</string>
-				<string>19C9B01F47838983C7761F25C93A70F1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-Nudgespot_Example</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-Nudgespot_Example</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>F57024B0A62168F713C90137E171F14F</key>
 		<dict>
 			<key>fileRef</key>
@@ -10849,36 +10822,29 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>F5A3F560BEE68657409822FBCCE5CA00</key>
+		<key>F58479E647CA5D9E2181B37103E15835</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>B67ED40C5B47DE5D6BBEF70E08960FC0</string>
-			<key>buildPhases</key>
-			<array>
-				<string>9276E8762BC2E32A077B710713A99B5F</string>
-				<string>41B17435AB1B07E3D13CAEB693DE3971</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>E927927F82DC52F24549056AC75AB1A2</string>
-				<string>8A79A7D201E489B5E3138F3B9AD07DC1</string>
-				<string>72DA7E6B199E08F2A40C7F4C54B3FD3A</string>
-				<string>EBB8142D92BF694C325D5049D457CF48</string>
-				<string>EC63CC8849D0103F086196EC4688F60F</string>
-				<string>8382F244A2BC9DAA4EBA6C5356A0D469</string>
-			</array>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>0E379356BC4A11F545860C016C625E19</string>
+			<key>remoteInfo</key>
+			<string>AWSCore</string>
+		</dict>
+		<key>F5D7485D9D6934B4C2A27344DE257EDB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
 			<key>name</key>
-			<string>Pods-Nudgespot_Example</string>
-			<key>productName</key>
-			<string>Pods-Nudgespot_Example</string>
-			<key>productReference</key>
-			<string>EDAA22B4DEC13E2BE9A318F0ECBB0D7B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
+			<string>NudgespotiOSSDK</string>
+			<key>target</key>
+			<string>33F2760D2683AB4754B1DBFB11B28AD2</string>
+			<key>targetProxy</key>
+			<string>1315A34D80713BA65E1C2FD81DE8602B</string>
 		</dict>
 		<key>F60AA9744A1B211CC891F4DEF5A1BC35</key>
 		<dict>
@@ -10909,16 +10875,27 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F63EF041F22D83D64FE493DF243B58D4</key>
+		<key>F63D659F6019EEBD73BAF66AC18A5852</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>03ACD1ABF499CAA398648E6DBE373897</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>NudgespotiOSSDK</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>bundle</string>
+			</dict>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>AFNetworking</string>
-			<key>target</key>
-			<string>928353533005A4198EBDA5B700D37B64</string>
-			<key>targetProxy</key>
-			<string>A084C7C10EBEAB2F6DE21C06551BAF6D</string>
+			<string>Release</string>
 		</dict>
 		<key>F70096F5277A4861ACB77EDE3E895EC6</key>
 		<dict>
@@ -10931,21 +10908,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
-		</dict>
-		<key>F72961837DAD0F161C1537E6DE7A6FC2</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libReachability.a</string>
-			<key>path</key>
-			<string>libReachability.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>F97D7C130BD49BAC68A11BD9632F8097</key>
 		<dict>
@@ -10976,22 +10938,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>F9C6A30F20FF336B4A41F15B6C793D55</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E49AE28CE8B5EB3649C5B3D4C0B4F9BB</string>
-				<string>1F2F94C851C048838032B97F34C92EAE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>RestClient</string>
-			<key>path</key>
-			<string>RestClient</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>FA5CA612845B3A2B5FBEC6957C46A097</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -11004,6 +10950,53 @@
 			<string>AWSURLRequestSerialization.h</string>
 			<key>path</key>
 			<string>AWSCore/Serialization/AWSURLRequestSerialization.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FA60DEEAFCB6D995AD67333A069E92A1</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>80F4DD47DADB8E13E7BC0656FC5590A3</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Reachability/Reachability-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>FA87DC52C6F586C814CC5C807321E41E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SubscriberContact.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -11021,12 +11014,39 @@
 				</array>
 			</dict>
 		</dict>
+		<key>FA9FA576136F814E45A98AEE58F42CDB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>032405E4939C6BBAA48C0E806D874FFB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pod</string>
+			<key>path</key>
+			<string>Pod</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>FADB2EB7CE4C96C41094B44205795D10</key>
 		<dict>
 			<key>fileRef</key>
 			<string>C9C994B1CC05CF6505599EC33856E35F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>FB506C5D787E4015992FFCBE4F84595F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AA6B29C2C3D49B478F1F46ACC49D0AFF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
+			</dict>
 		</dict>
 		<key>FB563203E45BA4D0F89167AAB4D05DB9</key>
 		<dict>
@@ -11054,19 +11074,6 @@
 			<string>AWSCore/Mantle/NSValueTransformer+AWSMTLInversionAdditions.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FB5AAA75F92B4346C7735666BA28406F</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>A5D74149151C19435FBED7862908B355</string>
-			<key>remoteInfo</key>
-			<string>AWSSNS</string>
 		</dict>
 		<key>FB68FE65F1A145027661712AA3C7652A</key>
 		<dict>
@@ -11141,19 +11148,27 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>FCF82E6036B3884FED3DA16B763C001F</key>
+		<key>FC9DD518F9426A6B700E1DF029C14A00</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A203A4B4417251275EA59A9332F466DC</string>
+			<string>C9C994B1CC05CF6505599EC33856E35F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+		</dict>
+		<key>FD28CAC91CB34152B9BDE5647D05C645</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6B0FD4071351C96264BE35CE3474773C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>FD3B9755E1ABB820202E0527255FE24B</key>
 		<dict>
@@ -11181,6 +11196,19 @@
 			<string>AWSReachability.m</string>
 			<key>path</key>
 			<string>AWSCore/Reachability/AWSReachability.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FD95724448B1459EDC41094DBC4F9AFB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-NudgespotiOSSDK_Tests.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -11227,19 +11255,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>FF43665D90B2BE8B4B69B7EFEFEAE5BF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>FF61ECA4931BB6BF11C2BEBFC2C203BC</key>
 		<dict>

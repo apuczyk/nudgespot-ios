@@ -1,1 +1,0 @@
-../../../../../Pod/Classes/NudgespotLib/Main/NudgespotSubscriber.h

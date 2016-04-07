@@ -1,9 +1,9 @@
 //
-//  NudgespotTests.m
-//  NudgespotTests
+//  NudgespotiOSSDKTests.m
+//  NudgespotiOSSDKTests
 //
-//  Created by Maheep Kaushal on 02/17/2016.
-//  Copyright (c) 2016 Nudgespot. All rights reserved.
+//  Created by Maheep Kaushal on 04/07/2016.
+//  Copyright (c) 2016 Maheep Kaushal. All rights reserved.
 //
 
 @import XCTest;

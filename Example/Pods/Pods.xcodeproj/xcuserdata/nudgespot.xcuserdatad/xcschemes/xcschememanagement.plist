@@ -6,78 +6,78 @@
 	<dict>
 		<key>AFNetworking.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>AWSCognito.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>AWSCore.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>AWSSNS.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
-		<key>Nudgespot-Nudgespot.xcscheme</key>
+		<key>NudgespotiOSSDK-NudgespotiOSSDK.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
-		<key>Nudgespot.xcscheme</key>
+		<key>NudgespotiOSSDK.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
-		<key>Pods-Nudgespot_Example.xcscheme</key>
+		<key>Pods-NudgespotiOSSDK_Example.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
-		<key>Pods-Nudgespot_Tests.xcscheme</key>
+		<key>Pods-NudgespotiOSSDK_Tests.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Reachability.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0866E918B3AEE608302A022C53DDF54E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0E379356BC4A11F545860C016C625E19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0EC7279CEEF63E5B639356F307CFC7CE</key>
+		<key>0F67641800255B28500310459099B727</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F0BCC7FBBA0AEC658A628E0093885EE</key>
+		<key>33F2760D2683AB4754B1DBFB11B28AD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84339DBD94F00FE0B37EFF1B37877175</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>86A10A0BB2E80ED56532B03F37679316</key>
+		<key>7849C1F8A4B35815CCE076B5BE1D1AC5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5A3F560BEE68657409822FBCCE5CA00</key>
+		<key>C7E22561D8A0A01BC1107D2B920FAA7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

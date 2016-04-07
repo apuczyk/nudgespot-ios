@@ -43,7 +43,7 @@ PODS:
   - GoogleSymbolUtilities (1.1.0)
   - GoogleUtilities (1.2.0):
     - GoogleSymbolUtilities (~> 1.0)
-  - Nudgespot (0.1.1):
+  - NudgespotiOSSDK (0.1.0):
     - AFNetworking
     - AWSCognito
     - AWSCore
@@ -58,11 +58,11 @@ DEPENDENCIES:
   - AWSCore
   - AWSSNS
   - Google/CloudMessaging
-  - Nudgespot (from `../`)
+  - NudgespotiOSSDK (from `../`)
   - Reachability
 
 EXTERNAL SOURCES:
-  Nudgespot:
+  NudgespotiOSSDK:
     :path: ../
 
 SPEC CHECKSUMS:
@@ -78,7 +78,7 @@ SPEC CHECKSUMS:
   GoogleNetworkingUtilities: ec1e9911aca811eb18b7144394fee6168b607785
   GoogleSymbolUtilities: eb3965ea12710569c7b80db198a39e39b18613f7
   GoogleUtilities: 85f8ad6b251544286a97163133d042ec95f889c5
-  Nudgespot: aa73f2462c609d950ae621f8e5d496987fda428a
+  NudgespotiOSSDK: 833331e8d8599a5fda206ce217db6473836dc031
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
 COCOAPODS: 0.39.0
