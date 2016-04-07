@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NudgespotiOSSDK"
-    s.version          = "0.1.1"
+    s.version          = "0.1.2"
     s.summary          = "nudgespot-ios is Objective-C framework."
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
     s.description      = <<-DESC
-    Nudgespot provides framework for iOS which allows users to track events.
+    NudgespotiOSSDK provides framework for iOS which allows users to track events.
     DESC
 
 s.homepage         = "https://github.com/nudgespot/nudgespot-ios"

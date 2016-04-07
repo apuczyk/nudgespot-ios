@@ -1,15 +1,15 @@
 {
   "name": "NudgespotiOSSDK",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "nudgespot-ios is Objective-C framework.",
-  "description": "Nudgespot provides framework for iOS which allows users to track events.",
+  "description": "NudgespotiOSSDK provides framework for iOS which allows users to track events.",
   "homepage": "https://github.com/nudgespot/nudgespot-ios",
   "authors": {
     "Nudgespot": "dev@nudgespot.com"
   },
   "source": {
     "git": "https://github.com/nudgespot/nudgespot-ios.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "7.0"
