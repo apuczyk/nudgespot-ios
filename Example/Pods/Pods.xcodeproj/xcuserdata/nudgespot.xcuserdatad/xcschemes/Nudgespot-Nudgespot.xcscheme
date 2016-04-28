@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C471774E592D6935CDAB4D71'
+               BlueprintIdentifier = 'B5651767B2ADC2AC157F6693'
                BlueprintName = 'Nudgespot-Nudgespot'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Nudgespot.bundle'>

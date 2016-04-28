@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "Nudgespot"
-    s.version          = "0.1.2"
+    s.version          = "0.1.3"
     s.summary          = "nudgespot-ios is Objective-C framework."
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
         DESC
 
     s.homepage         = "https://github.com/nudgespot/nudgespot-ios"
-    # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
     #s.license          = 'MIT'
     s.author           = { "Nudgespot" => "dev@nudgespot.com" }
     s.source           = { :git => "https://github.com/nudgespot/nudgespot-ios.git", :tag => s.version.to_s }
@@ -31,12 +30,13 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '7.0'
     s.requires_arc = true
 
-    s.source_files = 'Nudgespot/Classes/**/*'
+    s.source_files = "Nudgespot/Classes/**/*"
     s.resource_bundles = {
         'Nudgespot' => ['Nudgespot/Assets/*.png']
     }
 
     s.public_header_files = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
+
     s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork'
 
     #s.libraries = 'libz', 'libsqlite3'
