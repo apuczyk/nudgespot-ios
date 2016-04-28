@@ -1,8 +1,8 @@
 //
-//  NudgespotiOSSDKTests.m
-//  NudgespotiOSSDKTests
+//  NudgespotTests.m
+//  NudgespotTests
 //
-//  Created by Maheep Kaushal on 04/07/2016.
+//  Created by Maheep Kaushal on 04/28/2016.
 //  Copyright (c) 2016 Maheep Kaushal. All rights reserved.
 //
 

@@ -1,0 +1,1 @@
+../../../../../Nudgespot/Classes/NudgespotLib/Main/NudgespotSubscriber.h

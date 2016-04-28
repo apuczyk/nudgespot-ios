@@ -24,22 +24,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>NudgespotiOSSDK-NudgespotiOSSDK.xcscheme</key>
+		<key>Nudgespot-Nudgespot.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>NudgespotiOSSDK.xcscheme</key>
+		<key>Nudgespot.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-NudgespotiOSSDK_Example.xcscheme</key>
+		<key>Pods-Nudgespot_Example.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-NudgespotiOSSDK_Tests.xcscheme</key>
+		<key>Pods-Nudgespot_Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,27 +57,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0866E918B3AEE608302A022C53DDF54E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0E379356BC4A11F545860C016C625E19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0F67641800255B28500310459099B727</key>
+		<key>0EC7279CEEF63E5B639356F307CFC7CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33F2760D2683AB4754B1DBFB11B28AD2</key>
+		<key>6F0BCC7FBBA0AEC658A628E0093885EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7849C1F8A4B35815CCE076B5BE1D1AC5</key>
+		<key>84339DBD94F00FE0B37EFF1B37877175</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86A10A0BB2E80ED56532B03F37679316</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7E22561D8A0A01BC1107D2B920FAA7C</key>
+		<key>F5A3F560BEE68657409822FBCCE5CA00</key>
 		<dict>
 			<key>primary</key>
 			<true/>

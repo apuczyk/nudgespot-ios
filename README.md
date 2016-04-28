@@ -1,9 +1,9 @@
-# NudgespotiOSSDK
+# Nudgespot
 
-[![CI Status](http://img.shields.io/travis/Maheep Kaushal/NudgespotiOSSDK.svg?style=flat)](https://travis-ci.org/Maheep Kaushal/NudgespotiOSSDK)
-[![Version](https://img.shields.io/cocoapods/v/NudgespotiOSSDK.svg?style=flat)](http://cocoapods.org/pods/NudgespotiOSSDK)
-[![License](https://img.shields.io/cocoapods/l/NudgespotiOSSDK.svg?style=flat)](http://cocoapods.org/pods/NudgespotiOSSDK)
-[![Platform](https://img.shields.io/cocoapods/p/NudgespotiOSSDK.svg?style=flat)](http://cocoapods.org/pods/NudgespotiOSSDK)
+[![CI Status](http://img.shields.io/travis/Maheep Kaushal/Nudgespot.svg?style=flat)](https://travis-ci.org/Maheep Kaushal/Nudgespot)
+[![Version](https://img.shields.io/cocoapods/v/Nudgespot.svg?style=flat)](http://cocoapods.org/pods/Nudgespot)
+[![License](https://img.shields.io/cocoapods/l/Nudgespot.svg?style=flat)](http://cocoapods.org/pods/Nudgespot)
+[![Platform](https://img.shields.io/cocoapods/p/Nudgespot.svg?style=flat)](http://cocoapods.org/pods/Nudgespot)
 
 ## Usage
 
@@ -13,12 +13,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-NudgespotiOSSDK is available through [CocoaPods](http://cocoapods.org). To install
+Nudgespot is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "NudgespotiOSSDK"
+pod "Nudgespot"
 ```
 
 ## Author
-Nudgespot, dev@nudgespot.com
+
+Maheep Kaushal, maheepkaushal@gmail.com
+
+## License
+
+Nudgespot is available under the MIT license. See the LICENSE file for more info.
