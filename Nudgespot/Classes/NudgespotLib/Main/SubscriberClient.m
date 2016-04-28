@@ -94,26 +94,27 @@
         // call the method on a background thread
         dispatch_group_async(group,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
             
-            // sendAnonymousIdentification method will send Notification to server so, that they will replace all anonymous users to uid and from there server can track.
-            
-            [self sendAnonymousIdentification];
-            
-            DLog(@"getOrCreateSubscriber starts here");
-            
-            // GetOrCreateSubscriber will get user and if not found then it will create.
-            
-            [self getOrCreateSubscriberWithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
+            [self getAccountsSDKConfigCompletionHandler:^(id response, id error) {
                 
-                DLog(@"getOrCreateSubscriber ends here");
+                // sendAnonymousIdentification method will send Notification to server so, that they will replace all anonymous users to uid and from there server can track.
+                [self sendAnonymousIdentification];
                 
-                if (currentSubscriber) {
+                DLog(@"getOrCreateSubscriber starts here");
+                
+                // GetOrCreateSubscriber will get user and if not found then it will create.
+                
+                [self getOrCreateSubscriberWithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
                     
-                    if ([_theDelegate respondsToSelector:@selector(gotSubscriber:registrationHandler:)]) {
-                        
-                        [_theDelegate gotSubscriber:currentSubsciber registrationHandler:self.registrationHandler];
+                    DLog(@"getOrCreateSubscriber ends here");
+                    
+                    if (currentSubscriber) {
+                        if ([_theDelegate respondsToSelector:@selector(gotSubscriber:registrationHandler:)]) {
+                            [_theDelegate gotSubscriber:currentSubsciber registrationHandler:self.registrationHandler];
+                        }
                     }
-                }
+                }];
             }];
+            
         });
     }
     
@@ -187,6 +188,8 @@
             
             [BasicUtils setUserDefaultsValue:[NSString stringWithFormat:@"%@",[json_Data objectForKey:@"gcm_sender_id"]] forKey:GCM_SENDER_ID];
             [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"sns_anon_identification_topic"] forKey:SNS_ANON_IDENTIFICATION_TOPIC];
+            [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"identity_pool_id"] forKey:IDENTITY_POOL_ID];
+
             
             [self initGCM];
             
@@ -203,6 +206,8 @@
             
             [BasicUtils removeUserDefaultsForKey:GCM_SENDER_ID];
             [BasicUtils removeUserDefaultsForKey:SNS_ANON_IDENTIFICATION_TOPIC];
+            [BasicUtils removeUserDefaultsForKey:IDENTITY_POOL_ID];
+            
         }
         
         if (completionBlock) {
@@ -247,7 +252,13 @@
         return;
     }
     
-    AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1 identityPoolId:@"us-east-1:927bd403-dff8-4d50-93e6-68921b91e82c"];
+    NSString * poolId = [NSString string];
+    
+    if ([BasicUtils getUserDefaultsValueForKey:IDENTITY_POOL_ID]) {
+        poolId = [BasicUtils getUserDefaultsValueForKey:IDENTITY_POOL_ID];
+    }
+    
+    AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1 identityPoolId:poolId];
     
     AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSEast1 credentialsProvider:credentialsProvider];
     

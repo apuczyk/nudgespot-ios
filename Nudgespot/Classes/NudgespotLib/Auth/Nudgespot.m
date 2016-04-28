@@ -84,22 +84,18 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void)runRegistrationInBackgroundWithToken:(NSData *)deviceToken registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
     
-    [Nudge getAccountsSDKConfigCompletionHandler:^(id response, id error) {
-    
-        [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
+    [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
+        
+        // As Device Token not found then we don't need to register with GCM. We will only register GCM if we found Device Token..
+        if (!error) {
             
-            // As Device Token not found then we don't need to register with GCM. We will only register GCM if we found Device Token..
-            if (!error) {
-                
-                [self connectWithGCM];
-                
-                DLog(@"runRegistrationInBackgroundWithToken starts here");
-                
-                [self registerForNotifications:deviceToken registrationHandler:registeration];
-            }
-        }];
+            [self connectWithGCM];
+            
+            DLog(@"runRegistrationInBackgroundWithToken starts here");
+            
+            [self registerForNotifications:deviceToken registrationHandler:registeration];
+        }
     }];
-    
 }
 
 
@@ -113,7 +109,8 @@ static Nudgespot *sharedMyManager = nil;
     [Nudge setIsAnonymousUser:YES];
     [Nudge setAnonymousHandler:completionBlock];
     
-    
+    [Nudge getAccountsSDKConfigCompletionHandler:^(id response, id error) {
+
         [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
             
             if (!error) {
@@ -123,8 +120,8 @@ static Nudgespot *sharedMyManager = nil;
                 [self sendAnonymousRegistrationToNudgespotWithToken:nil];
             }
 
+        }];
     }];
-    
 }
 
 + (void)loadDeviceToken:(NSData *)deviceToken

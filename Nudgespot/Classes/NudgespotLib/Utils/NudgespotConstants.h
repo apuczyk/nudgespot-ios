@@ -51,6 +51,8 @@ static NSString *const SNS_ANON_IDENTIFICATION_TOPIC = @"sns_anon_identification
 
 static NSString *const GCM_SENDER_ID = @"gcm_sender_id";
 
+static NSString *const IDENTITY_POOL_ID = @"identity_pool_id";
+
 
 static NSString *const VISITOR_REGISTRATION = @"visitors/register";
 
