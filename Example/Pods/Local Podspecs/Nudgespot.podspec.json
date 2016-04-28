@@ -21,7 +21,7 @@
       "Nudgespot/Assets/*.png"
     ]
   },
-  "public_header_files": "Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch",
+  "prefix_header_file": "Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch",
   "frameworks": [
     "SystemConfiguration",
     "Foundation",

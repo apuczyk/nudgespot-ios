@@ -24,18 +24,20 @@ Pod::Spec.new do |s|
     s.homepage         = "https://github.com/nudgespot/nudgespot-ios"
     #s.license          = 'MIT'
     s.author           = { "Nudgespot" => "dev@nudgespot.com" }
-    s.source           = { :git => "https://github.com/nudgespot/nudgespot-ios.git", :tag => s.version.to_s }
+    s.source           = {  :git => "https://github.com/nudgespot/nudgespot-ios.git",
+                            :tag => s.version.to_s }
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
     s.ios.deployment_target = '7.0'
     s.requires_arc = true
 
     s.source_files = "Nudgespot/Classes/**/*"
+
     s.resource_bundles = {
         'Nudgespot' => ['Nudgespot/Assets/*.png']
     }
 
-    s.public_header_files = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
+    s.prefix_header_file = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
 
     s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork'
 
