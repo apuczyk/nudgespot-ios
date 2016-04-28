@@ -43,7 +43,7 @@ PODS:
   - GoogleSymbolUtilities (1.1.0)
   - GoogleUtilities (1.3.0):
     - GoogleSymbolUtilities (~> 1.0)
-  - Nudgespot (0.1.3):
+  - Nudgespot (0.1.4):
     - AFNetworking
     - AWSCognito
     - AWSCore
@@ -78,7 +78,7 @@ SPEC CHECKSUMS:
   GoogleNetworkingUtilities: ec1e9911aca811eb18b7144394fee6168b607785
   GoogleSymbolUtilities: eb3965ea12710569c7b80db198a39e39b18613f7
   GoogleUtilities: 5c653f7df2eedf0ce0efdfe5afe4f831f375fd7a
-  Nudgespot: 8739370b70e87617fee1930b44f500f399a850ba
+  Nudgespot: be710da248416352e147fd8380a08e7b4198e78d
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
 COCOAPODS: 0.39.0
