@@ -94,8 +94,9 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
     
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badgeCount];
     
-    [Nudgespot   acknowledgeGCMServer:userInfo];
+    [Nudgespot  acknowledgeGCMServer:userInfo];
     
+    [Nudgespot  processNudgespotNotification:userInfo withApplication:application andWindow:self.window];
 }
 
 - (void)application:(UIApplication *)application

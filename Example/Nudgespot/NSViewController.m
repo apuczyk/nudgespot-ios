@@ -120,7 +120,7 @@
                            @"Course Fee":@"$10,000"
                            };
     
-    _activity = [[NudgespotActivity alloc] initwithNudgespotActivity:@"purchased" andProperty:(NSMutableDictionary *)dict];
+    _activity = [[NudgespotActivity alloc] initwithNudgespotActivity:@"enroll_course" andProperty:(NSMutableDictionary *)dict];
     
     [Nudgespot trackActivity:_activity completion:^(id response, NSError *error) {
         

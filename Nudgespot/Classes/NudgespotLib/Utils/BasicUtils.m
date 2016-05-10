@@ -207,11 +207,14 @@
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    if (![value isEqualToString:@""]) {
+    if (value) {
         
-        [userDefaults setObject:value forKey:key];
+        if (![value isEqualToString:@""]) {
+            
+            [userDefaults setObject:value forKey:key];
+        }
     }
-    
+        
     [[NSUserDefaults standardUserDefaults] synchronize];
 
 }
@@ -259,16 +262,22 @@
         
         DLog(@"Notification received: %@", [alert objectForKey:@"title"]);
         
-        DLog(@"launch_activity name: %@", [alert objectForKey:@"launch_activity"]);
+        DLog(@"launch_activity name: %@", [alert objectForKey:iOS_LAUNCH_ACTIVITY]);
         
         UINavigationController *nc = (UINavigationController*)window.rootViewController;
         
         if (userinfo) {
             
-            UIViewController *vc = [nc.storyboard instantiateViewControllerWithIdentifier:[alert objectForKey:@"launch_activity"]];
+            NSString * identifier = [userinfo objectForKey:iOS_LAUNCH_ACTIVITY];
             
-            [nc pushViewController:vc animated:NO];
-            
+            if (identifier != nil) {
+                
+                UIViewController *vc = [nc.storyboard instantiateViewControllerWithIdentifier:identifier];
+                
+                if (vc != nil) {
+                    [nc pushViewController:vc animated:NO];
+                }
+            }
         }
     }
     
@@ -278,8 +287,7 @@
         // call the method on a background thread
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
             
-            [Nudgespot processNudgespotNotification:userinfo];
-            
+            [Nudgespot  sendNudgespotMessageEvent:messageId andEvent:@"opened"];
         });
     }
     

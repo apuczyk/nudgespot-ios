@@ -1030,7 +1030,7 @@
 				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
 				<string>LaunchImage</string>
 				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
+				<string>iPhone Developer: Anubhav Sudha (F5N3NAX3KW)</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
@@ -1045,6 +1045,8 @@
 				<string>com.nudgespot.sdk</string>
 				<key>PRODUCT_NAME</key>
 				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
 				<key>WRAPPER_EXTENSION</key>
 				<string>app</string>
 			</dict>
@@ -1064,7 +1066,7 @@
 				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
 				<string>LaunchImage</string>
 				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
+				<string>iPhone Developer: Anubhav Sudha (F5N3NAX3KW)</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
@@ -1079,6 +1081,8 @@
 				<string>com.nudgespot.sdk</string>
 				<key>PRODUCT_NAME</key>
 				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
 				<key>WRAPPER_EXTENSION</key>
 				<string>app</string>
 			</dict>

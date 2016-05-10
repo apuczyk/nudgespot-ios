@@ -241,9 +241,9 @@
 
 #pragma mark Navigate To Specific Screen Handler Methods
 
-+(void) processNudgespotNotification:(NSDictionary *)userinfo;
++ (void) processNudgespotNotification:(NSDictionary *)userinfo withApplication: (UIApplication * )application andWindow:(UIWindow *)window;
 
-+(void) sendNudgespotMessageEvent:(NSString *)messageId andEvent:(NSString *)event;
++ (void) sendNudgespotMessageEvent:(NSString *)messageId andEvent:(NSString *)event;
 
 
 #pragma mark - Track Activities ..

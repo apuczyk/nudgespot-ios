@@ -409,6 +409,8 @@ static Nudgespot *sharedMyManager = nil;
     [Nudge setRegistrationOptions:@{kGGLInstanceIDRegisterAPNSOption:deviceToken,
                                     kGGLInstanceIDAPNSServerTypeSandboxOption:@"YES"}];
     
+//    DLog(@"%@ is device token %@ is GCM Id", deviceToken, [Nudge gcmSenderID]);
+    
     [[GGLInstanceID sharedInstance] tokenWithAuthorizedEntity:[Nudge gcmSenderID]
                                                         scope:kGGLInstanceIDScopeGCM
                                                       options:[Nudge registrationOptions]
@@ -420,10 +422,10 @@ static Nudgespot *sharedMyManager = nil;
                                                           if (![token isEqualToString:@""] && token != nil) {
                                                               
                                                               [self storeRegistrationId:token];
-                                                              
-                                                              [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
                                                               [self sendAnonymousRegistrationToNudgespotWithToken:token];
+                                                              [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
                                                           }
+                                                          
                                                       }];
     
 }
@@ -499,7 +501,6 @@ static Nudgespot *sharedMyManager = nil;
             
             [Nudge updateSubscriber:[Nudge subscriber] completion:^(NudgespotSubscriber *subscriber, id error) {
                 if (subscriber) {
-                    
                     [Nudge setSubscriber:subscriber];
                 }
                 
@@ -567,17 +568,22 @@ static Nudgespot *sharedMyManager = nil;
 }
 
 
-+ (void) processNudgespotNotification:(NSDictionary *)userinfo {
++ (void) processNudgespotNotification:(NSDictionary *)userinfo withApplication: (UIApplication * )application andWindow:(UIWindow *)window {
     
     NSString *messageId = [userinfo objectForKey:@"message_uid"];
     
     if (messageId != nil) {
         
-        [self sendNudgespotMessageEvent:messageId andEvent:@"delivered"];
+        if (application.applicationState == UIApplicationStateBackground) {
+            [self sendNudgespotMessageEvent:messageId andEvent:@"delivered"];
+        } else if (application.applicationState == UIApplicationStateInactive) {
+            [BasicUtils navigateToSpecificViewController:userinfo andApplication:application andWindow:window];
+        }
         
-        [self sendNudgespotMessageEvent:messageId andEvent:@"opened"];
     }
+    
 }
+
 
 + (void)sendNudgespotMessageEvent:(NSString *)messageId andEvent:(NSString *)event {
     
@@ -591,13 +597,11 @@ static Nudgespot *sharedMyManager = nil;
         
         NSMutableDictionary *postDic = [self messageObjectToJSON:messageId andMode:event];
         
-        __weak typeof (Nudge) weakSelf = self;
-        
         [NudgespotNetworkManager sendNudgespotMessageEventWithData:postDic success:^(NSURLSessionDataTask *operation, id responseObject) {
             
-            DLog(@"message %@ json Response Object ::::::::::::::::::::: \n  = %@", postDic, responseObject);
+            DLog(@"message %@ json Response Object ::::::::::::::::::::: \n  = %@ %@ %@", postDic, responseObject, operation.originalRequest.URL.absoluteString, operation.currentRequest.URL.absoluteString);
             
-            [weakSelf setSubscriber:[Nudge convertDictionaryToModel:responseObject]];
+            [Nudge setSubscriber:[Nudge convertDictionaryToModel:responseObject]];
             
         } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             
@@ -686,6 +690,8 @@ static Nudgespot *sharedMyManager = nil;
  */
 
 + (void)acknowledgeGCMServer:(NSDictionary *)userInfo {
+    
+    NSLog(@"%@ is object", [GCMService sharedInstance]);
     
     [[GCMService sharedInstance] appDidReceiveMessage:userInfo];
 }

@@ -111,10 +111,12 @@
 @implementation NudgespotNetworkManager (MessageEvents)
 
 + (NSURLSessionDataTask *)sendNudgespotMessageEventWithData:(NSMutableDictionary *) postData  success:(successCallback)success failure:(failureCallback)failure {
+
+    NudgespotNetworkManager * manager = [[NudgespotNetworkManager manager] initWithBaseURL:nil];
     
-    DLog(@"message %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString],TRACK_API_ENDPOINT);
+    DLog(@"message %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[manager baseURL]absoluteString],TRACK_API_ENDPOINT);
     
-    return [NudgeRestInstance POST:TRACK_API_ENDPOINT parameters:postData progress:nil success:success failure:failure];
+    return [manager POST:TRACK_API_ENDPOINT parameters:postData progress:nil success:success failure:failure];
 
 }
 
