@@ -262,13 +262,13 @@
         
         DLog(@"Notification received: %@", [alert objectForKey:@"title"]);
         
-        DLog(@"launch_activity name: %@", [alert objectForKey:iOS_LAUNCH_ACTIVITY]);
+        DLog(@"launch_activity name: %@", [alert objectForKey:iOS_VIEWCONTROLLER]);
         
         UINavigationController *nc = (UINavigationController*)window.rootViewController;
         
         if (userinfo) {
             
-            NSString * identifier = [userinfo objectForKey:iOS_LAUNCH_ACTIVITY];
+            NSString * identifier = [userinfo objectForKey:iOS_VIEWCONTROLLER];
             
             if (identifier != nil) {
                 

@@ -30,7 +30,7 @@ static NSString *const SHARED_PROP_REGISTRATION_ID = @"nudgespot::registration_i
 
 static NSString *const SHARED_PROP_REGISTRATION_SENT = @"nudgespot::registration_sent";
 
-static NSString *const iOS_LAUNCH_ACTIVITY = @"ios_launch_activity";
+static NSString *const iOS_VIEWCONTROLLER = @"ios_view_controller";
 
 static NSString *const SHARED_PROP_APP_VERSION = @"nudgespot::app_version";
 
