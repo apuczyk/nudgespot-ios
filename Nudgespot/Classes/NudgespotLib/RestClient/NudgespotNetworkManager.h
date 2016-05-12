@@ -25,11 +25,9 @@ typedef void(^failureCallback)(NSURLSessionDataTask *operation, NSError *error);
 
 + (NSURLSessionDataTask *) getAccountsSDKConfigFile:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 
-+ (NSURLSessionDataTask *) createSubscriberWithPostData:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
++ (NSURLSessionDataTask *) identifySubscriberWithPostData:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 
 + (NSURLSessionDataTask *) updateSubscriberWithUrl:(NSString *)urlString withPostData : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
-
-+ (NSURLSessionDataTask *) getSubscriberWithID:(NSString *)uid success:(successCallback)success failure:(failureCallback)failure;
 
 @end
 

@@ -77,14 +77,6 @@
     DLog(@"GET Accounts SDK Config %@ ::::::::::::::::::::: \n request Url %@", postData, requestUrl);
 
     return [NudgeRestInstance GET:requestUrl parameters:nil progress:nil success:success failure:failure];
-
-}
-
-+ (NSURLSessionDataTask *) createSubscriberWithPostData:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
-{
-    DLog(@"createSubscriber %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString],SUBSCRIBER_CREATE_PATH);
-    
-    return [NudgeRestInstance POST:SUBSCRIBER_CREATE_PATH parameters:postData progress:nil success:success failure:failure];
 }
 
 + (NSURLSessionDataTask *) updateSubscriberWithUrl:(NSString *)urlString withPostData : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
@@ -94,13 +86,13 @@
     return [NudgeRestInstance PUT:urlString parameters:postData success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *) getSubscriberWithID:(NSString *)uid success:(successCallback)success failure:(failureCallback)failure;
-{
-    NSString *requestUrl = [NSString stringWithFormat:@"%@%@",SUBSCRIBER_FIND_PATH, uid];
++ (NSURLSessionDataTask *) identifySubscriberWithPostData:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure; {
     
-    DLog(@"getSubscriber search path %@ ::::::::::::::::::::: \n request Url %@%@", requestUrl, [[[self manager] baseURL]absoluteString],SUBSCRIBER_FIND_PATH);
+    NSString *requestUrl = [NSString stringWithFormat:@"%@",SUBSCRIBER_IDENTIFY];
     
-    return [NudgeRestInstance GET:requestUrl parameters:nil progress:nil success:success failure:failure];
+    DLog(@"SUBSCRIBER IDENTIFY search path %@ ::::::::::::::::::::: \n request Url %@%@", requestUrl, [[[self manager] baseURL]absoluteString],SUBSCRIBER_IDENTIFY);
+    
+    return [NudgeRestInstance POST:SUBSCRIBER_IDENTIFY parameters:postData progress:nil success:success failure:failure];
 }
 
 @end

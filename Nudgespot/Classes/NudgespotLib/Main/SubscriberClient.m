@@ -99,13 +99,13 @@
                 // sendAnonymousIdentification method will send Notification to server so, that they will replace all anonymous users to uid and from there server can track.
                 [self sendAnonymousIdentification];
                 
-                DLog(@"getOrCreateSubscriber starts here");
+                DLog(@"identifySubscriber starts here");
                 
                 // GetOrCreateSubscriber will get user and if not found then it will create.
                 
-                [self getOrCreateSubscriberWithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
+                [self identifySubscriberWithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
                     
-                    DLog(@"getOrCreateSubscriber ends here");
+                    DLog(@"identifySubscriber ends here");
                     
                     if (currentSubscriber) {
                         if ([_theDelegate respondsToSelector:@selector(gotSubscriber:registrationHandler:)]) {
@@ -296,19 +296,18 @@
 
 #pragma mark Nudgespot Service Methods
 
--(void) createSubscriber:(NudgespotSubscriber *)currentSubscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock {
+-(void) identifySubscriber:(NudgespotSubscriber *)subscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock {
     
     @try {
         
-        if (currentSubscriber == nil) {
+        if (subscriber == nil) {
             return;
         }
         
-        NSMutableDictionary *postData =  [currentSubscriber toJSON];
+        NSMutableDictionary *postData =  [subscriber toJSON];
         
-        [NudgespotNetworkManager createSubscriberWithPostData:postData success:^(NSURLSessionDataTask *operation, id responseObject)
-        {
-            DLog(@"url = %@ createSubscriber %@ json Response Object ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, postData,  responseObject);
+        [NudgespotNetworkManager identifySubscriberWithPostData:postData success:^(NSURLSessionDataTask *operation, id responseObject) {
+            DLog(@"url = %@ identify %@ json Response Object ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, postData,  responseObject);
             
             NudgespotSubscriber *getSubscriber = [self convertDictionaryToModel:responseObject];
             
@@ -316,14 +315,15 @@
                 completionBlock (getSubscriber, nil);
             }
 
-        } failure:^(NSURLSessionDataTask *operation, NSError *error)
-        {
+        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             DLog(@"%@ is failure \n %@", error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey], error);
             
             if (completionBlock != nil){
                 completionBlock (nil, error);
             }
+
         }];
+        
     }
     @catch (NSException *exception) {
         
@@ -370,68 +370,21 @@
     }
 }
 
-
--(void) getSubscriber:(NSString *)uID completion:(void (^)(NudgespotSubscriber *subsciber, id error))completionBlock {
-    
-    @try {
-        
-        NSString *encodedUID = [BasicUtils getEncodedString:uID];
-        
-        [NudgespotNetworkManager getSubscriberWithID:encodedUID success:^(NSURLSessionDataTask *operation, id responseObject) {
-            
-            DLog(@"url = %@ getSubscriber %@ json Response Object ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, encodedUID,  responseObject);
-            
-            NudgespotSubscriber  *getSubsciber = [self convertDictionaryToModel:responseObject];
-            
-            if (completionBlock != nil){
-                completionBlock (getSubsciber, nil);
-            }
-            
-        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-            
-            if (completionBlock != nil){
-                completionBlock (nil, error);
-            }
-        }];
-    }
-    @catch (NSException *exception) {
-        
-        DLog(@"Exception:%@",exception);
-    }
-    
-}
-
-
--(void) getOrCreateSubscriberWithCompletion:(void (^)(NudgespotSubscriber *currentSubsciber, id error))completionBlock {
+-(void) identifySubscriberWithCompletion:(void (^)(NudgespotSubscriber *currentSubsciber, id error))completionBlock {
     
     if ([BasicUtils isNonEmpty:self.subscriberUid]) {
         
-        [self getSubscriber:self.subscriberUid completion:^(NudgespotSubscriber *theSubscriber, id error)
-        {
-            if (theSubscriber){
+        [self identifySubscriber:self.subscriber completion:^(NudgespotSubscriber *subscriber, id error) {
+            if (subscriber) {
+                self.subscriber = subscriber;
                 
-                self.subscriber = theSubscriber;
                 if (completionBlock != nil) {
-                    completionBlock (theSubscriber, error);
+                    completionBlock (subscriber, error);
                 }
-            }
-            else
-            {
-                [self createSubscriber:subscriber completion:^(NudgespotSubscriber *theSubscriber, id error) {
-                    
-                    if (theSubscriber) {
-                        self.subscriber = theSubscriber;
-                        
-                        if (completionBlock != nil) {
-                            completionBlock (theSubscriber, error);
-                        }
-                    }
-                }];
             }
         }];
     }
 }
-
 
 -(void) trackActivity:(NudgespotActivity *) currentActivity completion:(void (^)(id response, NSError *error))completionBlock {
     
@@ -450,29 +403,29 @@
                 NSDictionary *postData = [currentActivity toJSON];
                 
                 [NudgespotNetworkManager createActivityWithPostData:postData success:^(NSURLSessionDataTask *operation, id responseObject) {
+                    
+                    DLog(@" url = %@ and postData = %@ and trackActivity json Response string ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, postData, responseObject);
+                    
+                    if ([responseObject objectForKey:KEY_ERROR] == nil) {
                         
-                        DLog(@" url = %@ and postData = %@ and trackActivity json Response string ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, postData, responseObject);
+                        activity = [[NudgespotActivity alloc] initWithJSON:responseObject];
+                    }
+                    else if ([responseObject objectForKey:KEY_ERROR] != nil) {
                         
-                        if ([responseObject objectForKey:KEY_ERROR] == nil) {
-                            
-                            activity = [[NudgespotActivity alloc] initWithJSON:responseObject];
-                        }
-                        else if ([responseObject objectForKey:KEY_ERROR] != nil) {
-                            
-                            message = [self getErrorMessage:[responseObject objectForKey:KEY_ERROR]];
-                        }
-                        
-                        if (completionBlock) {
-                            completionBlock (responseObject, operation.error);
-                        }
-                        
-                    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-                        DLog(@"%@ is error %@", operation.response, error);
-                        
-                        if (completionBlock) {
-                            completionBlock (operation.response, error);
-                        }
-                    }];
+                        message = [self getErrorMessage:[responseObject objectForKey:KEY_ERROR]];
+                    }
+                    
+                    if (completionBlock) {
+                        completionBlock (responseObject, operation.error);
+                    }
+                    
+                } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+                    DLog(@"%@ is error %@", operation.response, error);
+                    
+                    if (completionBlock) {
+                        completionBlock (operation.response, error);
+                    }
+                }];
             
             }
             @catch (NSException *exception) {

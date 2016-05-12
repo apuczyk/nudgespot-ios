@@ -78,11 +78,9 @@
 
 - (void) getAccountsSDKConfigCompletionHandler :(void (^)(id response, id error))completionBlock;
 
--(void) createSubscriber:(NudgespotSubscriber *)currentSubscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock;
+-(void) identifySubscriber:(NudgespotSubscriber *)subscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock;
 
 -(void) updateSubscriber:(NudgespotSubscriber *)currentSubscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock;
-
--(void) getSubscriber:(NSString *)uID completion:(void (^)(NudgespotSubscriber *subsciber, id error))completionBlock;
 
 -(void) trackActivity:(NudgespotActivity *) currentActivity completion:(void (^)(id response, NSError *error))completionBlock;
 

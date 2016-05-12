@@ -9,9 +9,9 @@
 
 //  PROD CONFIG
 
-static NSString * REST_API_ENDPOINT = @"http://sphinx.nudgespot.com/201507";
+static NSString * REST_API_ENDPOINT = @"https://app.nudgespot.com/201507";
 
-static NSString *const TRACK_API_ENDPOINT = @"http://track.sphinx.nudgespot.com/android/message_events";
+static NSString *const TRACK_API_ENDPOINT = @"https://track.nudgespot.com/android/message_events";
 
 static NSString *const CONTACT_TYPE_EMAIL = @"email";
 
@@ -43,6 +43,9 @@ static NSString *const SHARED_PROP_IS_ANON_USER_EXISTS = @"isAnynomousUserExits"
 static NSString *const SUBSCRIBER_CREATE_PATH = @"subscribers";
 
 static NSString *const SUBSCRIBER_FIND_PATH = @"subscribers?uid=";
+
+static NSString *const SUBSCRIBER_IDENTIFY = @"subscribers/identify";
+
 
 static NSString *const ACTIVITY_CREATE_PATH = @"activities";
 
