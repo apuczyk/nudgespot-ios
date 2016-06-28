@@ -1,6 +1,6 @@
 {
   "name": "Nudgespot",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "summary": "nudgespot-ios is Objective-C framework.",
   "description": "Nudgespot provides framework for iOS which allows users to track events.",
   "homepage": "https://github.com/nudgespot/nudgespot-ios",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/nudgespot/nudgespot-ios.git",
-    "tag": "0.1.6"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "7.0"
@@ -39,15 +39,6 @@
 
     ],
     "AFNetworking": [
-
-    ],
-    "AWSCognito": [
-
-    ],
-    "AWSCore": [
-
-    ],
-    "AWSSNS": [
 
     ]
   }

@@ -95,6 +95,16 @@
     return [NudgeRestInstance POST:SUBSCRIBER_IDENTIFY parameters:postData progress:nil success:success failure:failure];
 }
 
++ (NSURLSessionDataTask *) identifyVisitorForAccount:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure; {
+    
+    NSString *requestUrl = [NSString stringWithFormat:@"%@",VISITOR_IDENTIFY];
+    
+    DLog(@"VISITOR IDENTIFY For an account %@ ::::::::::::::::::::: \n request Url %@%@", requestUrl, [[[self manager] baseURL]absoluteString], VISITOR_IDENTIFY);
+    
+    return [NudgeRestInstance POST:requestUrl parameters:postData progress:nil success:success failure:failure];
+}
+
+
 @end
 
 

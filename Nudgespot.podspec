@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "Nudgespot"
-    s.version          = "0.1.6"
+    s.version          = "0.1.7"
     s.summary          = "nudgespot-ios is Objective-C framework."
 
 # This description is used to generate tags and improve search results.
@@ -46,8 +46,5 @@ Pod::Spec.new do |s|
     s.dependency 'Google/CloudMessaging'
     s.dependency 'Reachability'
     s.dependency 'AFNetworking'
-    s.dependency 'AWSCognito'
-    s.dependency 'AWSCore'
-    s.dependency 'AWSSNS'
 
 end

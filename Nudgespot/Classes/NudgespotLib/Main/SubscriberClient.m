@@ -14,10 +14,6 @@
 #import "NudgespotActivity.h"
 #import "NudgespotConstants.h"
 
-#import <AWSCore/AWSCore.h>
-#import <AWSSNS/AWSSNS.h>
-#import <AWSCognito/AWSCognito.h>
-
 @implementation SubscriberClient
 
 @synthesize endpoint;
@@ -258,40 +254,16 @@
         poolId = [BasicUtils getUserDefaultsValueForKey:IDENTITY_POOL_ID];
     }
     
-    AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1 identityPoolId:poolId];
-    
-    AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSEast1 credentialsProvider:credentialsProvider];
-    
-    AWSServiceManager.defaultServiceManager.defaultServiceConfiguration = configuration;
-    
     NSDictionary * message = @{KEY_SUBSCRIBER_UID : subscriber.uid,
                                KEY_VISITOR_UID: vistitorUid,
                                @"api_key": [[Nudgespot sharedInstance] JavascriptAPIkey]};
     
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:message
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:&error];
-    NSString * jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    
-    AWSSNS *sns = [AWSSNS defaultSNS];
-    
-    AWSSNSPublishInput *request = [AWSSNSPublishInput new];
-    
-    NSString *topicArc = [NSString string];
-    
-    if ([BasicUtils getUserDefaultsValueForKey:SNS_ANON_IDENTIFICATION_TOPIC]) {
-        topicArc = [BasicUtils getUserDefaultsValueForKey:SNS_ANON_IDENTIFICATION_TOPIC];
-    }
-    
-    request.topicArn = topicArc;
-    request.message = jsonString;
-    
-    [sns publish:request completionHandler:^(AWSSNSPublishResponse * _Nullable response, NSError * _Nullable error) {
-        
-        DLog(@"%@ is response", response);
-        
+    [NudgespotNetworkManager identifyVisitorForAccount:message success:^(NSURLSessionDataTask *operation, id responseObject) {
+        DLog(@"success %@", responseObject);
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        DLog(@"error %@", error);
     }];
+    
 }
 
 #pragma mark Nudgespot Service Methods
