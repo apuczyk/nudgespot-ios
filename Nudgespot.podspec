@@ -33,10 +33,6 @@ Pod::Spec.new do |s|
 
     s.source_files = "Nudgespot/Classes/**/*"
 
-    s.resource_bundles = {
-        'Nudgespot' => ['Nudgespot/Assets/*.png']
-    }
-
     s.prefix_header_file = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
 
     s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork'
