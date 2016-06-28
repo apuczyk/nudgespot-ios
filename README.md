@@ -22,7 +22,7 @@ pod "Nudgespot"
 
 ## Author
 
-Maheep Kaushal, maheepkaushal@gmail.com
+Nudgespot, dev@nudgespot.com
 
 ## License
 
