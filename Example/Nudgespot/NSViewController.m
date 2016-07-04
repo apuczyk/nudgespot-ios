@@ -33,7 +33,6 @@
     
     [super viewDidLoad];
     
-    
     NSString *uidText = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
     
     if (uidText) {

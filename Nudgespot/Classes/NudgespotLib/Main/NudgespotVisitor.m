@@ -80,14 +80,14 @@
             [dict setObject:deviceInfo forKey:KEY_VISITOR_DEVICE_INFO];
         }
         
-        if ([BasicUtils isNonEmpty:self.properties]) {
-            
-            [dict setObject:self.properties forKey:KEY_VISITOR_PROPERTIES];
+        if (self.properties == nil) {
+            self.properties = [[NSMutableDictionary alloc] init];
+        }else{
+            self.properties = [[NSMutableDictionary alloc] initWithDictionary:self.properties];
         }
-        else {
-            
-            [dict setObject:@{} forKey:KEY_VISITOR_PROPERTIES];
-        }
+        
+        [self.properties setObject:@"Y" forKey:iOS_USER];
+        [dict setObject:self.properties forKey:KEY_VISITOR_PROPERTIES];
         
         [vistorDict setObject:dict forKey:KEY_VISITOR];
         
@@ -95,7 +95,6 @@
     @catch (NSException *exception) {
         
         DLog(@"Exception:%@",exception);
-        
     }
     
     return vistorDict;

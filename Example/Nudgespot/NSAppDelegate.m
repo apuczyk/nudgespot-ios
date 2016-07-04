@@ -57,7 +57,9 @@ static NSUInteger badgeCount = 1;
         }];
         
     } else {
-        [Nudgespot setWithUID:uid registrationHandler:nil];
+        [Nudgespot setWithUID:uid registrationHandler:^(NSString *registrationToken, NSError *error) {
+            NSLog(@"%@ is response ", registrationToken);
+        }];
     }
     
     return YES;

@@ -52,6 +52,11 @@ static NSString *const VISITOR_IDENTIFY = @"accounts/identify_visitor";
 static NSString *const ACTIVITY_CREATE_PATH = @"activities";
 
 
+static NSString *const iOS_USER = @"ios_user";
+
+static NSString *const SOURCE_LIB = @"source_lib";
+
+
 static NSString *const ACCOUNTS_SDK_CONFIG = @"accounts/sdk_config";
 
 static NSString *const SNS_ANON_IDENTIFICATION_TOPIC = @"sns_anon_identification_topic";

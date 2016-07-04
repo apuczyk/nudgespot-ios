@@ -103,12 +103,17 @@
             else {
                 [dict setObject:[BasicUtils nowString] forKey:KEY_ACTIVITY_TIMESTAMP];
             }
-            
-            if (self.properties != nil) {
-                
-                [dict setObject:self.properties forKey:KEY_ACTIVITY_PROPERTIES];
-                
+                        
+            if (self.properties == nil) {
+                self.properties = [[NSMutableDictionary alloc] init];
+            }else{
+                self.properties = [[NSMutableDictionary alloc] initWithDictionary:self.properties];
             }
+            
+            [self.properties setValue:@"iOS" forKey:SOURCE_LIB];
+            
+            
+            [dict setObject:self.properties forKey:KEY_ACTIVITY_PROPERTIES];
             
             [activityDict setObject:dict forKey:KEY_ACTIVITY];
             

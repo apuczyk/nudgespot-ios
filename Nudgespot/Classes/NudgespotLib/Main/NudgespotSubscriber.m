@@ -175,11 +175,16 @@
             [dict setObject:[BasicUtils getStringValueOfUTC:self.signupTime] forKey:KEY_SIGNED_UP_AT];
             
         }
-        if (self.properties != nil) {
-            
-            [dict setObject:self.properties forKey:KEY_SUBSCRIBER_PROPERTIES];
-            
+        
+        if (self.properties == nil) {
+            self.properties = [[NSMutableDictionary alloc] init];
+        }else{
+            self.properties = [[NSMutableDictionary alloc] initWithDictionary:self.properties];
         }
+        
+        [self.properties setObject:@"Y" forKey:iOS_USER];
+        [dict setObject:self.properties forKey:KEY_SUBSCRIBER_PROPERTIES];
+        
         if (self.subscriberContactList.count > 0) {
             
             NSMutableArray *contactArrayList = [[NSMutableArray alloc] init];
