@@ -407,7 +407,7 @@ static Nudgespot *sharedMyManager = nil;
 + (void)gettingTokenFromGCM:(NSData *)deviceToken {
     
     [Nudge setRegistrationOptions:@{kGGLInstanceIDRegisterAPNSOption:deviceToken,
-                                    kGGLInstanceIDAPNSServerTypeSandboxOption:@"YES"}];
+                                    kGGLInstanceIDAPNSServerTypeSandboxOption:@NO}];
     
 //    DLog(@"%@ is device token %@ is GCM Id", deviceToken, [Nudge gcmSenderID]);
     
