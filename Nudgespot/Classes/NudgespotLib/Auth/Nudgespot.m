@@ -422,10 +422,10 @@ static Nudgespot *sharedMyManager = nil;
                                                           if (![token isEqualToString:@""] && token != nil) {
                                                               
                                                               [self storeRegistrationId:token];
-                                                              [self sendAnonymousRegistrationToNudgespotWithToken:token];
-                                                              [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
                                                           }
                                                           
+                                                          [self sendAnonymousRegistrationToNudgespotWithToken:token];
+                                                          [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
                                                       }];
     
 }
@@ -449,10 +449,10 @@ static Nudgespot *sharedMyManager = nil;
                                                           if (![token isEqualToString:@""] && token != nil) {
                                                               
                                                               [Nudgespot storeRegistrationId:token];
-                                                              
-                                                              [Nudgespot sendRegistrationToNudgespotWithRegistrationHandler:self.registrationHandler];
-                                                              [[Nudgespot sharedInstance] sendAnonymousRegistrationToNudgespotWithToken:token];
                                                           }
+                                                          
+                                                          [Nudgespot sendRegistrationToNudgespotWithRegistrationHandler:self.registrationHandler];
+                                                          [[Nudgespot sharedInstance] sendAnonymousRegistrationToNudgespotWithToken:token];
                                                       }];
     
 }
