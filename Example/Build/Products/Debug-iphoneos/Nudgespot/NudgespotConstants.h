@@ -126,7 +126,7 @@ static NSString *const KEY_PROPERTIES_LASTSEEN = @"last_seen";
 static NSString *const KEY_PROPERTIES_PLAN = @"plan";
 
 
-static NSString *const KEY_CONTACT = @"contact";
+static NSString *const KEY_CONTACT = @"contacts";
 
 static NSString *const KEY_CONTACT_TYPE = @"contact_type";
 

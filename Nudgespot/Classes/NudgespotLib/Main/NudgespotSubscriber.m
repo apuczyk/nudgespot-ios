@@ -122,9 +122,11 @@
     
     [self removeContact:type andValue:value]; // safety check in case the contact already exists
     
-    SubscriberContact *contact = [[SubscriberContact alloc] initwithType:type andValue:value];
-    
-    [self.subscriberContactList addObject:contact];
+    if (value != nil || ![value isEqualToString:@""]) {
+        
+        SubscriberContact *contact = [[SubscriberContact alloc] initwithType:type andValue:value];
+        [self.subscriberContactList addObject:contact];
+    }
     
 }
 
