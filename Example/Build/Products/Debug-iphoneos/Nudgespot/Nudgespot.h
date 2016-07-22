@@ -17,6 +17,7 @@
 #import "BasicUtils.h"
 #import "Reachability.h"
 #import "SubscriberClient.h"
+#import <Firebase/Firebase.h>
 
 @interface Nudgespot : SubscriberClient <SubscriberClientDelegate>
 
@@ -141,19 +142,19 @@
 + (void) loadDeviceToken : (NSData *)deviceToken;
 
 
-#pragma mark - Methods used to connect and disconnect from GCM Server
+#pragma mark - Methods used to connect and disconnect from Fcm Server
 
 /**
- *  Connect to the GCM server to receive non-APNS notifications
+ *  Connect to the Fcm server to receive non-APNS notifications
  */
 
-+ (void)connectWithGCM;
++ (void)connectToFcm;
 
 /**
- *  Disconnect with the GCM server to stop receiving non-APNS notifications
+ *  Disconnect with the Fcm server to stop receiving non-APNS notifications
  */
 
-+ (void)disconnectWithGCM;
++ (void)disconnectToFcm;
 
 
 #pragma mark - Method to clear local storage
@@ -233,11 +234,10 @@
 #pragma mark - Notification receipt Acknowledgement Methods
 
 /**
- * to acknowledge receipt of that message to the GCM connection server
+ * to acknowledge receipt of that message to the Fcm connection server
  */
 
-+ (void)acknowledgeGCMServer:(NSDictionary *)userInfo;
-
++ (void)acknowledgeFcmServer:(NSDictionary *)userInfo;
 
 #pragma mark Navigate To Specific Screen Handler Methods
 

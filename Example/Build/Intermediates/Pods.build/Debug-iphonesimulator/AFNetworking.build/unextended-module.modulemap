@@ -1,0 +1,10 @@
+framework module AFNetworking {
+  umbrella header "AFNetworking-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AFNetworking.__Swift {
+    exclude header "AFNetworking-Swift.h"
+}

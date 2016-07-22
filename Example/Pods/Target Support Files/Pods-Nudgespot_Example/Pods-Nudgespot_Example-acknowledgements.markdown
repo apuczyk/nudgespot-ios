@@ -24,27 +24,27 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## GGLInstanceID
+## Firebase
 
-Copyright 2015 Google Inc.
+Copyright 2016 Google Inc.
 
-## Google
+## FirebaseAnalytics
 
-Copyright 2015 Google Inc.
+Copyright 2016 Google
 
-## GoogleCloudMessaging
+## FirebaseInstanceID
 
-Copyright 2015 Google Inc.
+Copyright 2016 Google Inc.
+
+## FirebaseMessaging
+
+Copyright 2016 Google Inc.
 
 ## GoogleIPhoneUtilities
 
 Copyright 2015 Google Inc.
 
 ## GoogleInterchangeUtilities
-
-Copyright 2015 Google Inc.
-
-## GoogleNetworkingUtilities
 
 Copyright 2015 Google Inc.
 
@@ -58,7 +58,7 @@ Copyright 2015 Google Inc.
 
 ## Nudgespot
 
-Copyright (c) 2016 Maheep Kaushal <maheepkaushal@gmail.com>
+Copyright (c) 2016 Nudgespot <dev@nudgespot.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

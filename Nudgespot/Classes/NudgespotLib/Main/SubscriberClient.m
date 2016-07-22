@@ -7,12 +7,10 @@
 //
 
 #import "SubscriberClient.h"
-#import "NudgespotSubscriber.h"
-#import <Google/CloudMessaging.h>
+
 #import "NudgespotNetworkManager.h"
-#import "NudgespotSubscriber.h"
-#import "NudgespotActivity.h"
-#import "NudgespotConstants.h"
+
+#import <Firebase/Firebase.h>
 
 @implementation SubscriberClient
 
@@ -185,9 +183,8 @@
             [BasicUtils setUserDefaultsValue:[NSString stringWithFormat:@"%@",[json_Data objectForKey:@"gcm_sender_id"]] forKey:GCM_SENDER_ID];
             [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"sns_anon_identification_topic"] forKey:SNS_ANON_IDENTIFICATION_TOPIC];
             [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"identity_pool_id"] forKey:IDENTITY_POOL_ID];
-
             
-            [self initGCM];
+            [self configureFirebase];
             
             if (completionBlock) {
                 completionBlock(responseObject, nil);
@@ -225,19 +222,11 @@
 }
 
 
-- (void) initGCM {
-    
-    // Configure the Google context: parses the GoogleService-Info.plist, and initializes
-    // the services that have entries in the file
-//    NSError* configureError;
-//    [[GGLContext sharedInstance] configureWithError:&configureError];
-//    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+- (void) configureFirebase {
     
     self.gcmSenderID = [BasicUtils getUserDefaultsValueForKey:GCM_SENDER_ID];
     
-    GCMConfig *gcmConfig = [GCMConfig defaultConfig];
-    gcmConfig.receiverDelegate = self;
-    
+//    [FIRApp configure];
 }
 
 - (void)sendAnonymousIdentification {

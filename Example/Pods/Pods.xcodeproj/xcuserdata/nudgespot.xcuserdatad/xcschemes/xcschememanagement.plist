@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Nudgespot-Nudgespot.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Nudgespot.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0386732D5961350745C2A8818A32FD6B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5E1CF866667D2A16AA2A42527E233B5C</key>
+		<key>2FB4AEC2E5AA068200B1B07672A360C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +47,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0BACE196767899BF706B8044FA60E77</key>
+		<key>AA210DA4DB58F64E0825254E933BBAA8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

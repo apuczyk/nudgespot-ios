@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/AFNetworking.build/unextended-module.modulemap',
+    }]
+  }]
+}

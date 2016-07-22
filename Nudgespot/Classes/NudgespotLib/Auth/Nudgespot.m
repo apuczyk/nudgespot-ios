@@ -8,10 +8,8 @@
 
 #import "Nudgespot.h"
 
-#import <Google/CloudMessaging.h>
-#import "SubscriberClient.h"
+#import <Firebase/Firebase.h>
 #import "NudgespotNetworkManager.h"
-#import "NudgespotVisitor.h"
 
 #define Nudge [self sharedInstance]
 
@@ -89,7 +87,7 @@ static Nudgespot *sharedMyManager = nil;
         // As Device Token not found then we don't need to register with GCM. We will only register GCM if we found Device Token..
         if (!error) {
             
-            [self connectWithGCM];
+            [self connectToFcm];
             
             DLog(@"runRegistrationInBackgroundWithToken starts here");
             
@@ -154,34 +152,30 @@ static Nudgespot *sharedMyManager = nil;
 }
 
 
-#pragma mark - Methods used to connect and disconnect from GCM Server
+#pragma mark - Methods used to connect and disconnect from Fcm Server
 
 /**
- *  Connect to the GCM server to receive non-APNS notifications
+ *  Connect to the Fcm server to receive non-APNS notifications
  */
 
-+ (void)connectWithGCM {
-    
-    [[GCMService sharedInstance] connectWithHandler:^(NSError *error) {
-        
-        if (error) {
-            
-            DLog(@"Could not connect to GCM: %@", error.localizedDescription);
-            
++ (void)connectToFcm {
+    [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"Unable to connect to FCM. %@", error);
         } else {
-            
-            DLog(@"Connected to GCM");
+            NSLog(@"Connected to FCM.");
         }
     }];
 }
 
 /**
- *  Disconnect with the GCM server to stop receiving non-APNS notifications
+ *  Disconnect with the Fcm server to stop receiving non-APNS notifications
  */
 
-+ (void)disconnectWithGCM {
++ (void)disconnectToFcm {
     
-    [[GCMService sharedInstance] disconnect];
+    [[FIRMessaging messaging] disconnect];
+    DLog(@"Disconnected from FCM");
 }
 
 #pragma mark - Method to clear local storage
@@ -192,8 +186,8 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void) clearRegistrationWithCompletion:(void (^)(id response, NSError *error))completionBlock {
     
-    [[GGLInstanceID sharedInstance] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope: kGGLInstanceIDScopeGCM handler:^(NSError *error) {
-        
+    [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
+      
         if (!error) {
             
             [self sendUnregistrationToNudgespotWithCompletion:^(id response, NSError *error) {
@@ -222,7 +216,6 @@ static Nudgespot *sharedMyManager = nil;
                 }
                 
             }];
-            
         }
     }];
 }
@@ -348,7 +341,7 @@ static Nudgespot *sharedMyManager = nil;
     
     if ([Nudge isAnonymousUser] && registrationId.length == 0  && subuid.length == 0) { // Get GCM Registration Token for Anyonomous User
         
-        [self gettingTokenFromGCM:[Nudge deviceToken]];
+        [self gettingTokenFromFcm:[Nudge deviceToken]];
         
     }else if ([Nudge isAnonymousUser] && registrationId.length > 1 && subuid.length == 0) {
         
@@ -387,7 +380,7 @@ static Nudgespot *sharedMyManager = nil;
     
     if ([[Nudge registrationId] isEqualToString:@""] || registerAfresh) { // either no existing registration ID found or the customer is a new one in which case we re-register
         
-        [self gettingTokenFromGCM:deviceToken];
+        [self gettingTokenFromFcm:deviceToken];
         
     } else { // in case the registration is there but the registration failed last time, we try it again
         
@@ -397,40 +390,37 @@ static Nudgespot *sharedMyManager = nil;
 }
 
 + (void) gcmStartConfig {
-    
-    GGLInstanceIDConfig *instanceIDConfig = [GGLInstanceIDConfig defaultConfig];
-    instanceIDConfig.delegate = self;
-    [[GGLInstanceID sharedInstance] startWithConfig:instanceIDConfig];
-    
-}
-
-+ (void)gettingTokenFromGCM:(NSData *)deviceToken {
-    
-    [Nudge setRegistrationOptions:@{kGGLInstanceIDRegisterAPNSOption:deviceToken,
-                                    kGGLInstanceIDAPNSServerTypeSandboxOption:@NO}];
-    
-//    DLog(@"%@ is device token %@ is GCM Id", deviceToken, [Nudge gcmSenderID]);
-    
-    [[GGLInstanceID sharedInstance] tokenWithAuthorizedEntity:[Nudge gcmSenderID]
-                                                        scope:kGGLInstanceIDScopeGCM
-                                                      options:[Nudge registrationOptions]
-                                                      handler:^(NSString *token, NSError *error){
-                                                          
-                                                          DLog(@"GCM Registration token = %@",token);
-                                                          DLog(@"GCM Registration error = %@",error);
-                                                          
-                                                          if (![token isEqualToString:@""] && token != nil) {
-                                                              
-                                                              [self storeRegistrationId:token];
-                                                          }
-                                                          
-                                                          [self sendAnonymousRegistrationToNudgespotWithToken:token];
-                                                          [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
-                                                      }];
+//    
+//    GGLInstanceIDConfig *instanceIDConfig = [GGLInstanceIDConfig defaultConfig];
+//    instanceIDConfig.delegate = self;
+//    [[GGLInstanceID sharedInstance] startWithConfig:instanceIDConfig];
     
 }
 
-#pragma mark - GCM When token Needs to Refresh <GGLInstanceIDDelegate>
++ (void)gettingTokenFromFcm:(NSData *)deviceToken {
+    
+    [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
+    
+    DLog(@"%@ is device token %@ is GCM Id", deviceToken, [Nudge gcmSenderID]);
+    
+    [[FIRInstanceID instanceID] tokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification options:nil handler:^(NSString * _Nullable token, NSError * _Nullable error) {
+        
+        DLog(@"GCM Registration token = %@",token);
+        DLog(@"GCM Registration error = %@",error);
+        
+        if (![token isEqualToString:@""] && token != nil) {
+            
+            [self storeRegistrationId:token];
+        }
+        
+        [self sendAnonymousRegistrationToNudgespotWithToken:token];
+        [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
+        
+    }];
+    
+}
+
+#pragma mark - Fcm When token Needs to Refresh <GGLInstanceIDDelegate>
 
 - (void)onTokenRefresh
 {
@@ -438,27 +428,27 @@ static Nudgespot *sharedMyManager = nil;
     
     DLog(@"The GCM registration token needs to be changed.");
     
-    [[GGLInstanceID sharedInstance] tokenWithAuthorizedEntity:self.gcmSenderID
-                                                        scope:kGGLInstanceIDScopeGCM
-                                                      options:_registrationOptions
-                                                      handler:^(NSString *token, NSError *error) {
+    [[FIRInstanceID instanceID] tokenWithAuthorizedEntity:self.gcmSenderID
+                                                    scope:kFIRInstanceIDTokenRefreshNotification
+                                                  options:nil handler:^(NSString * _Nullable token, NSError * _Nullable error) {
+                                                      
+                                                      DLog(@"GCM Registration token Refresh = %@",token);
+                                                      DLog(@"GCM Registration Refresh error = %@",error);
+                                                      
+                                                      if (![token isEqualToString:@""] && token != nil) {
                                                           
-                                                          DLog(@"GCM Registration token Refresh = %@",token);
-                                                          DLog(@"GCM Registration Refresh error = %@",error);
-                                                          
-                                                          if (![token isEqualToString:@""] && token != nil) {
-                                                              
-                                                              [Nudgespot storeRegistrationId:token];
-                                                          }
-                                                          
-                                                          [Nudgespot sendRegistrationToNudgespotWithRegistrationHandler:self.registrationHandler];
-                                                          [[Nudgespot sharedInstance] sendAnonymousRegistrationToNudgespotWithToken:token];
-                                                      }];
+                                                          [Nudgespot storeRegistrationId:token];
+                                                      }
+                                                      
+                                                      [Nudgespot sendRegistrationToNudgespotWithRegistrationHandler:self.registrationHandler];
+                                                      [[Nudgespot sharedInstance] sendAnonymousRegistrationToNudgespotWithToken:token];
+                                                      
+                                                  }];
     
 }
 
 
-#pragma mark - GCM When token Needs to Refresh <SubscriberClientDelegate>
+#pragma mark - Fcm When token Needs to Refresh <SubscriberClientDelegate>
 
 /**
  *  A Delegate method from SubscriberClientDelegate which will call once we have Subscriber.
@@ -686,14 +676,14 @@ static Nudgespot *sharedMyManager = nil;
 #pragma mark - Notification receipt Acknowledgement Methods
 
 /**
- * to acknowledge receipt of that message to the GCM connection server
+ * to acknowledge receipt of that message to the Fcm connection server
  */
 
-+ (void)acknowledgeGCMServer:(NSDictionary *)userInfo {
++ (void)acknowledgeFcmServer:(NSDictionary *)userInfo {
     
-    NSLog(@"%@ is object", [GCMService sharedInstance]);
+    NSLog(@"%@ is object", [FIRMessaging messaging]);
     
-    [[GCMService sharedInstance] appDidReceiveMessage:userInfo];
+    [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
 }
 
 #pragma mark - Track Activities ..

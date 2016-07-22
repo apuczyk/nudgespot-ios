@@ -78,7 +78,7 @@ static NSUInteger badgeCount = 1;
     
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badgeCount];
     
-    [Nudgespot  connectWithGCM];
+    [Nudgespot  connectToFcm];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -96,7 +96,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
     
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badgeCount];
     
-    [Nudgespot  acknowledgeGCMServer:userInfo];
+    [Nudgespot  acknowledgeFcmServer:userInfo];
     
     [Nudgespot  processNudgespotNotification:userInfo withApplication:application andWindow:self.window];
 }
@@ -114,7 +114,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    [Nudgespot   disconnectWithGCM];
+    [Nudgespot   disconnectToFcm];
 }
 
 

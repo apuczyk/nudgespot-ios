@@ -1,9 +1,10 @@
-source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
 
 inhibit_all_warnings!
 
-pod 'Google/CloudMessaging'
+pod 'Firebase'
+pod 'FirebaseMessaging'
+pod 'FirebaseAnalytics'
 pod 'Reachability'
 pod 'AFNetworking'
 
@@ -12,7 +13,6 @@ target 'Nudgespot_Example' do
     
     target 'Nudgespot_Tests' do
         inherit! :search_paths
-        
         
     end
 end

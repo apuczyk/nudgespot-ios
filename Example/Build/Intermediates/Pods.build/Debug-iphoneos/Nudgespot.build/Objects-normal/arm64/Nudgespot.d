@@ -8,24 +8,23 @@ dependencies: \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Main/SubscriberClient.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Utils/BasicUtils.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Reachability/Reachability.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Private/Firebase/Firebase.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FirebaseAnalytics.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics+AppDelegate.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIREventNames.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRParameterNames.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRUserPropertyNames.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalyticsConfiguration.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRApp.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRConfiguration.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIROptions.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FirebaseInstanceID.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FIRInstanceID.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseMessaging/FirebaseMessaging/FirebaseMessaging.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseMessaging/FirebaseMessaging/FIRMessaging.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Utils/NudgespotConstants.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Main/NudgespotVisitor.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Google/Google/CloudMessaging.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Google/Google/Core.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Google/Google/GGLConfiguration.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Google/Google/GGLContext.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Google/Google/GGLErrorCode.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Google/Google/GMRConfiguration.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/GoogleCloudMessaging/Headers/Public/GCMConfig.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/GoogleCloudMessaging/Headers/Public/GCMPubSub.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/GoogleCloudMessaging/Headers/Public/GCMService.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Google/Google/GGLContext+CloudMessaging.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/GGLInstanceID/Headers/Public/GGLInstanceIDHeaders.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/GGLInstanceID/Headers/Public/GGLInstanceID.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/GGLInstanceID/Headers/Public/GGLInstanceIDConfig.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/GGLInstanceID/Headers/Public/GGLInstanceIDDelegate.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/GoogleCloudMessaging/Headers/Public/GoogleCloudMessaging.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/GoogleCloudMessaging/Headers/Public/GCMReceiverDelegate.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/RestClient/NudgespotNetworkManager.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/AFNetworking/AFNetworking/AFNetworking.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h \
