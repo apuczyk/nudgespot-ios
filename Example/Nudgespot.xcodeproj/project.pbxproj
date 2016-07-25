@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CEBE6F64571C7607AB8C916 /* Pods_Nudgespot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FCE00546990800753AB28E /* Pods_Nudgespot_Example.framework */; };
+		222D4EDCE5D23F19C2991249 /* libPods-Nudgespot_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8A17E8962671452F248E20 /* libPods-Nudgespot_Tests.a */; };
 		443559B81D460D8D00258E3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 443559B71D460D8D00258E3D /* GoogleService-Info.plist */; };
 		44E81BAE1CD1EDA100AA47F1 /* UIAlertController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E81BAD1CD1EDA100AA47F1 /* UIAlertController+Alert.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -24,7 +24,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		DF1D7F51D1FCC79CFEE52FC6 /* Pods_Nudgespot_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4689BC1C517B303676E6D651 /* Pods_Nudgespot_Tests.framework */; };
+		E3115FCE4266317C35D6D604 /* libPods-Nudgespot_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A9A315E02DE1CAEFD353C3 /* libPods-Nudgespot_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11FCE00546990800753AB28E /* Pods_Nudgespot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudgespot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		395960C67E83E71397411472 /* Nudgespot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nudgespot.podspec; path = ../Nudgespot.podspec; sourceTree = "<group>"; };
 		443559B71D460D8D00258E3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44A560A11D42015D001D154C /* libNudgespot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNudgespot.a; path = "Build/Products/Debug-iphoneos/Nudgespot/libNudgespot.a"; sourceTree = "<group>"; };
@@ -51,7 +50,6 @@
 		44F1F3FB1D42684000A76616 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44F1F3FC1D42685B00A76616 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
 		4556D28BB7A7C2E888D9BDE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		4689BC1C517B303676E6D651 /* Pods_Nudgespot_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudgespot_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* Nudgespot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudgespot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,7 +73,9 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		88A3670BEEA8A91882127B5E /* Pods-Nudgespot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example.release.xcconfig"; sourceTree = "<group>"; };
 		94CCE9B8E688D141DC16C8AC /* Pods-Nudgespot_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BB8A17E8962671452F248E20 /* libPods-Nudgespot_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nudgespot_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10FC0A0499CF267E071D903 /* Pods-Nudgespot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1A9A315E02DE1CAEFD353C3 /* libPods-Nudgespot_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nudgespot_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3CC7562F15B7A63E5F717E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +87,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				3CEBE6F64571C7607AB8C916 /* Pods_Nudgespot_Example.framework in Frameworks */,
+				E3115FCE4266317C35D6D604 /* libPods-Nudgespot_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				DF1D7F51D1FCC79CFEE52FC6 /* Pods_Nudgespot_Tests.framework in Frameworks */,
+				222D4EDCE5D23F19C2991249 /* libPods-Nudgespot_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +177,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				11FCE00546990800753AB28E /* Pods_Nudgespot_Example.framework */,
-				4689BC1C517B303676E6D651 /* Pods_Nudgespot_Tests.framework */,
+				D1A9A315E02DE1CAEFD353C3 /* libPods-Nudgespot_Example.a */,
+				BB8A17E8962671452F248E20 /* libPods-Nudgespot_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

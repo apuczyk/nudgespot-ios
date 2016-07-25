@@ -1,12 +1,7 @@
-platform :ios, '8.0'
-
-use_frameworks!
+platform :ios, '7.0'
 
 target 'Nudgespot_Example' do
     pod 'Nudgespot', :path => '../'
-    
-    pod 'Firebase'
-    pod 'FirebaseMessaging'
     
     target 'Nudgespot_Tests' do
         inherit! :search_paths
