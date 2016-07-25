@@ -16,7 +16,7 @@
     "tag": "1.4"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "requires_arc": true,
   "source_files": "Nudgespot/Classes/**/*",
@@ -35,12 +35,6 @@
 
     ],
     "AFNetworking": [
-
-    ],
-    "Firebase": [
-
-    ],
-    "FirebaseMessaging": [
 
     ]
   }

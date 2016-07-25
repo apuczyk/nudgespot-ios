@@ -226,7 +226,7 @@
     
     self.gcmSenderID = [BasicUtils getUserDefaultsValueForKey:GCM_SENDER_ID];
     
-//    [FIRApp configure];
+    [FIRApp configure];
 }
 
 - (void)sendAnonymousIdentification {

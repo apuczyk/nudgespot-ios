@@ -8,7 +8,6 @@
 
 #import "Nudgespot.h"
 
-#import <Firebase/Firebase.h>
 #import "NudgespotNetworkManager.h"
 
 #define Nudge [self sharedInstance]
@@ -159,13 +158,13 @@ static Nudgespot *sharedMyManager = nil;
  */
 
 + (void)connectToFcm {
-    [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
-        if (error != nil) {
-            NSLog(@"Unable to connect to FCM. %@", error);
-        } else {
-            NSLog(@"Connected to FCM.");
-        }
-    }];
+//    [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
+//        if (error != nil) {
+//            NSLog(@"Unable to connect to FCM. %@", error);
+//        } else {
+//            NSLog(@"Connected to FCM.");
+//        }
+//    }];
 }
 
 /**
@@ -174,7 +173,7 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void)disconnectToFcm {
     
-    [[FIRMessaging messaging] disconnect];
+//    [[FIRMessaging messaging] disconnect];
     DLog(@"Disconnected from FCM");
 }
 
@@ -186,38 +185,38 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void) clearRegistrationWithCompletion:(void (^)(id response, NSError *error))completionBlock {
     
-    [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
-      
-        if (!error) {
-            
-            [self sendUnregistrationToNudgespotWithCompletion:^(id response, NSError *error) {
-                
-                if (!error) {
-                    
-                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_SENT];
-                    
-                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_ID];
-                    
-                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_APP_VERSION];
-                    
-                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_SUBSCRIBER_UID];
-                    
-                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_ANON_ID ];
-                    
-                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
-                    
-                    [Nudge clearSubscriber];
-                    
-                    DLog(@"Cleared all registration data on the application");
-                }
-                
-                if (completionBlock) {
-                    completionBlock (response, error);
-                }
-                
-            }];
-        }
-    }];
+//    [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
+//      
+//        if (!error) {
+//            
+//            [self sendUnregistrationToNudgespotWithCompletion:^(id response, NSError *error) {
+//                
+//                if (!error) {
+//                    
+//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_SENT];
+//                    
+//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_ID];
+//                    
+//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_APP_VERSION];
+//                    
+//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_SUBSCRIBER_UID];
+//                    
+//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_ANON_ID ];
+//                    
+//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
+//                    
+//                    [Nudge clearSubscriber];
+//                    
+//                    DLog(@"Cleared all registration data on the application");
+//                }
+//                
+//                if (completionBlock) {
+//                    completionBlock (response, error);
+//                }
+//                
+//            }];
+//        }
+//    }];
 }
 
 #pragma mark - Methods to retrieve local storage
@@ -399,24 +398,24 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void)gettingTokenFromFcm:(NSData *)deviceToken {
     
-    [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
-    
-    DLog(@"%@ is device token %@ is GCM Id", deviceToken, [Nudge gcmSenderID]);
-    
-    [[FIRInstanceID instanceID] tokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification options:nil handler:^(NSString * _Nullable token, NSError * _Nullable error) {
-        
-        DLog(@"GCM Registration token = %@",token);
-        DLog(@"GCM Registration error = %@",error);
-        
-        if (![token isEqualToString:@""] && token != nil) {
-            
-            [self storeRegistrationId:token];
-        }
-        
-        [self sendAnonymousRegistrationToNudgespotWithToken:token];
-        [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
-        
-    }];
+//    [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
+//    
+//    DLog(@"%@ is device token %@ is GCM Id", deviceToken, [Nudge gcmSenderID]);
+//    
+//    [[FIRInstanceID instanceID] tokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification options:nil handler:^(NSString * _Nullable token, NSError * _Nullable error) {
+//        
+//        DLog(@"GCM Registration token = %@",token);
+//        DLog(@"GCM Registration error = %@",error);
+//        
+//        if (![token isEqualToString:@""] && token != nil) {
+//            
+//            [self storeRegistrationId:token];
+//        }
+//        
+//        [self sendAnonymousRegistrationToNudgespotWithToken:token];
+//        [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
+//        
+//    }];
     
 }
 
@@ -428,22 +427,22 @@ static Nudgespot *sharedMyManager = nil;
     
     DLog(@"The GCM registration token needs to be changed.");
     
-    [[FIRInstanceID instanceID] tokenWithAuthorizedEntity:self.gcmSenderID
-                                                    scope:kFIRInstanceIDTokenRefreshNotification
-                                                  options:nil handler:^(NSString * _Nullable token, NSError * _Nullable error) {
-                                                      
-                                                      DLog(@"GCM Registration token Refresh = %@",token);
-                                                      DLog(@"GCM Registration Refresh error = %@",error);
-                                                      
-                                                      if (![token isEqualToString:@""] && token != nil) {
-                                                          
-                                                          [Nudgespot storeRegistrationId:token];
-                                                      }
-                                                      
-                                                      [Nudgespot sendRegistrationToNudgespotWithRegistrationHandler:self.registrationHandler];
-                                                      [[Nudgespot sharedInstance] sendAnonymousRegistrationToNudgespotWithToken:token];
-                                                      
-                                                  }];
+//    [[FIRInstanceID instanceID] tokenWithAuthorizedEntity:self.gcmSenderID
+//                                                    scope:kFIRInstanceIDTokenRefreshNotification
+//                                                  options:nil handler:^(NSString * _Nullable token, NSError * _Nullable error) {
+//                                                      
+//                                                      DLog(@"GCM Registration token Refresh = %@",token);
+//                                                      DLog(@"GCM Registration Refresh error = %@",error);
+//                                                      
+//                                                      if (![token isEqualToString:@""] && token != nil) {
+//                                                          
+//                                                          [Nudgespot storeRegistrationId:token];
+//                                                      }
+//                                                      
+//                                                      [Nudgespot sendRegistrationToNudgespotWithRegistrationHandler:self.registrationHandler];
+//                                                      [[Nudgespot sharedInstance] sendAnonymousRegistrationToNudgespotWithToken:token];
+//                                                      
+//                                                  }];
     
 }
 
@@ -681,9 +680,9 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void)acknowledgeFcmServer:(NSDictionary *)userInfo {
     
-    NSLog(@"%@ is object", [FIRMessaging messaging]);
-    
-    [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
+//    NSLog(@"%@ is object", [FIRMessaging messaging]);
+//    
+//    [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
 }
 
 #pragma mark - Track Activities ..

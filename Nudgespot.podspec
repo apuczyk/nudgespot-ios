@@ -27,7 +27,7 @@ s.author           = { 'Nudgespot' => 'dev@nudgespot.com' }
 s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 :tag => s.version.to_s }
 
-s.ios.deployment_target = '7.0'
+s.ios.deployment_target = '8.0'
 s.requires_arc = true
 
 s.source_files = "Nudgespot/Classes/**/*"
@@ -38,7 +38,5 @@ s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreS
 
 s.dependency 'Reachability'
 s.dependency 'AFNetworking'
-s.dependency 'Firebase'
-s.dependency 'FirebaseMessaging'
 
 end
