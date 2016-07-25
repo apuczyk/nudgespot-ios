@@ -18,6 +18,8 @@
 #import "Reachability.h"
 #import "SubscriberClient.h"
 
+
+
 @interface Nudgespot : SubscriberClient <SubscriberClientDelegate>
 
 /**
@@ -233,11 +235,10 @@
 #pragma mark - Notification receipt Acknowledgement Methods
 
 /**
- * to acknowledge receipt of that message to the GCM connection server
+ * to acknowledge receipt of that message to the Fcm connection server
  */
 
-+ (void)acknowledgeGCMServer:(NSDictionary *)userInfo;
-
++ (void)acknowledgeFcmServer:(NSDictionary *)userInfo;
 
 #pragma mark Navigate To Specific Screen Handler Methods
 

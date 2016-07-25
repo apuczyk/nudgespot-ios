@@ -17,7 +17,8 @@
 #import "BasicUtils.h"
 #import "Reachability.h"
 #import "SubscriberClient.h"
-#import <Firebase/Firebase.h>
+
+
 
 @interface Nudgespot : SubscriberClient <SubscriberClientDelegate>
 

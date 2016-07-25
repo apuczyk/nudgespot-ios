@@ -42,18 +42,12 @@ PODS:
   - Nudgespot (1.4):
     - AFNetworking
     - Firebase
-    - FirebaseAnalytics
     - FirebaseMessaging
     - Reachability
   - Reachability (3.2)
 
 DEPENDENCIES:
-  - AFNetworking
-  - Firebase
-  - FirebaseAnalytics
-  - FirebaseMessaging
   - Nudgespot (from `../`)
-  - Reachability
 
 EXTERNAL SOURCES:
   Nudgespot:
@@ -69,9 +63,9 @@ SPEC CHECKSUMS:
   GoogleIPhoneUtilities: 63f25e93a3ddcb66884d182aab3a660d98f1479b
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
-  Nudgespot: 24ec01a5da660b63025b34a5f01e9024cf6059b0
+  Nudgespot: 5791348b7d8e3847c09bc1d112640391a2cebc23
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-PODFILE CHECKSUM: 32d224cf29d7fcaf3f0af07eb76af82215f3f4fd
+PODFILE CHECKSUM: a58cffd91063d420ffe2e843e202c4cfeb8def2f
 
 COCOAPODS: 1.0.1

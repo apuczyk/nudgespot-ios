@@ -8,11 +8,10 @@
 
 
 //  PROD CONFIG
-//
+
 //static NSString * REST_API_ENDPOINT = @"https://app.nudgespot.com/201507";
 //
 //static NSString *const TRACK_API_ENDPOINT = @"https://track.nudgespot.com/android/message_events";
-
 
 static NSString * REST_API_ENDPOINT = @"https://phoenix.nudgespot.com/201507";
 
