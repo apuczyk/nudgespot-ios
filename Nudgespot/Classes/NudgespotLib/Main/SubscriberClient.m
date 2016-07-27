@@ -54,7 +54,7 @@
 }
 
 
--(id) initWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration{
+-(id) initWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
     
     subscriber = [[NudgespotSubscriber alloc] init];
     
@@ -68,7 +68,7 @@
 -(id) initWithEndpoint:(NSString *)endpointUrl andSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
     
     self.endpoint = endpointUrl;
-
+    
     return [self initWithSubscriber:subscriber registrationHandler:registeration];
 }
 
@@ -94,16 +94,16 @@
             
             DLog(@"identifySubscriber starts here");
             
-            // GetOrCreateSubscriber will get user and if not found then it will create.
+            // Identify subscriber will get user and if not found then it will create.
             
             [self identifySubscriberWithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
                 
                 DLog(@"identifySubscriber ends here");
                 
                 if (currentSubscriber) {
-                    if ([_theDelegate respondsToSelector:@selector(gotSubscriber:registrationHandler:)]) {
-                        [_theDelegate gotSubscriber:currentSubsciber registrationHandler:self.registrationHandler];
-                    }
+                    
+                    [Nudgespot gotSubscriber:currentSubsciber registrationHandler:self.registrationHandler];
+                    
                 } else {
                     self.registrationHandler(currentSubsciber, error);
                 }
@@ -231,7 +231,6 @@
             if (completionBlock != nil){
                 completionBlock (nil, error);
             }
-
         }];
         
     }
@@ -447,6 +446,23 @@
 
 #pragma mark - Fcm integration..
 
+- (void) getFcmTokenCompletion:(void (^)(id token, id error))completionBlock; {
+    
+    if ([[FIRInstanceID instanceID] token]) {
+        if (completionBlock) {
+            completionBlock([[FIRInstanceID instanceID] token], nil);
+        }
+    } else {
+        self.completionBlock =  ^(id token, id error) {
+            
+            if (completionBlock) {
+                completionBlock(token, error);
+            }
+        };
+    }
+    
+}
+
 - (void) configureFirebase {
     
     @try {
@@ -471,23 +487,22 @@
     NSString *refreshedToken = [[FIRInstanceID instanceID] token];
     NSLog(@"InstanceID token: %@", refreshedToken);
     
+    
     // Connect to FCM since connection may have failed when attempted before having a token.
-    [self connectToFcm];
+    [self connectToFcmWithCompletion:self.completionBlock];
 }
 // [END refresh_token]
 
 
 // [START connect_to_fcm]
-- (void)connectToFcm {
+- (void)connectToFcmWithCompletion:(void (^)(id token, id error)) completionBlock {
+    
     [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
-        if (error != nil) {
-            NSLog(@"Unable to connect to FCM. %@", error);
-        } else {
-            NSLog(@"Connected to FCM.");
-        }
+        completionBlock([[FIRInstanceID instanceID] token], error);
     }];
 }
 // [END connect_to_fcm]
+
 
 - (void)disconnectToFcm {
     

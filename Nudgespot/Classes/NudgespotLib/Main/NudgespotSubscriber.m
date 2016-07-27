@@ -130,6 +130,17 @@
     
 }
 
+-(void) updateContact:(NSString *)type FromValue:(NSString *)fromValue toValue: (NSString *) toValue {
+    
+    [self removeContact:type andValue:fromValue]; // remove previous contact.
+    
+    if (toValue != nil || ![toValue isEqualToString:@""]) {
+        
+        SubscriberContact *contact = [[SubscriberContact alloc] initwithType:type andValue:toValue];
+        [self.subscriberContactList addObject:contact];
+    }
+    
+}
 
 -(void) removeContact:(NSString *)type andValue:(NSString *)value {
     

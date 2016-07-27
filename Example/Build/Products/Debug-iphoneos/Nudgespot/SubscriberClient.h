@@ -12,13 +12,6 @@
 @class NudgespotActivity;
 @class NudgespotVisitor;
 
-@protocol SubscriberClientDelegate <NSObject>
-
-- (void) gotSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
-
-@end
-
-
 @interface SubscriberClient : NSObject
 {
     NSString *endpoint;
@@ -51,11 +44,11 @@
 
 @property (nonatomic , retain) SubscriberClient *client;
 
-@property (nonatomic , assign) id<SubscriberClientDelegate> theDelegate;
-
 @property (nonatomic , retain) NSString *gcmSenderID;
 
 @property(nonatomic, strong) void (^registrationHandler) (NSString *registrationToken, NSError *error);
+
+@property(nonatomic, strong) void (^completionBlock)(id token, id error);
 
 @property BOOL credentialsPresent;
 
@@ -95,9 +88,11 @@
  */
 - (NSString *) getStoredSubscriberUid;
 
+- (void) getFcmTokenCompletion:(void (^)(id token, id error))completionBlock;
+
 #pragma mark - Fcm integration.
 
-- (void) connectToFcm;
+- (void)connectToFcmWithCompletion:(void (^)(id token, id error)) completionBlock ;
 
 - (void) disconnectToFcm;
 

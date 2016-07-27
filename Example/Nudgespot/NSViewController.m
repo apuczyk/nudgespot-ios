@@ -139,8 +139,7 @@
     
     __weak NSViewController *weak = self;
     
-    [Nudgespot  clearRegistrationWithCompletion:^(id response, NSError *error) {
-        
+    [Nudgespot clearRegistration:^(id response, NSError *error) {
         if (response) {
             
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:kSubscriberUid];
@@ -167,6 +166,7 @@
             [weak.activityIndicatorView stopAnimating];
         }
     }];
+    
 }
 
 

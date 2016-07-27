@@ -20,7 +20,7 @@
 
 
 
-@interface Nudgespot : SubscriberClient <SubscriberClientDelegate>
+@interface Nudgespot : SubscriberClient
 
 /**
  *  @brief This is check if its registered user or AnonymousUser.
@@ -29,29 +29,11 @@
 @property (nonatomic, assign) BOOL isAnonymousUser;
 
 /**
- *  @brief registration id. This will use once we got registration token from GCM, later will will store that local. so, 
- *         that we don't have togetStoredSubscriberUid get registration token from GCM.
+ *  @brief registration id. This will use once we got registration token from Fcm, later will will store that local. so,
+ *         that we don't have togetStoredSubscriberUid get registration token from Fcm.
  */
 
 @property (nonatomic , retain) NSString *registrationId;
-
-/**
- *  @brief check if Registeration is done successfully or not.
- */
-
-@property (nonatomic , assign) BOOL isRegisterForNotification;
-
-/**
- *  @brief registration options for GCM.
- */
-
-@property (nonatomic , retain) NSDictionary* registrationOptions;
-
-/**
- *  @brief device token from appdelegate file, which requires to register GCM.
- */
-
-@property (nonatomic , retain) NSData *deviceToken;
 
 /**
  *  @brief api key from Nudgespot account settings.
@@ -80,7 +62,7 @@
 /**
  *  @brief Method will initialize Nudgespot Client.
  *  @param pass api key from Nudgespot account settings and secrettoken from Nudgespot account settings.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id)setJavascriptAPIkey:(NSString *)key andRESTAPIkey:(NSString *)token;
@@ -88,7 +70,7 @@
 /**
  *  @brief Method will register user with unique uid and pass endpointurl.
  *  @param pass unique uid and endpointurl.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id) setEndpoint:(NSString *)endpointUrl andUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
@@ -96,7 +78,7 @@
 /**
  *  @brief Method will register user with unique uid.
  *  @param pass unique uid.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
@@ -104,7 +86,7 @@
 /**
  *  @brief Method will register user with subscriber and pass endpointurl.
  *  @param pass subscriber object and endpointurl.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id) setWithEndpoint:(NSString *)endpointUrl andSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
@@ -112,18 +94,18 @@
 /**
  *  @brief Method will register user with subscriber.
  *  @param pass subscriber object in that case.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id) setWithSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
 /**
- *  @brief Method runs for getting GCM registeration token.
+ *  @brief Method runs for getting Fcm registeration token.
  *  @param device token from appdelegate file.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
-+ (void)runRegistrationInBackgroundWithToken:(NSData *)deviceToken registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
++ (void)runRegistrationInBackground:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
 /**
  *  @brief Method which will use if we want to call it as anynomous users.
@@ -131,17 +113,6 @@
  */
 
 + (void) registerAnynomousUser: (void (^)(id response, NSError *error))completionBlock;
-
-#pragma mark - Helper Method to Device Token from Appdelegate
-
-/**
- *  @brief Method for loading Device token to Nudgespot.
- *  @param pass device token from appdelegate file.
- *  @return Application's version code from the Application Bundle.
- */
-
-+ (void) loadDeviceToken : (NSData *)deviceToken;
-
 
 #pragma mark - Methods used to connect and disconnect from Fcm Server
 
@@ -161,27 +132,27 @@
 #pragma mark - Method to clear local storage
 
 /**
- * @ Delete the registration id from GCM Server and also clear the local data storage
+ * @ Delete the registration id from Fcm Server and also clear the local data storage
  */
 
 
-+ (void) clearRegistrationWithCompletion:(void (^)(id response, NSError *error))completionBlock;
++ (void) clearRegistration:(void (^)(id response, NSError *error))completionBlock;
 
 #pragma mark - Registration Methods
 
 /**
- * @ Actual registration for Notification starts here. To register for Notification in GCM Server and also stores the data in local data storage
+ * @ Actual registration for Notification starts here. To register for Notification in Fcm Server and also stores the data in local data storage
  */
 
-+ (BOOL) registerForNotifications:(NSData *)data registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
++ (BOOL) registerForNotifications:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
 /**
- * Registers the application with GCM servers asynchronously.
+ * Registers the application with Fcm servers asynchronously.
  * <p/>
  * Stores the registration ID and the app version code in the application's shared preferences.
  */
 
-+ (void)registerAndSendInBackground:(NSData *)deviceToken andRegisterAfresh:(BOOL)registerAfresh registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
++ (void)registerAndSendInBackgroundAndRegisterAfresh:(BOOL)registerAfresh registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
 #pragma mark - Methods to perform local storage
 
@@ -218,7 +189,7 @@
  * So it can save the registration id for future communication using CCS
  */
 
-+ (void) sendRegistrationToNudgespotWithRegistrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
++ (void) sendRegistrationToNudgespot:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
 #pragma mark - Unregistration Methods
 
@@ -226,11 +197,14 @@
  * Sends un-registration to the Nudgespot server over HTTP to notify that this device has been un-registered for this user.
  */
 
-+ (BOOL) sendUnregistrationToNudgespotWithCompletion:(void (^)(id response, NSError *error))completionBlock;
++ (BOOL) sendUnregistrationToNudgespot:(void (^)(id response, NSError *error))completionBlock;
 
 
 + (NSMutableDictionary *)messageObjectToJSON:(NSString *) messageId andMode:(NSString *)mode;
 
+#pragma mark - Got subscriber..
+
++ (void)gotSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *, NSError *))registeration;
 
 #pragma mark - Notification receipt Acknowledgement Methods
 

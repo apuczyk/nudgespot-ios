@@ -82,17 +82,13 @@ static Nudgespot *sharedMyManager = nil;
     return [Nudge initWithSubscriber:currentSubscriber registrationHandler:registeration];;
 }
 
-+ (void)runRegistrationInBackgroundWithToken:(NSData *)deviceToken registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
++ (void) runRegistrationInBackground:(void (^)(NSString *, NSError *))registeration {
     
-    [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
+    [Nudge getFcmTokenCompletion:^(id token, id error) {
         
-        // As Device Token not found then we don't need to register with Fcm. We will only register Fcm if we found Device Token..
-        if (!error) {
-            
-            DLog(@"runRegistrationInBackgroundWithToken starts here");
-            
-            [self registerForNotifications:deviceToken registrationHandler:registeration];
-        }
+        DLog(@"runRegistrationInBackgroundWithToken starts here");
+        
+        [self registerForNotifications:registeration];
     }];
 }
 
@@ -106,23 +102,12 @@ static Nudgespot *sharedMyManager = nil;
 {
     [Nudge setIsAnonymousUser:YES];
     [Nudge setAnonymousHandler:completionBlock];
-    [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
-        
-        if (!error) {
-            
-            [self runRegistrationInBackgroundWithToken:[Nudge deviceToken] registrationHandler:completionBlock];
-        } else {
-            [self sendAnonymousRegistrationToNudgespotWithToken:nil];
+    
+    [Nudge getFcmTokenCompletion:^(id token, id error) {
+        if (token) {
+            [self runRegistrationInBackground:completionBlock];
         }
-        
     }];
-}
-
-+ (void)loadDeviceToken:(NSData *)deviceToken
-{
-    [Nudge   setIsRegisterForNotification:NO];
-    [Nudge   setDeviceToken:deviceToken];
-    [Nudge   setTheDelegate:Nudge];
 }
 
 #pragma mark - Helper Method to get App Info
@@ -155,7 +140,14 @@ static Nudgespot *sharedMyManager = nil;
  */
 
 + (void)connectToFcm {
-    [Nudge connectToFcm];
+    [Nudge connectToFcmWithCompletion:^(id token, id error) {
+        if (!error) {
+            DLog(@"Connected to Fcm.");
+        } else {
+            NSLog(@"Unable to connect to FCM. %@", error);
+        }
+    }];
+    
 }
 
 /**
@@ -174,7 +166,7 @@ static Nudgespot *sharedMyManager = nil;
  * @ Delete the registration id from Fcm Server and also clear the local data storage
  */
 
-+ (void) clearRegistrationWithCompletion:(void (^)(id response, NSError *error))completionBlock {
++ (void) clearRegistration:(void (^)(id, NSError *))completionBlock {
     
     NSLog(@"%@ is Fcm sender id", [Nudge gcmSenderID] );
     
@@ -185,7 +177,7 @@ static Nudgespot *sharedMyManager = nil;
             // Clear Notificaiton...
             [[NSNotificationCenter defaultCenter] removeObserver:self name:kFIRInstanceIDTokenRefreshNotification object:nil];
             
-            [self sendUnregistrationToNudgespotWithCompletion:^(id response, NSError *error) {
+            [self sendUnregistrationToNudgespot:^(id response, NSError *error) {
                 
                 if (!error) {
                     
@@ -323,9 +315,7 @@ static Nudgespot *sharedMyManager = nil;
  * @ Actual registration for Notification starts here. To register for Notification in Fcm Server and also stores the data in local data storage
  */
 
-+ (BOOL) registerForNotifications:(NSData *)data registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
-    
-    [Nudge setIsRegisterForNotification:YES];
++ (BOOL) registerForNotifications:(void (^)(NSString *, NSError *))registeration {
     
     BOOL registerAfresh = false;
     
@@ -334,7 +324,7 @@ static Nudgespot *sharedMyManager = nil;
     
     if ([Nudge isAnonymousUser] && registrationId.length == 0  && subuid.length == 0) { // Get Fcm Registration Token for Anyonomous User
         
-        [self gettingTokenFromFcm:[Nudge deviceToken]];
+        [self gettingTokenFromFcm];
         
     }else if ([Nudge isAnonymousUser] && registrationId.length > 1 && subuid.length == 0) {
         
@@ -358,7 +348,7 @@ static Nudgespot *sharedMyManager = nil;
         
         [Nudge setRegistrationId:registrationId];
         
-        [self registerAndSendInBackground:data andRegisterAfresh:registerAfresh registrationHandler:registeration];
+        [self registerAndSendInBackgroundAndRegisterAfresh:registerAfresh registrationHandler:registeration];
     }
     
     return YES;
@@ -369,42 +359,34 @@ static Nudgespot *sharedMyManager = nil;
  * <p/>
  * Stores the registration ID and the app version code in the application's shared preferences.
  */
-+ (void)registerAndSendInBackground:(NSData *)deviceToken andRegisterAfresh:(BOOL)registerAfresh registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;{
++ (void)registerAndSendInBackgroundAndRegisterAfresh:(BOOL)registerAfresh registrationHandler:(void (^)(NSString *, NSError *))registeration {
     
     if ([[Nudge registrationId] isEqualToString:@""] || registerAfresh) { // either no existing registration ID found or the customer is a new one in which case we re-register
         
-        [self gettingTokenFromFcm:deviceToken];
+        [self gettingTokenFromFcm];
         
     } else { // in case the registration is there but the registration failed last time, we try it again
         
-        [self sendRegistrationToNudgespotWithRegistrationHandler:registeration];
+        [self sendRegistrationToNudgespot:registeration];
         
     }
 }
 
-+ (void)gettingTokenFromFcm:(NSData *)deviceToken {
++ (void)gettingTokenFromFcm {
     NSString *refreshedToken = [[FIRInstanceID instanceID] token];
-    
-    // Connect to FCM since connection may have failed when attempted before having a token.
-    [self connectToFcm];
     
     [self storeRegistrationId:refreshedToken];
     [self sendAnonymousRegistrationToNudgespotWithToken:refreshedToken];
-    [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
+    [self sendRegistrationToNudgespot:[Nudge registrationHandler]];
 }
 
-#pragma mark - Fcm When token Needs to Refresh <SubscriberClientDelegate>
-
-/**
- *  A Delegate method from SubscriberClientDelegate which will call once we have Subscriber.
- */
-
-- (void)gotSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *, NSError *))registeration
++ (void)gotSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *, NSError *))registeration
 {
     DLog(@"%@ is currentSubscriber", currentSubscriber);
     
     if (currentSubscriber) {
-        [Nudgespot runRegistrationInBackgroundWithToken:self.deviceToken registrationHandler:registeration];
+        
+        [Nudgespot  runRegistrationInBackground:registeration];
     }
 }
 
@@ -424,38 +406,29 @@ static Nudgespot *sharedMyManager = nil;
  * Sends the registration ID to Nudgespot server over HTTP along with the user id.
  * So it can save the registration id for future communication using CCS
  */
-+ (void) sendRegistrationToNudgespotWithRegistrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration; {
++ (void) sendRegistrationToNudgespot:(void (^)(NSString *, NSError *))registeration {
     
     // Here we send the registration ID to Nudgespot servers so that messages can be sent to this device
  
     if ([Nudge isSubscriberReady]) {
         
-        if (![[Nudge subscriber] hasContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID andValue:[Nudge registrationId]]) {
-            
-            [[Nudge subscriber] addContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID andValue:[Nudge registrationId]];
-            
-            [Nudge updateSubscriber:[Nudge subscriber] completion:^(NudgespotSubscriber *subscriber, id error) {
-                if (subscriber) {
-                    [Nudge setSubscriber:subscriber];
-                }
-                
-                // Complete completion Block for initlize client
-                if (registeration) {
-                    registeration([Nudge registrationId], error);
-                }
-                
-                DLog(@"Registration sent to Nudgespot: %@", [Nudge registrationId]);
-            }];
-            
-        } else {
-            
-            // Complete Registeration Block for NudgespotClient
-            if (registeration) {
-                registeration([Nudge registrationId], nil);
+        [[Nudge subscriber] updateContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID FromValue:[Nudge registrationId] toValue:[[FIRInstanceID instanceID] token]];
+        
+        [Nudge updateSubscriber:[Nudge subscriber] completion:^(NudgespotSubscriber *subscriber, id error) {
+            if (subscriber) {
+                [Nudge setSubscriber:subscriber];
             }
             
-            DLog(@"Registration already exists in Nudgespot: %@", [Nudge registrationId]);
-        }
+            // Complete completion Block for initlize client
+            if (registeration) {
+                registeration([Nudge registrationId], error);
+            }
+            
+            DLog(@"Registration sent to Nudgespot: %@", [Nudge registrationId]);
+            
+            // Update Registration Id ..
+            [self storeRegistrationId:[[FIRInstanceID instanceID] token]];
+        }];
         
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:SHARED_PROP_REGISTRATION_SENT];
         
@@ -478,7 +451,7 @@ static Nudgespot *sharedMyManager = nil;
 /**
  * Sends un-registration to the Nudgespot server over HTTP to notify that this device has been un-registered for this user.
  */
-+ (BOOL) sendUnregistrationToNudgespotWithCompletion:(void (^)(id response, NSError *error))completionBlock; {
++ (BOOL) sendUnregistrationToNudgespot:(void (^)(id, NSError *))completionBlock {
     
     BOOL unregistered = false;
     
@@ -585,42 +558,6 @@ static Nudgespot *sharedMyManager = nil;
     }
     
     return dict;
-}
-
-+ (void)getOrWaitForDeviceTokenWithTime:(NSTimeInterval)timeInterval withCompletion : (void (^)(id deviceToken, NSError * error)) completionBlock {
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // Here we are waiting if our device token not found...
-        NSTimeInterval sleep = 0.01;
-        
-        while (sleep < timeInterval && ![Nudge deviceToken]) { // we build an exponential wait time for about one minute else give up and wait for the next initialization
-            
-            DLog(@"%@ is deviceToken and %@ is Fcm Sender ID", [Nudge deviceToken], [Nudge gcmSenderID]);
-            
-            @try {
-                DLog(@"Sleeping for %lf seconds", sleep);
-                [NSThread sleepForTimeInterval:sleep];
-            }
-            @catch (NSException *exception) {
-                DLog(@"Exception:%@",exception);
-            }
-            @finally {
-                sleep = sleep * 2;
-            }
-        }
-        
-        if ([Nudge deviceToken]) {
-            if (completionBlock) {
-                completionBlock ([Nudge deviceToken ], nil);
-            }
-        }
-        else {
-            if(completionBlock) {
-                completionBlock (nil, [NSError errorWithDomain:@"Device token not found" code:1001 userInfo:nil]);
-            }
-        }
-    });
-    
 }
 
 #pragma mark - Notification receipt Acknowledgement Methods

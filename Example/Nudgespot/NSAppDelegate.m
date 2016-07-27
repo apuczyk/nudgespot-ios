@@ -107,9 +107,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     NSLog(@"%@ is device token", deviceToken);
     
     self.deviceToken = deviceToken;
-    
-    [Nudgespot loadDeviceToken:deviceToken];
-    
+        
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
