@@ -51,7 +51,7 @@
     
     self.anonymousId = [visitorDictionary objectForKey:KEY_VISITOR_UID]? [visitorDictionary objectForKey:KEY_VISITOR_UID] : @"";
     
-    self.registrationToken = [[visitorDictionary objectForKey:KEY_VISITOR_DEVICE_INFO] objectForKey:CONTACT_TYPE_IOS_GCM_REGISTRATION_ID]? [[visitorDictionary objectForKey:KEY_VISITOR_DEVICE_INFO] objectForKey:CONTACT_TYPE_IOS_GCM_REGISTRATION_ID] : @"";
+    self.registrationToken = [[visitorDictionary objectForKey:KEY_VISITOR_DEVICE_INFO] objectForKey:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID]? [[visitorDictionary objectForKey:KEY_VISITOR_DEVICE_INFO] objectForKey:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID] : @"";
     
     self.properties = [visitorDictionary objectForKey:KEY_VISITOR_PROPERTIES]? [visitorDictionary objectForKey:KEY_VISITOR_PROPERTIES] : @{};
     
@@ -74,7 +74,7 @@
         
         if ([BasicUtils isNonEmpty:self.registrationToken]) {
             
-            NSMutableDictionary *deviceInfo = @{CONTACT_TYPE_IOS_GCM_REGISTRATION_ID : self.registrationToken,
+            NSMutableDictionary *deviceInfo = @{CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID : self.registrationToken,
                                                 KEY_VISITOR_TYPE  : KEY_VISITOR_TYPE_iOS};
             
             [dict setObject:deviceInfo forKey:KEY_VISITOR_DEVICE_INFO];

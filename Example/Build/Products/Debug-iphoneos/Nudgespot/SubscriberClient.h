@@ -76,8 +76,6 @@
 
 #pragma mark Nudgespot Service Methods
 
-- (void) getAccountsSDKConfigCompletionHandler :(void (^)(id response, id error))completionBlock;
-
 -(void) identifySubscriber:(NudgespotSubscriber *)subscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock;
 
 -(void) updateSubscriber:(NudgespotSubscriber *)currentSubscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock;

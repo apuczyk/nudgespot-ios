@@ -86,7 +86,7 @@ static Nudgespot *sharedMyManager = nil;
     
     [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
         
-        // As Device Token not found then we don't need to register with GCM. We will only register GCM if we found Device Token..
+        // As Device Token not found then we don't need to register with Fcm. We will only register Fcm if we found Device Token..
         if (!error) {
             
             DLog(@"runRegistrationInBackgroundWithToken starts here");
@@ -171,12 +171,12 @@ static Nudgespot *sharedMyManager = nil;
 #pragma mark - Method to clear local storage
 
 /**
- * @ Delete the registration id from GCM Server and also clear the local data storage
+ * @ Delete the registration id from Fcm Server and also clear the local data storage
  */
 
 + (void) clearRegistrationWithCompletion:(void (^)(id response, NSError *error))completionBlock {
     
-    NSLog(@"%@ is gcm sender id", [Nudge gcmSenderID] );
+    NSLog(@"%@ is Fcm sender id", [Nudge gcmSenderID] );
     
     [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
       
@@ -218,7 +218,7 @@ static Nudgespot *sharedMyManager = nil;
 #pragma mark - Methods to retrieve local storage
 
 /**
- * Gets the current registration ID for application on GCM service, if there is one.
+ * Gets the current registration ID for application on Fcm service, if there is one.
  * <p/>
  * If result is empty, the app needs to register.
  *
@@ -320,7 +320,7 @@ static Nudgespot *sharedMyManager = nil;
 #pragma mark - Registration Methods
 
 /**
- * @ Actual registration for Notification starts here. To register for Notification in GCM Server and also stores the data in local data storage
+ * @ Actual registration for Notification starts here. To register for Notification in Fcm Server and also stores the data in local data storage
  */
 
 + (BOOL) registerForNotifications:(NSData *)data registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
@@ -332,7 +332,7 @@ static Nudgespot *sharedMyManager = nil;
     NSString *subuid = [self getStoredSubscriberUid];
     NSString *registrationId =  [Nudge getStoredRegistrationId];
     
-    if ([Nudge isAnonymousUser] && registrationId.length == 0  && subuid.length == 0) { // Get GCM Registration Token for Anyonomous User
+    if ([Nudge isAnonymousUser] && registrationId.length == 0  && subuid.length == 0) { // Get Fcm Registration Token for Anyonomous User
         
         [self gettingTokenFromFcm:[Nudge deviceToken]];
         
@@ -365,7 +365,7 @@ static Nudgespot *sharedMyManager = nil;
 }
 
 /**
- * Registers the application with GCM servers asynchronously.
+ * Registers the application with Fcm servers asynchronously.
  * <p/>
  * Stores the registration ID and the app version code in the application's shared preferences.
  */
@@ -430,9 +430,9 @@ static Nudgespot *sharedMyManager = nil;
  
     if ([Nudge isSubscriberReady]) {
         
-        if (![[Nudge subscriber] hasContact:CONTACT_TYPE_IOS_GCM_REGISTRATION_ID andValue:[Nudge registrationId]]) {
+        if (![[Nudge subscriber] hasContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID andValue:[Nudge registrationId]]) {
             
-            [[Nudge subscriber] addContact:CONTACT_TYPE_IOS_GCM_REGISTRATION_ID andValue:[Nudge registrationId]];
+            [[Nudge subscriber] addContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID andValue:[Nudge registrationId]];
             
             [Nudge updateSubscriber:[Nudge subscriber] completion:^(NudgespotSubscriber *subscriber, id error) {
                 if (subscriber) {
@@ -485,7 +485,7 @@ static Nudgespot *sharedMyManager = nil;
     // First send contact de-activation data to the server
     if ([Nudge isSubscriberReady]) {
         
-        [[Nudge subscriber] removeContact:CONTACT_TYPE_IOS_GCM_REGISTRATION_ID andValue:[Nudge registrationId]];
+        [[Nudge subscriber] removeContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID andValue:[Nudge registrationId]];
         
         [Nudge updateSubscriber:[Nudge subscriber] completion:^(NudgespotSubscriber *subscriber, id error) {
             if (subscriber) {
@@ -595,7 +595,7 @@ static Nudgespot *sharedMyManager = nil;
         
         while (sleep < timeInterval && ![Nudge deviceToken]) { // we build an exponential wait time for about one minute else give up and wait for the next initialization
             
-            DLog(@"%@ is deviceToken and %@ is GCM Sender ID", [Nudge deviceToken], [Nudge gcmSenderID]);
+            DLog(@"%@ is deviceToken and %@ is Fcm Sender ID", [Nudge deviceToken], [Nudge gcmSenderID]);
             
             @try {
                 DLog(@"Sleeping for %lf seconds", sleep);

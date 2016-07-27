@@ -29,8 +29,8 @@
 @property (nonatomic, assign) BOOL isAnonymousUser;
 
 /**
- *  @brief registration id. This will use once we got registration token from GCM, later will will store that local. so, 
- *         that we don't have togetStoredSubscriberUid get registration token from GCM.
+ *  @brief registration id. This will use once we got registration token from Fcm, later will will store that local. so,
+ *         that we don't have togetStoredSubscriberUid get registration token from Fcm.
  */
 
 @property (nonatomic , retain) NSString *registrationId;
@@ -42,13 +42,7 @@
 @property (nonatomic , assign) BOOL isRegisterForNotification;
 
 /**
- *  @brief registration options for GCM.
- */
-
-@property (nonatomic , retain) NSDictionary* registrationOptions;
-
-/**
- *  @brief device token from appdelegate file, which requires to register GCM.
+ *  @brief device token from appdelegate file, which requires to register Fcm.
  */
 
 @property (nonatomic , retain) NSData *deviceToken;
@@ -80,7 +74,7 @@
 /**
  *  @brief Method will initialize Nudgespot Client.
  *  @param pass api key from Nudgespot account settings and secrettoken from Nudgespot account settings.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id)setJavascriptAPIkey:(NSString *)key andRESTAPIkey:(NSString *)token;
@@ -88,7 +82,7 @@
 /**
  *  @brief Method will register user with unique uid and pass endpointurl.
  *  @param pass unique uid and endpointurl.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id) setEndpoint:(NSString *)endpointUrl andUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
@@ -96,7 +90,7 @@
 /**
  *  @brief Method will register user with unique uid.
  *  @param pass unique uid.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
@@ -104,7 +98,7 @@
 /**
  *  @brief Method will register user with subscriber and pass endpointurl.
  *  @param pass subscriber object and endpointurl.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id) setWithEndpoint:(NSString *)endpointUrl andSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
@@ -112,15 +106,15 @@
 /**
  *  @brief Method will register user with subscriber.
  *  @param pass subscriber object in that case.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (id) setWithSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
 /**
- *  @brief Method runs for getting GCM registeration token.
+ *  @brief Method runs for getting Fcm registeration token.
  *  @param device token from appdelegate file.
- *  @return completion handler will return Token from GCM and error in case anyting missing.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
 + (void)runRegistrationInBackgroundWithToken:(NSData *)deviceToken registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
@@ -161,7 +155,7 @@
 #pragma mark - Method to clear local storage
 
 /**
- * @ Delete the registration id from GCM Server and also clear the local data storage
+ * @ Delete the registration id from Fcm Server and also clear the local data storage
  */
 
 
@@ -170,13 +164,13 @@
 #pragma mark - Registration Methods
 
 /**
- * @ Actual registration for Notification starts here. To register for Notification in GCM Server and also stores the data in local data storage
+ * @ Actual registration for Notification starts here. To register for Notification in Fcm Server and also stores the data in local data storage
  */
 
 + (BOOL) registerForNotifications:(NSData *)data registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
 /**
- * Registers the application with GCM servers asynchronously.
+ * Registers the application with Fcm servers asynchronously.
  * <p/>
  * Stores the registration ID and the app version code in the application's shared preferences.
  */

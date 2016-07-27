@@ -170,44 +170,6 @@
     
 }
 
-- (void) getAccountsSDKConfigCompletionHandler :(void (^)(id response, id error))completionBlock
-{
-    [NudgespotNetworkManager getAccountsSDKConfigFile:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
-        
-        DLog(@"%@ is response object", responseObject);
-        
-        NSDictionary * json_Data = responseObject;
-        
-        if (json_Data.count > 1) {
-            
-            [BasicUtils setUserDefaultsValue:[NSString stringWithFormat:@"%@",[json_Data objectForKey:@"gcm_sender_id"]] forKey:GCM_SENDER_ID];
-            [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"sns_anon_identification_topic"] forKey:SNS_ANON_IDENTIFICATION_TOPIC];
-            [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"identity_pool_id"] forKey:IDENTITY_POOL_ID];
-            
-            if (completionBlock) {
-                completionBlock(responseObject, nil);
-            }
-        }
-        
-    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
-        NSLog(@"%@ is error ", error.description);
-        
-        if (error) {
-            
-            [BasicUtils removeUserDefaultsForKey:GCM_SENDER_ID];
-            [BasicUtils removeUserDefaultsForKey:SNS_ANON_IDENTIFICATION_TOPIC];
-            [BasicUtils removeUserDefaultsForKey:IDENTITY_POOL_ID];
-            
-        }
-        
-        if (completionBlock) {
-            completionBlock(nil, error);
-        }
-    }];
-    
-}
-
 -(void) clearSubscriber {
     
     self.subscriber = nil;
@@ -229,10 +191,6 @@
     }
     
     NSString * poolId = [NSString string];
-    
-    if ([BasicUtils getUserDefaultsValueForKey:IDENTITY_POOL_ID]) {
-        poolId = [BasicUtils getUserDefaultsValueForKey:IDENTITY_POOL_ID];
-    }
     
     NSDictionary * message = @{KEY_SUBSCRIBER_UID : subscriber.uid,
                                KEY_VISITOR_UID: vistitorUid,
@@ -495,8 +453,6 @@
         [FIRApp configure];
         
         self.gcmSenderID = [[FIROptions defaultOptions] GCMSenderID];
-        
-        [BasicUtils setUserDefaultsValue:[NSString stringWithFormat:@"%@",[[FIROptions defaultOptions] GCMSenderID]] forKey:GCM_SENDER_ID];
         
         // Add observer for InstanceID token refresh callback.
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:) name:kFIRInstanceIDTokenRefreshNotification object:nil];

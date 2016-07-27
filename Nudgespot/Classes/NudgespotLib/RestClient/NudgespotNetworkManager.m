@@ -72,15 +72,6 @@
 
 @implementation NudgespotNetworkManager (Subscriber)
 
-+ (NSURLSessionDataTask *) getAccountsSDKConfigFile:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
-{
-    NSString *requestUrl = [NSString stringWithFormat:@"%@",ACCOUNTS_SDK_CONFIG];
-    
-    DLog(@"GET Accounts SDK Config %@ ::::::::::::::::::::: \n request Url %@", postData, requestUrl);
-
-    return [NudgeRestInstance GET:requestUrl parameters:nil progress:nil success:success failure:failure];
-}
-
 + (NSURLSessionDataTask *) updateSubscriberWithUrl:(NSString *)urlString withPostData : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 {
     DLog(@"updateSubscriber %@ request serviceUrl ::::::::::::::::::::: \n  = %@",postData, urlString);

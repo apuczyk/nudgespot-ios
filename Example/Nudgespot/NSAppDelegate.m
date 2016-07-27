@@ -43,7 +43,7 @@ static NSUInteger badgeCount = 1;
         [[UIApplication sharedApplication] registerForRemoteNotifications];
     }
     // [END register_for_remote_notifications]
-    // [START start_gcm_service]
+    // [START start_Fcm_service]
     
     [Nudgespot setJavascriptAPIkey:kJavascriptAPIkey andRESTAPIkey:kRESTAPIkey];
     
@@ -72,7 +72,7 @@ static NSUInteger badgeCount = 1;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Connect to the GCM server to receive non-APNS notifications
+    // Connect to the Fcm server to receive non-APNS notifications
     
     badgeCount = 0;
     
