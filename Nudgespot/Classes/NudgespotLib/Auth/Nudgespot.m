@@ -144,7 +144,7 @@ static Nudgespot *sharedMyManager = nil;
         if (!error) {
             DLog(@"Connected to Fcm.");
         } else {
-            NSLog(@"Unable to connect to FCM. %@", error);
+            DLog(@"Unable to connect to FCM. %@", error);
         }
     }];
     
@@ -168,7 +168,7 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void) clearRegistration:(void (^)(id, NSError *))completionBlock {
     
-    NSLog(@"%@ is Fcm sender id", [Nudge gcmSenderID] );
+    DLog(@"%@ is Fcm sender id", [Nudge gcmSenderID] );
     
     [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
       
@@ -568,7 +568,7 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void)acknowledgeFcmServer:(NSDictionary *)userInfo {
     
-    NSLog(@"%@ is object", [FIRMessaging messaging]);
+    DLog(@"%@ is object", [FIRMessaging messaging]);
     
     [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
 }

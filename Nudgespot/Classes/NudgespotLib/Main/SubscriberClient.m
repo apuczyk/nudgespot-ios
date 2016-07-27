@@ -485,7 +485,7 @@
     // time. So if you need to retrieve the token as soon as it is available this is where that
     // should be done.
     NSString *refreshedToken = [[FIRInstanceID instanceID] token];
-    NSLog(@"InstanceID token: %@", refreshedToken);
+    DLog(@"InstanceID token: %@", refreshedToken);
     
     
     // Connect to FCM since connection may have failed when attempted before having a token.
