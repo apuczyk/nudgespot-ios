@@ -38,6 +38,8 @@
         self.gcmSenderID = nil;
         
         group = dispatch_group_create();
+        
+        [self configureFirebase];
     }
     
     return self;
@@ -84,29 +86,27 @@
         
         self.subscriber = currentSubscriber;
         
-        
         // call the method on a background thread
         dispatch_group_async(group,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
             
-            [self getAccountsSDKConfigCompletionHandler:^(id response, id error) {
+            // sendAnonymousIdentification method will send Notification to server so, that they will replace all anonymous users to uid and from there server can track.
+            [self sendAnonymousIdentification];
+            
+            DLog(@"identifySubscriber starts here");
+            
+            // GetOrCreateSubscriber will get user and if not found then it will create.
+            
+            [self identifySubscriberWithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
                 
-                // sendAnonymousIdentification method will send Notification to server so, that they will replace all anonymous users to uid and from there server can track.
-                [self sendAnonymousIdentification];
+                DLog(@"identifySubscriber ends here");
                 
-                DLog(@"identifySubscriber starts here");
-                
-                // GetOrCreateSubscriber will get user and if not found then it will create.
-                
-                [self identifySubscriberWithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
-                    
-                    DLog(@"identifySubscriber ends here");
-                    
-                    if (currentSubscriber) {
-                        if ([_theDelegate respondsToSelector:@selector(gotSubscriber:registrationHandler:)]) {
-                            [_theDelegate gotSubscriber:currentSubsciber registrationHandler:self.registrationHandler];
-                        }
+                if (currentSubscriber) {
+                    if ([_theDelegate respondsToSelector:@selector(gotSubscriber:registrationHandler:)]) {
+                        [_theDelegate gotSubscriber:currentSubsciber registrationHandler:self.registrationHandler];
                     }
-                }];
+                } else {
+                    self.registrationHandler(currentSubsciber, error);
+                }
             }];
             
         });
@@ -174,7 +174,7 @@
 {
     [NudgespotNetworkManager getAccountsSDKConfigFile:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
         
-        NSLog(@"%@ is response object", responseObject);
+        DLog(@"%@ is response object", responseObject);
         
         NSDictionary * json_Data = responseObject;
         
@@ -183,8 +183,6 @@
             [BasicUtils setUserDefaultsValue:[NSString stringWithFormat:@"%@",[json_Data objectForKey:@"gcm_sender_id"]] forKey:GCM_SENDER_ID];
             [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"sns_anon_identification_topic"] forKey:SNS_ANON_IDENTIFICATION_TOPIC];
             [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"identity_pool_id"] forKey:IDENTITY_POOL_ID];
-            
-            [self configureFirebase];
             
             if (completionBlock) {
                 completionBlock(responseObject, nil);
@@ -221,13 +219,6 @@
     return (self.subscriber != nil) && [BasicUtils isNonEmpty:self.subscriber.resourceLocation];
 }
 
-
-- (void) configureFirebase {
-    
-    self.gcmSenderID = [BasicUtils getUserDefaultsValueForKey:GCM_SENDER_ID];
-    
-    [FIRApp configure];
-}
 
 - (void)sendAnonymousIdentification {
     
@@ -496,6 +487,57 @@
     return anon_id;
 }
 
+#pragma mark - Fcm integration..
+
+- (void) configureFirebase {
+    
+    @try {
+        [FIRApp configure];
+        
+        self.gcmSenderID = [[FIROptions defaultOptions] GCMSenderID];
+        
+        [BasicUtils setUserDefaultsValue:[NSString stringWithFormat:@"%@",[[FIROptions defaultOptions] GCMSenderID]] forKey:GCM_SENDER_ID];
+        
+        // Add observer for InstanceID token refresh callback.
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:) name:kFIRInstanceIDTokenRefreshNotification object:nil];
+        
+    } @catch (NSException *exception) {
+        DLog(@"Exception = %@", exception);
+    }
+    
+}
+
+// [START refresh_token]
+- (void)tokenRefreshNotification:(NSNotification *)notification {
+    // Note that this callback will be fired everytime a new token is generated, including the first
+    // time. So if you need to retrieve the token as soon as it is available this is where that
+    // should be done.
+    NSString *refreshedToken = [[FIRInstanceID instanceID] token];
+    NSLog(@"InstanceID token: %@", refreshedToken);
+    
+    // Connect to FCM since connection may have failed when attempted before having a token.
+    [self connectToFcm];
+}
+// [END refresh_token]
+
+
+// [START connect_to_fcm]
+- (void)connectToFcm {
+    [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"Unable to connect to FCM. %@", error);
+        } else {
+            NSLog(@"Connected to FCM.");
+        }
+    }];
+}
+// [END connect_to_fcm]
+
+- (void)disconnectToFcm {
+    
+    [[FIRMessaging messaging] disconnect];
+    DLog(@"Disconnected from FCM");
+}
 
 
 @end

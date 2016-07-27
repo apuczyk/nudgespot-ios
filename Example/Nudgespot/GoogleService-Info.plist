@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>609746758973-t4cdq2keea9mpva641ilvjmfq9bb05it.apps.googleusercontent.com</string>
+	<string>450668757275-37unnfpqhna47tr3ftmb0roje77d983n.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.609746758973-t4cdq2keea9mpva641ilvjmfq9bb05it</string>
+	<string>com.googleusercontent.apps.450668757275-37unnfpqhna47tr3ftmb0roje77d983n</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBD9BmKmc0q0SQS_zJt6yN7-sWg786ma6E</string>
+	<string>AIzaSyBs3YBnqdsquO5FsJ5iYYGYd9Uxx0Q7Qbw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>609746758973</string>
+	<string>450668757275</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.nudgespot.Nudgespot</string>
 	<key>PROJECT_ID</key>
-	<string>nudgespotsdk</string>
+	<string>nudgespotsdk-64143</string>
 	<key>STORAGE_BUCKET</key>
-	<string>nudgespotsdk.appspot.com</string>
+	<string>nudgespotsdk-64143.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:609746758973:ios:81e20dbd70665f6e</string>
+	<string>1:450668757275:ios:81e20dbd70665f6e</string>
 	<key>DATABASE_URL</key>
-	<string>https://nudgespotsdk.firebaseio.com</string>
+	<string>https://nudgespotsdk-64143.firebaseio.com</string>
 </dict>
 </plist>

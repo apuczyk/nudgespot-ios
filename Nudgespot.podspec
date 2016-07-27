@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'Nudgespot'
-s.version          = '1.4'
+s.version          = '1.5'
 s.summary          = 'nudgespot-ios is Objective-C framework.'
 
 # This description is used to generate tags and improve search results.

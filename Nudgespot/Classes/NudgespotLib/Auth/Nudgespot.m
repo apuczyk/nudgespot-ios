@@ -89,8 +89,6 @@ static Nudgespot *sharedMyManager = nil;
         // As Device Token not found then we don't need to register with GCM. We will only register GCM if we found Device Token..
         if (!error) {
             
-            [self connectToFcm];
-            
             DLog(@"runRegistrationInBackgroundWithToken starts here");
             
             [self registerForNotifications:deviceToken registrationHandler:registeration];
@@ -108,19 +106,15 @@ static Nudgespot *sharedMyManager = nil;
 {
     [Nudge setIsAnonymousUser:YES];
     [Nudge setAnonymousHandler:completionBlock];
-    
-    [Nudge getAccountsSDKConfigCompletionHandler:^(id response, id error) {
-
-        [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
+    [self getOrWaitForDeviceTokenWithTime:100 withCompletion:^(id deviceToken, NSError *error) {
+        
+        if (!error) {
             
-            if (!error) {
-                
-                [self runRegistrationInBackgroundWithToken:[Nudge deviceToken] registrationHandler:completionBlock];
-            } else {
-                [self sendAnonymousRegistrationToNudgespotWithToken:nil];
-            }
-
-        }];
+            [self runRegistrationInBackgroundWithToken:[Nudge deviceToken] registrationHandler:completionBlock];
+        } else {
+            [self sendAnonymousRegistrationToNudgespotWithToken:nil];
+        }
+        
     }];
 }
 
@@ -161,13 +155,7 @@ static Nudgespot *sharedMyManager = nil;
  */
 
 + (void)connectToFcm {
-//    [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
-//        if (error != nil) {
-//            NSLog(@"Unable to connect to FCM. %@", error);
-//        } else {
-//            NSLog(@"Connected to FCM.");
-//        }
-//    }];
+    [Nudge connectToFcm];
 }
 
 /**
@@ -176,7 +164,7 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void)disconnectToFcm {
     
-//    [[FIRMessaging messaging] disconnect];
+    [Nudge disconnectToFcm];
     DLog(@"Disconnected from FCM");
 }
 
@@ -188,38 +176,43 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void) clearRegistrationWithCompletion:(void (^)(id response, NSError *error))completionBlock {
     
-//    [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
-//      
-//        if (!error) {
-//            
-//            [self sendUnregistrationToNudgespotWithCompletion:^(id response, NSError *error) {
-//                
-//                if (!error) {
-//                    
-//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_SENT];
-//                    
-//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_ID];
-//                    
-//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_APP_VERSION];
-//                    
-//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_SUBSCRIBER_UID];
-//                    
-//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_ANON_ID ];
-//                    
-//                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
-//                    
-//                    [Nudge clearSubscriber];
-//                    
-//                    DLog(@"Cleared all registration data on the application");
-//                }
-//                
-//                if (completionBlock) {
-//                    completionBlock (response, error);
-//                }
-//                
-//            }];
-//        }
-//    }];
+    NSLog(@"%@ is gcm sender id", [Nudge gcmSenderID] );
+    
+    [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
+      
+        if (!error) {
+            
+            // Clear Notificaiton...
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:kFIRInstanceIDTokenRefreshNotification object:nil];
+            
+            [self sendUnregistrationToNudgespotWithCompletion:^(id response, NSError *error) {
+                
+                if (!error) {
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_SENT];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_REGISTRATION_ID];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_APP_VERSION];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_SUBSCRIBER_UID];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_ANON_ID ];
+                    
+                    [BasicUtils removeUserDefaultsForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
+                    
+                    [Nudge clearSubscriber];
+                    
+                    DLog(@"Cleared all registration data on the application");
+                }
+                
+                if (completionBlock) {
+                    completionBlock (response, error);
+                }
+                
+            }];
+        }
+    }];
 }
 
 #pragma mark - Methods to retrieve local storage
@@ -339,8 +332,6 @@ static Nudgespot *sharedMyManager = nil;
     NSString *subuid = [self getStoredSubscriberUid];
     NSString *registrationId =  [Nudge getStoredRegistrationId];
     
-    [self gcmStartConfig];
-    
     if ([Nudge isAnonymousUser] && registrationId.length == 0  && subuid.length == 0) { // Get GCM Registration Token for Anyonomous User
         
         [self gettingTokenFromFcm:[Nudge deviceToken]];
@@ -391,84 +382,16 @@ static Nudgespot *sharedMyManager = nil;
     }
 }
 
-+ (void) gcmStartConfig {
-//    
-//    GGLInstanceIDConfig *instanceIDConfig = [GGLInstanceIDConfig defaultConfig];
-//    instanceIDConfig.delegate = self;
-//    [[GGLInstanceID sharedInstance] startWithConfig:instanceIDConfig];
-    
-}
-
 + (void)gettingTokenFromFcm:(NSData *)deviceToken {
-    
-    // Add observer for InstanceID token refresh callback.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:)
-                                                 name:kFIRInstanceIDTokenRefreshNotification object:nil];
-
-    
-//    [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
-//    
-//    DLog(@"%@ is device token %@ is GCM Id", deviceToken, [Nudge gcmSenderID]);
-//    
-//    [[FIRInstanceID instanceID] tokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification options:nil handler:^(NSString * _Nullable token, NSError * _Nullable error) {
-//        
-//        DLog(@"GCM Registration token = %@",token);
-//        DLog(@"GCM Registration error = %@",error);
-//        
-//        if (![token isEqualToString:@""] && token != nil) {
-//            
-//            [self storeRegistrationId:token];
-//        }
-//        
-//        [self sendAnonymousRegistrationToNudgespotWithToken:token];
-//        [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
-//        
-//    }];
-    
-}
-
-#pragma mark - Fcm When token Needs to Refresh <GGLInstanceIDDelegate>
-
-// [START refresh_token]
-- (void)tokenRefreshNotification:(NSNotification *)notification {
-    // Note that this callback will be fired everytime a new token is generated, including the first
-    // time. So if you need to retrieve the token as soon as it is available this is where that
-    // should be done.
     NSString *refreshedToken = [[FIRInstanceID instanceID] token];
-    NSLog(@"InstanceID token: %@", refreshedToken);
     
     // Connect to FCM since connection may have failed when attempted before having a token.
-    [Nudgespot connectToFcm];
+    [self connectToFcm];
     
-    // TODO: If necessary send token to appliation server.
+    [self storeRegistrationId:refreshedToken];
+    [self sendAnonymousRegistrationToNudgespotWithToken:refreshedToken];
+    [self sendRegistrationToNudgespotWithRegistrationHandler:[Nudge registrationHandler]];
 }
-
-
-- (void)onTokenRefresh
-{
-    // A rotation of the registration tokens is happening, so the app needs to request a new token.
-    
-    DLog(@"The GCM registration token needs to be changed.");
-    
-//    [[FIRInstanceID instanceID] tokenWithAuthorizedEntity:self.gcmSenderID
-//                                                    scope:kFIRInstanceIDTokenRefreshNotification
-//                                                  options:nil handler:^(NSString * _Nullable token, NSError * _Nullable error) {
-//                                                      
-//                                                      DLog(@"GCM Registration token Refresh = %@",token);
-//                                                      DLog(@"GCM Registration Refresh error = %@",error);
-//                                                      
-//                                                      if (![token isEqualToString:@""] && token != nil) {
-//                                                          
-//                                                          [Nudgespot storeRegistrationId:token];
-//                                                      }
-//                                                      
-//                                                      [Nudgespot sendRegistrationToNudgespotWithRegistrationHandler:self.registrationHandler];
-//                                                      [[Nudgespot sharedInstance] sendAnonymousRegistrationToNudgespotWithToken:token];
-//                                                      
-//                                                  }];
-    
-}
-
 
 #pragma mark - Fcm When token Needs to Refresh <SubscriberClientDelegate>
 
@@ -575,7 +498,12 @@ static Nudgespot *sharedMyManager = nil;
         }];
         
         unregistered = true;
+    } else {
+        if (completionBlock) {
+            completionBlock(nil, [NSError errorWithDomain:@"Subscriber is not ready yet." code:1001 userInfo:nil]);
+        }
     }
+    
     return unregistered;
 }
 
@@ -703,9 +631,9 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void)acknowledgeFcmServer:(NSDictionary *)userInfo {
     
-//    NSLog(@"%@ is object", [FIRMessaging messaging]);
-//    
-//    [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
+    NSLog(@"%@ is object", [FIRMessaging messaging]);
+    
+    [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
 }
 
 #pragma mark - Track Activities ..

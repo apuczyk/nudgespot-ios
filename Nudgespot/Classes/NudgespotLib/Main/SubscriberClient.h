@@ -97,5 +97,10 @@
  */
 - (NSString *) getStoredSubscriberUid;
 
+#pragma mark - Fcm integration.
+
+- (void) connectToFcm;
+
+- (void) disconnectToFcm;
 
 @end

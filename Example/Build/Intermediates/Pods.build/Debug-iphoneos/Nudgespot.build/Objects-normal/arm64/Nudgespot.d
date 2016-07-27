@@ -10,7 +10,7 @@ dependencies: \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Reachability/Reachability.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Utils/NudgespotConstants.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Main/NudgespotVisitor.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Firebase/Firebase.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Private/Firebase/Firebase.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FirebaseAnalytics.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics+AppDelegate.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics.h \
