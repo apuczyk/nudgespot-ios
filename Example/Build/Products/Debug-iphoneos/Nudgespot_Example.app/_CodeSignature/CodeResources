@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>GoogleService-Info.plist</key>
-		<data>
-		PkjtXqmlU6HajSzSjjwF/HxgK1U=
-		</data>
 		<key>Info.plist</key>
 		<data>
 		hZEpW1HWahdoboRbArOqXp0tktM=
@@ -22,67 +18,67 @@
 		</data>
 		<key>Main.storyboardc/LandingPageViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		mosLmS5oXUokaDmdNTGZUe6gc9I=
+		PTRLip6EIblg2CF2UGU0sKWu4DE=
 		</data>
 		<key>Main.storyboardc/LandingPageViewController~ipad.nib/runtime.nib</key>
 		<data>
-		hWwVXhwqoGFuCbPQ736IiQn4vEU=
+		V+P+MVjlX7oGfvVFzg9tqf2idJI=
 		</data>
 		<key>Main.storyboardc/LandingPageViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		lljRrkdy/MTAfMLWuU+zrMlttdw=
+		T2Magr6vRopZiWI2TyF4078MVRw=
 		</data>
 		<key>Main.storyboardc/LandingPageViewController~iphone.nib/runtime.nib</key>
 		<data>
-		XbyRegUXHumZae3tD3qTli3q1eY=
+		fgOjUYrWLUR6z2bemAp4KrhKrOw=
 		</data>
 		<key>Main.storyboardc/UINavigationController-3DP-kZ-hFr~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		fQFMtuiLTLVazuy6jPSzNtsXHd0=
+		evdefKKxIMF1hl4B4OakPotfZog=
 		</data>
 		<key>Main.storyboardc/UINavigationController-3DP-kZ-hFr~ipad.nib/runtime.nib</key>
 		<data>
-		um5I8lVJ1GCdpltK4c+ZQAZ5M9E=
+		RPu/MtM3YuTV3dMwX6aSnkNmNSI=
 		</data>
 		<key>Main.storyboardc/UINavigationController-3DP-kZ-hFr~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		Le07DEU4OcYM6gH1uqZTH6WMYvA=
+		BtXHTraZWHtT5wsY2qSZB0G0e6I=
 		</data>
 		<key>Main.storyboardc/UINavigationController-3DP-kZ-hFr~iphone.nib/runtime.nib</key>
 		<data>
-		JaNshs+YZcFv2WDPLjtstwJJlBc=
+		suoNLPBO8ESjS8HYdFPPzm2xnqc=
 		</data>
 		<key>Main.storyboardc/WAA-Jt-Y1d-view-r2b-bz-daY~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		r5uBWR1/Wo7olrZkQ8PR2mVue2Y=
+		hWAPqWe3+MtqUu5/n6z9Xg91/Zg=
 		</data>
 		<key>Main.storyboardc/WAA-Jt-Y1d-view-r2b-bz-daY~ipad.nib/runtime.nib</key>
 		<data>
-		4gWOE3vyLIwlgA6b4lvKOw3bjH4=
+		BB3MBhVzFhptTbtASR2dNH3rpJI=
 		</data>
 		<key>Main.storyboardc/WAA-Jt-Y1d-view-r2b-bz-daY~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		c4+bKUrDJjZXbm1SlGLKPihH3JY=
+		BvkzyxIr2Vc4hB6ehFD46nSvv+Q=
 		</data>
 		<key>Main.storyboardc/WAA-Jt-Y1d-view-r2b-bz-daY~iphone.nib/runtime.nib</key>
 		<data>
-		MBxWzKnYLmyjDRLMLNSnZ2uAqXs=
+		12d9iq2toX5o5aXUpzNC+4bUSSo=
 		</data>
 		<key>Main.storyboardc/ZTL-Fe-Vhi-view-QlB-7z-i20~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		IuDIMAAARPgG8kJmw5ILl6wz9W8=
+		3STRRyyBBRxUswSOTqH698M7e70=
 		</data>
 		<key>Main.storyboardc/ZTL-Fe-Vhi-view-QlB-7z-i20~ipad.nib/runtime.nib</key>
 		<data>
-		G2k5ytt3KfXf+TLkxIYDZwVZzj4=
+		d5H48LH1kwljjAV2eorgNsNYnHE=
 		</data>
 		<key>Main.storyboardc/ZTL-Fe-Vhi-view-QlB-7z-i20~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		a8h6RAEQpmFcAaedIrqua2glQAc=
+		uh1IjcywF3KDMREXFT+W99J7oQc=
 		</data>
 		<key>Main.storyboardc/ZTL-Fe-Vhi-view-QlB-7z-i20~iphone.nib/runtime.nib</key>
 		<data>
-		lDF9fqibBRcnlCGXZzBuSqAatpk=
+		W/Jir2hpsJ0ZQS+3IRrQxu6vk00=
 		</data>
 		<key>Main~ipad.storyboardc/Info-8.0+.plist</key>
 		<data>
@@ -120,17 +116,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>GoogleService-Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			PkjtXqmlU6HajSzSjjwF/HxgK1U=
-			</data>
-			<key>hash2</key>
-			<data>
-			J5kAKCZ4qmWYbuzmQakEP3KLC1ynI+6BS2c4Hdp5K18=
-			</data>
-		</dict>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<dict>
 			<key>hash</key>
@@ -157,176 +142,176 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mosLmS5oXUokaDmdNTGZUe6gc9I=
+			PTRLip6EIblg2CF2UGU0sKWu4DE=
 			</data>
 			<key>hash2</key>
 			<data>
-			eBWbFJ2wJeOaBt9V5st1WH3VqW4F7ejrO1HFsnUJK+U=
+			sjCm6mf9trGd/NRUSSxV8ycvXiUNo5OdJLyFonVZQmA=
 			</data>
 		</dict>
 		<key>Main.storyboardc/LandingPageViewController~ipad.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hWwVXhwqoGFuCbPQ736IiQn4vEU=
+			V+P+MVjlX7oGfvVFzg9tqf2idJI=
 			</data>
 			<key>hash2</key>
 			<data>
-			npOLMkGlgUANEXUbAdZIa/1J/k/0QyRu1VQjqcYT5Mo=
+			bxRO7wDdBTSU2ybPIHc+f64D/KfglgPPbB5FSHrIkpw=
 			</data>
 		</dict>
 		<key>Main.storyboardc/LandingPageViewController~iphone.nib/objects-8.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lljRrkdy/MTAfMLWuU+zrMlttdw=
+			T2Magr6vRopZiWI2TyF4078MVRw=
 			</data>
 			<key>hash2</key>
 			<data>
-			7dnC5xm3PPGBG+PdpDlurhxiD5uwqC3i3TUDYpTzFDw=
+			lh842+gJ8arXn9cc+BRKa2INrHK+K7/MsdIoy7J3aHs=
 			</data>
 		</dict>
 		<key>Main.storyboardc/LandingPageViewController~iphone.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XbyRegUXHumZae3tD3qTli3q1eY=
+			fgOjUYrWLUR6z2bemAp4KrhKrOw=
 			</data>
 			<key>hash2</key>
 			<data>
-			atkFEZ9dhak0lA5AarIsEeMey9mvIlLcuo5twollF84=
+			Q0rZqyAT7iwhttBgckiuCVpzfqdqOBf1hc3b1w2gqbY=
 			</data>
 		</dict>
 		<key>Main.storyboardc/UINavigationController-3DP-kZ-hFr~ipad.nib/objects-8.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fQFMtuiLTLVazuy6jPSzNtsXHd0=
+			evdefKKxIMF1hl4B4OakPotfZog=
 			</data>
 			<key>hash2</key>
 			<data>
-			PvFOhGLZk7yuObkr9rWGpsrVe+FjmSNIAA5K4PqkXSA=
+			n44hQ9dqiLL+AaSocGHjR9n1DwquhPNoj/Mq6739A8E=
 			</data>
 		</dict>
 		<key>Main.storyboardc/UINavigationController-3DP-kZ-hFr~ipad.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			um5I8lVJ1GCdpltK4c+ZQAZ5M9E=
+			RPu/MtM3YuTV3dMwX6aSnkNmNSI=
 			</data>
 			<key>hash2</key>
 			<data>
-			kxKrl4IWNLb9CMWUE7zDP4OClIhy/2dG+2Z8H6vc8AQ=
+			NyObAVjgoHquxHhEDmB28MbeInqYk8ccM/TlZdmCpcY=
 			</data>
 		</dict>
 		<key>Main.storyboardc/UINavigationController-3DP-kZ-hFr~iphone.nib/objects-8.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Le07DEU4OcYM6gH1uqZTH6WMYvA=
+			BtXHTraZWHtT5wsY2qSZB0G0e6I=
 			</data>
 			<key>hash2</key>
 			<data>
-			9kWFoCmHzv0QPURFdg9Y3lQ1e38443LcK2JD27qetWI=
+			5qJtHa761+1TSxY6B9QM/U+eZuyJOWt6uauRmC4bKCk=
 			</data>
 		</dict>
 		<key>Main.storyboardc/UINavigationController-3DP-kZ-hFr~iphone.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JaNshs+YZcFv2WDPLjtstwJJlBc=
+			suoNLPBO8ESjS8HYdFPPzm2xnqc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Le3+w79wccN/X53fpkJX0qlQaqHFI8I4mv06xP6Un+o=
+			lZh+uGP+dZvvtg7TF79lIpURHEg4g5oPBDxTJPyO3mY=
 			</data>
 		</dict>
 		<key>Main.storyboardc/WAA-Jt-Y1d-view-r2b-bz-daY~ipad.nib/objects-8.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r5uBWR1/Wo7olrZkQ8PR2mVue2Y=
+			hWAPqWe3+MtqUu5/n6z9Xg91/Zg=
 			</data>
 			<key>hash2</key>
 			<data>
-			sXkTaHRGWfvd5rZ8bMtZyfjAvUjAQniSge9pKLc1+Io=
+			GoabI1Ry7vssxol3w9Japgc72I+t69MmUIh++s6YnLM=
 			</data>
 		</dict>
 		<key>Main.storyboardc/WAA-Jt-Y1d-view-r2b-bz-daY~ipad.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4gWOE3vyLIwlgA6b4lvKOw3bjH4=
+			BB3MBhVzFhptTbtASR2dNH3rpJI=
 			</data>
 			<key>hash2</key>
 			<data>
-			UtjCOR8aU1GRIUSKruqU5A4iw8qavgvwxC/HahmRFAc=
+			u9sC1g8QRel86uXufTm6cmEMeJuTXGTZJJ98I2um6dI=
 			</data>
 		</dict>
 		<key>Main.storyboardc/WAA-Jt-Y1d-view-r2b-bz-daY~iphone.nib/objects-8.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			c4+bKUrDJjZXbm1SlGLKPihH3JY=
+			BvkzyxIr2Vc4hB6ehFD46nSvv+Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			U3g+UN6Ud59nwUfrgJma1uhhrhlRFl9XYnjFYGu4HXA=
+			sf1y0f9PtQO8BTcEawaNuoE5lub1dbKajkO0wPWWv+I=
 			</data>
 		</dict>
 		<key>Main.storyboardc/WAA-Jt-Y1d-view-r2b-bz-daY~iphone.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MBxWzKnYLmyjDRLMLNSnZ2uAqXs=
+			12d9iq2toX5o5aXUpzNC+4bUSSo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hy2U8LMttWYiZFhUrWTSKkmmjJcO6CNfftzb8kA9KfM=
+			g1G/p4xdyvLXPZVbUcdlR2iNJ1xVImoC4h21hEPrKvU=
 			</data>
 		</dict>
 		<key>Main.storyboardc/ZTL-Fe-Vhi-view-QlB-7z-i20~ipad.nib/objects-8.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IuDIMAAARPgG8kJmw5ILl6wz9W8=
+			3STRRyyBBRxUswSOTqH698M7e70=
 			</data>
 			<key>hash2</key>
 			<data>
-			fzKwyL80uJCTdDGJTKhWdq3LWfsTWy02MsL4CtrgDkk=
+			86OieafF67GZu14S6GXRfe3og/w0k7gVIO8kMXolbpw=
 			</data>
 		</dict>
 		<key>Main.storyboardc/ZTL-Fe-Vhi-view-QlB-7z-i20~ipad.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G2k5ytt3KfXf+TLkxIYDZwVZzj4=
+			d5H48LH1kwljjAV2eorgNsNYnHE=
 			</data>
 			<key>hash2</key>
 			<data>
-			ykffH5oq/IJjmLqfLDvjl6LIKRzlpd9ph7W/Qw0yxXY=
+			BfcNVd4ky+U6tgdXsmIvk/S1Ic5j+O2v1Oys1a4NBrM=
 			</data>
 		</dict>
 		<key>Main.storyboardc/ZTL-Fe-Vhi-view-QlB-7z-i20~iphone.nib/objects-8.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a8h6RAEQpmFcAaedIrqua2glQAc=
+			uh1IjcywF3KDMREXFT+W99J7oQc=
 			</data>
 			<key>hash2</key>
 			<data>
-			d5kmDBqMEFkKfAppZK0gPbrTgoe0Paqrq3GPoAfp/eg=
+			yayRB5Q+/82QbZm0bkgyuJunG54IqD47TPGUWeNJ5K0=
 			</data>
 		</dict>
 		<key>Main.storyboardc/ZTL-Fe-Vhi-view-QlB-7z-i20~iphone.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lDF9fqibBRcnlCGXZzBuSqAatpk=
+			W/Jir2hpsJ0ZQS+3IRrQxu6vk00=
 			</data>
 			<key>hash2</key>
 			<data>
-			zg8UN91NnsJ5+9UU/hRfSWi5kbNKhJIf3gnuJNpUyJg=
+			OuOwCrvrBeMtoymlf+7JhrYj5dzVxgCX2G5Vx42XN98=
 			</data>
 		</dict>
 		<key>Main~ipad.storyboardc/Info-8.0+.plist</key>

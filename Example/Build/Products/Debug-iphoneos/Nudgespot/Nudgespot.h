@@ -204,6 +204,13 @@
 
 #pragma mark - Got subscriber..
 
+
+/**
+ *  @brief this will called when we got subscriber.
+ *  @param NudgespotSubscriber
+ *  @return Completion handler will give you response and error if any.
+ */
+
 + (void)gotSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *, NSError *))registeration;
 
 #pragma mark - Notification receipt Acknowledgement Methods

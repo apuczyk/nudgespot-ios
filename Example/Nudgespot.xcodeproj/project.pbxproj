@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		222D4EDCE5D23F19C2991249 /* libPods-Nudgespot_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8A17E8962671452F248E20 /* libPods-Nudgespot_Tests.a */; };
-		443559B81D460D8D00258E3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 443559B71D460D8D00258E3D /* GoogleService-Info.plist */; };
 		44E81BAE1CD1EDA100AA47F1 /* UIAlertController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E81BAD1CD1EDA100AA47F1 /* UIAlertController+Alert.m */; };
+		44F07F101D48E82A00569C22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44F07F0F1D48E82A00569C22 /* GoogleService-Info.plist */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -39,11 +39,11 @@
 
 /* Begin PBXFileReference section */
 		395960C67E83E71397411472 /* Nudgespot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nudgespot.podspec; path = ../Nudgespot.podspec; sourceTree = "<group>"; };
-		443559B71D460D8D00258E3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44A560A11D42015D001D154C /* libNudgespot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNudgespot.a; path = "Build/Products/Debug-iphoneos/Nudgespot/libNudgespot.a"; sourceTree = "<group>"; };
 		44E81BAB1CD1EDA100AA47F1 /* NudgeSpotConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NudgeSpotConstants.h; sourceTree = "<group>"; };
 		44E81BAC1CD1EDA100AA47F1 /* UIAlertController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Alert.h"; sourceTree = "<group>"; };
 		44E81BAD1CD1EDA100AA47F1 /* UIAlertController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Alert.m"; sourceTree = "<group>"; };
+		44F07F0F1D48E82A00569C22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4556D28BB7A7C2E888D9BDE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Nudgespot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudgespot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -159,7 +159,7 @@
 		6003F593195388D20070C39A /* Example for Nudgespot */ = {
 			isa = PBXGroup;
 			children = (
-				443559B71D460D8D00258E3D /* GoogleService-Info.plist */,
+				44F07F0F1D48E82A00569C22 /* GoogleService-Info.plist */,
 				44E81BAA1CD1EDA100AA47F1 /* Comman */,
 				6003F59C195388D20070C39A /* NSAppDelegate.h */,
 				6003F59D195388D20070C39A /* NSAppDelegate.m */,
@@ -308,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				443559B81D460D8D00258E3D /* GoogleService-Info.plist in Resources */,
+				44F07F101D48E82A00569C22 /* GoogleService-Info.plist in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
