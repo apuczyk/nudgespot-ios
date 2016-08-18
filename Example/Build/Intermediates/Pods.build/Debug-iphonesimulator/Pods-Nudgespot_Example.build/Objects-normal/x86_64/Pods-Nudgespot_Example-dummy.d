@@ -1,3 +1,3 @@
 dependencies: \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Target\ Support\ Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example-dummy.m \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Firebase/Headers/module.modulemap
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Firebase/Analytics/Sources/module.modulemap
