@@ -46,6 +46,8 @@ static NSUInteger badgeCount = 1;
     // [END register_for_remote_notifications]
     // [START start_Fcm_service]
     
+    // Initialize Nudgespot
+    
     [Nudgespot setJavascriptAPIkey:kJavascriptAPIkey andRESTAPIkey:kRESTAPIkey];
     
     NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
@@ -76,7 +78,7 @@ static NSUInteger badgeCount = 1;
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Connect to the Fcm server to receive non-APNS notifications
+    // Connect to the Nudgetspot server to receive notifications
     
     badgeCount = 0;
     
@@ -111,7 +113,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     NSLog(@"%@ is device token", deviceToken);
     
-    [Nudgespot setAPNSToken:deviceToken ofType:NudgespotAPNSTokenTypeSandbox];
+    [Nudgespot setAPNSToken:deviceToken ofType:NudgespotAPNSTokenTypeProd];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
