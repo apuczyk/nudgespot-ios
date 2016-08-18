@@ -36,6 +36,14 @@
     ],
     "AFNetworking": [
 
+    ],
+    "Firebase": [
+
+    ],
+    "FirebaseMessaging": [
+
+    ],
+    "STPopup": [
     ]
   }
 }

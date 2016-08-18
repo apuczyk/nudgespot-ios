@@ -11,12 +11,17 @@
 @class NudgespotSubscriber;
 @class NudgespotActivity;
 @class NudgespotVisitor;
+@class Nudgespot;
 
-@protocol SubscriberClientDelegate <NSObject>
+typedef NS_ENUM(NSInteger, NudgespotIDAPNSTokenType) {
+    /// Unknown token type.
+    NudgespotAPNSTokenTypeUnknown,
+    /// Sandbox token type.
+    NudgespotAPNSTokenTypeSandbox,
+    /// Production token type.
+    NudgespotAPNSTokenTypeProd,
+};
 
-- (void) gotSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
-
-@end
 
 
 @interface SubscriberClient : NSObject
@@ -51,11 +56,11 @@
 
 @property (nonatomic , retain) SubscriberClient *client;
 
-@property (nonatomic , assign) id<SubscriberClientDelegate> theDelegate;
-
 @property (nonatomic , retain) NSString *gcmSenderID;
 
 @property(nonatomic, strong) void (^registrationHandler) (NSString *registrationToken, NSError *error);
+
+@property(nonatomic, strong) void (^completionBlock)(id token, id error);
 
 @property BOOL credentialsPresent;
 
@@ -76,8 +81,6 @@
 
 #pragma mark Nudgespot Service Methods
 
-- (void) getAccountsSDKConfigCompletionHandler :(void (^)(id response, id error))completionBlock;
-
 -(void) identifySubscriber:(NudgespotSubscriber *)subscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock;
 
 -(void) updateSubscriber:(NudgespotSubscriber *)currentSubscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock;
@@ -88,6 +91,7 @@
 
 -(NudgespotSubscriber *)convertDictionaryToModel:(NSMutableDictionary *)responseDictionary;
 
+- (void)setAPNSToken:(NSData *)deviceToken ofType:(NudgespotIDAPNSTokenType) type;
 
 /**
  * Retrieves the stored subscriber UID for the application, if there is one
@@ -97,5 +101,12 @@
  */
 - (NSString *) getStoredSubscriberUid;
 
+- (void) getFcmTokenCompletion:(void (^)(id token, id error))completionBlock;
+
+#pragma mark - Fcm integration.
+
+- (void)connectToFcmWithCompletion:(void (^)(id token, id error)) completionBlock ;
+
+- (void) disconnectToFcm;
 
 @end

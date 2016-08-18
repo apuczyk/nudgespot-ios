@@ -38,6 +38,8 @@
         self.gcmSenderID = nil;
         
         group = dispatch_group_create();
+        
+        [self configureFirebase];
     }
     
     return self;
@@ -52,7 +54,7 @@
 }
 
 
--(id) initWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration{
+-(id) initWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
     
     subscriber = [[NudgespotSubscriber alloc] init];
     
@@ -66,7 +68,7 @@
 -(id) initWithEndpoint:(NSString *)endpointUrl andSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration {
     
     self.endpoint = endpointUrl;
-
+    
     return [self initWithSubscriber:subscriber registrationHandler:registeration];
 }
 
@@ -84,31 +86,28 @@
         
         self.subscriber = currentSubscriber;
         
-        
         // call the method on a background thread
         dispatch_group_async(group,dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^ {
             
-            [self getAccountsSDKConfigCompletionHandler:^(id response, id error) {
-                
-                // sendAnonymousIdentification method will send Notification to server so, that they will replace all anonymous users to uid and from there server can track.
-                [self sendAnonymousIdentification];
-                
-                DLog(@"identifySubscriber starts here");
-                
-                // GetOrCreateSubscriber will get user and if not found then it will create.
-                
-                [self identifySubscriberWithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
-                    
-                    DLog(@"identifySubscriber ends here");
-                    
-                    if (currentSubscriber) {
-                        if ([_theDelegate respondsToSelector:@selector(gotSubscriber:registrationHandler:)]) {
-                            [_theDelegate gotSubscriber:currentSubsciber registrationHandler:self.registrationHandler];
-                        }
-                    }
-                }];
-            }];
+            // sendAnonymousIdentification method will send Notification to server so, that they will replace all anonymous users to uid and from there server can track.
+            [self sendAnonymousIdentification];
             
+            DLog(@"identifySubscriber starts here");
+            
+            // Identify subscriber will get user and if not found then it will create.
+            
+            [self identifySubscriberWithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
+                
+                DLog(@"identifySubscriber ends here");
+                
+                if (currentSubscriber) {
+                    
+                    [Nudgespot gotSubscriber:currentSubsciber registrationHandler:self.registrationHandler];
+                    
+                } else {
+                    self.registrationHandler(currentSubsciber, error);
+                }
+            }];
         });
     }
     
@@ -121,41 +120,65 @@
     
     [self checkEndPoints];
     
-    NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
-    visitor.registrationToken = registrationToken;
-    
-    [[Nudgespot sharedInstance] setVisitor:visitor];
-    
     NSString *isRegistered = [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
     
-    if (!isRegistered.length) {
+    if (isRegistered.length) {
         
-        [NudgespotNetworkManager loginWithAnynomousUser:visitor.toJSON success:^(NSURLSessionDataTask *operation, id responseObject) {
+        // Check if anonymousId token is same or not...
+        NSString *visitorFcmToken = [BasicUtils getUserDefaultsValueForKey:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID_ANON];
+        
+        if (![visitorFcmToken isEqualToString:[[FIRInstanceID instanceID] token]]) {
             
-            if (!operation.error) {
-                
-                [BasicUtils setUserDefaultsValue:visitor.anonymousId forKey:SHARED_PROP_IS_ANON_USER_EXISTS];
-            }
+            NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
+            visitor.registrationToken = [[FIRInstanceID instanceID] token];
+            [[Nudgespot sharedInstance] setVisitor:visitor];
+            
+            [self loginWithAnynomous:visitor completionBlock:completionBlock];
+            
+            DLog(@"Visitor FCM updated %@", visitor.toJSON);
+            
+        } else {
             
             if (completionBlock) {
-                completionBlock(responseObject, operation.error);
+                completionBlock ([NSString stringWithFormat:@"Vistor already exits %@", isRegistered], nil);
             }
-            
-        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-            
-            if (completionBlock) {
-                completionBlock(operation.response, error);
-            }
-            
-        }];
+        }
     } else {
         
-        if (completionBlock) {
-            completionBlock (@"Vistor already exits", nil);
-        }
+        NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
+        visitor.registrationToken = registrationToken;
+        
+        [[Nudgespot sharedInstance] setVisitor:visitor];
+        
+        [self loginWithAnynomous:visitor completionBlock:completionBlock];
+        
+        DLog(@"Visitor Created %@", visitor.toJSON);
     }
-    
+
     return self;
+}
+
+- (void) loginWithAnynomous: (NudgespotVisitor *) visitor completionBlock :(void (^)(id response, id error))completionBlock {
+    
+    [NudgespotNetworkManager loginWithAnynomousUser:visitor.toJSON success:^(NSURLSessionDataTask *operation, id responseObject) {
+        
+        if (!operation.error) {
+            
+            [BasicUtils setUserDefaultsValue:visitor.anonymousId forKey:SHARED_PROP_IS_ANON_USER_EXISTS];
+            [BasicUtils setUserDefaultsValue:visitor.registrationToken forKey:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID_ANON];
+        }
+        
+        if (completionBlock) {
+            completionBlock(responseObject, operation.error);
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+        if (completionBlock) {
+            completionBlock(operation.response, error);
+        }
+        
+    }];
 }
 
 - (void)checkEndPoints {
@@ -167,46 +190,6 @@
     else {
         REST_API_ENDPOINT = self.endpoint;
     }
-    
-}
-
-- (void) getAccountsSDKConfigCompletionHandler :(void (^)(id response, id error))completionBlock
-{
-    [NudgespotNetworkManager getAccountsSDKConfigFile:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
-        
-        NSLog(@"%@ is response object", responseObject);
-        
-        NSDictionary * json_Data = responseObject;
-        
-        if (json_Data.count > 1) {
-            
-            [BasicUtils setUserDefaultsValue:[NSString stringWithFormat:@"%@",[json_Data objectForKey:@"gcm_sender_id"]] forKey:GCM_SENDER_ID];
-            [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"sns_anon_identification_topic"] forKey:SNS_ANON_IDENTIFICATION_TOPIC];
-            [BasicUtils setUserDefaultsValue:[json_Data objectForKey:@"identity_pool_id"] forKey:IDENTITY_POOL_ID];
-            
-            [self configureFirebase];
-            
-            if (completionBlock) {
-                completionBlock(responseObject, nil);
-            }
-        }
-        
-    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-        
-        NSLog(@"%@ is error ", error.description);
-        
-        if (error) {
-            
-            [BasicUtils removeUserDefaultsForKey:GCM_SENDER_ID];
-            [BasicUtils removeUserDefaultsForKey:SNS_ANON_IDENTIFICATION_TOPIC];
-            [BasicUtils removeUserDefaultsForKey:IDENTITY_POOL_ID];
-            
-        }
-        
-        if (completionBlock) {
-            completionBlock(nil, error);
-        }
-    }];
     
 }
 
@@ -222,13 +205,6 @@
 }
 
 
-- (void) configureFirebase {
-    
-    self.gcmSenderID = [BasicUtils getUserDefaultsValueForKey:GCM_SENDER_ID];
-    
-//    [FIRApp configure];
-}
-
 - (void)sendAnonymousIdentification {
     
     NSString * vistitorUid = [self getStoredAnonymousUid];
@@ -238,10 +214,6 @@
     }
     
     NSString * poolId = [NSString string];
-    
-    if ([BasicUtils getUserDefaultsValueForKey:IDENTITY_POOL_ID]) {
-        poolId = [BasicUtils getUserDefaultsValueForKey:IDENTITY_POOL_ID];
-    }
     
     NSDictionary * message = @{KEY_SUBSCRIBER_UID : subscriber.uid,
                                KEY_VISITOR_UID: vistitorUid,
@@ -282,7 +254,6 @@
             if (completionBlock != nil){
                 completionBlock (nil, error);
             }
-
         }];
         
     }
@@ -294,7 +265,7 @@
 }
 
 
--(void) updateSubscriber:(NudgespotSubscriber *)currentSubscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock{
+-(void) updateSubscriber:(NudgespotSubscriber *)currentSubscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock {
     
     @try {
         
@@ -496,6 +467,100 @@
     return anon_id;
 }
 
+#pragma mark - Fcm integration..
 
+- (void) getFcmTokenCompletion:(void (^)(id token, id error))completionBlock; {
+    
+    if ([[FIRInstanceID instanceID] token]) {
+        if (completionBlock) {
+            [self connectToFcmWithCompletion:^(id token, id error) {
+                completionBlock(token, error);
+            }];
+        }
+    } else {
+        self.completionBlock =  ^(id token, id error) {
+            
+            if (completionBlock) {
+                completionBlock(token, error);
+            }
+        };
+    }
+
+}
+
+- (void) configureFirebase {
+    
+    @try {
+        [FIRApp configure];
+        
+        self.gcmSenderID = [[FIROptions defaultOptions] GCMSenderID];
+        
+        [[FIRInstanceID instanceID] deleteIDWithHandler:^(NSError * _Nullable error) {
+            // Add observer for InstanceID token refresh callback.
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:) name:kFIRInstanceIDTokenRefreshNotification object:nil];
+            
+        }];
+        
+    } @catch (NSException *exception) {
+        DLog(@"Exception = %@", exception);
+    }
+    
+}
+
+// [START refresh_token]
+- (void)tokenRefreshNotification:(NSNotification *)notification {
+    // Note that this callback will be fired everytime a new token is generated, including the first
+    // time. So if you need to retrieve the token as soon as it is available this is where that
+    // should be done.
+    NSString *refreshedToken = [[FIRInstanceID instanceID] token];
+    DLog(@"InstanceID Refresh token: %@", refreshedToken);
+    
+    if (refreshedToken != nil) {
+        // Connect to FCM since connection may have failed when attempted before having a token.
+        [self connectToFcmWithCompletion:self.completionBlock];
+    }
+}
+// [END refresh_token]
+
+
+// [START connect_to_fcm]
+- (void)connectToFcmWithCompletion:(void (^)(id token, id error)) completionBlock {
+    
+    @try {
+        [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
+            
+            if (completionBlock != nil) {
+                completionBlock([[FIRInstanceID instanceID] token], error);
+            }
+            
+            DLog(@"%@ is token, %@ is error", [[FIRInstanceID instanceID] token], error);
+        }];
+    } @catch (NSException *exception) {
+        DLog(@"Exception %@", exception.description);
+    }
+    
+}
+// [END connect_to_fcm]
+
+- (void)setAPNSToken:(NSData *)deviceToken ofType:(NudgespotIDAPNSTokenType) type {
+    
+    switch (type) {
+        case NudgespotAPNSTokenTypeSandbox:
+            [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
+            break;
+        case NudgespotAPNSTokenTypeProd:
+            [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeProd];
+            break;
+        default:
+            [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeUnknown];
+            break;
+    }
+}
+
+- (void)disconnectToFcm {
+    
+    [[FIRMessaging messaging] disconnect];
+    DLog(@"Disconnected from FCM");
+}
 
 @end

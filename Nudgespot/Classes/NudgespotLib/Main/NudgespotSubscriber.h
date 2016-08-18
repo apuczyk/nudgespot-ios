@@ -58,6 +58,8 @@
 
 -(void) addContact:(NSString *)type andValue:(NSString *)value;
 
+-(void) updateContact:(NSString *)type FromValue:(NSString *)fromValue toValue: (NSString *) toValue;
+
 -(void) removeContact:(NSString *)type andValue:(NSString *)value;
 
 -(NSMutableDictionary *) toJSON;

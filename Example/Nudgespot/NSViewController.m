@@ -36,8 +36,12 @@
     NSString *uidText = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
     
     if (uidText) {
-        [self.uid setText:uidText];
-        [self.loginOrLogout setTitle:@"LOGOUT" forState:UIControlStateNormal];
+        
+        if (uidText.length > 1) {
+            [self.uid setText:uidText];
+            [self.loginOrLogout setTitle:@"LOGOUT" forState:UIControlStateNormal];
+        }
+        
     }
     
 }
@@ -135,8 +139,7 @@
     
     __weak NSViewController *weak = self;
     
-    [Nudgespot  clearRegistrationWithCompletion:^(id response, NSError *error) {
-        
+    [Nudgespot clearRegistration:^(id response, NSError *error) {
         if (response) {
             
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:kSubscriberUid];
@@ -159,8 +162,11 @@
             self.uid.text = @"";
             
             NSLog(@"Logout success with response %@", response);
+        } else {
+            [weak.activityIndicatorView stopAnimating];
         }
     }];
+    
 }
 
 

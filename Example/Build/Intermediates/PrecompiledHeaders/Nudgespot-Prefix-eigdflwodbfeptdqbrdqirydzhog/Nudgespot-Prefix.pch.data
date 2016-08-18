@@ -10,10 +10,17 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.
 InputFile    /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Nudgespot/Nudgespot-Prefix.pch 0 1467023328 321 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/SDKSettings.plist 0 1457133609 1664 33204
 InputFile    /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Nudgespot/Nudgespot-Prefix.pch 0 1467023328 321 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Firebase/Headers/module.modulemap 0 1469199223 52 33184
 InputFile    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.3.0/include/module.modulemap 0 1459533667 2849 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/module.modulemap 0 1455917335 20146 33188
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/Darwin-27KPT5D0GSPDE.pcm 0 1469199540 3487576 33188
+=======
+InputFile    /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Firebase/Headers/module.modulemap 0 1469446470 52 33184
+InputFile    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.3.0/include/module.modulemap 0 1459533667 2849 33188
+InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/module.modulemap 0 1455917335 20146 33188
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/Darwin-27KPT5D0GSPDE.pcm 0 1469611812 3487576 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/sys/cdefs.h 0 1455919917 26454 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/sys/_symbol_aliasing.h 0 1455919918 11549 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/sys/_posix_availability.h 0 1455919918 2905 33188
@@ -467,7 +474,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap 0 1456805516 220 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap 0 1455931175 239 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Modules/module.modulemap 0 1455920606 210 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/MachO-2HB3LN2NNBH54.pcm 0 1469199541 202680 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/MachO-2HB3LN2NNBH54.pcm 0 1469611812 202680 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/mach-o/arch.h 0 1456347264 4191 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/mach-o/compact_unwind_encoding.h 0 1455918885 18900 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/mach-o/dyld.h 0 1432489324 15334 33188
@@ -481,7 +492,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/mach-o/reloc.h 0 1456347264 10506 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/mach-o/stab.h 0 1456347264 6321 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/mach-o/swap.h 0 1438480865 7044 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/ObjectiveC-3ULJ0XSAFVF6Y.pcm 0 1469199541 179840 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/ObjectiveC-3ULJ0XSAFVF6Y.pcm 0 1469611812 179844 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/objc/message.h 0 1432489327 11972 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/objc/objc.h 0 1455917446 7410 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/objc/objc-api.h 0 1456348051 6626 33188
@@ -496,11 +511,19 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/objc/objc-sync.h 0 1455919880 2159 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/objc/Object.h 0 1455919880 3820 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/objc/Protocol.h 0 1455919880 2412 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/os-27KPT5D0GSPDE.pcm 0 1469199541 74184 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/os/base.h 0 1455917311 4232 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/os/object.h 0 1455916657 5212 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/os/activity.h 0 1455919244 9753 33188
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/Dispatch-1R7EBG91WJXG6.pcm 0 1469199541 149516 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/os-27KPT5D0GSPDE.pcm 0 1469611812 74184 33188
+InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/os/base.h 0 1455917311 4232 33188
+InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/os/object.h 0 1455916657 5212 33188
+InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/os/activity.h 0 1455919244 9753 33188
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/Dispatch-1R7EBG91WJXG6.pcm 0 1469611812 149516 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/dispatch/dispatch.h 0 1455918971 1631 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/dispatch/base.h 0 1455916657 4536 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/dispatch/time.h 0 1455918972 2977 33188
@@ -514,7 +537,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/dispatch/data.h 0 1432489323 11014 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/dispatch/io.h 0 1455918972 25824 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/dispatch/introspection.h 0 1455917694 4905 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreFoundation-32TTPFOUI4NW2.pcm 0 1469199541 597296 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreFoundation-32TTPFOUI4NW2.pcm 0 1469611812 597296 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h 0 1455920585 2959 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/assert.h 0 1456347200 4197 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h 0 1455919591 21772 33188
@@ -560,7 +587,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFFileDescriptor.h 0 1455920585 2118 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFPlugInCOM.h 0 1456380406 4226 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Security.framework/module.map 0 1455917332 285 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/Security-1ZA8OU3LLHL5O.pcm 0 1469199541 216764 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/Security-1ZA8OU3LLHL5O.pcm 0 1469611812 216764 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.h 0 1456986175 1361 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Security.framework/Headers/SecBase.h 0 1456459820 4604 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Security.framework/Headers/SecCertificate.h 0 1456986175 3435 33188
@@ -576,7 +607,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Security.framework/Headers/CipherSuite.h 0 1456986182 11816 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Security.framework/Headers/SecureTransport.h 0 1456295802 52371 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CFNetwork.framework/Modules/module.modulemap 0 1456194972 112 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CFNetwork-2BJKVT37P1GZV.pcm 0 1469199541 174532 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CFNetwork-2BJKVT37P1GZV.pcm 0 1469611812 174532 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h 0 1456194877 1230 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetworkDefs.h 0 1456194877 744 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetworkErrors.h 0 1456194877 8371 33188
@@ -589,7 +624,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFHTTPAuthentication.h 0 1456194873 13840 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetDiagnostics.h 0 1456380531 5328 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFProxySupport.h 0 1456194877 18046 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/Foundation-12C4MGUD45UK4.pcm 0 1469199541 1757764 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/Foundation-12C4MGUD45UK4.pcm 0 1469611812 1757768 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h 0 1455931158 6314 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h 0 1455931158 22336 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSArray.h 0 1455931158 9070 33188
@@ -702,7 +741,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSUserActivity.h 0 1455929358 7559 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSUUID.h 0 1455931157 1275 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Modules/module.modulemap 0 1455921870 115 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreGraphics-17KZXFSPS3UL.pcm 0 1469199541 393156 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreGraphics-17KZXFSPS3UL.pcm 0 1469611812 393156 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h 0 1455921830 1322 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGBase.h 0 1455921648 7349 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGAffineTransform.h 0 1432489323 5067 33188
@@ -737,7 +780,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/module.map 0 1455917331 193 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreVideo.framework/Modules/module.modulemap 0 1455921601 182 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/OpenGLES.framework/module.map 0 1455917332 247 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/OpenGLES-3MWXTOH4THPZ9.pcm 0 1469199541 451108 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/OpenGLES-3MWXTOH4THPZ9.pcm 0 1469611813 451108 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/EAGL.h 0 1455921492 2715 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/EAGLDrawable.h 0 1455921492 2734 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/gl.h 0 1456350125 37273 33188
@@ -747,7 +794,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES2/glext.h 0 1432489323 26478 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES3/gl.h 0 1455921491 76717 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES3/glext.h 0 1432489324 19220 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreVideo-2QGKR3AL6QX0B.pcm 0 1469199541 177176 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreVideo-2QGKR3AL6QX0B.pcm 0 1469611813 177176 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CoreVideo.h 0 1455921601 1531 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVReturn.h 0 1455921601 3968 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVBase.h 0 1456350016 10579 33188
@@ -759,7 +810,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVOpenGLESTextureCache.h 0 1455921425 7640 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVPixelFormatDescription.h 0 1455921425 8539 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVHostTime.h 0 1455921601 1771 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreImage-305SH86BONUIS.pcm 0 1469199541 204420 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreImage-305SH86BONUIS.pcm 0 1469611813 204420 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.h 0 1455923458 804 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImageDefines.h 0 1455923458 814 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIVector.h 0 1455923458 2990 33188
@@ -776,7 +831,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIFilterShape.h 0 1455923458 1740 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CISampler.h 0 1455923458 3027 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreText.framework/Modules/module.modulemap 0 1455922138 107 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreText-16NOO5OJKVAP8.pcm 0 1469199541 554312 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/CoreText-16NOO5OJKVAP8.pcm 0 1469611813 554312 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.h 0 1455922091 2422 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTDefines.h 0 1455922091 2717 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFont.h 0 1455921864 64682 33188
@@ -799,7 +858,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/SFNTLayoutTypes.h 0 1455922091 66471 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/SFNTTypes.h 0 1432489323 14910 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/QuartzCore.framework/Modules/module.modulemap 0 1456375487 1835 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/QuartzCore-2B4IK9TQEEVPC.pcm 0 1469199541 238344 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/QuartzCore-2B4IK9TQEEVPC.pcm 0 1469611813 238344 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAAnimation.h 0 1456708595 11995 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h 0 1456375141 32563 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAMediaTiming.h 0 1456375141 2923 33188
@@ -822,7 +885,11 @@ InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAValueFunction.h 0 1456375141 2412 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CoreAnimation.h 0 1456375141 985 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h 0 1456375140 192 33188
+<<<<<<< HEAD
 InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/UIKit-2YJGPC5YLDB6L.pcm 0 1469199541 1985912 33188
+=======
+InputFile    /Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/1CVBB59JHTDU7/UIKit-2YJGPC5YLDB6L.pcm 0 1469611813 1985912 33188
+>>>>>>> Fcm_additions
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h 0 1455936242 6208 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKitDefines.h 0 1456805404 1340 33188
 InputFile    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccelerometer.h 0 1456805404 1399 33188
