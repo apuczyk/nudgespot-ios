@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>GoogleService-Info.plist</key>
-		<data>
-		PkjtXqmlU6HajSzSjjwF/HxgK1U=
-		</data>
 		<key>Info.plist</key>
 		<data>
 		M3L7jDzTAjQsYiSrqiDNUvWqBzk=
@@ -136,17 +132,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>GoogleService-Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			PkjtXqmlU6HajSzSjjwF/HxgK1U=
-			</data>
-			<key>hash2</key>
-			<data>
-			J5kAKCZ4qmWYbuzmQakEP3KLC1ynI+6BS2c4Hdp5K18=
-			</data>
-		</dict>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<dict>
 			<key>hash</key>
