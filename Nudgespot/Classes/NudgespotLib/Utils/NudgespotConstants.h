@@ -8,10 +8,15 @@
 
 
 //  PROD CONFIG
+//
+//static NSString * REST_API_ENDPOINT = @"https://app.nudgespot.com/201507";
+//
+//static NSString *const TRACK_API_ENDPOINT = @"https://track.nudgespot.com/android/message_events";
 
-static NSString * REST_API_ENDPOINT = @"https://app.nudgespot.com/201507";
 
-static NSString *const TRACK_API_ENDPOINT = @"https://track.nudgespot.com/android/message_events";
+static NSString * REST_API_ENDPOINT = @"https://phoenix.nudgespot.com/201507";
+
+static NSString *const TRACK_API_ENDPOINT = @"https://track.phoenix.nudgespot.com/android/message_events";
 
 static NSString *const CONTACT_TYPE_EMAIL = @"email";
 
@@ -21,6 +26,9 @@ static NSString *const CONTACT_TYPE_PHONE = @"phone";
 static NSString *const CONTACT_TYPE_ANDROID_REGISTRATION_ID = @"android_registration_id";
 
 static NSString *const CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID = @"ios_gcm_registration_id";
+
+static NSString *const CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID_ANON = @"ios_gcm_registration_id_anon";
+
 
 static NSString *const SHARED_PREFS_NAME = @"com.nudgespot.gcmclient.prefs";
 

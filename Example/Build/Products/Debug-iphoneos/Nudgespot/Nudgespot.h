@@ -18,8 +18,6 @@
 #import "Reachability.h"
 #import "SubscriberClient.h"
 
-
-
 @interface Nudgespot : SubscriberClient
 
 /**
@@ -108,7 +106,7 @@
 + (void)runRegistrationInBackground:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
 /**
- *  @brief Method which will use if we want to call it as anynomous users.
+ *  @brief Method register Anynomous Visitor on Nudgespot and compare registerationToken with Fcm token if not match then update again on Nudgespot with same Anynomous id and if same then return Visitor.
  *  @return Completion handler will give you response and error if any.
  */
 
@@ -227,6 +225,13 @@
 
 + (void) sendNudgespotMessageEvent:(NSString *)messageId andEvent:(NSString *)event;
 
+/**
+ *  @brief Method which will use in didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken and this will help you to get correct format payload from APNS Data. 
+ *  @param Devicetoken as NSData and Type, Production or Development.
+ *  @return No return.
+ */
+
++ (void)setAPNSToken:(NSData *)deviceToken ofType:(NudgespotIDAPNSTokenType) type;
 
 #pragma mark - Track Activities ..
 

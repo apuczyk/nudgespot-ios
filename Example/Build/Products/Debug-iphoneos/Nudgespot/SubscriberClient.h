@@ -11,6 +11,18 @@
 @class NudgespotSubscriber;
 @class NudgespotActivity;
 @class NudgespotVisitor;
+@class Nudgespot;
+
+typedef NS_ENUM(NSInteger, NudgespotIDAPNSTokenType) {
+    /// Unknown token type.
+    NudgespotAPNSTokenTypeUnknown,
+    /// Sandbox token type.
+    NudgespotAPNSTokenTypeSandbox,
+    /// Production token type.
+    NudgespotAPNSTokenTypeProd,
+};
+
+
 
 @interface SubscriberClient : NSObject
 {
@@ -79,6 +91,7 @@
 
 -(NudgespotSubscriber *)convertDictionaryToModel:(NSMutableDictionary *)responseDictionary;
 
+- (void)setAPNSToken:(NSData *)deviceToken ofType:(NudgespotIDAPNSTokenType) type;
 
 /**
  * Retrieves the stored subscriber UID for the application, if there is one

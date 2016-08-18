@@ -53,6 +53,22 @@ static Nudgespot *sharedMyManager = nil;
     return [self copyWithZone:zone];
 }
 
+/**
+ *  @brief Method which will use in didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+ *  @param Devicetoken as NSData and Type, Production or Development.
+ *  @return No return.
+ */
+
++ (void)setAPNSToken:(NSData *)deviceToken ofType:(NudgespotIDAPNSTokenType) type {
+    [Nudge setAPNSToken:deviceToken ofType:type];
+}
+
+/**
+ *  @brief Method will initialize Nudgespot Client.
+ *  @param pass api key from Nudgespot account settings and secrettoken from Nudgespot account settings.
+ *  @return completion handler will return Token from Fcm and error in case anyting missing.
+ */
+
 + (id)setJavascriptAPIkey:(NSString *)key andRESTAPIkey:(NSString *)token {
     
     [Nudge setJavascriptAPIkey:key];
@@ -132,7 +148,6 @@ static Nudgespot *sharedMyManager = nil;
     }
 }
 
-
 #pragma mark - Methods used to connect and disconnect from Fcm Server
 
 /**
@@ -168,14 +183,13 @@ static Nudgespot *sharedMyManager = nil;
 
 + (void) clearRegistration:(void (^)(id, NSError *))completionBlock {
     
-    DLog(@"%@ is Fcm sender id", [Nudge gcmSenderID] );
+    DLog(@"%@ is Fcm sender id", [Nudge gcmSenderID]);
     
     [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
       
         if (!error) {
             
             // Clear Notificaiton...
-            [[NSNotificationCenter defaultCenter] removeObserver:self name:kFIRInstanceIDTokenRefreshNotification object:nil];
             
             [self sendUnregistrationToNudgespot:^(id response, NSError *error) {
                 
@@ -409,30 +423,42 @@ static Nudgespot *sharedMyManager = nil;
 + (void) sendRegistrationToNudgespot:(void (^)(NSString *, NSError *))registeration {
     
     // Here we send the registration ID to Nudgespot servers so that messages can be sent to this device
- 
+    
     if ([Nudge isSubscriberReady]) {
         
-        [[Nudge subscriber] updateContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID FromValue:[Nudge registrationId] toValue:[[FIRInstanceID instanceID] token]];
-        
-        [Nudge updateSubscriber:[Nudge subscriber] completion:^(NudgespotSubscriber *subscriber, id error) {
-            if (subscriber) {
-                [Nudge setSubscriber:subscriber];
-            }
+        if (![[Nudge subscriber] hasContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID andValue:[[FIRInstanceID instanceID] token]] ) {
             
-            // Complete completion Block for initlize client
+            [[Nudge subscriber] updateContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID FromValue:[Nudge registrationId] toValue:[[FIRInstanceID instanceID] token]];
+            
+            [Nudge updateSubscriber:[Nudge subscriber] completion:^(NudgespotSubscriber *subscriber, id error) {
+                if (subscriber) {
+                    [Nudge setSubscriber:subscriber];
+                }
+                
+                // Complete completion Block for initlize client
+                if (registeration) {
+                    registeration([Nudge registrationId], error);
+                }
+                
+                DLog(@"Registration sent to Nudgespot: %@", [Nudge registrationId]);
+                
+                // Update Registration Id ..
+                [self storeRegistrationId:[[FIRInstanceID instanceID] token]];
+            }];
+            
+        } else {
+            // Complete Registeration Block for NudgespotClient
             if (registeration) {
-                registeration([Nudge registrationId], error);
+                registeration([Nudge registrationId], nil);
             }
             
-            DLog(@"Registration sent to Nudgespot: %@", [Nudge registrationId]);
-            
-            // Update Registration Id ..
-            [self storeRegistrationId:[[FIRInstanceID instanceID] token]];
-        }];
+            DLog(@"Registration already exists in Nudgespot: %@", [[FIRInstanceID instanceID] token]);
+        }
         
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:SHARED_PROP_REGISTRATION_SENT];
         
         [[NSUserDefaults standardUserDefaults] synchronize];
+        
     } else {
         
         // Subscriber was not ready, unable to register

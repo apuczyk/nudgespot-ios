@@ -40,5 +40,6 @@ s.dependency 'Reachability'
 s.dependency 'AFNetworking'
 s.dependency 'Firebase'
 s.dependency 'FirebaseMessaging'
+s.dependency 'STPopup'
 
 end

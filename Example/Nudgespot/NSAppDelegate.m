@@ -11,14 +11,50 @@
 
 #import "Nudgespot.h"
 #import "NudgeSpotConstants.h"
+#import "STPopupController.h"
+
+@interface BasicTheamViewController : UIViewController
+
+@property(nonatomic, assign) CGSize contentSizeInPopup;
+@property(nonatomic, assign) CGSize landscapeContentSizeInPopup;
+
+@end
+
+@implementation BasicTheamViewController
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.title = @"Basic Theam ViewController";
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(nextBtnDidTap)];
+        self.contentSizeInPopup = CGSizeMake(300, 400);
+        self.landscapeContentSizeInPopup = CGSizeMake(400, 200);
+    }
+    return self;
+}
+
+- (void)nextBtnDidTap {
+    
+    NSLog(@"I am tapped");
+    
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    
+    
+}
+
+@end
 
 static NSUInteger badgeCount = 1;
 
-@interface NSAppDelegate()
-
-@property (nonatomic, strong) NSData *deviceToken;
-
-@end
+NSString * const NotificationCategoryIdent1  = @"ACTIONABLE";
+//NSString * const NotificationCategoryIdent2  = @"ACTIONABLE2";
+NSString * const NotificationActionOneIdent = @"ACTION_ONE";
+NSString * const NotificationActionTwoIdent = @"ACTION_TWO";
 
 @implementation NSAppDelegate
 
@@ -35,12 +71,8 @@ static NSUInteger badgeCount = 1;
     } else {
         // iOS 8 or later
         // [END_EXCLUDE]
-        UIUserNotificationType allNotificationTypes =
-        (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
-        UIUserNotificationSettings *settings =
-        [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
-        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+        [self registerForNotification];
     }
     // [END register_for_remote_notifications]
     // [START start_Fcm_service]
@@ -66,10 +98,56 @@ static NSUInteger badgeCount = 1;
     
 }
 
+
+- (void)registerForNotification {
+    
+    UIMutableUserNotificationAction *action1;
+    action1 = [[UIMutableUserNotificationAction alloc] init];
+    [action1 setActivationMode:UIUserNotificationActivationModeBackground];
+    [action1 setTitle:@"Action 1"];
+    [action1 setIdentifier:NotificationActionOneIdent];
+    [action1 setDestructive:NO];
+    [action1 setAuthenticationRequired:NO];
+    
+    UIMutableUserNotificationAction *action2;
+    action2 = [[UIMutableUserNotificationAction alloc] init];
+    [action2 setActivationMode:UIUserNotificationActivationModeBackground];
+    [action2 setTitle:@"Action 2"];
+    [action2 setIdentifier:NotificationActionTwoIdent];
+    [action2 setDestructive:NO];
+    [action2 setAuthenticationRequired:NO];
+    
+    UIMutableUserNotificationCategory *actionCategory1;
+    actionCategory1 = [[UIMutableUserNotificationCategory alloc] init];
+    [actionCategory1 setIdentifier:NotificationCategoryIdent1];
+    [actionCategory1 setActions:@[action1, action2]
+                    forContext:UIUserNotificationActionContextDefault];
+    
+//    UIMutableUserNotificationCategory *actionCategory2;
+//    actionCategory2 = [[UIMutableUserNotificationCategory alloc] init];
+//    [actionCategory2 setIdentifier:NotificationCategoryIdent2];
+//    [actionCategory2 setActions:@[action1, action2, action1, action2]
+//                    forContext:UIUserNotificationActionContextDefault];
+//    
+    NSSet *categories = [NSSet setWithObjects:actionCategory1,  nil];
+    UIUserNotificationType types = (UIUserNotificationTypeAlert|
+                                    UIUserNotificationTypeSound|
+                                    UIUserNotificationTypeBadge);
+    
+    UIUserNotificationSettings *settings;
+    settings = [UIUserNotificationSettings settingsForTypes:types
+                                                 categories:categories];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
+
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
 {
     NSLog(@"Failed to get token, error: %@", error);
 }
+
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Connect to the Fcm server to receive non-APNS notifications
@@ -79,6 +157,25 @@ static NSUInteger badgeCount = 1;
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badgeCount];
     
     [Nudgespot  connectToFcm];
+}
+
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (^)())completionHandler {
+    
+    NSLog(@"Notification received: %@", userInfo);
+    
+    if ([identifier isEqualToString:NotificationActionOneIdent]) {
+        
+        NSLog(@"You chose action 1.");
+    }
+    else if ([identifier isEqualToString:NotificationActionTwoIdent]) {
+        
+        NSLog(@"You chose action 2.");
+    }
+    if (completionHandler) {
+        
+        completionHandler();
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -91,6 +188,20 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
     
     NSLog(@"Notification received: %@", userInfo);
+    
+    // Start Code for showing message..
+    if ((application.applicationState == UIApplicationStateInactive)) {
+    
+        STPopupController *popupController = [[STPopupController alloc] initWithRootViewController:[BasicTheamViewController new]];
+        UINavigationController *nc = (UINavigationController*)self.window.rootViewController;
+        
+        if (nc != nil) {
+            [popupController presentInViewController:nc];
+        }
+        
+    }
+    // End Code for message popup showing..
+    
     
     badgeCount = badgeCount +1;
     
@@ -106,13 +217,12 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     NSLog(@"%@ is device token", deviceToken);
     
-    self.deviceToken = deviceToken;
-        
+    [Nudgespot setAPNSToken:deviceToken ofType:NudgespotAPNSTokenTypeSandbox];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    [Nudgespot   disconnectToFcm];
+    [Nudgespot disconnectToFcm];
 }
 
 

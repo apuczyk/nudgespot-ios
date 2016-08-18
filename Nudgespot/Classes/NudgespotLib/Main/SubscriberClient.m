@@ -108,7 +108,6 @@
                     self.registrationHandler(currentSubsciber, error);
                 }
             }];
-            
         });
     }
     
@@ -121,41 +120,65 @@
     
     [self checkEndPoints];
     
-    NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
-    visitor.registrationToken = registrationToken;
-    
-    [[Nudgespot sharedInstance] setVisitor:visitor];
-    
     NSString *isRegistered = [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
     
-    if (!isRegistered.length) {
+    if (isRegistered.length) {
         
-        [NudgespotNetworkManager loginWithAnynomousUser:visitor.toJSON success:^(NSURLSessionDataTask *operation, id responseObject) {
+        // Check if anonymousId token is same or not...
+        NSString *visitorFcmToken = [BasicUtils getUserDefaultsValueForKey:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID_ANON];
+        
+        if (![visitorFcmToken isEqualToString:[[FIRInstanceID instanceID] token]]) {
             
-            if (!operation.error) {
-                
-                [BasicUtils setUserDefaultsValue:visitor.anonymousId forKey:SHARED_PROP_IS_ANON_USER_EXISTS];
-            }
+            NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
+            visitor.registrationToken = [[FIRInstanceID instanceID] token];
+            [[Nudgespot sharedInstance] setVisitor:visitor];
+            
+            [self loginWithAnynomous:visitor completionBlock:completionBlock];
+            
+            DLog(@"Visitor FCM updated %@", visitor.toJSON);
+            
+        } else {
             
             if (completionBlock) {
-                completionBlock(responseObject, operation.error);
+                completionBlock ([NSString stringWithFormat:@"Vistor already exits %@", isRegistered], nil);
             }
-            
-        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
-            
-            if (completionBlock) {
-                completionBlock(operation.response, error);
-            }
-            
-        }];
+        }
     } else {
         
-        if (completionBlock) {
-            completionBlock (@"Vistor already exits", nil);
-        }
+        NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
+        visitor.registrationToken = registrationToken;
+        
+        [[Nudgespot sharedInstance] setVisitor:visitor];
+        
+        [self loginWithAnynomous:visitor completionBlock:completionBlock];
+        
+        DLog(@"Visitor Created %@", visitor.toJSON);
     }
-    
+
     return self;
+}
+
+- (void) loginWithAnynomous: (NudgespotVisitor *) visitor completionBlock :(void (^)(id response, id error))completionBlock {
+    
+    [NudgespotNetworkManager loginWithAnynomousUser:visitor.toJSON success:^(NSURLSessionDataTask *operation, id responseObject) {
+        
+        if (!operation.error) {
+            
+            [BasicUtils setUserDefaultsValue:visitor.anonymousId forKey:SHARED_PROP_IS_ANON_USER_EXISTS];
+            [BasicUtils setUserDefaultsValue:visitor.registrationToken forKey:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID_ANON];
+        }
+        
+        if (completionBlock) {
+            completionBlock(responseObject, operation.error);
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        
+        if (completionBlock) {
+            completionBlock(operation.response, error);
+        }
+        
+    }];
 }
 
 - (void)checkEndPoints {
@@ -242,7 +265,7 @@
 }
 
 
--(void) updateSubscriber:(NudgespotSubscriber *)currentSubscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock{
+-(void) updateSubscriber:(NudgespotSubscriber *)currentSubscriber completion:(void (^)(NudgespotSubscriber *subscriber, id error))completionBlock {
     
     @try {
         
@@ -450,7 +473,9 @@
     
     if ([[FIRInstanceID instanceID] token]) {
         if (completionBlock) {
-            completionBlock([[FIRInstanceID instanceID] token], nil);
+            [self connectToFcmWithCompletion:^(id token, id error) {
+                completionBlock(token, error);
+            }];
         }
     } else {
         self.completionBlock =  ^(id token, id error) {
@@ -460,7 +485,7 @@
             }
         };
     }
-    
+
 }
 
 - (void) configureFirebase {
@@ -470,8 +495,11 @@
         
         self.gcmSenderID = [[FIROptions defaultOptions] GCMSenderID];
         
-        // Add observer for InstanceID token refresh callback.
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:) name:kFIRInstanceIDTokenRefreshNotification object:nil];
+        [[FIRInstanceID instanceID] deleteIDWithHandler:^(NSError * _Nullable error) {
+            // Add observer for InstanceID token refresh callback.
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:) name:kFIRInstanceIDTokenRefreshNotification object:nil];
+            
+        }];
         
     } @catch (NSException *exception) {
         DLog(@"Exception = %@", exception);
@@ -485,11 +513,12 @@
     // time. So if you need to retrieve the token as soon as it is available this is where that
     // should be done.
     NSString *refreshedToken = [[FIRInstanceID instanceID] token];
-    DLog(@"InstanceID token: %@", refreshedToken);
+    DLog(@"InstanceID Refresh token: %@", refreshedToken);
     
-    
-    // Connect to FCM since connection may have failed when attempted before having a token.
-    [self connectToFcmWithCompletion:self.completionBlock];
+    if (refreshedToken != nil) {
+        // Connect to FCM since connection may have failed when attempted before having a token.
+        [self connectToFcmWithCompletion:self.completionBlock];
+    }
 }
 // [END refresh_token]
 
@@ -497,18 +526,41 @@
 // [START connect_to_fcm]
 - (void)connectToFcmWithCompletion:(void (^)(id token, id error)) completionBlock {
     
-    [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
-        completionBlock([[FIRInstanceID instanceID] token], error);
-    }];
+    @try {
+        [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
+            
+            if (completionBlock != nil) {
+                completionBlock([[FIRInstanceID instanceID] token], error);
+            }
+            
+            DLog(@"%@ is token, %@ is error", [[FIRInstanceID instanceID] token], error);
+        }];
+    } @catch (NSException *exception) {
+        DLog(@"Exception %@", exception.description);
+    }
+    
 }
 // [END connect_to_fcm]
 
+- (void)setAPNSToken:(NSData *)deviceToken ofType:(NudgespotIDAPNSTokenType) type {
+    
+    switch (type) {
+        case NudgespotAPNSTokenTypeSandbox:
+            [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
+            break;
+        case NudgespotAPNSTokenTypeProd:
+            [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeProd];
+            break;
+        default:
+            [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeUnknown];
+            break;
+    }
+}
 
 - (void)disconnectToFcm {
     
     [[FIRMessaging messaging] disconnect];
     DLog(@"Disconnected from FCM");
 }
-
 
 @end

@@ -13,6 +13,7 @@
 #import "NudgespotVisitor.h"
 
 #import <AdSupport/AdSupport.h>
+#import "STPopupController.h"
 
 #endif
 
