@@ -1,5 +1,12 @@
 platform :ios, '7.0'
 
+inhibit_all_warnings!
+
+pod 'Reachability'
+pod 'AFNetworking'
+pod 'Firebase'
+pod 'FirebaseMessaging'
+
 target 'Nudgespot_Example' do
     pod 'Nudgespot', :path => '../'
     

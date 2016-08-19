@@ -42,15 +42,15 @@ PODS:
     - GoogleSymbolUtilities (~> 1.0)
   - Nudgespot (1.7):
     - AFNetworking
-    - Firebase
-    - FirebaseMessaging
     - Reachability
-    - STPopup
   - Reachability (3.2)
-  - STPopup (1.8.0)
 
 DEPENDENCIES:
+  - AFNetworking
+  - Firebase
+  - FirebaseMessaging
   - Nudgespot (from `../`)
+  - Reachability
 
 EXTERNAL SOURCES:
   Nudgespot:
@@ -66,10 +66,9 @@ SPEC CHECKSUMS:
   GoogleIPhoneUtilities: 63f25e93a3ddcb66884d182aab3a660d98f1479b
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
-  Nudgespot: bd4b216a3fc9dd7b4fc02e5db854ce4035a77453
+  Nudgespot: 0a83f9c6c9bcfa0a5835e2e03bbcd0d4817f98dd
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  STPopup: af630a85628e4226ffcbda5caaead0d99aed13a8
 
-PODFILE CHECKSUM: a58cffd91063d420ffe2e843e202c4cfeb8def2f
+PODFILE CHECKSUM: 6ec54952250502212df9240671eee664aeaa3228
 
 COCOAPODS: 1.0.1

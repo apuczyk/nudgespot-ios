@@ -217,12 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "Nudgespot_Example" */;
 			buildPhases = (
-				46043D276CDF20FF49C7FA19 /* [CP] Check Pods Manifest.lock */,
+				4DDA5A2AE6534E6FA048ECAA /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				1068111D180AB6B20497D64E /* [CP] Embed Pods Frameworks */,
-				11F6978DEE99DE7B7DEBF181 /* [CP] Copy Pods Resources */,
+				C9D99C58B2E864558156AD4F /* [CP] Embed Pods Frameworks */,
+				4B880F74FD265F00D205A429 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,22 +321,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1068111D180AB6B20497D64E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		11F6978DEE99DE7B7DEBF181 /* [CP] Copy Pods Resources */ = {
+		4B880F74FD265F00D205A429 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,7 +336,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		46043D276CDF20FF49C7FA19 /* [CP] Check Pods Manifest.lock */ = {
+		4DDA5A2AE6534E6FA048ECAA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,6 +379,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9D99C58B2E864558156AD4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1D3D5A1352CFD0FBF877561 /* [CP] Check Pods Manifest.lock */ = {

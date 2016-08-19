@@ -10,8 +10,6 @@ dependencies: \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Reachability/Reachability.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Utils/NudgespotConstants.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Main/NudgespotVisitor.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/STPopup/STPopup/STPopupController.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/STPopup/STPopup/STPopupNavigationBar.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/RestClient/NudgespotNetworkManager.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/AFNetworking/AFNetworking/AFNetworking.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h \
