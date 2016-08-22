@@ -8,6 +8,7 @@
 #import "NudgespotActivity.h"
 #import "BasicUtils.h"
 #import "Reachability.h"
+#import "AFNetworking.h"
 #import "SubscriberClient.h"
 #import "NudgespotConstants.h"
 #import "NudgespotVisitor.h"
@@ -17,7 +18,7 @@
 #endif
 
 #ifdef DEBUG
-#    define DLog(...) /*   NSLog(__VA_ARGS__) */
+#    define DLog(...) NSLog(__VA_ARGS__)
 #else
 #    define DLog(...) /* */
 #endif

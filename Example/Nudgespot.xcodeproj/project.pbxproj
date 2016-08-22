@@ -7,222 +7,156 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		222D4EDCE5D23F19C2991249 /* libPods-Nudgespot_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8A17E8962671452F248E20 /* libPods-Nudgespot_Tests.a */; };
-		44E81BAE1CD1EDA100AA47F1 /* UIAlertController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E81BAD1CD1EDA100AA47F1 /* UIAlertController+Alert.m */; };
-		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
-		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
-		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* NSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* NSAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* NSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* NSViewController.m */; };
-		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
-		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		E3115FCE4266317C35D6D604 /* libPods-Nudgespot_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A9A315E02DE1CAEFD353C3 /* libPods-Nudgespot_Example.a */; };
+		443A638C1D6AFAAE00916D86 /* UIAlertController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 443A638B1D6AFAAE00916D86 /* UIAlertController+Alert.m */; };
+		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		71E74919A3C2DEC838DDD190 /* Pods_Nudgespot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814FBD70E8836FC0D1D49E08 /* Pods_Nudgespot_Example.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6003F582195388D10070C39A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6003F589195388D20070C39A;
-			remoteInfo = Nudgespot;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		395960C67E83E71397411472 /* Nudgespot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nudgespot.podspec; path = ../Nudgespot.podspec; sourceTree = "<group>"; };
-		44A560A11D42015D001D154C /* libNudgespot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNudgespot.a; path = "Build/Products/Debug-iphoneos/Nudgespot/libNudgespot.a"; sourceTree = "<group>"; };
-		44E81BAB1CD1EDA100AA47F1 /* NudgeSpotConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NudgeSpotConstants.h; sourceTree = "<group>"; };
-		44E81BAC1CD1EDA100AA47F1 /* UIAlertController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Alert.h"; sourceTree = "<group>"; };
-		44E81BAD1CD1EDA100AA47F1 /* UIAlertController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Alert.m"; sourceTree = "<group>"; };
-		4556D28BB7A7C2E888D9BDE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* Nudgespot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudgespot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F595195388D20070C39A /* Nudgespot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Nudgespot-Info.plist"; sourceTree = "<group>"; };
-		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6003F59B195388D20070C39A /* Nudgespot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nudgespot-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* NSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* NSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* NSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* NSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSViewController.m; sourceTree = "<group>"; };
-		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Nudgespot_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nudgespot_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6B5743FCC65885AD8C6F5F4E /* Pods-Nudgespot_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		88A3670BEEA8A91882127B5E /* Pods-Nudgespot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example.release.xcconfig"; sourceTree = "<group>"; };
-		94CCE9B8E688D141DC16C8AC /* Pods-Nudgespot_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		BB8A17E8962671452F248E20 /* libPods-Nudgespot_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nudgespot_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C10FC0A0499CF267E071D903 /* Pods-Nudgespot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D1A9A315E02DE1CAEFD353C3 /* libPods-Nudgespot_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nudgespot_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3CC7562F15B7A63E5F717E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		01F8CECAC1BDE14973A06577 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		04E1CE9174CC40B3F32EA327 /* Pods-Nudgespot_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1D02416DEF87568EBF40EF69 /* Pods-Nudgespot_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		44285A921D6AF802009D9B17 /* Nudgespot_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nudgespot_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		443A638A1D6AFAAE00916D86 /* UIAlertController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Alert.h"; sourceTree = "<group>"; };
+		443A638B1D6AFAAE00916D86 /* UIAlertController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Alert.m"; sourceTree = "<group>"; };
+		5F7417A5054453250E455D57 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		607FACD01AFB9204008FA782 /* Nudgespot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudgespot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		6CAB64AD4DAE6F546B243795 /* Pods_Nudgespot_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudgespot_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814FBD70E8836FC0D1D49E08 /* Pods_Nudgespot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudgespot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D86E84C7445729C5153A6D2 /* Pods-Nudgespot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C00F253063EDD13EDBA12BC1 /* Pods-Nudgespot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4E81C603119C6E7F68BBC64 /* Nudgespot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nudgespot.podspec; path = ../Nudgespot.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6003F587195388D20070C39A /* Frameworks */ = {
+		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
-				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				E3115FCE4266317C35D6D604 /* libPods-Nudgespot_Example.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6003F5AB195388D20070C39A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
-				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				222D4EDCE5D23F19C2991249 /* libPods-Nudgespot_Tests.a in Frameworks */,
+				71E74919A3C2DEC838DDD190 /* Pods_Nudgespot_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		32492CB10DEA1C02D7AE9D64 /* Pods */ = {
+		01D614FA3AAA32F121CCDE87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6B5743FCC65885AD8C6F5F4E /* Pods-Nudgespot_Example.debug.xcconfig */,
-				88A3670BEEA8A91882127B5E /* Pods-Nudgespot_Example.release.xcconfig */,
-				C10FC0A0499CF267E071D903 /* Pods-Nudgespot_Tests.debug.xcconfig */,
-				94CCE9B8E688D141DC16C8AC /* Pods-Nudgespot_Tests.release.xcconfig */,
+				04E1CE9174CC40B3F32EA327 /* Pods-Nudgespot_Example.debug.xcconfig */,
+				9D86E84C7445729C5153A6D2 /* Pods-Nudgespot_Example.release.xcconfig */,
+				C00F253063EDD13EDBA12BC1 /* Pods-Nudgespot_Tests.debug.xcconfig */,
+				1D02416DEF87568EBF40EF69 /* Pods-Nudgespot_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		44E81BAA1CD1EDA100AA47F1 /* Comman */ = {
+		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				44E81BAB1CD1EDA100AA47F1 /* NudgeSpotConstants.h */,
-				44E81BAC1CD1EDA100AA47F1 /* UIAlertController+Alert.h */,
-				44E81BAD1CD1EDA100AA47F1 /* UIAlertController+Alert.m */,
-			);
-			path = Comman;
-			sourceTree = "<group>";
-		};
-		6003F581195388D10070C39A = {
-			isa = PBXGroup;
-			children = (
-				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F593195388D20070C39A /* Example for Nudgespot */,
-				6003F5B5195388D20070C39A /* Tests */,
-				6003F58C195388D20070C39A /* Frameworks */,
-				6003F58B195388D20070C39A /* Products */,
-				32492CB10DEA1C02D7AE9D64 /* Pods */,
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD21AFB9204008FA782 /* Example for Nudgespot */,
+				607FACE81AFB9204008FA782 /* Tests */,
+				607FACD11AFB9204008FA782 /* Products */,
+				01D614FA3AAA32F121CCDE87 /* Pods */,
+				A9AE66EE96D66CB18A9BA0F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		6003F58B195388D20070C39A /* Products */ = {
+		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* Nudgespot_Example.app */,
-				6003F5AE195388D20070C39A /* Nudgespot_Tests.xctest */,
+				607FACD01AFB9204008FA782 /* Nudgespot_Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6003F58C195388D20070C39A /* Frameworks */ = {
+		607FACD21AFB9204008FA782 /* Example for Nudgespot */ = {
 			isa = PBXGroup;
 			children = (
-				44A560A11D42015D001D154C /* libNudgespot.a */,
-				6003F58D195388D20070C39A /* Foundation.framework */,
-				6003F58F195388D20070C39A /* CoreGraphics.framework */,
-				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
-				D1A9A315E02DE1CAEFD353C3 /* libPods-Nudgespot_Example.a */,
-				BB8A17E8962671452F248E20 /* libPods-Nudgespot_Tests.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6003F593195388D20070C39A /* Example for Nudgespot */ = {
-			isa = PBXGroup;
-			children = (
-				44E81BAA1CD1EDA100AA47F1 /* Comman */,
-				6003F59C195388D20070C39A /* NSAppDelegate.h */,
-				6003F59D195388D20070C39A /* NSAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* NSViewController.h */,
-				6003F5A6195388D20070C39A /* NSViewController.m */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				443A638A1D6AFAAE00916D86 /* UIAlertController+Alert.h */,
+				443A638B1D6AFAAE00916D86 /* UIAlertController+Alert.m */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
+				44285A921D6AF802009D9B17 /* Nudgespot_Example-Bridging-Header.h */,
 			);
 			name = "Example for Nudgespot";
 			path = Nudgespot;
 			sourceTree = "<group>";
 		};
-		6003F594195388D20070C39A /* Supporting Files */ = {
+		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6003F595195388D20070C39A /* Nudgespot-Info.plist */,
-				6003F596195388D20070C39A /* InfoPlist.strings */,
-				6003F599195388D20070C39A /* main.m */,
-				6003F59B195388D20070C39A /* Nudgespot-Prefix.pch */,
+				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6003F5B5195388D20070C39A /* Tests */ = {
+		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
+				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
+		607FACE91AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				395960C67E83E71397411472 /* Nudgespot.podspec */,
-				FD3CC7562F15B7A63E5F717E /* README.md */,
-				4556D28BB7A7C2E888D9BDE5 /* LICENSE */,
+				D4E81C603119C6E7F68BBC64 /* Nudgespot.podspec */,
+				01F8CECAC1BDE14973A06577 /* README.md */,
+				5F7417A5054453250E455D57 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		A9AE66EE96D66CB18A9BA0F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				814FBD70E8836FC0D1D49E08 /* Pods_Nudgespot_Example.framework */,
+				6CAB64AD4DAE6F546B243795 /* Pods_Nudgespot_Tests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F589195388D20070C39A /* Nudgespot_Example */ = {
+		607FACCF1AFB9204008FA782 /* Nudgespot_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "Nudgespot_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Nudgespot_Example" */;
 			buildPhases = (
-				4DDA5A2AE6534E6FA048ECAA /* [CP] Check Pods Manifest.lock */,
-				6003F586195388D20070C39A /* Sources */,
-				6003F587195388D20070C39A /* Frameworks */,
-				6003F588195388D20070C39A /* Resources */,
-				C9D99C58B2E864558156AD4F /* [CP] Embed Pods Frameworks */,
-				4B880F74FD265F00D205A429 /* [CP] Copy Pods Resources */,
+				3DC85891288F3845B3F84281 /* [CP] Check Pods Manifest.lock */,
+				607FACCC1AFB9204008FA782 /* Sources */,
+				607FACCD1AFB9204008FA782 /* Frameworks */,
+				607FACCE1AFB9204008FA782 /* Resources */,
+				436AC3B7D75016344227AAC1 /* [CP] Embed Pods Frameworks */,
+				FF4A28FB5CD4891347335089 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,41 +164,21 @@
 			);
 			name = Nudgespot_Example;
 			productName = Nudgespot;
-			productReference = 6003F58A195388D20070C39A /* Nudgespot_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* Nudgespot_Example.app */;
 			productType = "com.apple.product-type.application";
-		};
-		6003F5AD195388D20070C39A /* Nudgespot_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Nudgespot_Tests" */;
-			buildPhases = (
-				F1D3D5A1352CFD0FBF877561 /* [CP] Check Pods Manifest.lock */,
-				6003F5AA195388D20070C39A /* Sources */,
-				6003F5AB195388D20070C39A /* Frameworks */,
-				6003F5AC195388D20070C39A /* Resources */,
-				C49DAC97F5CE4C9A1AB56E69 /* [CP] Embed Pods Frameworks */,
-				961B203443B65ED37120EAA3 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6003F5B4195388D20070C39A /* PBXTargetDependency */,
-			);
-			name = Nudgespot_Tests;
-			productName = NudgespotTests;
-			productReference = 6003F5AE195388D20070C39A /* Nudgespot_Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6003F582195388D10070C39A /* Project object */ = {
+		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = NS;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Maheep Kaushal";
+				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					6003F589195388D20070C39A = {
+					607FACCF1AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 6LEZ4C2EY4;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -275,12 +189,9 @@
 							};
 						};
 					};
-					6003F5AD195388D20070C39A = {
-						TestTargetID = 6003F589195388D20070C39A;
-					};
 				};
 			};
-			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "Nudgespot" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Nudgespot" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -288,55 +199,31 @@
 				en,
 				Base,
 			);
-			mainGroup = 6003F581195388D10070C39A;
-			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			mainGroup = 607FACC71AFB9204008FA782;
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F589195388D20070C39A /* Nudgespot_Example */,
-				6003F5AD195388D20070C39A /* Nudgespot_Tests */,
+				607FACCF1AFB9204008FA782 /* Nudgespot_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6003F588195388D20070C39A /* Resources */ = {
+		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6003F5AC195388D20070C39A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B880F74FD265F00D205A429 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4DDA5A2AE6534E6FA048ECAA /* [CP] Check Pods Manifest.lock */ = {
+		3DC85891288F3845B3F84281 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,37 +238,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		961B203443B65ED37120EAA3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C49DAC97F5CE4C9A1AB56E69 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9D99C58B2E864558156AD4F /* [CP] Embed Pods Frameworks */ = {
+		436AC3B7D75016344227AAC1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,74 +253,57 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F1D3D5A1352CFD0FBF877561 /* [CP] Check Pods Manifest.lock */ = {
+		FF4A28FB5CD4891347335089 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6003F586195388D20070C39A /* Sources */ = {
+		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F59E195388D20070C39A /* NSAppDelegate.m in Sources */,
-				44E81BAE1CD1EDA100AA47F1 /* UIAlertController+Alert.m in Sources */,
-				6003F5A7195388D20070C39A /* NSViewController.m in Sources */,
-				6003F59A195388D20070C39A /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6003F5AA195388D20070C39A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				443A638C1D6AFAAE00916D86 /* UIAlertController+Alert.m in Sources */,
+				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6003F589195388D20070C39A /* Nudgespot_Example */;
-			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6003F597195388D20070C39A /* en */,
+				607FACDA1AFB9204008FA782 /* Base */,
 			);
-			name = InfoPlist.strings;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6003F5B9195388D20070C39A /* en */,
+				607FACDF1AFB9204008FA782 /* Base */,
 			);
-			name = InfoPlist.strings;
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6003F5BD195388D20070C39A /* Debug */ = {
+		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -478,12 +318,16 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -497,13 +341,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		6003F5BE195388D20070C39A /* Release */ = {
+		607FACEE1AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -518,11 +363,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -530,143 +379,67 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		6003F5C0195388D20070C39A /* Debug */ = {
+		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B5743FCC65885AD8C6F5F4E /* Pods-Nudgespot_Example.debug.xcconfig */;
+			baseConfigurationReference = 04E1CE9174CC40B3F32EA327 /* Pods-Nudgespot_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Anubhav Sudha (F5N3NAX3KW)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphoneos/Nudgespot",
-					"$(PROJECT_DIR)/Pods",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Nudgespot/Nudgespot-Prefix.pch";
-				INFOPLIST_FILE = "Nudgespot/Nudgespot-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphoneos/Nudgespot",
-				);
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Nudgespot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nudgespot.Nudgespot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				WRAPPER_EXTENSION = app;
+				SWIFT_OBJC_BRIDGING_HEADER = "Nudgespot/Nudgespot_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		6003F5C1195388D20070C39A /* Release */ = {
+		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88A3670BEEA8A91882127B5E /* Pods-Nudgespot_Example.release.xcconfig */;
+			baseConfigurationReference = 9D86E84C7445729C5153A6D2 /* Pods-Nudgespot_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Anubhav Sudha (F5N3NAX3KW)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphoneos/Nudgespot",
-					"$(PROJECT_DIR)/Pods",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Nudgespot/Nudgespot-Prefix.pch";
-				INFOPLIST_FILE = "Nudgespot/Nudgespot-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphoneos/Nudgespot",
-				);
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Nudgespot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nudgespot.Nudgespot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		6003F5C3195388D20070C39A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C10FC0A0499CF267E071D903 /* Pods-Nudgespot_Tests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nudgespot_Example.app/Nudgespot_Example";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		6003F5C4195388D20070C39A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94CCE9B8E688D141DC16C8AC /* Pods-Nudgespot_Tests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nudgespot_Example.app/Nudgespot_Example";
-				WRAPPER_EXTENSION = xctest;
+				SWIFT_OBJC_BRIDGING_HEADER = "Nudgespot/Nudgespot_Example-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6003F585195388D10070C39A /* Build configuration list for PBXProject "Nudgespot" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Nudgespot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5BD195388D20070C39A /* Debug */,
-				6003F5BE195388D20070C39A /* Release */,
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "Nudgespot_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Nudgespot_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5C0195388D20070C39A /* Debug */,
-				6003F5C1195388D20070C39A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Nudgespot_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6003F5C3195388D20070C39A /* Debug */,
-				6003F5C4195388D20070C39A /* Release */,
+				607FACF01AFB9204008FA782 /* Debug */,
+				607FACF11AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6003F582195388D10070C39A /* Project object */;
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }

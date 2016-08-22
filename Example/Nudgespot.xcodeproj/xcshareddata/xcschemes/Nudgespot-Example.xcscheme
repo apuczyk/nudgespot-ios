@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F589195388D20070C39A"
+               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
                BuildableName = "Nudgespot_Example.app"
                BlueprintName = "Nudgespot_Example"
+               ReferencedContainer = "container:Nudgespot.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BuildableName = "Nudgespot_Tests.xctest"
+               BlueprintName = "Nudgespot_Tests"
                ReferencedContainer = "container:Nudgespot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "Nudgespot_Tests.xctest"
                BlueprintName = "Nudgespot_Tests"
                ReferencedContainer = "container:Nudgespot.xcodeproj">
@@ -42,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "Nudgespot_Example.app"
             BlueprintName = "Nudgespot_Example"
             ReferencedContainer = "container:Nudgespot.xcodeproj">
@@ -65,7 +79,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "Nudgespot_Example.app"
             BlueprintName = "Nudgespot_Example"
             ReferencedContainer = "container:Nudgespot.xcodeproj">
@@ -84,7 +98,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "Nudgespot_Example.app"
             BlueprintName = "Nudgespot_Example"
             ReferencedContainer = "container:Nudgespot.xcodeproj">

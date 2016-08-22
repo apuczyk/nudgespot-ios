@@ -10,7 +10,7 @@
 
 #import "NudgespotNetworkManager.h"
 
-#import <Firebase/Firebase.h>
+#import "Firebase.h"
 
 @implementation SubscriberClient
 
@@ -471,26 +471,33 @@
 
 - (void) getFcmTokenCompletion:(void (^)(id token, id error))completionBlock; {
     
-    if ([[FIRInstanceID instanceID] token]) {
-        if (completionBlock) {
-            [self connectToFcmWithCompletion:^(id token, id error) {
-                completionBlock(token, error);
-            }];
-        }
-    } else {
-        self.completionBlock =  ^(id token, id error) {
-            
+    @try {
+        
+        if ([[FIRInstanceID instanceID] token]) {
             if (completionBlock) {
-                completionBlock(token, error);
+                [self connectToFcmWithCompletion:^(id token, id error) {
+                    completionBlock(token, error);
+                }];
             }
-        };
+        } else {
+            self.completionBlock =  ^(id token, id error) {
+                
+                if (completionBlock) {
+                    completionBlock(token, error);
+                }
+            };
+        }
+        
+    }@catch (NSException *exception) {
+        DLog(@"Exception = %@", exception);
     }
-
+    
 }
 
 - (void) configureFirebase {
     
     @try {
+        
         [FIRApp configure];
         
         self.gcmSenderID = [[FIROptions defaultOptions] GCMSenderID];
@@ -498,8 +505,9 @@
         [[FIRInstanceID instanceID] deleteIDWithHandler:^(NSError * _Nullable error) {
             // Add observer for InstanceID token refresh callback.
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:) name:kFIRInstanceIDTokenRefreshNotification object:nil];
-            
+        
         }];
+    
         
     } @catch (NSException *exception) {
         DLog(@"Exception = %@", exception);

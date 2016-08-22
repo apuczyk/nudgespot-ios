@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/Nudgespot.svg?style=flat)](http://cocoapods.org/pods/Nudgespot)
 [![Platform](https://img.shields.io/cocoapods/p/Nudgespot.svg?style=flat)](http://cocoapods.org/pods/Nudgespot)
 
-## Usage
+## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
@@ -22,7 +22,7 @@ pod "Nudgespot"
 
 ## Author
 
-Nudgespot, dev@nudgespot.com
+Maheep Kaushal, maheep@nudgespot.com
 
 ## License
 

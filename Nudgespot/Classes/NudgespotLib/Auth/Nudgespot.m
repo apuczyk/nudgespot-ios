@@ -8,9 +8,8 @@
 
 #import "Nudgespot.h"
 
-#import <Firebase/Firebase.h>
-#import <FirebaseMessaging/FIRMessaging.h>
-#import <FirebaseInstanceID/FIRInstanceID.h>
+#import "Firebase.h"
+
 #import "NudgespotNetworkManager.h"
 
 #define Nudge [self sharedInstance]
@@ -436,11 +435,11 @@ static Nudgespot *sharedMyManager = nil;
                 }
                 
                 // Complete completion Block for initlize client
-                if (registeration) {
-                    registeration([Nudge registrationId], error);
+                if (registeration != nil) {
+                    registeration([[FIRInstanceID instanceID] token], error);
                 }
                 
-                DLog(@"Registration sent to Nudgespot: %@", [Nudge registrationId]);
+                DLog(@"Registration sent to Nudgespot: %@", [[FIRInstanceID instanceID] token]);
                 
                 // Update Registration Id ..
                 [self storeRegistrationId:[[FIRInstanceID instanceID] token]];
@@ -449,7 +448,7 @@ static Nudgespot *sharedMyManager = nil;
         } else {
             // Complete Registeration Block for NudgespotClient
             if (registeration) {
-                registeration([Nudge registrationId], nil);
+                registeration([[FIRInstanceID instanceID] token], nil);
             }
             
             DLog(@"Registration already exists in Nudgespot: %@", [[FIRInstanceID instanceID] token]);

@@ -7,6 +7,7 @@
 #
 
 Pod::Spec.new do |s|
+
 s.name             = 'Nudgespot'
 s.version          = '1.7'
 s.summary          = 'nudgespot-ios is Objective-C framework.'
@@ -22,7 +23,7 @@ Nudgespot provides framework for iOS which allows users to track events.
 DESC
 
 s.homepage         = 'https://github.com/nudgespot/nudgespot-ios'
-s.license          = { :type => 'MIT', :file => 'LICENSE' }
+#s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Nudgespot' => 'dev@nudgespot.com' }
 s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 :tag => s.version.to_s }
