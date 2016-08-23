@@ -1,6 +1,6 @@
 {
   "name": "Nudgespot",
-  "version": "2.0",
+  "version": "2.0.1",
   "summary": "nudgespot-ios is Objective-C framework.",
   "description": "Nudgespot provides framework for iOS which allows users to track events.",
   "homepage": "https://github.com/nudgespot/nudgespot-ios",
@@ -9,12 +9,19 @@
   },
   "source": {
     "git": "https://github.com/nudgespot/nudgespot-ios.git",
-    "tag": "2.0"
+    "tag": "2.0.1"
   },
   "pod_target_xcconfig": {
     "OTHER_LDFLAGS": "-ObjC",
-    "FRAMEWORK_SEARCH_PATHS": "\"$(SRCROOT)/../../Nudgespot/Assets/Analytics\" \"$(SRCROOT)/../../Nudgespot/Assets/Messaging\""
+    "FRAMEWORK_SEARCH_PATHS": "\"$(SRCROOT)/../../Nudgespot/Assets/Analytics\" \"$(SRCROOT)/../../Nudgespot/Assets/Messaging\"",
+    "HEADER_SEARCH_PATHS": "$(PODS_ROOT)/Nudgespot/Nudgespot"
   },
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "$(PODS_ROOT)/Nudgespot/Nudgespot",
+    "SWIFT_INCLUDE_PATHS": "$(PODS_ROOT)/Nudgespot/Nudgespot"
+  },
+  "module_name": "Nudgespot",
+  "preserve_paths": "Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap",
   "platforms": {
     "ios": "7.0"
   },
