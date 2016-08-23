@@ -23,15 +23,25 @@ Nudgespot provides framework for iOS which allows users to track events.
 DESC
 
 s.homepage         = 'https://github.com/nudgespot/nudgespot-ios'
+
 #s.license          = { :type => 'MIT', :file => 'LICENSE' }
+
 s.author           = { 'Nudgespot' => 'dev@nudgespot.com' }
+
 s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 :tag => s.version.to_s }
 
+s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" => '"$(SRCROOT)/../../Nudgespot/Assets/Analytics" "$(SRCROOT)/../../Nudgespot/Assets/Messaging"' }
+
 s.ios.deployment_target = '7.0'
+
 s.requires_arc = true
 
-s.source_files = "Nudgespot/Classes/**/*"
+s.source_files = 'Nudgespot/Classes/**/*.{h,m}', 'Nudgespot/Assets/*.h'
+
+s.ios.public_header_files  = 'Nudgespot/Classes/**/*.h'
+
+s.ios.vendored_frameworks = "Nudgespot/Assets/**/*.{framework}"
 
 s.prefix_header_file = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
 
@@ -39,5 +49,35 @@ s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreS
 
 s.dependency 'Reachability'
 s.dependency 'AFNetworking'
+
+# ////*** PCH Content begin here.. ***/////
+s.prefix_header_contents = '#ifdef __OBJC__
+
+#import "NudgespotActivity.h"
+#import "SubscriberContact.h"
+#import "Nudgespot.h"
+#import "NudgespotSubscriber.h"
+#import "SubscriberClient.h"
+#import "NudgespotActivity.h"
+#import "BasicUtils.h"
+#import "Reachability.h"
+#import "AFNetworking.h"
+#import "SubscriberClient.h"
+#import "NudgespotConstants.h"
+#import "NudgespotVisitor.h"
+
+#import <AdSupport/AdSupport.h>
+
+#endif
+
+#ifdef DEBUG
+#    define DLog(...) NSLog(__VA_ARGS__)
+#else
+#    define DLog(...) /* */
+#endif
+#define ALog(...) NSLog(__VA_ARGS__)'
+
+# ////*** PCH Content End here.. ***/////
+
 
 end

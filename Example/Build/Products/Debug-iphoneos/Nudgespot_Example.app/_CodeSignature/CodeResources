@@ -8,7 +8,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3jwN/hFw+RXv2WAhlxJaM0pfGP8=
+			3cM3NgT+7R+EgfsylEsVMk0q8uA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -17,7 +17,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JuUjEckasl1NFf/2Z40C9yebKWo=
+			aOPtqs+YRL4paE4r4awHCuKqHBI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -26,7 +26,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gP7a1Y6DbLiKCQQvAjkpCJmmD2A=
+			sSsMjOa++yexNLa/lXClajonfZY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -35,7 +35,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+bM6csxZf/qSSRZe2baueLqYjkc=
+			osvIgVAsva1631q2PPOP2QQ6wMo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -44,7 +44,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bFT78yCg6na5zbQGSXN95IjGkJM=
+			/h8uzhdGhSqAMB6H2H74bF5btkE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WV1V3nGhNozPTRPSZ2E/fQhOLU8=
+			GSjfqOL8XcPY4XtLauKQNe/4388=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -62,14 +62,14 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MyXBBPXz4Tq7BSvy9JUzzCQdfEw=
+			e6jZDIAVdSGUJSVILon5bx1kkmQ=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
 		<data>
-		XxaEa5+bWIHC8VDMtqOdceK4mDI=
+		hHKPx0DdvMtfMQatbxeDOfoOqK4=
 		</data>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
 		<data>
@@ -85,7 +85,7 @@
 		</data>
 		<key>Frameworks/Nudgespot.framework/Nudgespot</key>
 		<data>
-		mwTa7GHJYdjY2DnHeG7Zzy+4Fio=
+		mHFaUR2T1iQzRN9w8JPzeZiBpDE=
 		</data>
 		<key>Frameworks/Nudgespot.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -97,7 +97,7 @@
 		</data>
 		<key>Frameworks/Reachability.framework/Reachability</key>
 		<data>
-		9DlGzfxAj7eSGuGDWgicnnqRZHc=
+		BJVYrznScq7ZIEI8QBhXvJ24eRk=
 		</data>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -105,43 +105,39 @@
 		</data>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
-		hw1brr0uD5M1PsGY+lh7ud90GP0=
+		mkTnlqzaB3k1FBE3+6ZlZoHP3+o=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
-		imxvZ/NkiCOCykTWoBbypZz6a2Y=
+		hhxi0bTvr2zwqvfCn6dV5awCYFc=
 		</data>
 		<key>Frameworks/libswiftCoreGraphics.dylib</key>
 		<data>
-		iDEe9bFCvDE9a1QfYV4yr7JmttA=
+		lXRfeduFWOrITYgPDIbCnATa8S4=
 		</data>
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
-		efG/EWCd4rAQXLJTfT37Lttaulg=
+		SspGtZ8725voroSDpT0LZgOAqKE=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
-		J1ft6YfV286upWaW9wQ1NCOvOJQ=
+		5umKMmox66yy1E6GVXHJCIdbIvM=
 		</data>
 		<key>Frameworks/libswiftDispatch.dylib</key>
 		<data>
-		3GEa7vRjdTrUNSX1FrxXpB6aaMw=
+		Ec2ddxR5cgBLgmSZonjEqFNdAE8=
 		</data>
 		<key>Frameworks/libswiftFoundation.dylib</key>
 		<data>
-		2cFSsI5AZZrXStMK9nbZ0jBSLrw=
+		jPFUzJl6mG1CNEk5M+6cZeASO6U=
 		</data>
 		<key>Frameworks/libswiftObjectiveC.dylib</key>
 		<data>
-		9Q65jPFJwYzh1Q9bABYYlCYsQvw=
+		79nBUwklPcZOfy5AH2n3w0ZQJJU=
 		</data>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
-		LeyCaQ13W9GBOTQc451TDKAaDh0=
-		</data>
-		<key>GoogleService-Info.plist</key>
-		<data>
-		PkjtXqmlU6HajSzSjjwF/HxgK1U=
+		bi4fHYXpFg0J7RUf9npHi/ZYAPU=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -162,11 +158,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3jwN/hFw+RXv2WAhlxJaM0pfGP8=
+			3cM3NgT+7R+EgfsylEsVMk0q8uA=
 			</data>
 			<key>hash2</key>
 			<data>
-			elGUrsts38l8//2qPeH/2JkMIfZazpZTm2IQIJtHcx4=
+			VU8W+DKY70NjZOCZYWHl2JLQAl/AR7mZfPPc8S0KUY0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -175,11 +171,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JuUjEckasl1NFf/2Z40C9yebKWo=
+			aOPtqs+YRL4paE4r4awHCuKqHBI=
 			</data>
 			<key>hash2</key>
 			<data>
-			LZlRbcPWq9YnxEqHvAlsh+TiJ20w9yVDidvUf58xADU=
+			MQZrT/DxIwLxE2htZEtbBw8G1h+er5uBzXWEzR97+xo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -188,11 +184,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gP7a1Y6DbLiKCQQvAjkpCJmmD2A=
+			sSsMjOa++yexNLa/lXClajonfZY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Gqp1WaH+ge+qg1KRTcJNdUfQPGo6h1b09oyU6gjDZ1I=
+			zByxc62j2X89eOO7aUQKBiFEF4+4MgZlvWoqTY6h2nw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -201,11 +197,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+bM6csxZf/qSSRZe2baueLqYjkc=
+			osvIgVAsva1631q2PPOP2QQ6wMo=
 			</data>
 			<key>hash2</key>
 			<data>
-			MfAe4qDrzwLAdykFSxIASAsHHM08ifGrMnxvh8etCro=
+			VscRerEK8CyY+eRsgA9GODQ50FACbCkViM6mj6pmy7A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -214,11 +210,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bFT78yCg6na5zbQGSXN95IjGkJM=
+			/h8uzhdGhSqAMB6H2H74bF5btkE=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZY6KTiUWkyg8RYDTHwyxcHl7a7aYa2xkZUzWwSxVfVs=
+			1jNEpCq6AT4JcFtfRtMxYfgv9kVw6b+6pDyVgrCUHnM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -227,11 +223,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WV1V3nGhNozPTRPSZ2E/fQhOLU8=
+			GSjfqOL8XcPY4XtLauKQNe/4388=
 			</data>
 			<key>hash2</key>
 			<data>
-			BM3WHl1kuGxAT0yZbwuPR/qKuMeLBCqUsj5HgjtNfZg=
+			E6jqNSF/9na+UDxMRFcGbxi+rg2ll/gHTP0PkG3GRLs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -240,11 +236,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MyXBBPXz4Tq7BSvy9JUzzCQdfEw=
+			e6jZDIAVdSGUJSVILon5bx1kkmQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Jimoa5Y9DDOQZglA5g76QuuUzwOFtnuEPf7/HCZ+SOQ=
+			572xzjQIdErZg9+NRbaiqRK1RgoXD0X4w0AlKjG2UQw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -253,11 +249,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XxaEa5+bWIHC8VDMtqOdceK4mDI=
+			hHKPx0DdvMtfMQatbxeDOfoOqK4=
 			</data>
 			<key>hash2</key>
 			<data>
-			g1V2nZofeR/sxaSI2iTQRX0PT81fOzmyoAxZq2JdfZ4=
+			fvEQdOYpSLvdRniw8o0MFsQZaI1L9bHKYvUeogsE93I=
 			</data>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
@@ -297,11 +293,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mwTa7GHJYdjY2DnHeG7Zzy+4Fio=
+			mHFaUR2T1iQzRN9w8JPzeZiBpDE=
 			</data>
 			<key>hash2</key>
 			<data>
-			nsuaJ1ILaSObvbCz/Y5yFCeFGwSj5l2KU/E5iVaogSk=
+			1zpVUQtZgnRPzt0AhSHLzOe/XlSF+ssdBtd21CBF/g4=
 			</data>
 		</dict>
 		<key>Frameworks/Nudgespot.framework/_CodeSignature/CodeResources</key>
@@ -330,11 +326,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9DlGzfxAj7eSGuGDWgicnnqRZHc=
+			BJVYrznScq7ZIEI8QBhXvJ24eRk=
 			</data>
 			<key>hash2</key>
 			<data>
-			AOICjXMaUNl+h6yyucL5B0aT5U+K630VJ5mwdU/510Q=
+			VUyqxTaU8ryFA6iEQNnsdl3diji2WvR53zWxdSERE2M=
 			</data>
 		</dict>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>
@@ -352,110 +348,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hw1brr0uD5M1PsGY+lh7ud90GP0=
+			mkTnlqzaB3k1FBE3+6ZlZoHP3+o=
 			</data>
 			<key>hash2</key>
 			<data>
-			SXysNRSynXj9q4NH8EZGJrtsT7UCY2YLYUO1uErO0M4=
+			mOA8DWkIbwug++8qy9p6piSzrouzWgbveWYoE1lieRQ=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			imxvZ/NkiCOCykTWoBbypZz6a2Y=
+			hhxi0bTvr2zwqvfCn6dV5awCYFc=
 			</data>
 			<key>hash2</key>
 			<data>
-			9ietu5Tu0dQAHQlJfQ7MiorIJTWLGVxqz1Ge2CRaM2U=
+			hihMfUx2n96JwJRn+SR9+xyVwHyFNQ6LZr7oV0U6iq0=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCoreGraphics.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iDEe9bFCvDE9a1QfYV4yr7JmttA=
+			lXRfeduFWOrITYgPDIbCnATa8S4=
 			</data>
 			<key>hash2</key>
 			<data>
-			2+dUmQbHhvTnjKNJyOoLfqk+eCZmGnOU3sBWpa01C68=
+			gZEgxys0teT+ufxuWDY2akaFCiTMyvEarNd7LMAyjFw=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			efG/EWCd4rAQXLJTfT37Lttaulg=
+			SspGtZ8725voroSDpT0LZgOAqKE=
 			</data>
 			<key>hash2</key>
 			<data>
-			LxEiGeXMJHjSdNQulla/YTaetK+nzT8dFBdT1FQAfZc=
+			PSRKw0AoC1K1mPXeYp6PGo9vsQkjAJ3kLVHq9CRZ30Q=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			J1ft6YfV286upWaW9wQ1NCOvOJQ=
+			5umKMmox66yy1E6GVXHJCIdbIvM=
 			</data>
 			<key>hash2</key>
 			<data>
-			90CuY9KtCJZOXL1aymC56wetX2DgiUkH/zFUFQpbvaQ=
+			CkcVBMGVhj0s3TPaGrfjzAvzgNUmSbJl13y2k883dto=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftDispatch.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3GEa7vRjdTrUNSX1FrxXpB6aaMw=
+			Ec2ddxR5cgBLgmSZonjEqFNdAE8=
 			</data>
 			<key>hash2</key>
 			<data>
-			idP+pjVERZTQ6A4H61PIYM28Joh6643QrHyfyqGoB8w=
+			568Qhzl0eMkzC5SPnz/3mE2nLRwLwRkeWC2NZXN2+WI=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftFoundation.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2cFSsI5AZZrXStMK9nbZ0jBSLrw=
+			jPFUzJl6mG1CNEk5M+6cZeASO6U=
 			</data>
 			<key>hash2</key>
 			<data>
-			HwtwL7YUmbfmfdx0/+TLc4Hq5LeCAZ/Dcrafzuy62qg=
+			t2Rimn5iAAkhrRUm2JGMrWBUmOw/uIvqZqXGnT84+V8=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftObjectiveC.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9Q65jPFJwYzh1Q9bABYYlCYsQvw=
+			79nBUwklPcZOfy5AH2n3w0ZQJJU=
 			</data>
 			<key>hash2</key>
 			<data>
-			LXZUA/UMm3uPMF6I2bQF7AlbqGl+L1DxQTcZq5oH8mU=
+			rE4ZwTTayiHCfjurXC0o7yTu7ncosLq8t6n8pfYDp0g=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LeyCaQ13W9GBOTQc451TDKAaDh0=
+			bi4fHYXpFg0J7RUf9npHi/ZYAPU=
 			</data>
 			<key>hash2</key>
 			<data>
-			pRiXfJP2Ysv3rdHOscHca6j5+2KJ9/JFyppLqObZpyo=
-			</data>
-		</dict>
-		<key>GoogleService-Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			PkjtXqmlU6HajSzSjjwF/HxgK1U=
-			</data>
-			<key>hash2</key>
-			<data>
-			J5kAKCZ4qmWYbuzmQakEP3KLC1ynI+6BS2c4Hdp5K18=
+			DBFCSoaaGzQDrkLg1yWYyGKBYM3jrxhlL4r1fp53iD4=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>

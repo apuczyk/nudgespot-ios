@@ -1,0 +1,4 @@
+module Nudgespot {
+  header "Nudgespot.h"
+  export *
+}

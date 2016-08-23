@@ -8,7 +8,6 @@
 
 import UIKit
 
-import Nudgespot
 
 extension String {
     

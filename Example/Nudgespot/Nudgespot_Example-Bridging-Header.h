@@ -3,3 +3,6 @@
 //
 
 #import "UIAlertController+Alert.h"
+
+@import Nudgespot;
+
