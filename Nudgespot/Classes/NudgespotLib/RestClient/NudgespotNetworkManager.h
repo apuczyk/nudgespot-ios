@@ -6,7 +6,7 @@
 //
 //
 
-@import AFNetworking;
+#import <AFNetworking/AFNetworking.h>
 
 #define StringFormat(fmt, ...) [NSString stringWithFormat: fmt, ## __VA_ARGS__]
 
