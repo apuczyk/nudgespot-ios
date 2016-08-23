@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name             = 'Nudgespot'
-s.version          = '2.0.1'
+s.version          = '2.0.2'
 s.summary          = 'nudgespot-ios is Objective-C framework.'
 
 # This description is used to generate tags and improve search results.
@@ -31,8 +31,7 @@ s.author           = { 'Nudgespot' => 'dev@nudgespot.com' }
 s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 :tag => s.version.to_s }
 
-s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" => '"$(SRCROOT)/../../Nudgespot/Assets/Analytics" "$(SRCROOT)/../../Nudgespot/Assets/Messaging"',
-'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot'}
+s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" => '"$(SRCROOT)/../../Nudgespot/Assets/Analytics" "$(SRCROOT)/../../Nudgespot/Assets/Messaging"', 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot'}
 
 s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot' }
 
@@ -51,7 +50,9 @@ s.ios.vendored_frameworks = "Nudgespot/Assets/**/*.{framework}"
 
 s.prefix_header_file = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
 
-s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork'
+s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork', 'AddressBook'
+
+s.ios.libraries = 'stdc++', 'z', 'sqlite3'
 
 s.dependency 'Reachability'
 s.dependency 'AFNetworking'

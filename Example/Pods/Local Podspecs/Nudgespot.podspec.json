@@ -1,6 +1,6 @@
 {
   "name": "Nudgespot",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "summary": "nudgespot-ios is Objective-C framework.",
   "description": "Nudgespot provides framework for iOS which allows users to track events.",
   "homepage": "https://github.com/nudgespot/nudgespot-ios",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/nudgespot/nudgespot-ios.git",
-    "tag": "2.0.1"
+    "tag": "2.0.2"
   },
   "pod_target_xcconfig": {
     "OTHER_LDFLAGS": "-ObjC",
@@ -32,7 +32,12 @@
   ],
   "ios": {
     "public_header_files": "Nudgespot/Classes/**/*.h",
-    "vendored_frameworks": "Nudgespot/Assets/**/*.{framework}"
+    "vendored_frameworks": "Nudgespot/Assets/**/*.{framework}",
+    "libraries": [
+      "stdc++",
+      "z",
+      "sqlite3"
+    ]
   },
   "prefix_header_file": "Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch",
   "frameworks": [
@@ -42,7 +47,8 @@
     "MobileCoreServices",
     "Security",
     "AdSupport",
-    "CFNetwork"
+    "CFNetwork",
+    "AddressBook"
   ],
   "dependencies": {
     "Reachability": [
