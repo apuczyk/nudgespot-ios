@@ -9,15 +9,15 @@
 #ifndef NudgespotSDK_h
 #define NudgespotSDK_h
 
-#import "NudgespotActivity.h"
-#import "SubscriberContact.h"
 #import "Nudgespot.h"
-#import "NudgespotSubscriber.h"
-#import "SubscriberClient.h"
 #import "NudgespotActivity.h"
-#import "BasicUtils.h"
-#import "SubscriberClient.h"
-#import "NudgespotConstants.h"
+#import "NudgespotSubscriber.h"
 #import "NudgespotVisitor.h"
+#import "SubscriberClient.h"
+#import "SubscriberContact.h"
+#import "NudgespotSDK.h"
+#import "NudgespotNetworkManager.h"
+#import "BasicUtils.h"
+#import "NudgespotConstants.h"
 
 #endif /* NudgespotSDK_h */
