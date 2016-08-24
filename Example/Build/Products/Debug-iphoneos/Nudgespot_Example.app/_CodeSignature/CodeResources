@@ -69,7 +69,7 @@
 		</dict>
 		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
 		<data>
-		05inhgLP84XBO+//JhH8S297FM4=
+		OKYi7UsCanysVBZHEmFwOOzcWJc=
 		</data>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
 		<data>
@@ -85,7 +85,7 @@
 		</data>
 		<key>Frameworks/Nudgespot.framework/Nudgespot</key>
 		<data>
-		S2Hs1eFmvmZJPaWKkAHAb6qND34=
+		8k11cKVhrGW47yfv77nHfMjPxew=
 		</data>
 		<key>Frameworks/Nudgespot.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -97,7 +97,7 @@
 		</data>
 		<key>Frameworks/Reachability.framework/Reachability</key>
 		<data>
-		Lrw5M4QpI/smpV+xLqmcWvClul8=
+		yQHP8YVsceX6ibkkZ7g0efkQ+CU=
 		</data>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -249,11 +249,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			05inhgLP84XBO+//JhH8S297FM4=
+			OKYi7UsCanysVBZHEmFwOOzcWJc=
 			</data>
 			<key>hash2</key>
 			<data>
-			sLtxHVFJ3AimP/wha222aN8npLLn+riSj1pyUXemnvU=
+			hheyj6hWW+idviabSNtUBUnBnRIcjq4SBcTav6E6l/E=
 			</data>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
@@ -293,11 +293,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S2Hs1eFmvmZJPaWKkAHAb6qND34=
+			8k11cKVhrGW47yfv77nHfMjPxew=
 			</data>
 			<key>hash2</key>
 			<data>
-			T6mWzt1UYT0zzDbGAvnVYJPUwtcVZLf2g9EzP/8LNR4=
+			OtwSJQRGqT3Z/ZyWlsoooeXL/KM5W58G0VDDrqUL7+c=
 			</data>
 		</dict>
 		<key>Frameworks/Nudgespot.framework/_CodeSignature/CodeResources</key>
@@ -326,11 +326,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Lrw5M4QpI/smpV+xLqmcWvClul8=
+			yQHP8YVsceX6ibkkZ7g0efkQ+CU=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZU4A13Sng5bYydsTMlcT/76xFgMBl2gGTISXzzItwCQ=
+			sQRqNcI+GpDEmFTiYIZXGM8o7SLErhRLzZmmDoe3tGg=
 			</data>
 		</dict>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>

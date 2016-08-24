@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/Nudgespot-umbrella.h</key>
 		<data>
-		YfNl6zHHMji8r2QNLArzsRdc/GM=
+		CHPVSz22N5/5LS6AWDOSXUn8Yl8=
 		</data>
 		<key>Headers/Nudgespot.h</key>
 		<data>
@@ -27,6 +27,10 @@
 		<key>Headers/NudgespotNetworkManager.h</key>
 		<data>
 		wod+aYZb5YanMLkEr3SOv/4ELhY=
+		</data>
+		<key>Headers/NudgespotSDK.h</key>
+		<data>
+		vIO9dVfX70ZtQzlN4tGOqIhamCQ=
 		</data>
 		<key>Headers/NudgespotSubscriber.h</key>
 		<data>
@@ -70,11 +74,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YfNl6zHHMji8r2QNLArzsRdc/GM=
+			CHPVSz22N5/5LS6AWDOSXUn8Yl8=
 			</data>
 			<key>hash2</key>
 			<data>
-			S7gWROGVy1Ov0ZK1WAGSCOHq3jABFZ2JtU069Ak2AFM=
+			0sAwtu8mZycikH3N1dQnJGG9oHhNxahPhPwV+gvxBwQ=
 			</data>
 		</dict>
 		<key>Headers/Nudgespot.h</key>
@@ -119,6 +123,17 @@
 			<key>hash2</key>
 			<data>
 			LUmXohFq9CK4q/OONNGUS2nHnwnrRNnYvhESc/H0uQc=
+			</data>
+		</dict>
+		<key>Headers/NudgespotSDK.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vIO9dVfX70ZtQzlN4tGOqIhamCQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			AYkRgQ4BIO6tG2hwRFamFTFWSqHKzTkT6MBMt7z1Pbs=
 			</data>
 		</dict>
 		<key>Headers/NudgespotSubscriber.h</key>

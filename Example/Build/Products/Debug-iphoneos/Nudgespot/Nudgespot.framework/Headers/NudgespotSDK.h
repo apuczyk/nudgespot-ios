@@ -20,4 +20,7 @@
 #import "NudgespotConstants.h"
 #import "NudgespotVisitor.h"
 
+#import <AdSupport/AdSupport.h>
+
+
 #endif /* NudgespotSDK_h */
