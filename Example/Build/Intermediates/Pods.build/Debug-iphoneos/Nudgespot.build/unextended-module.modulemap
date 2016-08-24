@@ -1,0 +1,10 @@
+framework module Nudgespot {
+  umbrella header "Nudgespot-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Nudgespot.__Swift {
+    exclude header "Nudgespot-Swift.h"
+}

@@ -11,6 +11,6 @@
 #import "BasicUtils.h"
 #import "NudgespotConstants.h"
 
-FOUNDATION_EXPORT double NudgespotVersionNumber;
-FOUNDATION_EXPORT const unsigned char NudgespotVersionString[];
+FOUNDATION_EXPORT double NudgespotSDKVersionNumber;
+FOUNDATION_EXPORT const unsigned char NudgespotSDKVersionString[];
 

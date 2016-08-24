@@ -85,11 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Nudgespot/Nudgespot.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Nudgespot/NudgespotSDK.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Reachability/Reachability.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Nudgespot/Nudgespot.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Nudgespot/NudgespotSDK.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Reachability/Reachability.framework"
 fi

@@ -121,17 +121,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/NudgespotSDK.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "BasicUtils.h",
           'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Utils/BasicUtils.h"
-        },
-        {
-          'type': 'file',
-          'name': "Nudgespot-Swift.h",
-          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/Nudgespot-Swift.h"
         },
         {
           'type': 'file',
@@ -157,6 +152,11 @@
           'type': 'file',
           'name': "NudgespotNetworkManager.h",
           'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/RestClient/NudgespotNetworkManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "NudgespotSDK-Swift.h",
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/NudgespotSDK.framework/Headers/NudgespotSDK-Swift.h"
         },
         {
           'type': 'file',
@@ -187,7 +187,7 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Modules",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/NudgespotSDK.framework/Modules",
       'contents': [
         {
           'type': 'file',

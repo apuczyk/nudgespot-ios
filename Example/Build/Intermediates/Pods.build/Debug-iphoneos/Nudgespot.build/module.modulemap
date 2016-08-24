@@ -1,4 +1,4 @@
-framework module Nudgespot {
+framework module NudgespotSDK {
   umbrella header "Nudgespot-umbrella.h"
 
   export *

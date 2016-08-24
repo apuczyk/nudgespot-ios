@@ -21,14 +21,14 @@
     "SWIFT_INCLUDE_PATHS": "$(PODS_ROOT)/Nudgespot/Nudgespot",
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
   },
-  "module_name": "Nudgespot",
+  "module_name": "NudgespotSDK",
   "preserve_paths": "Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap",
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
   "source_files": [
-    "Nudgespot/Classes/**/*.{h,m}",
+    "Nudgespot/Classes/**/*.{h,m,modulemap}",
     "Nudgespot/Assets/*.h"
   ],
   "ios": {
