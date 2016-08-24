@@ -9,14 +9,8 @@
 Pod::Spec.new do |s|
 
 s.name             = 'Nudgespot'
-s.version          = '2.0.3'
+s.version          = '2.1'
 s.summary          = 'nudgespot-ios is Objective-C framework.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
 s.description      = <<-DESC
 Nudgespot provides framework for iOS which allows users to track events.
@@ -36,6 +30,7 @@ s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" =
 s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot' }
 
 s.module_name = "Nudgespot"
+
 s.preserve_path = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap'
 
 s.ios.deployment_target = '7.0'

@@ -6,6 +6,7 @@
 #import "NudgespotVisitor.h"
 #import "SubscriberClient.h"
 #import "SubscriberContact.h"
+#import "NudgespotSDK.h"
 #import "NudgespotNetworkManager.h"
 #import "BasicUtils.h"
 #import "NudgespotConstants.h"

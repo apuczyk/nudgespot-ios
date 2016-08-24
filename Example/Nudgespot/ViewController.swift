@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         Nudgespot.trackActivity(self.activity) { (response, error) in
             print("\(response), is response")
         }
-        
     }
     
     @IBAction func enrolCoursePressed(sender: UIButton) {

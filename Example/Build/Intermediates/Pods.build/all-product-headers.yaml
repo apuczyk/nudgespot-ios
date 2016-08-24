@@ -160,6 +160,11 @@
         },
         {
           'type': 'file',
+          'name': "NudgespotSDK.h",
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/NudgespotSDK.h"
+        },
+        {
+          'type': 'file',
           'name': "NudgespotSubscriber.h",
           'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Nudgespot/Classes/NudgespotLib/Main/NudgespotSubscriber.h"
         },
