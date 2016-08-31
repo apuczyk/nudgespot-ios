@@ -6,43 +6,43 @@ provides-nominal:
 provides-member:
 - ["C17Nudgespot_Example11AppDelegate", ""]
 provides-dynamic-lookup:
+- "badgeCount"
 - "applicationDidBecomeActive"
 - "kSubscriberUid"
-- "badgeCount"
 - "window"
 - "applicationDidEnterBackground"
-- "application"
-- "application"
-- "application"
 - "kJavascriptAPIkey"
+- "application"
+- "application"
+- "application"
 - "kRESTAPIkey"
 depends-top-level:
+- !private "NSFoundationVersionNumber_iOS_7_1"
+- !private "<="
+- !private "Array"
+- !private "String"
 - "UIApplicationDelegate"
-- "UIBackgroundFetchResult"
-- "UIApplication"
-- !private "BooleanLiteralType"
+- "NSData"
+- !private "=="
 - "AnyObject"
 - "Void"
-- !private "NSUserDefaults"
-- !private "=="
-- !private "NSFoundationVersionNumber_iOS_7_1"
-- !private "+="
-- "StringLiteralType"
-- "Bool"
-- !private "NSFoundationVersionNumber"
-- "NSObject"
 - !private "Nudgespot"
-- "NSData"
-- !private "UIUserNotificationType"
-- !private "<="
-- !private "UIUserNotificationSettings"
-- "UIResponder"
-- !private "Array"
-- "UIWindow"
 - !private "print"
+- !private "NSUserDefaults"
+- "StringLiteralType"
+- !private "UIUserNotificationSettings"
+- !private "+="
+- "Bool"
+- "UIResponder"
+- !private "NSFoundationVersionNumber"
 - !private "floor"
-- !private "String"
+- !private "UIUserNotificationType"
+- "UIApplication"
+- "NSObject"
 - "AppDelegate"
+- !private "BooleanLiteralType"
+- "UIWindow"
+- "UIBackgroundFetchResult"
 depends-member:
 - !private ["Ps9AnyObject", "NSFoundationVersionNumber"]
 - !private ["Ps9AnyObject", "NSFoundationVersionNumber_iOS_7_1"]
@@ -76,7 +76,7 @@ depends-member:
 - !private ["Ps9AnyObject", "objectForKey"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "processNudgespotNotification"]
-- !private ["Ps9AnyObject", "registerAnynomousUser"]
+- !private ["Ps9AnyObject", "registerAnonymousUser"]
 - !private ["Ps9AnyObject", "registerForRemoteNotificationTypes"]
 - !private ["Ps9AnyObject", "registerForRemoteNotifications"]
 - !private ["Ps9AnyObject", "registerUserNotificationSettings"]
@@ -162,7 +162,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "objectForKey"]
 - !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "processNudgespotNotification"]
-- !private ["Ps11CVarArgType", "registerAnynomousUser"]
+- !private ["Ps11CVarArgType", "registerAnonymousUser"]
 - !private ["Ps11CVarArgType", "registerForRemoteNotificationTypes"]
 - !private ["Ps11CVarArgType", "registerForRemoteNotifications"]
 - !private ["Ps11CVarArgType", "registerUserNotificationSettings"]
@@ -206,7 +206,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "objectForKey"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "processNudgespotNotification"]
-- !private ["Ps28CustomDebugStringConvertible", "registerAnynomousUser"]
+- !private ["Ps28CustomDebugStringConvertible", "registerAnonymousUser"]
 - !private ["Ps28CustomDebugStringConvertible", "registerForRemoteNotificationTypes"]
 - !private ["Ps28CustomDebugStringConvertible", "registerForRemoteNotifications"]
 - !private ["Ps28CustomDebugStringConvertible", "registerUserNotificationSettings"]
@@ -249,7 +249,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "objectForKey"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "processNudgespotNotification"]
-- !private ["Ps23CustomStringConvertible", "registerAnynomousUser"]
+- !private ["Ps23CustomStringConvertible", "registerAnonymousUser"]
 - !private ["Ps23CustomStringConvertible", "registerForRemoteNotificationTypes"]
 - !private ["Ps23CustomStringConvertible", "registerForRemoteNotifications"]
 - !private ["Ps23CustomStringConvertible", "registerUserNotificationSettings"]
@@ -298,7 +298,7 @@ depends-member:
 - !private ["Ps9Equatable", "objectForKey"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "processNudgespotNotification"]
-- !private ["Ps9Equatable", "registerAnynomousUser"]
+- !private ["Ps9Equatable", "registerAnonymousUser"]
 - !private ["Ps9Equatable", "registerForRemoteNotificationTypes"]
 - !private ["Ps9Equatable", "registerForRemoteNotifications"]
 - !private ["Ps9Equatable", "registerUserNotificationSettings"]
@@ -344,7 +344,7 @@ depends-member:
 - !private ["Ps8Hashable", "objectForKey"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "processNudgespotNotification"]
-- !private ["Ps8Hashable", "registerAnynomousUser"]
+- !private ["Ps8Hashable", "registerAnonymousUser"]
 - !private ["Ps8Hashable", "registerForRemoteNotificationTypes"]
 - !private ["Ps8Hashable", "registerForRemoteNotifications"]
 - !private ["Ps8Hashable", "registerUserNotificationSettings"]
@@ -405,7 +405,7 @@ depends-member:
 - !private ["CSo8NSObject", "objectForKey"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "processNudgespotNotification"]
-- !private ["CSo8NSObject", "registerAnynomousUser"]
+- !private ["CSo8NSObject", "registerAnonymousUser"]
 - !private ["CSo8NSObject", "registerForRemoteNotificationTypes"]
 - !private ["CSo8NSObject", "registerForRemoteNotifications"]
 - !private ["CSo8NSObject", "registerUserNotificationSettings"]
@@ -446,7 +446,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "objectForKey"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "processNudgespotNotification"]
-- !private ["PSo16NSObjectProtocol", "registerAnynomousUser"]
+- !private ["PSo16NSObjectProtocol", "registerAnonymousUser"]
 - !private ["PSo16NSObjectProtocol", "registerForRemoteNotificationTypes"]
 - !private ["PSo16NSObjectProtocol", "registerForRemoteNotifications"]
 - !private ["PSo16NSObjectProtocol", "registerUserNotificationSettings"]
@@ -466,7 +466,7 @@ depends-member:
 - !private ["CSo9Nudgespot", "connectToFcm"]
 - !private ["CSo9Nudgespot", "disconnectToFcm"]
 - !private ["CSo9Nudgespot", "processNudgespotNotification"]
-- !private ["CSo9Nudgespot", "registerAnynomousUser"]
+- !private ["CSo9Nudgespot", "registerAnonymousUser"]
 - !private ["CSo9Nudgespot", "setAPNSToken"]
 - !private ["CSo9Nudgespot", "setJavascriptAPIkey"]
 - !private ["CSo9Nudgespot", "setWithUID"]
@@ -494,7 +494,7 @@ depends-member:
 - !private ["CSo16SubscriberClient", "connectToFcm"]
 - !private ["CSo16SubscriberClient", "disconnectToFcm"]
 - !private ["CSo16SubscriberClient", "processNudgespotNotification"]
-- !private ["CSo16SubscriberClient", "registerAnynomousUser"]
+- !private ["CSo16SubscriberClient", "registerAnonymousUser"]
 - !private ["CSo16SubscriberClient", "setAPNSToken"]
 - !private ["CSo16SubscriberClient", "setJavascriptAPIkey"]
 - !private ["CSo16SubscriberClient", "setWithUID"]

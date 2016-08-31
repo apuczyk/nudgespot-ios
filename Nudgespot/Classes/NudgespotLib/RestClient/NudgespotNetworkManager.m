@@ -131,13 +131,13 @@
 @end
 
 
-#pragma mark - Helper methods for Anynomous User
+#pragma mark - Helper methods for Anonymous User
 
-@implementation NudgespotNetworkManager (Anynomous)
+@implementation NudgespotNetworkManager (Anonymous)
 
-+ (NSURLSessionDataTask *) loginWithAnynomousUser : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
++ (NSURLSessionDataTask *) loginWithAnonymousUser : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 {
-    DLog(@"login with Anynomous %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString], VISITOR_REGISTRATION);
+    DLog(@"login with Anonymous %@ request serviceUrl ::::::::::::::::::::: \n  = %@%@",postData, [[[self manager] baseURL]absoluteString], VISITOR_REGISTRATION);
     
     return [NudgeRestInstance POST:VISITOR_REGISTRATION parameters:postData progress:nil success:success failure:failure];
 }

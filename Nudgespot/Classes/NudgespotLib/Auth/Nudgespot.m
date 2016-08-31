@@ -109,11 +109,11 @@ static Nudgespot *sharedMyManager = nil;
 
 
 /**
- *  @brief Method which will use if we want to call it as anynomous users.
+ *  @brief Method which will use if we want to call it as Anonymous users.
  *  @return Completion handler will give you response and error if any.
  */
 
-+ (void) registerAnynomousUser: (void (^)(id response, NSError *error))completionBlock;
++ (void) registerAnonymousUser: (void (^)(id response, NSError *error))completionBlock;
 {
     [Nudge setIsAnonymousUser:YES];
     [Nudge setAnonymousHandler:completionBlock];
@@ -411,7 +411,7 @@ static Nudgespot *sharedMyManager = nil;
 + (void)sendAnonymousRegistrationToNudgespotWithToken: (NSString *)registrationToken {
     
     if (registrationToken) {
-        [Nudge initWithAnynomousUserWithRegistrationToken:registrationToken completionBlock:[Nudge anonymousHandler]];
+        [Nudge initWithAnonymousUserWithRegistrationToken:registrationToken completionBlock:[Nudge anonymousHandler]];
     }
 }
 

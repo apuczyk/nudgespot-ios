@@ -114,7 +114,7 @@
     return self;
 }
 
-- (id) initWithAnynomousUserWithRegistrationToken: (NSString *)registrationToken completionBlock :(void (^)(id response, id error))completionBlock;
+- (id) initWithAnonymousUserWithRegistrationToken: (NSString *)registrationToken completionBlock :(void (^)(id response, id error))completionBlock;
 {
     DLog(@"self.endpoint = %@",self.endpoint);
     
@@ -133,7 +133,7 @@
             visitor.registrationToken = [[FIRInstanceID instanceID] token];
             [[Nudgespot sharedInstance] setVisitor:visitor];
             
-            [self loginWithAnynomous:visitor completionBlock:completionBlock];
+            [self loginWithAnonymous:visitor completionBlock:completionBlock];
             
             DLog(@"Visitor FCM updated %@", visitor.toJSON);
             
@@ -150,7 +150,7 @@
         
         [[Nudgespot sharedInstance] setVisitor:visitor];
         
-        [self loginWithAnynomous:visitor completionBlock:completionBlock];
+        [self loginWithAnonymous:visitor completionBlock:completionBlock];
         
         DLog(@"Visitor Created %@", visitor.toJSON);
     }
@@ -158,9 +158,9 @@
     return self;
 }
 
-- (void) loginWithAnynomous: (NudgespotVisitor *) visitor completionBlock :(void (^)(id response, id error))completionBlock {
+- (void) loginWithAnonymous: (NudgespotVisitor *) visitor completionBlock :(void (^)(id response, id error))completionBlock {
     
-    [NudgespotNetworkManager loginWithAnynomousUser:visitor.toJSON success:^(NSURLSessionDataTask *operation, id responseObject) {
+    [NudgespotNetworkManager loginWithAnonymousUser:visitor.toJSON success:^(NSURLSessionDataTask *operation, id responseObject) {
         
         if (!operation.error) {
             

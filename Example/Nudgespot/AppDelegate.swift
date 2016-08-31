@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if uid == nil {
             
-            Nudgespot.registerAnynomousUser({ (response, error) in
+            Nudgespot.registerAnonymousUser({ (response, error) in
                 print(response)
             })
         } else {

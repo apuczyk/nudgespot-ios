@@ -136,7 +136,7 @@ class ViewController: UIViewController {
                 
                 // Here we are creating Anonymous user again for tracking activites.
                 
-                Nudgespot.registerAnynomousUser({ (response, error) in
+                Nudgespot.registerAnonymousUser({ (response, error) in
                     
                     dispatch_async(dispatch_get_main_queue(), { 
                         

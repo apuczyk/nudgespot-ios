@@ -41,7 +41,7 @@ static NSString *const SHARED_PROP_DEVICE_VERSION = @"version";
 
 static NSString *const SHARED_PROP_ANON_ID = @"anon_Id";
 
-static NSString *const SHARED_PROP_IS_ANON_USER_EXISTS = @"isAnynomousUserExits";
+static NSString *const SHARED_PROP_IS_ANON_USER_EXISTS = @"isAnonymousUserExits";
 
 static NSString *const SUBSCRIBER_CREATE_PATH = @"subscribers";
 

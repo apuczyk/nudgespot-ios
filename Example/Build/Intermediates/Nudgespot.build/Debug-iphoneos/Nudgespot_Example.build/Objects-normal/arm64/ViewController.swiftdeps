@@ -8,47 +8,47 @@ provides-member:
 - ["C17Nudgespot_Example14ViewController", ""]
 - ["SS", "length"]
 provides-dynamic-lookup:
-- "placeOrderPressed"
-- "courseName"
-- "orderNumber"
-- "loginPressed"
-- "activityView"
-- "enrolCoursePressed"
-- "viewDidLoad"
-- "orderAmount"
-- "uid"
-- "activity"
+- "didReceiveMemoryWarning"
 - "textFieldShouldReturn"
 - "loginOrLogout"
-- "didReceiveMemoryWarning"
+- "activity"
+- "activityView"
 - "logoutPressed"
+- "orderNumber"
+- "orderAmount"
+- "viewDidLoad"
+- "uid"
+- "enrolCoursePressed"
+- "placeOrderPressed"
+- "loginPressed"
+- "courseName"
 depends-top-level:
-- "UITextField"
+- "Int"
+- !private ">"
+- "Void"
 - !private "||"
-- !private "!="
-- !private "<"
+- !private "UIAlertController"
+- !private "Dictionary"
 - !private "=="
+- !private "Nudgespot"
+- !private "NSMutableDictionary"
+- "String"
+- "Bool"
+- !private "NSUserDefaults"
+- !private "StringLiteralType"
+- "UITextField"
 - "UIActivityIndicatorView"
 - !private "dispatch_get_main_queue"
-- !private "dispatch_async"
-- !private "NSUserDefaults"
-- "Int"
-- "Void"
-- !private "UIAlertController"
-- !private "StringLiteralType"
-- "ViewController"
-- "UITextFieldDelegate"
-- !private "NSMutableDictionary"
-- "Bool"
-- !private ">"
-- "String"
-- !private "Nudgespot"
 - !private "print"
-- "UIButton"
-- "UIViewController"
-- !private "Dictionary"
+- !private "dispatch_async"
 - "NudgespotActivity"
+- !private "!="
+- "UITextFieldDelegate"
+- "UIButton"
+- "ViewController"
+- !private "<"
 - !private "BooleanLiteralType"
+- "UIViewController"
 depends-member:
 - !private ["Ps9AnyObject", "Key"]
 - !private ["Ps9AnyObject", "NSUserDefaults"]
@@ -80,7 +80,7 @@ depends-member:
 - ["Ps9AnyObject", "orderNumber"]
 - ["Ps9AnyObject", "placeOrderPressed"]
 - !private ["Ps9AnyObject", "print"]
-- !private ["Ps9AnyObject", "registerAnynomousUser"]
+- !private ["Ps9AnyObject", "registerAnonymousUser"]
 - !private ["Ps9AnyObject", "removeObjectForKey"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
 - !private ["Ps9AnyObject", "setObject"]
@@ -140,7 +140,7 @@ depends-member:
 - ["Ps11CVarArgType", "orderNumber"]
 - ["Ps11CVarArgType", "placeOrderPressed"]
 - !private ["Ps11CVarArgType", "print"]
-- !private ["Ps11CVarArgType", "registerAnynomousUser"]
+- !private ["Ps11CVarArgType", "registerAnonymousUser"]
 - !private ["Ps11CVarArgType", "removeObjectForKey"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
 - !private ["Ps11CVarArgType", "setObject"]
@@ -205,7 +205,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "orderNumber"]
 - ["Ps28CustomDebugStringConvertible", "placeOrderPressed"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
-- !private ["Ps28CustomDebugStringConvertible", "registerAnynomousUser"]
+- !private ["Ps28CustomDebugStringConvertible", "registerAnonymousUser"]
 - !private ["Ps28CustomDebugStringConvertible", "removeObjectForKey"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
 - !private ["Ps28CustomDebugStringConvertible", "setObject"]
@@ -258,7 +258,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "orderNumber"]
 - ["Ps23CustomStringConvertible", "placeOrderPressed"]
 - !private ["Ps23CustomStringConvertible", "print"]
-- !private ["Ps23CustomStringConvertible", "registerAnynomousUser"]
+- !private ["Ps23CustomStringConvertible", "registerAnonymousUser"]
 - !private ["Ps23CustomStringConvertible", "removeObjectForKey"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
 - !private ["Ps23CustomStringConvertible", "setObject"]
@@ -316,7 +316,7 @@ depends-member:
 - ["Ps9Equatable", "orderNumber"]
 - ["Ps9Equatable", "placeOrderPressed"]
 - !private ["Ps9Equatable", "print"]
-- !private ["Ps9Equatable", "registerAnynomousUser"]
+- !private ["Ps9Equatable", "registerAnonymousUser"]
 - !private ["Ps9Equatable", "removeObjectForKey"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
 - !private ["Ps9Equatable", "setObject"]
@@ -375,7 +375,7 @@ depends-member:
 - ["Ps8Hashable", "orderNumber"]
 - ["Ps8Hashable", "placeOrderPressed"]
 - !private ["Ps8Hashable", "print"]
-- !private ["Ps8Hashable", "registerAnynomousUser"]
+- !private ["Ps8Hashable", "registerAnonymousUser"]
 - !private ["Ps8Hashable", "removeObjectForKey"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
 - !private ["Ps8Hashable", "setObject"]
@@ -540,7 +540,7 @@ depends-member:
 - ["CSo8NSObject", "orderNumber"]
 - ["CSo8NSObject", "placeOrderPressed"]
 - !private ["CSo8NSObject", "print"]
-- !private ["CSo8NSObject", "registerAnynomousUser"]
+- !private ["CSo8NSObject", "registerAnonymousUser"]
 - !private ["CSo8NSObject", "removeObjectForKey"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - !private ["CSo8NSObject", "setObject"]
@@ -590,7 +590,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "orderNumber"]
 - ["PSo16NSObjectProtocol", "placeOrderPressed"]
 - !private ["PSo16NSObjectProtocol", "print"]
-- !private ["PSo16NSObjectProtocol", "registerAnynomousUser"]
+- !private ["PSo16NSObjectProtocol", "registerAnonymousUser"]
 - !private ["PSo16NSObjectProtocol", "removeObjectForKey"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - !private ["PSo16NSObjectProtocol", "setObject"]
@@ -627,7 +627,7 @@ depends-member:
 - !private ["CSo14NSUserDefaults", "standardUserDefaults"]
 - !private ["CSo14NSUserDefaults", "synchronize"]
 - !private ["CSo9Nudgespot", "clearRegistration"]
-- !private ["CSo9Nudgespot", "registerAnynomousUser"]
+- !private ["CSo9Nudgespot", "registerAnonymousUser"]
 - !private ["CSo9Nudgespot", "setWithUID"]
 - !private ["CSo9Nudgespot", "trackActivity"]
 - ["CSo17NudgespotActivity", "init"]
@@ -668,7 +668,7 @@ depends-member:
 - !private ["Ps24StringLiteralConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "length"]
 - !private ["CSo16SubscriberClient", "clearRegistration"]
-- !private ["CSo16SubscriberClient", "registerAnynomousUser"]
+- !private ["CSo16SubscriberClient", "registerAnonymousUser"]
 - !private ["CSo16SubscriberClient", "setWithUID"]
 - !private ["CSo16SubscriberClient", "trackActivity"]
 - !private ["PSo29UIAccessibilityIdentification", "currentTitle"]

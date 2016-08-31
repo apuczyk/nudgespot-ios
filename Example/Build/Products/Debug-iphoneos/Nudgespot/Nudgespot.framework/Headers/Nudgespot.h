@@ -105,11 +105,11 @@
 + (void)runRegistrationInBackground:(void (^)(NSString *registrationToken, NSError *error))registeration;
 
 /**
- *  @brief Method register Anynomous Visitor on Nudgespot and compare registerationToken with Fcm token if not match then update again on Nudgespot with same Anynomous id and if same then return Visitor.
+ *  @brief Method register Anonymous Visitor on Nudgespot and compare registerationToken with Fcm token if not match then update again on Nudgespot with same Anonymous id and if same then return Visitor.
  *  @return Completion handler will give you response and error if any.
  */
 
-+ (void) registerAnynomousUser: (void (^)(id response, NSError *error))completionBlock;
++ (void) registerAnonymousUser: (void (^)(id response, NSError *error))completionBlock;
 
 #pragma mark - Methods used to connect and disconnect from Fcm Server
 

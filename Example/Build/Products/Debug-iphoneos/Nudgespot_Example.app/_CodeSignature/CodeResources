@@ -8,7 +8,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3cM3NgT+7R+EgfsylEsVMk0q8uA=
+			N36Nb02p/VdYDF9GObI2ylsUH4Y=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -17,7 +17,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aOPtqs+YRL4paE4r4awHCuKqHBI=
+			kqzmSMHxlqucC0kLRjG/JD0qLJc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -35,7 +35,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			osvIgVAsva1631q2PPOP2QQ6wMo=
+			49CeifsMiqZIi/YL9ki3Km2t3uk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -44,7 +44,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/h8uzhdGhSqAMB6H2H74bF5btkE=
+			4gwMVR7AQkpB379bJvefek1XJos=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GSjfqOL8XcPY4XtLauKQNe/4388=
+			/BotFJXq1WfQTucaXDBdWRBA18k=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -62,14 +62,14 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			e6jZDIAVdSGUJSVILon5bx1kkmQ=
+			2PA9bPueKDUOjyuywWgL1y5k8ho=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
 		<data>
-		8/88cv54hchg67XHszo8YdziIUw=
+		+TZUJGOiCWaDygyrKkVbG53V3U4=
 		</data>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
 		<data>
@@ -81,15 +81,15 @@
 		</data>
 		<key>Frameworks/Nudgespot.framework/Info.plist</key>
 		<data>
-		5legiDQoLLvkWm8ZtxLf5pFKyco=
+		wkAk2Ztrsr1bQWcafIyu1eHIeEk=
 		</data>
 		<key>Frameworks/Nudgespot.framework/Nudgespot</key>
 		<data>
-		AYC+EObmqlGulTpBF5gOo/WpfqY=
+		c3QI7A1i/Lc9UbOcDK44Qu9SDPo=
 		</data>
 		<key>Frameworks/Nudgespot.framework/_CodeSignature/CodeResources</key>
 		<data>
-		CAHwmwIIL97O6OqZ+O0Fx+DtrwE=
+		V8YemU2LxPj817vYYnKgMFwZGI0=
 		</data>
 		<key>Frameworks/Reachability.framework/Info.plist</key>
 		<data>
@@ -97,7 +97,7 @@
 		</data>
 		<key>Frameworks/Reachability.framework/Reachability</key>
 		<data>
-		zISEC5yG/DjCGtrbUG/zIL1Vftk=
+		bChdrksWpUh3eESXkCONhHuVQfY=
 		</data>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -158,11 +158,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3cM3NgT+7R+EgfsylEsVMk0q8uA=
+			N36Nb02p/VdYDF9GObI2ylsUH4Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			VU8W+DKY70NjZOCZYWHl2JLQAl/AR7mZfPPc8S0KUY0=
+			X2rxfJoDQZwMPCkRYPqRHnoz4iaFCquiRn9MOmKPNk8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -171,11 +171,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aOPtqs+YRL4paE4r4awHCuKqHBI=
+			kqzmSMHxlqucC0kLRjG/JD0qLJc=
 			</data>
 			<key>hash2</key>
 			<data>
-			MQZrT/DxIwLxE2htZEtbBw8G1h+er5uBzXWEzR97+xo=
+			Esx2gDS5mbK8Uib8i8jqsK/tRh9j97R/09pu5gMGnXc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -197,11 +197,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			osvIgVAsva1631q2PPOP2QQ6wMo=
+			49CeifsMiqZIi/YL9ki3Km2t3uk=
 			</data>
 			<key>hash2</key>
 			<data>
-			VscRerEK8CyY+eRsgA9GODQ50FACbCkViM6mj6pmy7A=
+			/J8JbI4wreTVn6nRvds5B9vf/ku55Zu/DmU3SjaxxBA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -210,11 +210,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/h8uzhdGhSqAMB6H2H74bF5btkE=
+			4gwMVR7AQkpB379bJvefek1XJos=
 			</data>
 			<key>hash2</key>
 			<data>
-			1jNEpCq6AT4JcFtfRtMxYfgv9kVw6b+6pDyVgrCUHnM=
+			Z7s4fE+XR/CFQ3n5Nrt0mvMPKBlHXIUCvJ/GptL2cw8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -223,11 +223,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GSjfqOL8XcPY4XtLauKQNe/4388=
+			/BotFJXq1WfQTucaXDBdWRBA18k=
 			</data>
 			<key>hash2</key>
 			<data>
-			E6jqNSF/9na+UDxMRFcGbxi+rg2ll/gHTP0PkG3GRLs=
+			8EpPuN7DZpCAe2Gx2bajQ11VM6bvwAcqz8X+2SXq8ss=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -236,11 +236,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			e6jZDIAVdSGUJSVILon5bx1kkmQ=
+			2PA9bPueKDUOjyuywWgL1y5k8ho=
 			</data>
 			<key>hash2</key>
 			<data>
-			572xzjQIdErZg9+NRbaiqRK1RgoXD0X4w0AlKjG2UQw=
+			68RjSESCOMu3wRYBTw5zdlQWoaAEsivmzLE6jKqgxrI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -249,11 +249,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8/88cv54hchg67XHszo8YdziIUw=
+			+TZUJGOiCWaDygyrKkVbG53V3U4=
 			</data>
 			<key>hash2</key>
 			<data>
-			CWtBdsgTNcQ/1mx9Ek+Z0YT1mKGgQWenWXedIYN2UV4=
+			iC9S3H7LnbHdBhX/KCUZBdxSfXcfiR0/KHivYs3E+kM=
 			</data>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
@@ -282,33 +282,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5legiDQoLLvkWm8ZtxLf5pFKyco=
+			wkAk2Ztrsr1bQWcafIyu1eHIeEk=
 			</data>
 			<key>hash2</key>
 			<data>
-			fLd9nrMO+T+zat7VWETpUIJ13uA1Vzi/bcdg/iJPVNU=
+			VV9f0gmNkv02XT88Fs7/kkW/SuwYiVgShXrGEEo23eA=
 			</data>
 		</dict>
 		<key>Frameworks/Nudgespot.framework/Nudgespot</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AYC+EObmqlGulTpBF5gOo/WpfqY=
+			c3QI7A1i/Lc9UbOcDK44Qu9SDPo=
 			</data>
 			<key>hash2</key>
 			<data>
-			yfF7OQYHF+5nbIaMxbssUaa6O3YwiscCSYFpvvkR65o=
+			JtXdRzFtrsAKQxbPd3tPUHrarPIbtG2WbpnEp0ApSis=
 			</data>
 		</dict>
 		<key>Frameworks/Nudgespot.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CAHwmwIIL97O6OqZ+O0Fx+DtrwE=
+			V8YemU2LxPj817vYYnKgMFwZGI0=
 			</data>
 			<key>hash2</key>
 			<data>
-			9D8UouvyRDY1iz8FRQUBzv7l/L+qhFDBwjFHraP8tA4=
+			OrFJYoWkuK3aftwvgBUFUh/WzO9blxr4ZL6N4J631zs=
 			</data>
 		</dict>
 		<key>Frameworks/Reachability.framework/Info.plist</key>
@@ -326,11 +326,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zISEC5yG/DjCGtrbUG/zIL1Vftk=
+			bChdrksWpUh3eESXkCONhHuVQfY=
 			</data>
 			<key>hash2</key>
 			<data>
-			BS68iP+5V1Sx9srsQA/AV0pM0qr0srKvC2fWqQCIYq8=
+			NYhiiIe4DzWrZGiWJCuGP2NX4t/vTHTUin6h159GGgE=
 			</data>
 		</dict>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>
