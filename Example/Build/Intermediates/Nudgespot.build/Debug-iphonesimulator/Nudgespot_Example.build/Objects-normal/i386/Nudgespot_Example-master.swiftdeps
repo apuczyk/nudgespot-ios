@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "fb4cbaee304b059c0aae7c87fb6ad5ed"
+build_time: [526636869, 902242000]
+inputs:
+  "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Nudgespot/ViewController.swift": [526107913, 0]
+  "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Nudgespot/AppDelegate.swift": [526636869, 0]

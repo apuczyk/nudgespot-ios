@@ -4,4 +4,4 @@
 
 #import "UIAlertController+Alert.h"
 
-@import Nudgespot;
+#import "NudgespotSDK.h"

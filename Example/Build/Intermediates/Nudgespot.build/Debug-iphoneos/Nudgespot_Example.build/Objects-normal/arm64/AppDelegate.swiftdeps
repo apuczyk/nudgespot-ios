@@ -6,43 +6,44 @@ provides-nominal:
 provides-member:
 - ["C17Nudgespot_Example11AppDelegate", ""]
 provides-dynamic-lookup:
-- "badgeCount"
-- "applicationDidBecomeActive"
-- "kSubscriberUid"
-- "window"
-- "applicationDidEnterBackground"
-- "kJavascriptAPIkey"
 - "application"
 - "application"
 - "application"
 - "kRESTAPIkey"
+- "badgeCount"
+- "applicationDidBecomeActive"
+- "window"
+- "kSubscriberUid"
+- "applicationDidEnterBackground"
+- "kJavascriptAPIkey"
 depends-top-level:
-- !private "NSFoundationVersionNumber_iOS_7_1"
-- !private "<="
-- !private "Array"
+- !private "+="
+- !private "floor"
+- "StringLiteralType"
+- "UIResponder"
 - !private "String"
-- "UIApplicationDelegate"
+- !private "NSFoundationVersionNumber"
+- !private "NSUserDefaults"
+- !private "Nudgespot"
+- "AppDelegate"
+- "AnyObject"
+- "NSObject"
+- !private "<="
+- !private "NSError"
+- !private "NSFoundationVersionNumber_iOS_7_1"
+- "UIBackgroundFetchResult"
+- !private "UIUserNotificationType"
 - "NSData"
 - !private "=="
-- "AnyObject"
-- "Void"
-- !private "Nudgespot"
-- !private "print"
-- !private "NSUserDefaults"
-- "StringLiteralType"
-- !private "UIUserNotificationSettings"
-- !private "+="
-- "Bool"
-- "UIResponder"
-- !private "NSFoundationVersionNumber"
-- !private "floor"
-- !private "UIUserNotificationType"
+- !private "Array"
+- "UIApplicationDelegate"
 - "UIApplication"
-- "NSObject"
-- "AppDelegate"
 - !private "BooleanLiteralType"
+- !private "UIUserNotificationSettings"
 - "UIWindow"
-- "UIBackgroundFetchResult"
+- !private "print"
+- "Bool"
+- "Void"
 depends-member:
 - !private ["Ps9AnyObject", "NSFoundationVersionNumber"]
 - !private ["Ps9AnyObject", "NSFoundationVersionNumber_iOS_7_1"]
@@ -90,6 +91,7 @@ depends-member:
 - ["C17Nudgespot_Example11AppDelegate", "AnyObject"]
 - ["C17Nudgespot_Example11AppDelegate", "Bool"]
 - ["C17Nudgespot_Example11AppDelegate", "NSData"]
+- !private ["C17Nudgespot_Example11AppDelegate", "NSError"]
 - !private ["C17Nudgespot_Example11AppDelegate", "NSFoundationVersionNumber"]
 - !private ["C17Nudgespot_Example11AppDelegate", "NSFoundationVersionNumber_iOS_7_1"]
 - ["C17Nudgespot_Example11AppDelegate", "NSObject"]
@@ -368,6 +370,7 @@ depends-member:
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "NSData"]
+- !private ["CSo8NSObject", "NSError"]
 - !private ["CSo8NSObject", "NSFoundationVersionNumber"]
 - !private ["CSo8NSObject", "NSFoundationVersionNumber_iOS_7_1"]
 - ["CSo8NSObject", "NSObject"]
@@ -536,6 +539,7 @@ depends-member:
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "NSData"]
+- !private ["CSo11UIResponder", "NSError"]
 - !private ["CSo11UIResponder", "NSFoundationVersionNumber"]
 - !private ["CSo11UIResponder", "NSFoundationVersionNumber_iOS_7_1"]
 - ["CSo11UIResponder", "NSObject"]
@@ -574,6 +578,38 @@ depends-member:
 - !private ["CSo11UIResponder", "sharedApplication"]
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
+- !private ["PSo30UIResponderStandardEditActions", "NSFoundationVersionNumber"]
+- !private ["PSo30UIResponderStandardEditActions", "NSFoundationVersionNumber_iOS_7_1"]
+- !private ["PSo30UIResponderStandardEditActions", "NSUserDefaults"]
+- !private ["PSo30UIResponderStandardEditActions", "Nudgespot"]
+- !private ["PSo30UIResponderStandardEditActions", "UIApplication"]
+- !private ["PSo30UIResponderStandardEditActions", "UIUserNotificationSettings"]
+- ["PSo30UIResponderStandardEditActions", "application"]
+- ["PSo30UIResponderStandardEditActions", "applicationDidBecomeActive"]
+- ["PSo30UIResponderStandardEditActions", "applicationDidEnterBackground"]
+- ["PSo30UIResponderStandardEditActions", "applicationDidFinishLaunching"]
+- ["PSo30UIResponderStandardEditActions", "applicationDidReceiveMemoryWarning"]
+- !private ["PSo30UIResponderStandardEditActions", "applicationIconBadgeNumber"]
+- ["PSo30UIResponderStandardEditActions", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo30UIResponderStandardEditActions", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo30UIResponderStandardEditActions", "applicationShouldRequestHealthAuthorization"]
+- ["PSo30UIResponderStandardEditActions", "applicationSignificantTimeChange"]
+- ["PSo30UIResponderStandardEditActions", "applicationWillEnterForeground"]
+- ["PSo30UIResponderStandardEditActions", "applicationWillResignActive"]
+- ["PSo30UIResponderStandardEditActions", "applicationWillTerminate"]
+- ["PSo30UIResponderStandardEditActions", "badgeCount"]
+- !private ["PSo30UIResponderStandardEditActions", "floor"]
+- ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", "kJavascriptAPIkey"]
+- ["PSo30UIResponderStandardEditActions", "kRESTAPIkey"]
+- ["PSo30UIResponderStandardEditActions", "kSubscriberUid"]
+- !private ["PSo30UIResponderStandardEditActions", "print"]
+- !private ["PSo30UIResponderStandardEditActions", "registerForRemoteNotificationTypes"]
+- !private ["PSo30UIResponderStandardEditActions", "registerForRemoteNotifications"]
+- !private ["PSo30UIResponderStandardEditActions", "registerUserNotificationSettings"]
+- !private ["PSo30UIResponderStandardEditActions", "sharedApplication"]
+- ["PSo30UIResponderStandardEditActions", "window"]
+- ["PSo30UIResponderStandardEditActions", ""]
 - !private ["CSo26UIUserNotificationSettings", "init"]
 - !private ["VSC22UIUserNotificationType", "Alert"]
 - !private ["VSC22UIUserNotificationType", "Badge"]
@@ -643,6 +679,7 @@ depends-nominal:
 - "PSo21UIApplicationDelegate"
 - !private "VSC24UIRemoteNotificationType"
 - "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
 - !private "CSo26UIUserNotificationSettings"
 - !private "VSC22UIUserNotificationType"
 - !private "Su"
@@ -661,47 +698,31 @@ depends-nominal:
 - !private "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Nudgespot/Nudgespot_Example-Bridging-Header.h"
 - "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Nudgespot/UIAlertController+Alert.h"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/UIProgressView+AFNetworking.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/UIWebView+AFNetworking.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/UIRefreshControl+AFNetworking.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/UIKit+AFNetworking.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/UIImageView+AFNetworking.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/UIImage+AFNetworking.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/UIButton+AFNetworking.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/UIActivityIndicatorView+AFNetworking.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFNetworkActivityIndicatorManager.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFImageDownloader.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFAutoPurgingImageCache.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFHTTPSessionManager.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFURLSessionManager.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFNetworkReachabilityManager.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFSecurityPolicy.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFURLResponseSerialization.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFURLRequestSerialization.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFNetworking.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Modules/module.modulemap"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/NudgespotConstants.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/NudgespotNetworkManager.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/NudgespotSDK.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/NudgespotVisitor.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/BasicUtils.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/SubscriberClient.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/NudgespotSubscriber.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/SubscriberContact.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/NudgespotActivity.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/Nudgespot.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/Nudgespot-umbrella.h"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Modules/module.modulemap"
-- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Modules/Nudgespot.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/Swift_2.3.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/NudgespotSDK.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/Nudgespot.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/NudgespotActivity.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/SubscriberContact.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/NudgespotSubscriber.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/SubscriberClient.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/BasicUtils.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/NudgespotVisitor.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/NudgespotNetworkManager.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/AFNetworking/AFNetworking.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/AFNetworking/AFURLRequestSerialization.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/AFNetworking/AFURLResponseSerialization.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/AFNetworking/AFSecurityPolicy.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/AFNetworking/AFNetworkReachabilityManager.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/AFNetworking/AFURLSessionManager.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/AFNetworking/AFHTTPSessionManager.h"
+- "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Pods/Headers/Public/Nudgespot/NudgespotConstants.h"
 interface-hash: "3752b4b10e0ba9c4c664b82a8829af9d"

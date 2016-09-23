@@ -48,11 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if uid == nil {
             
-            Nudgespot.registerAnonymousUser({ (response, error) in
+            Nudgespot.registerAnonymousUser({ (response: AnyObject?, error: NSError?) in
                 print(response)
             })
         } else {
-            Nudgespot.setWithUID(uid! as! String, registrationHandler: { (response, error) in
+            Nudgespot.setWithUID(uid! as! String, registrationHandler: { (response: String?, error: NSError?) in
                 print(response)
             })
         }

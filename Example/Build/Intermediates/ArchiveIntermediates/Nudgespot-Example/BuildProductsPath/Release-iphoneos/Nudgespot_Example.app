@@ -1,0 +1,1 @@
+/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Build/Intermediates/ArchiveIntermediates/Nudgespot-Example/InstallationBuildProductsLocation/Applications/Nudgespot_Example.app

@@ -527,6 +527,17 @@
         // Connect to FCM since connection may have failed when attempted before having a token.
         [self connectToFcmWithCompletion:self.completionBlock];
     }
+    
+    // noOfTimestokenRefreshCalled:- in case its may not get refreshedToken and stop after some time.
+    
+    static int noOfTimestokenRefreshCalled = 1;
+    
+    if (noOfTimestokenRefreshCalled >= 5) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:kFIRInstanceIDTokenRefreshNotification object:nil];
+    }
+    
+    noOfTimestokenRefreshCalled += 1;
+    
 }
 // [END refresh_token]
 

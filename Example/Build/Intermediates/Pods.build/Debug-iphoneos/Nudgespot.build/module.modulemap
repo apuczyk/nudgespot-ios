@@ -1,5 +1,5 @@
 framework module Nudgespot {
-  umbrella header "Nudgespot-umbrella.h"
+  umbrella header "Nudgespot.h"
 
   export *
   module * { export * }

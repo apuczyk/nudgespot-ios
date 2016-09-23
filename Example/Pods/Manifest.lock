@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Nudgespot (2.3):
+  - Nudgespot (2.4):
     - AFNetworking
     - Reachability
   - Reachability (3.2)
@@ -28,9 +28,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Nudgespot: 95f703a8eb99275dee918472fb8c246ab9f2acfa
+  Nudgespot: 068a04bef5228c00a0688d54d25ecd6f84c4d263
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-PODFILE CHECKSUM: cf25af42b013f8dc507d03cf77bf3e67039cd984
+PODFILE CHECKSUM: d593109f73a21a67f33871e5e915476936712f66
 
 COCOAPODS: 1.0.1

@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         
         self.activity = NudgespotActivity().initwithNudgespotActivity("purchased", andProperty: dict)
         
-        Nudgespot.trackActivity(self.activity) { (response, error) in
+        Nudgespot.trackActivity(self.activity) { (response: AnyObject?, error: NSError?) in
             print("\(response), is response")
         }
     }
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         
         self.activity = NudgespotActivity().initwithNudgespotActivity("enroll_course", andProperty: dict)
         
-        Nudgespot.trackActivity(self.activity) { (response, error) in
+        Nudgespot.trackActivity(self.activity) { (response: AnyObject?, error: NSError?) in
             print("\(response), is response")
         }
         
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
         
         self.activityView.startAnimating()
         
-        Nudgespot.clearRegistration { (response, error) in
+        Nudgespot.clearRegistration { (response: AnyObject?, error: NSError?) in
             
             if response != nil {
                 
@@ -136,7 +136,7 @@ class ViewController: UIViewController {
                 
                 // Here we are creating Anonymous user again for tracking activites.
                 
-                Nudgespot.registerAnonymousUser({ (response, error) in
+                Nudgespot.registerAnonymousUser({ (response: AnyObject?, error: NSError?) in
                     
                     dispatch_async(dispatch_get_main_queue(), { 
                         

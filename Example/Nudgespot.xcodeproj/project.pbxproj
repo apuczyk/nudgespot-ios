@@ -13,7 +13,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		71E74919A3C2DEC838DDD190 /* Pods_Nudgespot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814FBD70E8836FC0D1D49E08 /* Pods_Nudgespot_Example.framework */; };
+		DB2E955EE0A702490ADECE7D /* libPods-Nudgespot_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF3B2A7F629358336C64508 /* libPods-Nudgespot_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +23,7 @@
 		44285A921D6AF802009D9B17 /* Nudgespot_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nudgespot_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		443A638A1D6AFAAE00916D86 /* UIAlertController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Alert.h"; sourceTree = "<group>"; };
 		443A638B1D6AFAAE00916D86 /* UIAlertController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Alert.m"; sourceTree = "<group>"; };
+		44FC38291D952ADD0070CE10 /* Nudgespot_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nudgespot_Example.entitlements; sourceTree = "<group>"; };
 		5F7417A5054453250E455D57 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Nudgespot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudgespot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,10 +35,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6CAB64AD4DAE6F546B243795 /* Pods_Nudgespot_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudgespot_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		814FBD70E8836FC0D1D49E08 /* Pods_Nudgespot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudgespot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D86E84C7445729C5153A6D2 /* Pods-Nudgespot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C00F253063EDD13EDBA12BC1 /* Pods-Nudgespot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E81C603119C6E7F68BBC64 /* Nudgespot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nudgespot.podspec; path = ../Nudgespot.podspec; sourceTree = "<group>"; };
+		FBF3B2A7F629358336C64508 /* libPods-Nudgespot_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nudgespot_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71E74919A3C2DEC838DDD190 /* Pods_Nudgespot_Example.framework in Frameworks */,
+				DB2E955EE0A702490ADECE7D /* libPods-Nudgespot_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +67,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				44FC38291D952ADD0070CE10 /* Nudgespot_Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Nudgespot */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -138,8 +140,8 @@
 		A9AE66EE96D66CB18A9BA0F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				814FBD70E8836FC0D1D49E08 /* Pods_Nudgespot_Example.framework */,
 				6CAB64AD4DAE6F546B243795 /* Pods_Nudgespot_Tests.framework */,
+				FBF3B2A7F629358336C64508 /* libPods-Nudgespot_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -391,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Nudgespot_Example.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Nudgespot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -399,6 +402,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nudgespot/Nudgespot_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -408,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Nudgespot_Example.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Nudgespot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -415,6 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nudgespot.Nudgespot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nudgespot/Nudgespot_Example-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

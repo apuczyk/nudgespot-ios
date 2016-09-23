@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name             = 'Nudgespot'
-s.version          = '2.3'
+s.version          = '2.4'
 s.summary          = 'nudgespot-ios is Objective-C framework.'
 
 s.description      = <<-DESC
