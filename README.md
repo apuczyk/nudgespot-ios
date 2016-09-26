@@ -22,8 +22,8 @@ pod "Nudgespot"
 
 ## Author
 
-Maheep Kaushal, maheep@nudgespot.com
+Nudgespot, dev@nudgespot.com
 
 ## License
 
-Nudgespot is available under the MIT license. See the LICENSE file for more info.
+Nudgespot is available under the Nudgespot Inc. All Rights Reserved.

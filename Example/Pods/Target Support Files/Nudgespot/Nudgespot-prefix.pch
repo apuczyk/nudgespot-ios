@@ -1,0 +1,29 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+#ifdef __OBJC__
+
+#import "NudgespotActivity.h"
+#import "SubscriberContact.h"
+#import "Nudgespot.h"
+#import "NudgespotSubscriber.h"
+#import "SubscriberClient.h"
+#import "NudgespotActivity.h"
+#import "BasicUtils.h"
+#import "Reachability.h"
+#import "AFNetworking.h"
+#import "SubscriberClient.h"
+#import "NudgespotConstants.h"
+#import "NudgespotVisitor.h"
+
+#import <AdSupport/AdSupport.h>
+
+#endif
+
+#ifdef DEBUG
+#    define DLog(...) NSLog(__VA_ARGS__)
+#else
+#    define DLog(...) /* */
+#endif
+#define ALog(...) NSLog(__VA_ARGS__)

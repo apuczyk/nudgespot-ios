@@ -1,0 +1,9 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../Nudgespot/Assets/Analytics" "${PODS_ROOT}/../../Nudgespot/Assets/Messaging"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Nudgespot" "${PODS_ROOT}/Headers/Public/Reachability"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/AFNetworking" "$PODS_CONFIGURATION_BUILD_DIR/Nudgespot" "$PODS_CONFIGURATION_BUILD_DIR/Reachability"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/Nudgespot" -isystem "${PODS_ROOT}/Headers/Public/Reachability"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"Nudgespot" -l"Reachability" -l"sqlite3" -l"stdc++" -l"z" -framework "AdSupport" -framework "AddressBook" -framework "CFNetwork" -framework "CoreGraphics" -framework "FirebaseAnalytics" -framework "FirebaseInstanceID" -framework "FirebaseMessaging" -framework "Foundation" -framework "GoogleIPhoneUtilities" -framework "GoogleInterchangeUtilities" -framework "GoogleSymbolUtilities" -framework "GoogleUtilities" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/Pods
