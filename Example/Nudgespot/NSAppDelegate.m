@@ -12,7 +12,6 @@
 #import "NudgespotSDK.h"
 #import "NudgeSpotConstants.h"
 
-
 static NSUInteger badgeCount = 1;
 
 @implementation NSAppDelegate
@@ -45,7 +44,7 @@ static NSUInteger badgeCount = 1;
     }
     // [END register_for_remote_notifications]
     // [START start_Fcm_service]
-    
+        
     // Initialize Nudgespot
     
     [Nudgespot setJavascriptAPIkey:kJavascriptAPIkey andRESTAPIkey:kRESTAPIkey];
@@ -69,8 +68,6 @@ static NSUInteger badgeCount = 1;
     return YES;
     
 }
-
-
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
 {
@@ -104,9 +101,9 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
     
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badgeCount];
     
-    [Nudgespot  acknowledgeFcmServer:userInfo];
+    [Nudgespot acknowledgeFcmServer:userInfo];
     
-    [Nudgespot  processNudgespotNotification:userInfo withApplication:application andWindow:self.window];
+    [Nudgespot processNudgespotNotification:userInfo withApplication:application andWindow:self.window];
 }
 
 - (void)application:(UIApplication *)application

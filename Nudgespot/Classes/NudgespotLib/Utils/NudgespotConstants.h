@@ -56,6 +56,14 @@ static NSString *const ACTIVITY_CREATE_PATH = @"activities";
 
 static NSString *const iOS_USER = @"ios_user";
 
+static NSString *const SYSTEM_NAME = @"system_name";
+
+static NSString *const SYSTEM_VERSION = @"system_version";
+
+static NSString *const SYSTEM_MODEL = @"system_model";
+
+static NSString *const DEVICE_MANUFACTURER = @"device_manufacturer";
+
 static NSString *const SOURCE_LIB = @"source_lib";
 
 

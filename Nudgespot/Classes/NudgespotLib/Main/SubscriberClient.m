@@ -507,7 +507,6 @@
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:) name:kFIRInstanceIDTokenRefreshNotification object:nil];
         
         }];
-    
         
     } @catch (NSException *exception) {
         DLog(@"Exception = %@", exception);
@@ -532,7 +531,7 @@
     
     static int noOfTimestokenRefreshCalled = 1;
     
-    if (noOfTimestokenRefreshCalled >= 5) {
+    if (noOfTimestokenRefreshCalled >= 15) {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:kFIRInstanceIDTokenRefreshNotification object:nil];
     }
     

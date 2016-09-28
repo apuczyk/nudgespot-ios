@@ -10,6 +10,9 @@
 
 #import "NudgespotConstants.h"
 
+#import <sys/utsname.h> // import it in your header or implementation file.
+
+
 @implementation NudgespotSubscriber
 
 @synthesize uid;
@@ -188,7 +191,6 @@
         if (self.signupTime != nil) {
             
             [dict setObject:[BasicUtils getStringValueOfUTC:self.signupTime] forKey:KEY_SIGNED_UP_AT];
-            
         }
         
         if (self.properties == nil) {
@@ -198,6 +200,16 @@
         }
         
         [self.properties setObject:@"Y" forKey:iOS_USER];
+        
+        [self.properties setObject:[[UIDevice currentDevice] systemName] forKey:SYSTEM_NAME];
+        
+        [self.properties setObject:[[UIDevice currentDevice] systemVersion] forKey:SYSTEM_VERSION];
+        
+        [self.properties setObject:[[UIDevice currentDevice] model] forKey:SYSTEM_MODEL];
+        
+        [self.properties setObject:@"APPLE" forKey:DEVICE_MANUFACTURER];
+        
+        
         [dict setObject:self.properties forKey:KEY_SUBSCRIBER_PROPERTIES];
         
         if (self.subscriberContactList.count > 0) {
