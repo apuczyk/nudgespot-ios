@@ -201,11 +201,9 @@
         
         [self.properties setObject:@"Y" forKey:iOS_USER];
         
-        [self.properties setObject:[[UIDevice currentDevice] systemName] forKey:SYSTEM_NAME];
+        [self.properties setObject:[[UIDevice currentDevice] systemVersion] forKey:OS_VERSION];
         
-        [self.properties setObject:[[UIDevice currentDevice] systemVersion] forKey:SYSTEM_VERSION];
-        
-        [self.properties setObject:[[UIDevice currentDevice] model] forKey:SYSTEM_MODEL];
+        [self.properties setObject:[[UIDevice currentDevice] model] forKey:DEVICE_MODEL];
         
         [self.properties setObject:@"APPLE" forKey:DEVICE_MANUFACTURER];
         

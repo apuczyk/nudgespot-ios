@@ -11,7 +11,7 @@
 		440ED3711D991DA200539D64 /* UIAlertController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 440ED36C1D991DA200539D64 /* UIAlertController+Alert.m */; };
 		440ED3721D991DA200539D64 /* NSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 440ED36E1D991DA200539D64 /* NSAppDelegate.m */; };
 		440ED3731D991DA200539D64 /* NSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440ED3701D991DA200539D64 /* NSViewController.m */; };
-		442728431D9BCEAD00A8C528 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 442728421D9BCEAD00A8C528 /* GoogleService-Info.plist */; };
+		44A520171D9D002D00EED737 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44A520161D9D002D00EED737 /* GoogleService-Info.plist */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -49,8 +49,8 @@
 		440ED36E1D991DA200539D64 /* NSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAppDelegate.m; sourceTree = "<group>"; };
 		440ED36F1D991DA200539D64 /* NSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSViewController.h; sourceTree = "<group>"; };
 		440ED3701D991DA200539D64 /* NSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSViewController.m; sourceTree = "<group>"; };
-		442728421D9BCEAD00A8C528 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		442728441D9BD3EA00A8C528 /* Nudgespot_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nudgespot_Example.entitlements; sourceTree = "<group>"; };
+		44A520161D9D002D00EED737 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DA8E609102D486B4914FD7A /* Pods-Nudgespot_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Nudgespot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudgespot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,7 +148,7 @@
 		6003F593195388D20070C39A /* Example for Nudgespot */ = {
 			isa = PBXGroup;
 			children = (
-				442728421D9BCEAD00A8C528 /* GoogleService-Info.plist */,
+				44A520161D9D002D00EED737 /* GoogleService-Info.plist */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				440ED3691D991DA200539D64 /* Comman */,
 				440ED36D1D991DA200539D64 /* NSAppDelegate.h */,
@@ -309,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				442728431D9BCEAD00A8C528 /* GoogleService-Info.plist in Resources */,
+				44A520171D9D002D00EED737 /* GoogleService-Info.plist in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);

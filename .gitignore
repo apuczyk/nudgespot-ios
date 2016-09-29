@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # OS X
 .DS_Store
 
@@ -31,3 +32,9 @@ Carthage
 # `pod install` in .travis.yml
 #
 # Pods/
+=======
+.*.sw?
+.DS_Store
+.rbenv-version
+.idea
+>>>>>>> 58581d27c94818021f204898c58bb422ab80e4ca
