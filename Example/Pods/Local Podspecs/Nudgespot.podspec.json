@@ -1,6 +1,6 @@
 {
   "name": "Nudgespot",
-  "version": "2.6",
+  "version": "2.7",
   "summary": "nudgespot-ios is Objective-C framework.",
   "description": "Nudgespot provides framework for iOS which allows users to track events.",
   "homepage": "https://github.com/nudgespot/nudgespot-ios",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/nudgespot/nudgespot-ios.git",
-    "tag": "2.6"
+    "tag": "2.7"
   },
   "pod_target_xcconfig": {
     "OTHER_LDFLAGS": "-ObjC",

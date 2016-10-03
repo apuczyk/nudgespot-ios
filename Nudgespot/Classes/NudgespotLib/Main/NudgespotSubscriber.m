@@ -201,11 +201,11 @@
         
         [self.properties setObject:@"Y" forKey:iOS_USER];
         
-        [self.properties setObject:[[UIDevice currentDevice] systemVersion] forKey:OS_VERSION];
+        [self.properties setObject:[[UIDevice currentDevice] systemVersion] forKey:KEY_iOS_OS_VERSION];
         
-        [self.properties setObject:[[UIDevice currentDevice] model] forKey:DEVICE_MODEL];
+        [self.properties setObject:[[UIDevice currentDevice] model] forKey:KEY_DEVICE_MODEL];
         
-        [self.properties setObject:@"APPLE" forKey:DEVICE_MANUFACTURER];
+        [self.properties setObject:@"APPLE" forKey:KEY_DEVICE_MANUFACTURER];
         
         
         [dict setObject:self.properties forKey:KEY_SUBSCRIBER_PROPERTIES];
