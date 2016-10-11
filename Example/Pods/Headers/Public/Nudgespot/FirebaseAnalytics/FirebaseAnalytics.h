@@ -1,1 +1,0 @@
-../../../../../../Nudgespot/Assets/Analytics/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h

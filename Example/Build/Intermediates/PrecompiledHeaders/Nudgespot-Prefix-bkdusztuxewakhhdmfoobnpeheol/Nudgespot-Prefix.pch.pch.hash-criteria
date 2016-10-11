@@ -1,0 +1,38 @@
+-x
+objective-c
+-arch
+x86_64
+-std=gnu99
+-fobjc-arc
+-fmodules
+-gmodules
+-fmodules-cache-path=/Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache
+-fbuild-session-file=/Users/nudgespot/Library/Developer/Xcode/DerivedData/ModuleCache/Session.modulevalidation
+-fpascal-strings
+-O0
+-DDEBUG=1
+-DCOCOAPODS=1
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator10.0.sdk
+-fasm-blocks
+-mios-simulator-version-min=8.3
+-g
+-fobjc-abi-version=2
+-fobjc-legacy-dispatch
+-iquote
+-iquote
+-I/Users/nudgespot/Desktop/Nudgespot/Nudgespot New SDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/include
+-F/Users/nudgespot/Desktop/Nudgespot/Nudgespot New SDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator
+-F/Users/nudgespot/Desktop/Nudgespot/Nudgespot New SDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/AFNetworking
+-F/Users/nudgespot/Desktop/Nudgespot/Nudgespot New SDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Nudgespot
+-F/Users/nudgespot/Desktop/Nudgespot/Nudgespot New SDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Reachability
+-iquote
+/Users/nudgespot/Desktop/Nudgespot/Nudgespot New SDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers
+-iquote
+/Users/nudgespot/Desktop/Nudgespot/Nudgespot New SDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Nudgespot/Nudgespot.framework/Headers
+-iquote
+/Users/nudgespot/Desktop/Nudgespot/Nudgespot New SDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Reachability/Reachability.framework/Headers
+x86_64-apple-darwin15.6.0
+"4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)"
+SDK_PRODUCT_BUILD_VERSION=14A345
+14A345

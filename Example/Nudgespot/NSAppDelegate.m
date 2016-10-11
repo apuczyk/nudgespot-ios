@@ -44,7 +44,7 @@ static NSUInteger badgeCount = 1;
     }
     // [END register_for_remote_notifications]
     // [START start_Fcm_service]
-        
+    
     // Initialize Nudgespot
     
     [Nudgespot setJavascriptAPIkey:kJavascriptAPIkey andRESTAPIkey:kRESTAPIkey];

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0AF3A3AA7E29914A17976828C4E8420"
-               BuildableName = "libPods-Nudgespot_Tests.a"
+               BlueprintIdentifier = "6C9841C8173CC54B01647BB314703B5F"
+               BuildableName = "Pods_Nudgespot_Tests.framework"
                BlueprintName = "Pods-Nudgespot_Tests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F0AF3A3AA7E29914A17976828C4E8420"
-            BuildableName = "libPods-Nudgespot_Tests.a"
+            BlueprintIdentifier = "6C9841C8173CC54B01647BB314703B5F"
+            BuildableName = "Pods_Nudgespot_Tests.framework"
             BlueprintName = "Pods-Nudgespot_Tests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F0AF3A3AA7E29914A17976828C4E8420"
-            BuildableName = "libPods-Nudgespot_Tests.a"
-            BlueprintName = "Pods-Nudgespot_Tests"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
