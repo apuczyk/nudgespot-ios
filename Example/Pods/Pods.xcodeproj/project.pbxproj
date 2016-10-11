@@ -141,10 +141,6 @@
 		3BA91BE891A84B0CC836B018870A63F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		3DD90C4852F8E08288DFB074C1617EBB /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		43E98E275C77AFABA60D8AA316756ED6 /* Nudgespot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Nudgespot.h; sourceTree = "<group>"; };
-		4421F0AF1DA645B60073A075 /* BTActionOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTActionOptions.h; sourceTree = "<group>"; };
-		4421F0B01DA645B60073A075 /* BTActionOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTActionOptions.m; sourceTree = "<group>"; };
-		4421F0B11DA645B60073A075 /* BTUserAppNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUserAppNotification.h; sourceTree = "<group>"; };
-		4421F0B21DA645B60073A075 /* BTUserAppNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUserAppNotification.m; sourceTree = "<group>"; };
 		49ACF8DD511C4F49D4C90A73805B9D5B /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
 		4C0D461CF69AE2368D9FFFD582BFD4CA /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		4EA83106F730EA38D4CD39CD9E80EF21 /* Pods-Nudgespot_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nudgespot_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -356,17 +352,6 @@
 			path = Nudgespot;
 			sourceTree = "<group>";
 		};
-		4421F0AE1DA645B60073A075 /* BTUserAppNotification */ = {
-			isa = PBXGroup;
-			children = (
-				4421F0AF1DA645B60073A075 /* BTActionOptions.h */,
-				4421F0B01DA645B60073A075 /* BTActionOptions.m */,
-				4421F0B11DA645B60073A075 /* BTUserAppNotification.h */,
-				4421F0B21DA645B60073A075 /* BTUserAppNotification.m */,
-			);
-			path = BTUserAppNotification;
-			sourceTree = "<group>";
-		};
 		726CA6C6F3D8E80EE77D3E63534C0B40 /* Pods-Nudgespot_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,7 +539,6 @@
 		B9172975A7A413E3E28EF90F1CE7C699 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4421F0AE1DA645B60073A075 /* BTUserAppNotification */,
 				03B9A190D2E38F45583FA6356775D2DE /* NudgespotActivity.h */,
 				F8C8195F838B8F4E2D7EABF0BD7FB6DA /* NudgespotActivity.m */,
 				D148F61FF3AAD3A37205BF00EA9C38D7 /* NudgespotSubscriber.h */,
