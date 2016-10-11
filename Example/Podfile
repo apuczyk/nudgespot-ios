@@ -1,0 +1,9 @@
+target 'Nudgespot_Example' do
+  pod 'Nudgespot', :path => '../'
+
+  target 'Nudgespot_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
