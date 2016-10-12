@@ -4,7 +4,7 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -34,7 +34,7 @@
         {
           'type': 'file',
           'name': "AFNetworking-Swift.h",
-          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFNetworking-Swift.h"
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFNetworking-Swift.h"
         },
         {
           'type': 'file',
@@ -110,18 +110,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Modules",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Intermediates/Pods.build/Debug-iphoneos/AFNetworking.build/module.modulemap"
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/AFNetworking.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Nudgespot/Nudgespot.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -131,7 +131,7 @@
         {
           'type': 'file',
           'name': "Nudgespot-Swift.h",
-          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers/Nudgespot-Swift.h"
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Nudgespot/Nudgespot.framework/Headers/Nudgespot-Swift.h"
         },
         {
           'type': 'file',
@@ -187,18 +187,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Modules",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Nudgespot/Nudgespot.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Intermediates/Pods.build/Debug-iphoneos/Nudgespot.build/module.modulemap"
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Nudgespot.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Pods_Nudgespot_Example.framework/Headers",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Pods_Nudgespot_Example.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -208,29 +208,29 @@
         {
           'type': 'file',
           'name': "Pods_Nudgespot_Example-Swift.h",
-          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Pods_Nudgespot_Example.framework/Headers/Pods_Nudgespot_Example-Swift.h"
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Pods_Nudgespot_Example.framework/Headers/Pods_Nudgespot_Example-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Pods_Nudgespot_Example.framework/Modules",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Pods_Nudgespot_Example.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-Nudgespot_Example.build/module.modulemap"
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-Nudgespot_Example.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Reachability/Reachability.framework/Headers",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Reachability/Reachability.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "Reachability-Swift.h",
-          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Reachability/Reachability.framework/Headers/Reachability-Swift.h"
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Reachability/Reachability.framework/Headers/Reachability-Swift.h"
         },
         {
           'type': 'file',
@@ -246,12 +246,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Reachability/Reachability.framework/Modules",
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator/Reachability/Reachability.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Intermediates/Pods.build/Debug-iphoneos/Reachability.build/module.modulemap"
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Reachability.build/module.modulemap"
         }
       ]
     }
