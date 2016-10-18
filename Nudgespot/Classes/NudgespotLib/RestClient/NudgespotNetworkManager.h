@@ -27,9 +27,14 @@ typedef void(^failureCallback)(NSURLSessionDataTask *operation, NSError *error);
 
 + (NSURLSessionDataTask *) identifySubscriberWithPostData:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 
++ (NSURLSessionDataTask *) getSubscriberWithUid:(NSString *)uid success:(successCallback)success failure:(failureCallback)failure;
+
 + (NSURLSessionDataTask *) updateSubscriberWithUrl:(NSString *)urlString withPostData : (NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 
 + (NSURLSessionDataTask *) identifyVisitorForAccount:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
+
++ (NSURLSessionDataTask *) deleteContactWithUrl:(NSString *)urlString success:(successCallback)success failure:(failureCallback)failure;
+
 
 @end
 

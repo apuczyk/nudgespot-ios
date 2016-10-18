@@ -90,7 +90,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="enrolCoursePressed:" destination="OAp-7W-Lg8" eventType="touchUpInside" id="kQL-q1-agI"/>
+                                    <action selector="enrollCoursePressed:" destination="OAp-7W-Lg8" eventType="touchUpInside" id="KQb-Xw-aTx"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Uid" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rd4-Wh-iHQ">

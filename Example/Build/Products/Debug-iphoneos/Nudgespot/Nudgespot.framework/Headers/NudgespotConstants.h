@@ -18,12 +18,14 @@ static NSString *const CONTACT_TYPE_EMAIL = @"email";
 
 static NSString *const CONTACT_TYPE_PHONE = @"phone";
 
-static NSString *const CONTACT_TYPE_ANDROID_REGISTRATION_ID = @"android_registration_id";
+//static NSString *const CONTACT_TYPE_ANDROID_REGISTRATION_ID = @"android_registration_id";
 
 static NSString *const CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID = @"ios_gcm_registration_id";
 
 static NSString *const CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID_ANON = @"ios_gcm_registration_id_anon";
 
+
+static NSString *const SHARED_APNS_TOKEN_TYPE = @"NudgespotAPNSTokenType";
 
 static NSString *const SHARED_PREFS_NAME = @"com.nudgespot.gcmclient.prefs";
 
@@ -45,7 +47,7 @@ static NSString *const SHARED_PROP_IS_ANON_USER_EXISTS = @"isAnonymousUserExits"
 
 static NSString *const SUBSCRIBER_CREATE_PATH = @"subscribers";
 
-static NSString *const SUBSCRIBER_FIND_PATH = @"subscribers?uid=";
+static NSString *const SUBSCRIBER_FIND_PATH = @"subscribers.json?uid=";
 
 static NSString *const SUBSCRIBER_IDENTIFY = @"subscribers/identify";
 
@@ -71,6 +73,8 @@ static NSString *const SOURCE_LIB = @"source_lib";
 
 
 static NSString *const VISITOR_REGISTRATION = @"visitors/register";
+
+static NSString *const KEY_RESOURCE_LOCATION = @"href";
 
 static NSString *const KEY_VISITOR_UID = @"anon_id";
 

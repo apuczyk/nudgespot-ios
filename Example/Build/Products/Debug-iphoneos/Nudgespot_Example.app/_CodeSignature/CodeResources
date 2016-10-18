@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
 		<data>
-		xj4WF77CPs7rhG/gqXOj2Seb5xc=
+		EST7378+t7YS1Mc2Iq/IaJP8RhY=
 		</data>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
 		<data>
@@ -18,15 +18,15 @@
 		</data>
 		<key>Frameworks/Nudgespot.framework/Info.plist</key>
 		<data>
-		F1bBlywlv8dkW4qHe0MLstSAWps=
+		5UrfbdCMRx/YUX3lZXpFEViwwts=
 		</data>
 		<key>Frameworks/Nudgespot.framework/Nudgespot</key>
 		<data>
-		r9mTuIyr6p+fQxRk4whDpxKT3Y8=
+		YBZFhorNVse1CO6PUMx+8zP3qZ8=
 		</data>
 		<key>Frameworks/Nudgespot.framework/_CodeSignature/CodeResources</key>
 		<data>
-		OwR4Jol2Oeu0283TNgmTyHwk45E=
+		ENMuJKdEzrBPnNZO9nkDqczVXnA=
 		</data>
 		<key>Frameworks/Reachability.framework/Info.plist</key>
 		<data>
@@ -34,27 +34,43 @@
 		</data>
 		<key>Frameworks/Reachability.framework/Reachability</key>
 		<data>
-		qofR+kTHlaZWDbt4YSQE36W9IaQ=
+		68o03NEUn31fwZzMYbNPmg7/sSM=
 		</data>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>
 		<data>
 		sG9UxB2NWSUfZrYUZ3ndFdAwd38=
 		</data>
+		<key>GoogleService-Info.plist</key>
+		<data>
+		ehSuLtWueBt668iIWeSLknsVgTg=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		ahrQfe9DhaZY2mce2hwYeQePGcM=
+		8F6WjAtQkqODMX5Y5g7j9Xxq7fY=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
-		h/qrHehxHBZy29WTi4bHKzzV7CI=
+		IE8b2JJdBu5kXVpzmgaTUpyIQpA=
 		</data>
-		<key>Main.storyboardc/UIViewController-whP-gf-Uak.nib</key>
+		<key>Main.storyboardc/LandingPageViewController.nib</key>
 		<data>
-		4dZYYk9JI1lUutQelYqyQ0PBrSM=
+		lGsOcKcLi9yUlE4VlHReuCEIO74=
 		</data>
-		<key>Main.storyboardc/whP-gf-Uak-view-TpU-gO-2f1.nib</key>
+		<key>Main.storyboardc/OAp-7W-Lg8-view-gqz-HY-1g6.nib</key>
 		<data>
-		JtUU2tmS++i1n41OUYUFO18QMEg=
+		O/gjf0oyzg3EHpHGLnrwlWg9OI0=
+		</data>
+		<key>Main.storyboardc/UINavigationController-s9t-qA-zEf.nib</key>
+		<data>
+		mDxO1cAr3yfJFUIZhoi0rQJqyDY=
+		</data>
+		<key>Main.storyboardc/ViewController.nib</key>
+		<data>
+		aAECVoqicb5Dt162FPb0LMvkJ0I=
+		</data>
+		<key>Main.storyboardc/iXq-w1-IFJ-view-UOC-5Z-GrX.nib</key>
+		<data>
+		che20aW7xBUskqw7WN6/e9Hux/s=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -80,11 +96,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xj4WF77CPs7rhG/gqXOj2Seb5xc=
+			EST7378+t7YS1Mc2Iq/IaJP8RhY=
 			</data>
 			<key>hash2</key>
 			<data>
-			+6j4XLQW+zxjVAISNJ+unSovc4RQ4NSSVUqRBCsAsRE=
+			Dd0gtkAjZe1FTLW880thw0CaYEUdNVlV9dI06+nxOk4=
 			</data>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
@@ -113,33 +129,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			F1bBlywlv8dkW4qHe0MLstSAWps=
+			5UrfbdCMRx/YUX3lZXpFEViwwts=
 			</data>
 			<key>hash2</key>
 			<data>
-			0dTTHzxFQv62diL8kPofvwumoB4kzOVY92QRs8Wdtbk=
+			xkg6f4WAATw77VAA54A9+bg4xEY5wI5ytwFGsRMOXGE=
 			</data>
 		</dict>
 		<key>Frameworks/Nudgespot.framework/Nudgespot</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r9mTuIyr6p+fQxRk4whDpxKT3Y8=
+			YBZFhorNVse1CO6PUMx+8zP3qZ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			2rveWepsf8xOrY6O3NSB8fioHpjwubzlZX7XjaYZOuA=
+			cC8zkaNIiK6DkFM6uei4b9Mz6oux43EDhEij3HW0lVg=
 			</data>
 		</dict>
 		<key>Frameworks/Nudgespot.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OwR4Jol2Oeu0283TNgmTyHwk45E=
+			ENMuJKdEzrBPnNZO9nkDqczVXnA=
 			</data>
 			<key>hash2</key>
 			<data>
-			aKIPDx5cOa02Brtr/T4/w5gh7zJT5TIW4OQrhCAy58Y=
+			KPwZnv1bzcPD2dzN6JOTKgPs7kGS99xdSWBEgLcFvSI=
 			</data>
 		</dict>
 		<key>Frameworks/Reachability.framework/Info.plist</key>
@@ -157,11 +173,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qofR+kTHlaZWDbt4YSQE36W9IaQ=
+			68o03NEUn31fwZzMYbNPmg7/sSM=
 			</data>
 			<key>hash2</key>
 			<data>
-			wimHdUjlswbSIQq34YsD2b0f3hQ7znu0iBY3pwEUb3k=
+			1X4iAhArRB1GuXGr5ZRly/A9I+f67YozIE/LqejAW9U=
 			</data>
 		</dict>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>
@@ -175,37 +191,81 @@
 			Okbn2jFimWsV6af25xGPQqGvxhnUq3fS1rO+avt9YfM=
 			</data>
 		</dict>
+		<key>GoogleService-Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ehSuLtWueBt668iIWeSLknsVgTg=
+			</data>
+			<key>hash2</key>
+			<data>
+			lbzwTbl8MGoG+wokprXSd8kTwqLguvaAgdwo+x4yabA=
+			</data>
+		</dict>
 		<key>Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h/qrHehxHBZy29WTi4bHKzzV7CI=
+			IE8b2JJdBu5kXVpzmgaTUpyIQpA=
 			</data>
 			<key>hash2</key>
 			<data>
-			/dXp/VwdzCfq8c4YlCrNb8zW/fZ9tXrlfioUW1kDPR8=
+			o7FTqAuhoPZixJmH8Vv8wwSy9E9YOWYdV8ULIRkXgjg=
 			</data>
 		</dict>
-		<key>Main.storyboardc/UIViewController-whP-gf-Uak.nib</key>
+		<key>Main.storyboardc/LandingPageViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4dZYYk9JI1lUutQelYqyQ0PBrSM=
+			lGsOcKcLi9yUlE4VlHReuCEIO74=
 			</data>
 			<key>hash2</key>
 			<data>
-			r+tM+bUP7axxuTOJq71fnbjkqhDeSl3x5LnmQhrpdA8=
+			lt+b7yHa/uZnKIkVo/xVDw1RD03aB7L9FHXrCADv24Y=
 			</data>
 		</dict>
-		<key>Main.storyboardc/whP-gf-Uak-view-TpU-gO-2f1.nib</key>
+		<key>Main.storyboardc/OAp-7W-Lg8-view-gqz-HY-1g6.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JtUU2tmS++i1n41OUYUFO18QMEg=
+			O/gjf0oyzg3EHpHGLnrwlWg9OI0=
 			</data>
 			<key>hash2</key>
 			<data>
-			qKxYnhVRbftG/ki+KtAJmmev00Vs7pY/WZ0d1l7NV5w=
+			q0CgzaZJmDnSWypoAMxPi1T9RZDDO74lRIVZ3S6MVLw=
+			</data>
+		</dict>
+		<key>Main.storyboardc/UINavigationController-s9t-qA-zEf.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mDxO1cAr3yfJFUIZhoi0rQJqyDY=
+			</data>
+			<key>hash2</key>
+			<data>
+			hO0fe0Q9YkCa1x6eKhXBq4wFJGtInFPxlQsojkIs4qM=
+			</data>
+		</dict>
+		<key>Main.storyboardc/ViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aAECVoqicb5Dt162FPb0LMvkJ0I=
+			</data>
+			<key>hash2</key>
+			<data>
+			hPm5E3xQyMuvrezZAUplnrLc7wj6ri7vSVVrp8vx2Mc=
+			</data>
+		</dict>
+		<key>Main.storyboardc/iXq-w1-IFJ-view-UOC-5Z-GrX.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			che20aW7xBUskqw7WN6/e9Hux/s=
+			</data>
+			<key>hash2</key>
+			<data>
+			XYODDZtJTIeRGX2U8Z1y0EvkyGvUI17RYHN8+52iC7k=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>

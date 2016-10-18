@@ -15,7 +15,7 @@
 
 typedef NS_ENUM(NSInteger, NudgespotIDAPNSTokenType) {
     /// Unknown token type.
-    NudgespotAPNSTokenTypeUnknown,
+    NudgespotAPNSTokenTypeUnknown = 0,
     /// Sandbox token type.
     NudgespotAPNSTokenTypeSandbox,
     /// Production token type.
@@ -93,6 +93,8 @@ typedef NS_ENUM(NSInteger, NudgespotIDAPNSTokenType) {
 
 - (void)setAPNSToken:(NSData *)deviceToken ofType:(NudgespotIDAPNSTokenType) type;
 
+- (void) removeContact:(NSString *)type andValue: (NSString *) value completion:(void (^)(id response, NSError *error))completionBlock;
+
 /**
  * Retrieves the stored subscriber UID for the application, if there is one
  *
@@ -100,6 +102,8 @@ typedef NS_ENUM(NSInteger, NudgespotIDAPNSTokenType) {
  * @return customer ID, or empty string if there is none.
  */
 - (NSString *) getStoredSubscriberUid;
+
+- (NudgespotSubscriber *) getSubscriber:(NSString *) uid WithCompletion:(void (^)(NudgespotSubscriber *currentSubsciber, id error))completionBlock;
 
 - (void) getFcmTokenCompletion:(void (^)(id token, id error))completionBlock;
 

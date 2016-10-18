@@ -23,9 +23,11 @@
 
 @property (nonatomic , retain) NSString *subscriptionStatus;
 
+@property (nonatomic , retain) NSString * resourceLocation;
+
 -(id) initwithType:(NSString *)contactType andValue:(NSString *)contactValue;
 
--(id) initwithType:(NSString *)contactType andValue:(NSString *)contactValue andSubscriptionStatus:(NSString *)status;
+-(id)initwithType:(NSString *)contactType andValue:(NSString *)contactValue andSubscriptionStatus:(NSString *)status withResourceLocation: (NSString *)resourceLocation;
 
 -(SubscriberContact *) initWithJSON:(NSMutableDictionary *)responseDict;
 

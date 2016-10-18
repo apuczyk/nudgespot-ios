@@ -110,8 +110,8 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     NSLog(@"%@ is device token", deviceToken);
-    
-    [Nudgespot setAPNSToken:deviceToken ofType:NudgespotAPNSTokenTypeProd];
+    //nudgespot save device token
+    [Nudgespot setAPNSToken:deviceToken ofType:NudgespotAPNSTokenTypeSandbox];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application

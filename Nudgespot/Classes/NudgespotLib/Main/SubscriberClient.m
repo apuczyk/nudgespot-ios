@@ -40,6 +40,7 @@
         group = dispatch_group_create();
         
         [self configureFirebase];
+        
     }
     
     return self;
@@ -215,9 +216,11 @@
     
     NSString * poolId = [NSString string];
     
-    NSDictionary * message = @{KEY_SUBSCRIBER_UID : subscriber.uid,
-                               KEY_VISITOR_UID: vistitorUid,
-                               @"api_key": [[Nudgespot sharedInstance] JavascriptAPIkey]};
+    NSLog(@"%@ is uid %@", self.subscriber.uid, [[Nudgespot sharedInstance] JavascriptAPIkey]);
+    
+    NSDictionary * message = [[NSDictionary alloc] initWithDictionary:@{KEY_SUBSCRIBER_UID : self.subscriber.uid,
+                                                                        KEY_VISITOR_UID: vistitorUid,
+                                                                        @"api_key": [[Nudgespot sharedInstance] JavascriptAPIkey]}];
     
     [NudgespotNetworkManager identifyVisitorForAccount:message success:^(NSURLSessionDataTask *operation, id responseObject) {
         DLog(@"success %@", responseObject);
@@ -240,14 +243,14 @@
         NSMutableDictionary *postData =  [subscriber toJSON];
         
         [NudgespotNetworkManager identifySubscriberWithPostData:postData success:^(NSURLSessionDataTask *operation, id responseObject) {
-            DLog(@"url = %@ identify %@ json Response Object ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, postData,  responseObject);
+            DLog(@"url = %@ identify json Response Object ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString,  responseObject);
             
             NudgespotSubscriber *getSubscriber = [self convertDictionaryToModel:responseObject];
             
             if (completionBlock != nil) {
                 completionBlock (getSubscriber, nil);
             }
-
+            
         } failure:^(NSURLSessionDataTask *operation, NSError *error) {
             DLog(@"%@ is failure \n %@", error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey], error);
             
@@ -406,6 +409,27 @@
 }
 
 
+- (NudgespotSubscriber *) getSubscriber:(NSString *) uid WithCompletion:(void (^)(NudgespotSubscriber *currentSubsciber, id error))completionBlock {
+    
+    [NudgespotNetworkManager getSubscriberWithUid:uid success:^(NSURLSessionDataTask *operation, id responseObject) {
+        
+        DLog(@"Subscriber response :%@",responseObject);
+        
+        NudgespotSubscriber *getSubscriber = [self convertDictionaryToModel:responseObject];
+        
+        if (completionBlock != nil) {
+            completionBlock (getSubscriber, nil);
+        }
+        
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        DLog(@"Exception message :%@",error);
+        
+        if (completionBlock != nil) {
+            completionBlock (nil, error);
+        }
+    }];
+}
+
 -(NudgespotSubscriber *)convertDictionaryToModel:(NSMutableDictionary *)responseDictionary {
     
     NSString *message = @"";
@@ -467,6 +491,39 @@
     return anon_id;
 }
 
+- (void) removeContact:(NSString *)type andValue: (NSString *) value completion:(void (^)(id response, NSError *error))completionBlock; {
+    
+    if([[Nudgespot sharedInstance] isSubscriberReady]) {
+        
+        NSString *url = [self.subscriber contactLocation:type andValue:value];
+        
+        if(url != nil) {
+            
+            [NudgespotNetworkManager deleteContactWithUrl:url success:^(NSURLSessionDataTask *operation, id responseObject) {
+                DLog(@"Deleted Contact %@", responseObject);
+                
+                if (completionBlock) {
+                    completionBlock(responseObject, nil);
+                }
+                
+                [self getSubscriber:self.subscriberUid WithCompletion:^(NudgespotSubscriber *currentSubsciber, id error) {
+                    if (error == nil) {
+                        self.subscriber = currentSubsciber;
+                    }
+                }];
+                
+            } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+                DLog(@"Failure in deleting contact with Error: %@", error.description);
+                
+                if (completionBlock) {
+                    completionBlock(nil, error);
+                }
+            }];;
+        }
+    }
+    
+}
+
 #pragma mark - Fcm integration..
 
 - (void) getFcmTokenCompletion:(void (^)(id token, id error))completionBlock; {
@@ -502,12 +559,9 @@
         
         self.gcmSenderID = [[FIROptions defaultOptions] GCMSenderID];
         
-        [[FIRInstanceID instanceID] deleteIDWithHandler:^(NSError * _Nullable error) {
-            // Add observer for InstanceID token refresh callback.
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:) name:kFIRInstanceIDTokenRefreshNotification object:nil];
-        
-        }];
-        
+        // Add observer for InstanceID token refresh callback.
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:) name:kFIRInstanceIDTokenRefreshNotification object:nil];
+
     } @catch (NSException *exception) {
         DLog(@"Exception = %@", exception);
     }
@@ -525,6 +579,9 @@
     if (refreshedToken != nil) {
         // Connect to FCM since connection may have failed when attempted before having a token.
         [self connectToFcmWithCompletion:self.completionBlock];
+        
+        // Save FCM TOKEN...
+        [BasicUtils setUserDefaultsValue:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID forKey:refreshedToken];
     }
     
     // noOfTimestokenRefreshCalled:- in case its may not get refreshedToken and stop after some time.
@@ -561,6 +618,7 @@
 // [END connect_to_fcm]
 
 - (void)setAPNSToken:(NSData *)deviceToken ofType:(NudgespotIDAPNSTokenType) type {
+    
     
     switch (type) {
         case NudgespotAPNSTokenTypeSandbox:
