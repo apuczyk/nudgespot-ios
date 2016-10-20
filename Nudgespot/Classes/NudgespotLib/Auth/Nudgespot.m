@@ -81,9 +81,9 @@ static Nudgespot *sharedMyManager = nil;
     return [Nudge initWithEndpoint:endpointUrl andUID:uid registrationHandler:registeration];
 }
 
-+ (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
++ (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registration;
 {
-    return [Nudge initWithUID:uid registrationHandler:registeration];
+    return [Nudge initWithUID:uid registrationHandler:registration];
 }
 
 + (id) setWithEndpoint:(NSString *)endpointUrl andSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;

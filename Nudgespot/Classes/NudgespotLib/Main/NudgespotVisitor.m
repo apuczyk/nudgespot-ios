@@ -74,10 +74,9 @@
         
         if ([BasicUtils isNonEmpty:self.registrationToken]) {
             
-            NSMutableDictionary *deviceInfo = @{CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID : self.registrationToken,
-                                                KEY_VISITOR_TYPE  : KEY_VISITOR_TYPE_iOS};
-            
-            [dict setObject:deviceInfo forKey:KEY_VISITOR_DEVICE_INFO];
+            [dict setObject:@{CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID : self.registrationToken,
+                              KEY_VISITOR_TYPE  : KEY_VISITOR_TYPE_iOS}
+                     forKey:KEY_VISITOR_DEVICE_INFO];
         }
         
         if (self.properties == nil) {

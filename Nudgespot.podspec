@@ -29,9 +29,10 @@ s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" =
 
 s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 
+
 s.module_name = "Nudgespot"
 
-#s.preserve_path = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap'
+s.preserve_path = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap'
 
 s.ios.deployment_target = '7.0'
 

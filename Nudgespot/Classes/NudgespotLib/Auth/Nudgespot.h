@@ -78,7 +78,7 @@
  *  @return completion handler will return Token from Fcm and error in case anyting missing.
  */
 
-+ (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
++ (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registration;
 
 /**
  *  @brief Method will register user with subscriber and pass endpointurl.
@@ -171,15 +171,6 @@
  */
 
 + (void) storeRegistrationId:(NSString *)regid;
-
-/**
- * Retrieves the stored Visitor for the application, if there is one
- *
- * @param context
- * @return Visitor Anonymous id, or empty string if there is none.
- */
-+ (NSString *) getStoredAnonymousUid;
-
 
 /**
  * Sends the registration ID to Nudgespot server over HTTP along with the user id.

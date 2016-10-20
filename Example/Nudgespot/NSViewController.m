@@ -140,6 +140,7 @@
     __weak NSViewController *weak = self;
     
     [Nudgespot clearRegistration:^(id response, NSError *error) {
+        
         if (response) {
             
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:kSubscriberUid];

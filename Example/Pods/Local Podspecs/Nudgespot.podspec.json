@@ -22,6 +22,7 @@
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
   },
   "module_name": "Nudgespot",
+  "preserve_paths": "Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap",
   "platforms": {
     "ios": "7.0"
   },

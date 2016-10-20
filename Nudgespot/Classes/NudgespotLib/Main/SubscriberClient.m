@@ -218,9 +218,7 @@
     
     NSLog(@"%@ is uid %@", self.subscriber.uid, [[Nudgespot sharedInstance] JavascriptAPIkey]);
     
-    NSDictionary * message = [[NSDictionary alloc] initWithDictionary:@{KEY_SUBSCRIBER_UID : self.subscriber.uid,
-                                                                        KEY_VISITOR_UID: vistitorUid,
-                                                                        @"api_key": [[Nudgespot sharedInstance] JavascriptAPIkey]}];
+    NSDictionary * message = @{KEY_SUBSCRIBER_UID : self.subscriber.uid, KEY_VISITOR_UID: vistitorUid, @"api_key": [[Nudgespot sharedInstance] JavascriptAPIkey]};
     
     [NudgespotNetworkManager identifyVisitorForAccount:message success:^(NSURLSessionDataTask *operation, id responseObject) {
         DLog(@"success %@", responseObject);
@@ -335,7 +333,7 @@
                     return;
                 }
                 
-                NSDictionary *postData = [currentActivity toJSON];
+                NSMutableDictionary *postData = [currentActivity toJSON];
                 
                 [NudgespotNetworkManager createActivityWithPostData:postData success:^(NSURLSessionDataTask *operation, id responseObject) {
                     
@@ -450,7 +448,7 @@
                 
                 subscriber = curSubscriber;
             }
-
+            
             if ([BasicUtils isEmpty:curSubscriber.uid] || [BasicUtils isEmpty:curSubscriber.resourceLocation]) {
                 
                 curSubscriber = nil;

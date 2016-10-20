@@ -23,8 +23,6 @@ typedef void(^failureCallback)(NSURLSessionDataTask *operation, NSError *error);
 
 @interface NudgespotNetworkManager (Subscriber)
 
-+ (NSURLSessionDataTask *) getAccountsSDKConfigFile:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
-
 + (NSURLSessionDataTask *) identifySubscriberWithPostData:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure;
 
 + (NSURLSessionDataTask *) getSubscriberWithUid:(NSString *)uid success:(successCallback)success failure:(failureCallback)failure;

@@ -85,7 +85,7 @@
     
     DLog(@"SUBSCRIBER IDENTIFY search path %@ ::::::::::::::::::::: \n request Url %@%@", requestUrl, [[[self manager] baseURL]absoluteString],SUBSCRIBER_IDENTIFY);
     
-    return [NudgeRestInstance POST:SUBSCRIBER_IDENTIFY parameters:postData progress:nil success:success failure:failure];
+    return [NudgeRestInstance POST:requestUrl parameters:postData progress:nil success:success failure:failure];
 }
 
 + (NSURLSessionDataTask *) identifyVisitorForAccount:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure; {
