@@ -19,5 +19,6 @@
 #import "NudgespotNetworkManager.h"
 #import "BasicUtils.h"
 #import "NudgespotConstants.h"
+#import "BTUserAppNotification.h"
 
 #endif /* NudgespotSDK_h */

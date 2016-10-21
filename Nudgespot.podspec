@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name             = 'Nudgespot'
-s.version          = '2.8'
+s.version          = '3.0'
 s.summary          = 'nudgespot-ios is Objective-C framework.'
 
 s.description      = <<-DESC
@@ -37,7 +37,7 @@ s.ios.deployment_target = '7.0'
 
 s.requires_arc = true
 
-s.source_files = 'Nudgespot/Classes/**/*.{h,m}', 'Nudgespot/Assets/*.h'
+s.source_files = 'Nudgespot/Classes/**/*.{h,m}', 'Nudgespot/Assets/*.{h,plist}'
 
 s.ios.public_header_files  = 'Nudgespot/Classes/**/*.h'
 

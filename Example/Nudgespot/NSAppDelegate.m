@@ -49,6 +49,12 @@ static NSUInteger badgeCount = 1;
     
     [Nudgespot setJavascriptAPIkey:kJavascriptAPIkey andRESTAPIkey:kRESTAPIkey];
     
+    [BTUserAppNotification setNotificationCategory:@"Action" andApplication:application];
+    
+//    BTActionOptions *custom1 = [BTActionOptions updateBehavior:(UIUserNotificationActionBehavior) andParameters:(NSDictionary *) andActivationMode:(UIUserNotificationActivationMode) andAuthenticationRequired:(BOOL) andDestructive:(BOOL)];
+//    
+//    [BTUserAppNotification createCustomCategoryWithIdentifier:@"Actionalble" withActions:@[custom1] withApplication:application];
+    
     NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
     
     if (!uid) {

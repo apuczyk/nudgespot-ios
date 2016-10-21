@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Nudgespot/main.m \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/nudgespot-ios/Example/Nudgespot/NSAppDelegate.h
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Nudgespot/main.m \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Nudgespot/NSAppDelegate.h
