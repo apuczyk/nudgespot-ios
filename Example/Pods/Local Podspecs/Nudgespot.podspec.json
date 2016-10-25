@@ -16,13 +16,20 @@
     "FRAMEWORK_SEARCH_PATHS": "\"$(SRCROOT)/../../Nudgespot/Assets/Analytics\" \"$(SRCROOT)/../../Nudgespot/Assets/Messaging\"",
     "HEADER_SEARCH_PATHS": "$(PODS_ROOT)/Nudgespot/Nudgespot"
   },
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "$(PODS_ROOT)/Nudgespot/Nudgespot",
+    "SWIFT_INCLUDE_PATHS": "$(PODS_ROOT)/Nudgespot/Nudgespot",
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
+  },
+  "module_name": "Nudgespot",
+  "preserve_paths": "Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap",
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
   "source_files": [
     "Nudgespot/Classes/**/*.{h,m}",
-    "Nudgespot/Assets/*.{h,plist}"
+    "Nudgespot/Assets/*.{h}"
   ],
   "ios": {
     "public_header_files": "Nudgespot/Classes/**/*.h",
@@ -44,6 +51,11 @@
     "CFNetwork",
     "AddressBook"
   ],
+  "resource_bundles": {
+    "Nudgespot": [
+      "Nudgespot/Assets/*.{plist}"
+    ]
+  },
   "dependencies": {
     "Reachability": [
 

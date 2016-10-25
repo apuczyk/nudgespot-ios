@@ -85,7 +85,7 @@
     
     DLog(@"SUBSCRIBER IDENTIFY search path %@ ::::::::::::::::::::: \n request Url %@%@", requestUrl, [[[self manager] baseURL]absoluteString],SUBSCRIBER_IDENTIFY);
     
-    return [NudgeRestInstance POST:SUBSCRIBER_IDENTIFY parameters:postData progress:nil success:success failure:failure];
+    return [NudgeRestInstance POST:requestUrl parameters:postData progress:nil success:success failure:failure];
 }
 
 + (NSURLSessionDataTask *) identifyVisitorForAccount:(NSMutableDictionary *)postData success:(successCallback)success failure:(failureCallback)failure; {
@@ -97,6 +97,21 @@
     return [NudgeRestInstance POST:requestUrl parameters:postData progress:nil success:success failure:failure];
 }
 
++ (NSURLSessionDataTask *) deleteContactWithUrl:(NSString *)urlString success:(successCallback)success failure:(failureCallback)failure;
+{
+    DLog(@"DeleteContact ::::::::::::::::::::: \n  = %@", urlString);
+    
+    return [NudgeRestInstance DELETE:urlString parameters:nil success:success failure:failure];
+}
+
++ (NSURLSessionDataTask *) getSubscriberWithUid:(NSString *)uid success:(successCallback)success failure:(failureCallback)failure; {
+    
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@",SUBSCRIBER_FIND_PATH, [BasicUtils getEncodedString:uid]];
+    
+    DLog(@"GET Subscriber ::::::::::::::::::::: \n request Url %@", requestUrl);
+    
+    return [NudgeRestInstance GET:requestUrl parameters:nil progress:nil success:success failure:failure];
+}
 
 @end
 

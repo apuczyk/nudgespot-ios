@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EEB7AF0D53C24E2818240D6 /* libPods-Nudgespot_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 001F8FD55F6EA1EE996B756D /* libPods-Nudgespot_Tests.a */; };
 		440ED3711D991DA200539D64 /* UIAlertController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 440ED36C1D991DA200539D64 /* UIAlertController+Alert.m */; };
 		440ED3721D991DA200539D64 /* NSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 440ED36E1D991DA200539D64 /* NSAppDelegate.m */; };
 		440ED3731D991DA200539D64 /* NSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440ED3701D991DA200539D64 /* NSViewController.m */; };
+		445C04FF1DBA250300559CB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 445C04FE1DBA250300559CB4 /* GoogleService-Info.plist */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,8 +22,9 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		7B76B496AE7BC4BAEA9EBC84 /* Pods_Nudgespot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515544F082A610A5CAA7D5EF /* Pods_Nudgespot_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		87E837D3EDA0ABE9795551C5 /* libPods-Nudgespot_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B39CAEF4889DFAC21D3582 /* libPods-Nudgespot_Example.a */; };
+		90F39A5EEA6A0E9F519C9462 /* Pods_Nudgespot_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132B36E421BE79C7F52F6520 /* Pods_Nudgespot_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		001F8FD55F6EA1EE996B756D /* libPods-Nudgespot_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nudgespot_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0143B032FAEEF1EC3CE070CE /* Pods-Nudgespot_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		132B36E421BE79C7F52F6520 /* Pods_Nudgespot_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudgespot_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		223682094A0A81A9D592153F /* Pods-Nudgespot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Tests/Pods-Nudgespot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		35A56BC8573309CA658FBD22 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		440ED36A1D991DA200539D64 /* NudgeSpotConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NudgeSpotConstants.h; sourceTree = "<group>"; };
@@ -49,6 +50,8 @@
 		440ED36F1D991DA200539D64 /* NSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSViewController.h; sourceTree = "<group>"; };
 		440ED3701D991DA200539D64 /* NSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSViewController.m; sourceTree = "<group>"; };
 		442728441D9BD3EA00A8C528 /* Nudgespot_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nudgespot_Example.entitlements; sourceTree = "<group>"; };
+		445C04FE1DBA250300559CB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		515544F082A610A5CAA7D5EF /* Pods_Nudgespot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudgespot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA8E609102D486B4914FD7A /* Pods-Nudgespot_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudgespot_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudgespot_Example/Pods-Nudgespot_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Nudgespot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudgespot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,7 +72,6 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9CFB55BB20F992E74DC1B610 /* Nudgespot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nudgespot.podspec; path = ../Nudgespot.podspec; sourceTree = "<group>"; };
 		BA2DD2F1E6028C0AC2C88168 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		D9B39CAEF4889DFAC21D3582 /* libPods-Nudgespot_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nudgespot_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				87E837D3EDA0ABE9795551C5 /* libPods-Nudgespot_Example.a in Frameworks */,
+				7B76B496AE7BC4BAEA9EBC84 /* Pods_Nudgespot_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +93,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				1EEB7AF0D53C24E2818240D6 /* libPods-Nudgespot_Tests.a in Frameworks */,
+				90F39A5EEA6A0E9F519C9462 /* Pods_Nudgespot_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +139,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				D9B39CAEF4889DFAC21D3582 /* libPods-Nudgespot_Example.a */,
-				001F8FD55F6EA1EE996B756D /* libPods-Nudgespot_Tests.a */,
+				515544F082A610A5CAA7D5EF /* Pods_Nudgespot_Example.framework */,
+				132B36E421BE79C7F52F6520 /* Pods_Nudgespot_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +152,7 @@
 				440ED3691D991DA200539D64 /* Comman */,
 				440ED36D1D991DA200539D64 /* NSAppDelegate.h */,
 				440ED36E1D991DA200539D64 /* NSAppDelegate.m */,
+				445C04FE1DBA250300559CB4 /* GoogleService-Info.plist */,
 				440ED36F1D991DA200539D64 /* NSViewController.h */,
 				440ED3701D991DA200539D64 /* NSViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -308,6 +311,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				445C04FF1DBA250300559CB4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

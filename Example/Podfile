@@ -1,3 +1,5 @@
+use_frameworks!
+
 target 'Nudgespot_Example' do
   pod 'Nudgespot', :path => '../'
 

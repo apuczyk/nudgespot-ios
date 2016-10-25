@@ -256,13 +256,13 @@
             return;
         }
         
-        NSDictionary *aps = [userinfo objectForKey:@"aps"];
+//        NSDictionary *aps = [userinfo objectForKey:@"aps"];
         
-        NSDictionary *alert = [aps objectForKey:@"alert"];
-        
-        DLog(@"Notification received: %@", [alert objectForKey:@"title"]);
-        
-        DLog(@"launch_activity name: %@", [alert objectForKey:iOS_VIEWCONTROLLER]);
+//        NSDictionary *alert = [aps objectForKey:@"alert"];
+//        
+//        DLog(@"Notification received: %@", [alert objectForKey:@"title"]);
+//        
+//        DLog(@"launch_activity name: %@", [alert objectForKey:iOS_VIEWCONTROLLER]);
         
         UINavigationController *nc = (UINavigationController*)window.rootViewController;
         

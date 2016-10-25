@@ -27,17 +27,17 @@ s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 
 s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" => '"$(SRCROOT)/../../Nudgespot/Assets/Analytics" "$(SRCROOT)/../../Nudgespot/Assets/Messaging"', 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot'}
 
-#s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 
-#s.module_name = "Nudgespot"
+s.module_name = "Nudgespot"
 
-#s.preserve_path = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap'
+s.preserve_path = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap'
 
 s.ios.deployment_target = '7.0'
 
 s.requires_arc = true
 
-s.source_files = 'Nudgespot/Classes/**/*.{h,m}', 'Nudgespot/Assets/*.{h,plist}'
+s.source_files = 'Nudgespot/Classes/**/*.{h,m}', 'Nudgespot/Assets/*.{h}'
 
 s.ios.public_header_files  = 'Nudgespot/Classes/**/*.h'
 
@@ -46,6 +46,10 @@ s.ios.vendored_frameworks = "Nudgespot/Assets/**/*.{framework}"
 s.prefix_header_file = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
 
 s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork', 'AddressBook'
+
+s.resource_bundles = {
+'Nudgespot' => ['Nudgespot/Assets/*.{plist}']
+}
 
 s.ios.libraries = 'stdc++', 'z', 'sqlite3'
 

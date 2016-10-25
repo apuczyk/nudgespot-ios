@@ -21,27 +21,27 @@ static NSUInteger badgeCount = 1;
     // Override point for customization after application launch.
     // Override point for customization after application launch.
     // Register for remote notifications
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
-        // iOS 7.1 or earlier
-        UIRemoteNotificationType allNotificationTypes =
-        (UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge);
-        [application registerForRemoteNotificationTypes:allNotificationTypes];
-    } else {
-        // iOS 8 or later
-        // [END_EXCLUDE]
-        
-        UIUserNotificationType types = (UIUserNotificationTypeAlert|
-                                        UIUserNotificationTypeSound|
-                                        UIUserNotificationTypeBadge);
-        
-        UIUserNotificationSettings *settings;
-        settings = [UIUserNotificationSettings settingsForTypes:types
-                                                     categories:nil];
-        
-        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-        
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
-    }
+//    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
+//        // iOS 7.1 or earlier
+//        UIRemoteNotificationType allNotificationTypes =
+//        (UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge);
+//        [application registerForRemoteNotificationTypes:allNotificationTypes];
+//    } else {
+//        // iOS 8 or later
+//        // [END_EXCLUDE]
+//        
+//        UIUserNotificationType types = (UIUserNotificationTypeAlert|
+//                                        UIUserNotificationTypeSound|
+//                                        UIUserNotificationTypeBadge);
+//        
+//        UIUserNotificationSettings *settings;
+//        settings = [UIUserNotificationSettings settingsForTypes:types
+//                                                     categories:nil];
+//        
+//        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+//        
+//        [[UIApplication sharedApplication] registerForRemoteNotifications];
+//    }
     // [END register_for_remote_notifications]
     // [START start_Fcm_service]
         
@@ -49,10 +49,9 @@ static NSUInteger badgeCount = 1;
     
     [Nudgespot setJavascriptAPIkey:kJavascriptAPIkey andRESTAPIkey:kRESTAPIkey];
     
-    [BTUserAppNotification setNotificationCategory:@"Action" andApplication:application];
+    [BTUserAppNotification setNotificationCategory:@"bt_follow_share" andApplication:application];
     
 //    BTActionOptions *custom1 = [BTActionOptions updateBehavior:(UIUserNotificationActionBehavior) andParameters:(NSDictionary *) andActivationMode:(UIUserNotificationActivationMode) andAuthenticationRequired:(BOOL) andDestructive:(BOOL)];
-//    
 //    [BTUserAppNotification createCustomCategoryWithIdentifier:@"Actionalble" withActions:@[custom1] withApplication:application];
     
     NSString *uid = [[NSUserDefaults standardUserDefaults] objectForKey:kSubscriberUid];
@@ -117,7 +116,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     NSLog(@"%@ is device token", deviceToken);
     
-    [Nudgespot setAPNSToken:deviceToken ofType:NudgespotAPNSTokenTypeProd];
+    [Nudgespot setAPNSToken:deviceToken ofType:NudgespotAPNSTokenTypeSandbox];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application

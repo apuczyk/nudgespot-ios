@@ -93,6 +93,22 @@
     return found;
 }
 
+- (NSString *) contactLocation:(NSString*) type andValue: (NSString*) value {
+    
+    NSString *location = nil;
+    
+    for (SubscriberContact *contact in self.subscriberContactList ) {
+        
+        if ([contact.type isEqualToString: type] && [contact.value isEqualToString: value]) {
+            location = [[NSString alloc] initWithFormat:@"%@", contact.resourceLocation];
+        }
+        
+        DLog(@"%@\n%@\n%@\n%@\n", contact.type, type, contact.value,value);
+    }
+    
+    return location;
+    
+}
 
 -(void) unsubscribeAll {
     
@@ -101,7 +117,7 @@
     for (SubscriberContact *contact in self.subscriberContactList ) {
         
         SubscriberContact *currentContact = [[SubscriberContact alloc] initwithType:contact.type andValue:contact.value
-                                                              andSubscriptionStatus:@"inactive"];
+                                                              andSubscriptionStatus:@"inactive" withResourceLocation:contact.resourceLocation];
         
         [unsubscribes addObject:currentContact];
     }
@@ -115,7 +131,7 @@
     
     [self removeContact:type andValue:value]; // safety check in case the contact already exists
     
-    SubscriberContact *contact = [[SubscriberContact alloc] initwithType:type andValue:value andSubscriptionStatus:@"inactive"];
+    SubscriberContact *contact = [[SubscriberContact alloc] initwithType:type andValue:value andSubscriptionStatus:@"inactive" withResourceLocation:nil];
     
     [self.subscriberContactList addObject:contact];
 }
@@ -145,7 +161,7 @@
     
 }
 
--(void) removeContact:(NSString *)type andValue:(NSString *)value {
+-(void) removeContact:(NSString *)type andValue:(NSString *)value  {
     
     NSMutableArray * subscriberList = [[NSMutableArray alloc ] initWithArray:self.subscriberContactList];
     

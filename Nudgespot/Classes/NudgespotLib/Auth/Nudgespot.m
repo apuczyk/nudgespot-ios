@@ -36,7 +36,6 @@ static Nudgespot *sharedMyManager = nil;
     return sharedMyManager;
 }
 
-
 + (id)allocWithZone:(NSZone *)zone
 {
     return [self sharedInstance] ;
@@ -82,9 +81,9 @@ static Nudgespot *sharedMyManager = nil;
     return [Nudge initWithEndpoint:endpointUrl andUID:uid registrationHandler:registeration];
 }
 
-+ (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
++ (id) setWithUID:(NSString *)uid registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registration;
 {
-    return [Nudge initWithUID:uid registrationHandler:registeration];
+    return [Nudge initWithUID:uid registrationHandler:registration];
 }
 
 + (id) setWithEndpoint:(NSString *)endpointUrl andSubscriber:(NudgespotSubscriber *)currentSubscriber registrationHandler:(void (^)(NSString *registrationToken, NSError *error))registeration;
@@ -184,10 +183,10 @@ static Nudgespot *sharedMyManager = nil;
     
     DLog(@"%@ is Fcm sender id", [Nudge gcmSenderID]);
     
-    [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
-      
-        if (!error) {
-            
+//    [[FIRInstanceID instanceID] deleteTokenWithAuthorizedEntity:[Nudge gcmSenderID] scope:kFIRInstanceIDTokenRefreshNotification handler:^(NSError * _Nullable error) {
+//      
+//        if (!error) {
+    
             // Clear Notificaiton...
             
             [self sendUnregistrationToNudgespot:^(id response, NSError *error) {
@@ -206,8 +205,6 @@ static Nudgespot *sharedMyManager = nil;
                     
                     [BasicUtils removeUserDefaultsForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
                     
-                    [Nudge clearSubscriber];
-                    
                     DLog(@"Cleared all registration data on the application");
                 }
                 
@@ -216,8 +213,10 @@ static Nudgespot *sharedMyManager = nil;
                 }
                 
             }];
-        }
-    }];
+            
+            
+//        }
+//    }];
 }
 
 #pragma mark - Methods to retrieve local storage
@@ -483,15 +482,10 @@ static Nudgespot *sharedMyManager = nil;
     // First send contact de-activation data to the server
     if ([Nudge isSubscriberReady]) {
         
-        [[Nudge subscriber] removeContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID andValue:[Nudge registrationId]];
-        
-        [Nudge updateSubscriber:[Nudge subscriber] completion:^(NudgespotSubscriber *subscriber, id error) {
-            if (subscriber) {
-                [Nudge setSubscriber:subscriber];
-            }
+        [Nudge removeContact:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID andValue:[Nudge registrationId] completion:^(id response, NSError *error) {
             
             if (completionBlock) {
-                completionBlock(subscriber, error);
+                completionBlock(response, error);
             }
         }];
         

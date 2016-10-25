@@ -110,9 +110,12 @@ static BTUserAppNotification *sharedManager = nil;
     
     NSDictionary * userCategories = [self getUserCategoryDictionary];
     
-    NSSet * categorySet = [self getCategoriesFrom:notificationCategory fromDictionary:userCategories];
-    
-    [self updateRegistration:application withCategories:categorySet];
+    if (userCategories != nil) {
+        
+        NSSet * categorySet = [self getCategoriesFrom:notificationCategory fromDictionary:userCategories];
+        
+        [self updateRegistration:application withCategories:categorySet];
+    }
     
 }
 
@@ -213,10 +216,14 @@ static BTUserAppNotification *sharedManager = nil;
     NSBundle *bundle = [NSBundle bundleForClass:self.classForCoder];
     NSURL *bundleUrl = [bundle URLForResource:@"Nudgespot" withExtension:@"bundle"];
     
-    NSString *filePath = [[NSBundle bundleWithURL:bundleUrl] pathForResource:@"BTNotificationCategories" ofType:@"plist"];
-    NSDictionary *userCategory = [[NSDictionary alloc] initWithContentsOfFile:filePath];
+    if (bundleUrl != nil) {
+        
+        NSString *filePath = [[NSBundle bundleWithURL:bundleUrl] pathForResource:@"BTNotificationCategories" ofType:@"plist"];
+        NSDictionary *userCategory = [[NSDictionary alloc] initWithContentsOfFile:filePath];
+        return userCategory;
+    }
     
-    return userCategory;
+    return nil;
 }
 
 @end

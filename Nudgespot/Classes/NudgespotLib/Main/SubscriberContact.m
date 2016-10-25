@@ -18,14 +18,16 @@
 
 @synthesize subscriptionStatus;
 
+@synthesize resourceLocation;
+
 -(id)initwithType:(NSString *)contactType andValue:(NSString *)contactValue
 {
-    [self initwithType:contactType andValue:contactValue andSubscriptionStatus:@""];
+    [self initwithType:contactType andValue:contactValue andSubscriptionStatus:@"" withResourceLocation:@""];
     
     return self;
 }
 
--(id)initwithType:(NSString *)contactType andValue:(NSString *)contactValue andSubscriptionStatus:(NSString *)status
+-(id)initwithType:(NSString *)contactType andValue:(NSString *)contactValue andSubscriptionStatus:(NSString *)status withResourceLocation: (NSString *)resourceLocation
 {
     
     self.type = contactType;
@@ -33,6 +35,8 @@
     self.value = contactValue;
     
     self.subscriptionStatus = @"active";
+    
+    self.resourceLocation = resourceLocation;
     
     if (![status isEqualToString:@""] && status != nil) {
         self.subscriptionStatus = status;
@@ -50,7 +54,9 @@
 
     NSString *contactStatus = [responseDict objectForKey:KEY_CONTACT_SUBSCRIPTION_STATUS];
 
-    [self initwithType:contactType andValue:contactValue andSubscriptionStatus:contactStatus];
+    NSString *resourceLoc = [responseDict objectForKey:KEY_RESOURCE_LOCATION];
+    
+    [self initwithType:contactType andValue:contactValue andSubscriptionStatus:contactStatus withResourceLocation:resourceLoc];
     
     return self;
 }
@@ -77,6 +83,13 @@
             [dict setObject:self.subscriptionStatus forKey:KEY_CONTACT_SUBSCRIPTION_STATUS];
             
         }
+        
+        if ([BasicUtils isNonEmpty:self.resourceLocation]) {
+            
+            [dict setObject:self.resourceLocation forKey:KEY_RESOURCE_LOCATION];
+            
+        }
+        
     }
      @catch (NSException *exception) {
          
