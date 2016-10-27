@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
 		<data>
-		A1nmj+m/freIwyb+wTo7xeBmupw=
+		IHqOTpqqazvN98AQyHd4OjrpCz8=
 		</data>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Frameworks/Nudgespot.framework/Info.plist</key>
 		<data>
-		cT0B8oKJ4neMxaus31m26rM8y60=
+		mHipbiuP+5JuEhdKy0fJES3smQ0=
 		</data>
 		<key>Frameworks/Nudgespot.framework/Nudgespot</key>
 		<data>
-		hp1BBqEZKTxeyc1zj5D5iVbaI9U=
+		QI2STGo0Tgh1DgVfKEOp4aAlTzw=
 		</data>
 		<key>Frameworks/Nudgespot.framework/Nudgespot.bundle/BTNotificationCategories.plist</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Frameworks/Nudgespot.framework/_CodeSignature/CodeResources</key>
 		<data>
-		T82d4N5aPsL35qcMTKpMLLc6mrg=
+		xNsNrY0w5yKWPYy+HylZ7HqfvZg=
 		</data>
 		<key>Frameworks/Reachability.framework/Info.plist</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/Reachability.framework/Reachability</key>
 		<data>
-		Z3UonjkYNXaqfoR3qOrip1N0YLQ=
+		wauYUUchC/Nbly2a8ugwSISqJ2s=
 		</data>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>GoogleService-Info.plist</key>
 		<data>
-		PkjtXqmlU6HajSzSjjwF/HxgK1U=
+		ehSuLtWueBt668iIWeSLknsVgTg=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -108,11 +108,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A1nmj+m/freIwyb+wTo7xeBmupw=
+			IHqOTpqqazvN98AQyHd4OjrpCz8=
 			</data>
 			<key>hash2</key>
 			<data>
-			YlRCIKKgqjE7vQlaoFcLg9pU4kzPXXqocGEBb5uYRqQ=
+			YqsDSBh8FUxkM/LTvR5YufSF7ClFa48rZ6Ec5yjjYmg=
 			</data>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
@@ -152,22 +152,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cT0B8oKJ4neMxaus31m26rM8y60=
+			mHipbiuP+5JuEhdKy0fJES3smQ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			prGUQbyoWpqIjRm9KpnDWgK7C1ppvRibNVreAEfM3Uc=
+			L5qa8LwbAvbNTlW1UjH03qvyE9wD1A0efGvA7AVaDl4=
 			</data>
 		</dict>
 		<key>Frameworks/Nudgespot.framework/Nudgespot</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hp1BBqEZKTxeyc1zj5D5iVbaI9U=
+			QI2STGo0Tgh1DgVfKEOp4aAlTzw=
 			</data>
 			<key>hash2</key>
 			<data>
-			ua56TzNvgDCv2zL8gRCyjvsJSpwIgbYkyKe9/dbK+oI=
+			QnOYEasEEmxKhslXnM4t4kijI3m2izb99bRhBVR60X4=
 			</data>
 		</dict>
 		<key>Frameworks/Nudgespot.framework/Nudgespot.bundle/BTNotificationCategories.plist</key>
@@ -196,11 +196,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			T82d4N5aPsL35qcMTKpMLLc6mrg=
+			xNsNrY0w5yKWPYy+HylZ7HqfvZg=
 			</data>
 			<key>hash2</key>
 			<data>
-			ofdYnJgVOi7vXHZT1Z9hOmSFwLQlz8TCpeXe+lXtOPs=
+			li93FHGZLKwqagdIF5uJGfCUh6q/uL/QGKCLS8eTYDc=
 			</data>
 		</dict>
 		<key>Frameworks/Reachability.framework/Info.plist</key>
@@ -218,11 +218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z3UonjkYNXaqfoR3qOrip1N0YLQ=
+			wauYUUchC/Nbly2a8ugwSISqJ2s=
 			</data>
 			<key>hash2</key>
 			<data>
-			0rOPR7Ih0yEoJNqV65NAKFdhRzWm4lfpc9EmWLqo7XU=
+			+IRZ7YE3Kol6xJnWVxYEpFY4M4rldwaUo5LVv7gub1o=
 			</data>
 		</dict>
 		<key>Frameworks/Reachability.framework/_CodeSignature/CodeResources</key>
@@ -240,11 +240,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PkjtXqmlU6HajSzSjjwF/HxgK1U=
+			ehSuLtWueBt668iIWeSLknsVgTg=
 			</data>
 			<key>hash2</key>
 			<data>
-			J5kAKCZ4qmWYbuzmQakEP3KLC1ynI+6BS2c4Hdp5K18=
+			lbzwTbl8MGoG+wokprXSd8kTwqLguvaAgdwo+x4yabA=
 			</data>
 		</dict>
 		<key>Main.storyboardc/5f5-ok-ZoT-view-rGH-mc-3HA.nib</key>

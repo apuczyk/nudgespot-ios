@@ -12,10 +12,15 @@
 //static NSString * REST_API_ENDPOINT = @"https://api.boomtrain.net/201507";
 //
 //static NSString *const TRACK_API_ENDPOINT = @"https://track.nudgespot.com/android/message_events";
+//
+//static NSString * REST_API_ENDPOINT = @"http://phoenix.nudgespot.com/201507";
+//
+//static NSString *const TRACK_API_ENDPOINT = @"https://track.phoenix.nudgespot.com/android/message_events";
 
-static NSString * REST_API_ENDPOINT = @"http://sphinx.nudgespot.com/201507";
 
-static NSString *const TRACK_API_ENDPOINT = @"https://track.sphinx.nudgespot.com/android/message_events";
+static NSString * REST_API_ENDPOINT = @"http://264c2452.ngrok.io/201507";
+
+static NSString *const TRACK_API_ENDPOINT = @"http://264c2452.ngrok.io/android/message_events";
 
 static NSString *const CONTACT_TYPE_EMAIL = @"email";
 

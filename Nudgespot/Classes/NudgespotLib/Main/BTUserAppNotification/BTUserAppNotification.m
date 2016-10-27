@@ -106,20 +106,98 @@ static BTUserAppNotification *sharedManager = nil;
 
 // Set Notification Categories from Boomtrain Default categories..
 
-+ (void) setNotificationCategory : (NSString *) notificationCategory andApplication: (UIApplication *)application; {
++ (void) setDefaultBTCategoryWith : (NSString *) notificationIdentifier andApplication: (UIApplication *)application; {
     
     NSDictionary * userCategories = [self getUserCategoryDictionary];
     
     if (userCategories != nil) {
         
-        NSSet * categorySet = [self getCategoriesFrom:notificationCategory fromDictionary:userCategories];
+        NSMutableSet *categorySet = [[NSMutableSet alloc] init];
+        
+        UIMutableUserNotificationCategory * actionCategory = [self getCategoriesFrom:notificationIdentifier fromDictionary:userCategories];
+        [categorySet addObject:actionCategory];
         
         [self updateRegistration:application withCategories:categorySet];
     }
+}
+
++ (void) setAllDefaultBTCategory: (UIApplication *)application; {
+    
+    NSSet *allCategoriesSet = [self getAllDefaultBTCategory];
+    
+    [self updateRegistration:application withCategories:allCategoriesSet];
+}
+
++ (NSMutableSet*) getAllDefaultBTCategory {
+    
+    NSDictionary * userCategories = [self getUserCategoryDictionary];
+    
+    if (userCategories != nil) {
+        
+        NSMutableSet *allSet = [[NSMutableSet alloc] init];
+        
+        for (NSString * category in userCategories.allKeys) {
+            
+            UIMutableUserNotificationCategory * actionCategory = [self getCategoriesFrom:category fromDictionary:userCategories];
+            [allSet addObject:actionCategory];
+        }
+        
+        return allSet;
+    }
+    
+    return nil;
+}
+
++ (void) createCustomCategoryWithIdentifier: (NSString *)identifier withActions:(NSArray *)actions withApplication:(UIApplication *) application;
+{
+    
+    [[self sharedInstance] setApplication:application];
+    
+    NSString const * NotificationCategoryIdent = identifier ;
+    
+    UIMutableUserNotificationCategory *actionCategory = [[UIMutableUserNotificationCategory alloc] init];
+    [actionCategory setIdentifier: NotificationCategoryIdent];
+    [actionCategory setActions:actions
+                    forContext:UIUserNotificationActionContextDefault];
+    
+    NSMutableSet *allCategoriesSet = [self getAllDefaultBTCategory];
+    
+    [allCategoriesSet addObject:actionCategory];
+    
+    [self updateRegistration:application withCategories:allCategoriesSet];
+
+}
+
++ (UIMutableUserNotificationAction *) createCustomActionWithTitle:(NSString *)title withIdentifier:(NSString *)identifier options:(BTActionOptions *)optionDic;
+{
+    
+    UIMutableUserNotificationAction *action = [[UIMutableUserNotificationAction alloc] init];
+    action.behavior = optionDic.behavior;
+    action.activationMode = optionDic.activationMode;
+    action.parameters = optionDic.parameters;
+    action.authenticationRequired = optionDic.authenticationRequired;
+    action.destructive = optionDic.destructive;
+    [action setTitle:title];
+    [action setIdentifier:identifier];
+    
+    return action;
+}
+
+
++ (void) updateRegistration : (UIApplication *)application withCategories: (NSSet *)categories {
+    
+    UIUserNotificationType types = (UIUserNotificationTypeAlert|
+                                    UIUserNotificationTypeSound|
+                                    UIUserNotificationTypeBadge);
+    
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
+    
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
     
 }
 
-+ (NSMutableSet *) getCategoriesFrom : (NSString *)notificationCategory fromDictionary: (NSDictionary *) userCategory {
++ (UIMutableUserNotificationCategory *) getCategoriesFrom : (NSString *)notificationCategory fromDictionary: (NSDictionary *) userCategory {
     
     if ([userCategory objectForKey:notificationCategory]) {
         
@@ -151,7 +229,6 @@ static BTUserAppNotification *sharedManager = nil;
                 
                 [actions addObject:action];
             }
-            
         }
         
         NSString const * NotificationCategoryIdent = notificationCategory ;
@@ -161,54 +238,8 @@ static BTUserAppNotification *sharedManager = nil;
         [actionCategory setActions:actions
                         forContext:UIUserNotificationActionContextDefault];
         
-        return [NSSet setWithObjects:actionCategory, nil];
+        return actionCategory;
     }
-    
-}
-
-+ (UIMutableUserNotificationAction *) createCustomActionWithTitle:(NSString *)title withIdentifier:(NSString *)identifier options:(BTActionOptions *)optionDic;
-{
-    
-    UIMutableUserNotificationAction *action = [[UIMutableUserNotificationAction alloc] init];
-    
-    action.behavior = optionDic.behavior;
-    action.activationMode = optionDic.activationMode;
-    action.parameters = optionDic.parameters;
-    action.authenticationRequired = optionDic.authenticationRequired;
-    action.destructive = optionDic.destructive;
-    
-    [action setTitle:title];
-    [action setIdentifier:identifier];
-    
-    return action;
-}
-
-+ (void) createCustomCategoryWithIdentifier: (NSString *)identifier withActions:(NSArray *)actions withApplication:(UIApplication *) application;
-{
-    
-    [[self sharedInstance] setApplication:application];
-    
-    NSString const * NotificationCategoryIdent = identifier ;
-    
-    UIMutableUserNotificationCategory *actionCategory = [[UIMutableUserNotificationCategory alloc] init];
-    [actionCategory setIdentifier: NotificationCategoryIdent];
-    [actionCategory setActions:actions
-                    forContext:UIUserNotificationActionContextDefault];
-
-    [self updateRegistration:application withCategories:[NSSet setWithObjects:actionCategory, nil]];
-}
-
-+ (void) updateRegistration : (UIApplication *)application withCategories: (NSSet *)categories {
-    
-    UIUserNotificationType types = (UIUserNotificationTypeAlert|
-                                    UIUserNotificationTypeSound|
-                                    UIUserNotificationTypeBadge);
-    
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
-    
-    [application registerUserNotificationSettings:settings];
-    [application registerForRemoteNotifications];
-    
 }
 
 + (NSDictionary *) getUserCategoryDictionary {

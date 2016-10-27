@@ -48,7 +48,9 @@
 
 // Set Notification Categories from Boomtrain Default categories..
 
-+ (void) setNotificationCategory : (NSString *) notificationCategory andApplication: (UIApplication *)application;
++ (void) setDefaultBTCategoryWith : (NSString *) notificationIdentifier andApplication: (UIApplication *)application;
+
++ (void) setAllDefaultBTCategory: (UIApplication *)application;
 
 + (void) updateRegistration : (UIApplication *)application withCategories: (NSSet *)categories;
 

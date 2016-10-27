@@ -49,6 +49,7 @@
 		440ED36E1D991DA200539D64 /* NSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAppDelegate.m; sourceTree = "<group>"; };
 		440ED36F1D991DA200539D64 /* NSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSViewController.h; sourceTree = "<group>"; };
 		440ED3701D991DA200539D64 /* NSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSViewController.m; sourceTree = "<group>"; };
+		441794661DC0CC900073A519 /* NotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = NotificationPayload.apns; sourceTree = "<group>"; };
 		442728441D9BD3EA00A8C528 /* Nudgespot_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nudgespot_Example.entitlements; sourceTree = "<group>"; };
 		445C04FE1DBA250300559CB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		515544F082A610A5CAA7D5EF /* Pods_Nudgespot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudgespot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +153,7 @@
 				440ED3691D991DA200539D64 /* Comman */,
 				440ED36D1D991DA200539D64 /* NSAppDelegate.h */,
 				440ED36E1D991DA200539D64 /* NSAppDelegate.m */,
+				441794661DC0CC900073A519 /* NotificationPayload.apns */,
 				445C04FE1DBA250300559CB4 /* GoogleService-Info.plist */,
 				440ED36F1D991DA200539D64 /* NSViewController.h */,
 				440ED3701D991DA200539D64 /* NSViewController.m */,
