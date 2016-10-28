@@ -36,5 +36,5 @@ dependencies: \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/Headers/Public/FirebaseCore/FirebaseCore/FirebaseCore.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FirebaseInstanceID.h \
   /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FIRInstanceID.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/Headers/Public/Nudgespot/FirebaseMessaging/FirebaseMessaging.h \
-  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/Headers/Public/Nudgespot/FirebaseMessaging/FIRMessaging.h
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/Headers/Public/FirebaseMessaging/FirebaseMessaging/FirebaseMessaging.h \
+  /Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/Headers/Public/FirebaseMessaging/FirebaseMessaging/FIRMessaging.h

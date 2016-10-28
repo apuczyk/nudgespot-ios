@@ -12,7 +12,6 @@
     "tag": "3.1"
   },
   "module_name": "Nudgespot",
-  "preserve_paths": "Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap",
   "platforms": {
     "ios": "7.0"
   },

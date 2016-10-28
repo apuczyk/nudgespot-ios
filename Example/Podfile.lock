@@ -67,9 +67,9 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
-  Nudgespot: 9677fa6eb8cf9ac6a6e6258498ae12af5af7e44f
+  Nudgespot: f4a842f51f2e71f095703c8935d753a9359e8e75
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
 PODFILE CHECKSUM: 7a6fc556ca5d98b931cdbd27ff2eeadeeb8e5466
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0.beta.1

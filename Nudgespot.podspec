@@ -27,8 +27,6 @@ s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 
 s.module_name = "Nudgespot"
 
-s.preserve_path = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot.modulemap'
-
 s.ios.deployment_target = '7.0'
 
 s.requires_arc = true

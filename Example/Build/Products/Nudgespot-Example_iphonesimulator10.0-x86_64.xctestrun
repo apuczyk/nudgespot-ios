@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Nudgespot_Tests</key>
+	<dict>
+		<key>BundleIdentifiersForCrashReportEmphasis</key>
+		<array>
+			<string>org.cocoapods.demo.Nudgespot-Tests</string>
+			<string>com.nudgespot.Nudgespot</string>
+		</array>
+		<key>CommandLineArguments</key>
+		<array/>
+		<key>DependentProductPaths</key>
+		<array>
+			<string>__TESTROOT__/Debug-iphonesimulator/Nudgespot_Example.app</string>
+			<string>__TESTROOT__/Debug-iphonesimulator/Nudgespot_Example.app/PlugIns/Nudgespot_Tests.xctest</string>
+		</array>
+		<key>EnvironmentVariables</key>
+		<dict>
+			<key>DYLD_FRAMEWORK_PATH</key>
+			<string>/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator</string>
+			<key>DYLD_LIBRARY_PATH</key>
+			<string>/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator</string>
+			<key>OS_ACTIVITY_DT_MODE</key>
+			<string>YES</string>
+			<key>__XCODE_BUILT_PRODUCTS_DIR_PATHS</key>
+			<string>/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator</string>
+			<key>__XPC_DYLD_FRAMEWORK_PATH</key>
+			<string>/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator</string>
+			<key>__XPC_DYLD_LIBRARY_PATH</key>
+			<string>/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphonesimulator</string>
+		</dict>
+		<key>IsAppHostedTestBundle</key>
+		<true/>
+		<key>ProductModuleName</key>
+		<string>Nudgespot_Tests</string>
+		<key>TestBundlePath</key>
+		<string>__TESTHOST__/PlugIns/Nudgespot_Tests.xctest</string>
+		<key>TestHostBundleIdentifier</key>
+		<string>com.nudgespot.Nudgespot</string>
+		<key>TestHostPath</key>
+		<string>__TESTROOT__/Debug-iphonesimulator/Nudgespot_Example.app</string>
+		<key>TestingEnvironmentVariables</key>
+		<dict>
+			<key>DTX_CONNECTION_SERVICES_PATH</key>
+			<string>__PLATFORMS__/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/Developer/Library/PrivateFrameworks/DTXConnectionServices.framework</string>
+			<key>DYLD_FRAMEWORK_PATH</key>
+			<string>__TESTROOT__/Debug-iphonesimulator:__PLATFORMS__/iPhoneSimulator.platform/Developer/Library/Frameworks</string>
+			<key>DYLD_INSERT_LIBRARIES</key>
+			<string>__PLATFORMS__/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection</string>
+			<key>DYLD_LIBRARY_PATH</key>
+			<string>__TESTROOT__/Debug-iphonesimulator:__PLATFORMS__/iPhoneSimulator.platform/Developer/Library/Frameworks</string>
+			<key>XCInjectBundleInto</key>
+			<string>__TESTHOST__/Nudgespot_Example</string>
+			<key>XCODE_DBG_XPC_EXCLUSIONS</key>
+			<string>com.apple.dt.xctestSymbolicator</string>
+		</dict>
+		<key>ToolchainsSettingValue</key>
+		<array>
+			<string>com.apple.dt.toolchain.XcodeDefault</string>
+		</array>
+	</dict>
+</dict>
+</plist>
