@@ -121,6 +121,43 @@
     },
     {
       'type': 'directory',
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GTMDefines.h",
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/GoogleToolboxForMac/GTMDefines.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMNSData+zlib.h",
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/GoogleToolboxForMac/Foundation/GTMNSData+zlib.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleToolboxForMac-Swift.h",
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers/GoogleToolboxForMac-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleToolboxForMac-umbrella.h",
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Intermediates/Pods.build/Debug-iphoneos/GoogleToolboxForMac.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/nudgespot/Desktop/Nudgespot/NudgespotSDK/Nudgespot/Example/Build/Products/Debug-iphoneos/Nudgespot/Nudgespot.framework/Headers",
       'contents': [
         {

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name             = 'Nudgespot'
-s.version          = '3.0.1'
+s.version          = '3.1'
 s.summary          = 'nudgespot-ios is Objective-C framework.'
 
 s.description      = <<-DESC
@@ -24,9 +24,6 @@ s.author           = { 'Nudgespot' => 'dev@nudgespot.com' }
 
 s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 :tag => s.version.to_s }
-
-s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot', 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
-
 
 s.module_name = "Nudgespot"
 
@@ -43,6 +40,10 @@ s.ios.public_header_files  = 'Nudgespot/Classes/**/*.h'
 s.prefix_header_file = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
 
 s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork', 'AddressBook'
+
+s.resource_bundles = {
+'Nudgespot' => ['Nudgespot/Assets/*.{plist}']
+}
 
 s.dependency 'Reachability'
 s.dependency 'AFNetworking'

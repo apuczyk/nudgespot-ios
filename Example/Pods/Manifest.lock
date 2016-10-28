@@ -43,7 +43,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
-  - Nudgespot (3.0.1):
+  - Nudgespot (3.1):
     - AFNetworking
     - Firebase
     - FirebaseMessaging
@@ -67,9 +67,9 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
-  Nudgespot: d89fdae024b81831b5eabe864915d621bcd05689
+  Nudgespot: 9677fa6eb8cf9ac6a6e6258498ae12af5af7e44f
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-PODFILE CHECKSUM: b26e918a550ac7dd838fc0b75a2c3122720b9eb6
+PODFILE CHECKSUM: 7a6fc556ca5d98b931cdbd27ff2eeadeeb8e5466
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1
