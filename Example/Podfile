@@ -6,6 +6,6 @@ target 'Nudgespot_Example' do
   target 'Nudgespot_Tests' do
     inherit! :search_paths
 
-    
+
   end
 end

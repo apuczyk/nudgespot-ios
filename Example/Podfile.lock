@@ -14,18 +14,18 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Firebase (3.8.0):
-    - Firebase/Core (= 3.8.0)
-  - Firebase/Core (3.8.0):
-    - FirebaseAnalytics (= 3.5.1)
-    - FirebaseCore (= 3.4.4)
-  - FirebaseAnalytics (3.5.1):
+  - Firebase (3.10.0):
+    - Firebase/Core (= 3.10.0)
+  - Firebase/Core (3.10.0):
+    - FirebaseAnalytics (= 3.6.0)
+    - FirebaseCore (= 3.4.5)
+  - FirebaseAnalytics (3.6.0):
     - FirebaseCore (~> 3.4)
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleSymbolUtilities (~> 1.1)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCore (3.4.4):
+  - FirebaseCore (3.4.5):
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (1.0.8)
@@ -43,7 +43,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
-  - Nudgespot (3.1):
+  - Nudgespot (3.1.1):
     - AFNetworking
     - Firebase
     - FirebaseMessaging
@@ -59,17 +59,17 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Firebase: fdbecadb7b5cbef2774852d4fa659b9daf11f2af
-  FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
-  FirebaseCore: d0ed25f27b6f9158eccc439f1be6f92e81207e28
+  Firebase: 387f37c7dca894a02708da9ff35ba147040eae9e
+  FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
+  FirebaseCore: 1e383fdfe37b6b5d6ff88e84204bdee30276af0f
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
   FirebaseMessaging: acf66347e43c5637c697060c3001d25c809a4131
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
-  Nudgespot: f4a842f51f2e71f095703c8935d753a9359e8e75
+  Nudgespot: bf5ed23b720a65cb4662796e070045afbf19dd50
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-PODFILE CHECKSUM: 7a6fc556ca5d98b931cdbd27ff2eeadeeb8e5466
+PODFILE CHECKSUM: cc83a2d6f5f1d08d53bf290d32e55f012a36d8f6
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.0.1

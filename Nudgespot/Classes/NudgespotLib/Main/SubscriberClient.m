@@ -276,8 +276,16 @@
         
         NSMutableDictionary *postData =  [currentSubscriber toJSON] ;
         
+        NSString *replaced = [currentSubscriber.resourceLocation stringByReplacingOccurrencesOfString:@"boomtrain:3000"
+                                                                  withString:@"f2a1001e.ngrok.io"];
+        
+//        For LOCALHOST
+        
+//        [NudgespotNetworkManager updateSubscriberWithUrl:[currentSubscriber.resourceLocation stringByReplacingOccurrencesOfString:@"boomtrain:3000"
+//                                                                                                                       withString:@"f2a1001e.ngrok.io"] withPostData:postData success:^(NSURLSessionDataTask *operation, id responseObject) {
+        
         [NudgespotNetworkManager updateSubscriberWithUrl:currentSubscriber.resourceLocation withPostData:postData success:^(NSURLSessionDataTask *operation, id responseObject) {
-            
+        
             DLog(@"url = %@ updateSubscriber %@ json Response Object ::::::::::::::::::::: \n  = %@",operation.response.URL.absoluteString, postData,  responseObject);
             
             NudgespotSubscriber *getSubscriber = [self convertDictionaryToModel:responseObject];
