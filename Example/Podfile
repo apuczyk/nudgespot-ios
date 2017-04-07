@@ -2,6 +2,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Nudgespot_Example' do
   pod 'Nudgespot', :path => '../'
+  pod 'Firebase'
+  pod 'Firebase/Messaging'
 
   target 'Nudgespot_Tests' do
     inherit! :search_paths

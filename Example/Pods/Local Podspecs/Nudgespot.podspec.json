@@ -1,6 +1,6 @@
 {
   "name": "Nudgespot",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "summary": "nudgespot-ios is Objective-C framework.",
   "description": "Nudgespot provides framework for iOS which allows users to track events.",
   "homepage": "https://github.com/nudgespot/nudgespot-ios",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/nudgespot/nudgespot-ios.git",
-    "tag": "3.1.1"
+    "tag": "3.1.2"
   },
   "module_name": "Nudgespot",
   "platforms": {
@@ -41,12 +41,6 @@
 
     ],
     "AFNetworking": [
-
-    ],
-    "Firebase": [
-
-    ],
-    "FirebaseMessaging": [
 
     ]
   },

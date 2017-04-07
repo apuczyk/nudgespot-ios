@@ -19,6 +19,9 @@ PODS:
   - Firebase/Core (3.10.0):
     - FirebaseAnalytics (= 3.6.0)
     - FirebaseCore (= 3.4.5)
+  - Firebase/Messaging (3.10.0):
+    - Firebase/Core
+    - FirebaseMessaging (= 1.2.1)
   - FirebaseAnalytics (3.6.0):
     - FirebaseCore (~> 3.4)
     - FirebaseInstanceID (~> 1.0)
@@ -43,14 +46,14 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
-  - Nudgespot (3.1.1):
+  - Nudgespot (3.1.2):
     - AFNetworking
-    - Firebase
-    - FirebaseMessaging
     - Reachability
   - Reachability (3.2)
 
 DEPENDENCIES:
+  - Firebase
+  - Firebase/Messaging
   - Nudgespot (from `../`)
 
 EXTERNAL SOURCES:
@@ -67,9 +70,9 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
-  Nudgespot: bf5ed23b720a65cb4662796e070045afbf19dd50
+  Nudgespot: f348100e5eab52d4218e7941f3bbf4f8d34dc25b
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-PODFILE CHECKSUM: cc83a2d6f5f1d08d53bf290d32e55f012a36d8f6
+PODFILE CHECKSUM: e7b7f29905d50c23afcdad50200f17c862780d9f
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0
