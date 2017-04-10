@@ -24,6 +24,7 @@
 #import "SubscriberClient.h"
 #import "NudgespotConstants.h"
 #import "NudgespotVisitor.h"
+#import "Firebase.h"
 
 #import <AdSupport/AdSupport.h>
 

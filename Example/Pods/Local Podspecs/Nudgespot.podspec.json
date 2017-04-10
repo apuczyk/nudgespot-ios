@@ -44,5 +44,5 @@
 
     ]
   },
-  "prefix_header_contents": "#ifdef __OBJC__\n\n#import \"NudgespotActivity.h\"\n#import \"SubscriberContact.h\"\n#import \"Nudgespot.h\"\n#import \"NudgespotSubscriber.h\"\n#import \"SubscriberClient.h\"\n#import \"NudgespotActivity.h\"\n#import \"BasicUtils.h\"\n#import \"Reachability.h\"\n#import \"AFNetworking.h\"\n#import \"SubscriberClient.h\"\n#import \"NudgespotConstants.h\"\n#import \"NudgespotVisitor.h\"\n\n#import <AdSupport/AdSupport.h>\n\n#endif\n\n#ifdef DEBUG\n#    define DLog(...) NSLog(__VA_ARGS__)\n#else\n#    define DLog(...) /* */\n#endif\n#define ALog(...) NSLog(__VA_ARGS__)"
+  "prefix_header_contents": "#ifdef __OBJC__\n\n#import \"NudgespotActivity.h\"\n#import \"SubscriberContact.h\"\n#import \"Nudgespot.h\"\n#import \"NudgespotSubscriber.h\"\n#import \"SubscriberClient.h\"\n#import \"NudgespotActivity.h\"\n#import \"BasicUtils.h\"\n#import \"Reachability.h\"\n#import \"AFNetworking.h\"\n#import \"SubscriberClient.h\"\n#import \"NudgespotConstants.h\"\n#import \"NudgespotVisitor.h\"\n#import \"Firebase.h\"\n\n#import <AdSupport/AdSupport.h>\n\n#endif\n\n#ifdef DEBUG\n#    define DLog(...) NSLog(__VA_ARGS__)\n#else\n#    define DLog(...) /* */\n#endif\n#define ALog(...) NSLog(__VA_ARGS__)"
 }
