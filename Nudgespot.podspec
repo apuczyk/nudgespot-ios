@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name             = 'Nudgespot'
-s.version          = '3.1.1'
+s.version          = '3.1.2'
 s.summary          = 'nudgespot-ios is Objective-C framework.'
 
 s.description      = <<-DESC
@@ -25,19 +25,25 @@ s.author           = { 'Nudgespot' => 'dev@nudgespot.com' }
 s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 :tag => s.version.to_s }
 
+s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" => '"$(SRCROOT)/../../Nudgespot/Assets/Analytics" "$(SRCROOT)/../../Nudgespot/Assets/Messaging"', 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot'}
+
 s.module_name = "Nudgespot"
 
 s.ios.deployment_target = '7.0'
 
 s.requires_arc = true
 
-s.source_files = 'Nudgespot/Classes/**/*.{h,m}'
+s.source_files = 'Nudgespot/Classes/**/*.{h,m}', 'Nudgespot/Assets/*.h'
 
 s.ios.public_header_files  = 'Nudgespot/Classes/**/*.h'
+
+s.ios.vendored_frameworks = "Nudgespot/Assets/**/*.{framework}"
 
 s.prefix_header_file = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
 
 s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork', 'AddressBook'
+
+s.ios.libraries = 'stdc++', 'z', 'sqlite3'
 
 s.resource_bundles = {
 'Nudgespot' => ['Nudgespot/Assets/*.{plist}']
@@ -45,8 +51,6 @@ s.resource_bundles = {
 
 s.dependency 'Reachability'
 s.dependency 'AFNetworking'
-s.dependency 'Firebase'
-s.dependency 'FirebaseMessaging'
 
 # ////*** PCH Content begin here.. ***/////
 s.prefix_header_contents = '#ifdef __OBJC__

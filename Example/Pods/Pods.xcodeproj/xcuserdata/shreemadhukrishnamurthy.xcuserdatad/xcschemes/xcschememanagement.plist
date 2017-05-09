@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GoogleToolboxForMac.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Nudgespot-Nudgespot.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,11 +29,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Protobuf.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,22 +37,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0B0E4064EDD01F4581F63E9490EF278B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>28C065A70D3D12037FB738B3B6E2CF4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>36D19E8AF98BA26EDA6B95F4FD1474CB</key>
+		<key>6E274487BCD092486878FCDBBDA76C53</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7DFEDAFC395501FA4E96736CC7A0F28A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>92CCB3A07D53B89D12092A9505182B4C</key>
+		<key>9688CD1792E39053A8D5F2BFFD17615A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,17 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB21F1139BD1D31547B223EA37550AC3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC092566687B4275F5CD62FD6D018D06</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FA9D13261AF395CF5D54BB3203DF2A6E</key>
+		<key>FCE401E5A512005FA61A5D63FE4EA0D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

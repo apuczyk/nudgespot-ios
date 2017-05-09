@@ -1,0 +1,1 @@
+../../../../../../Nudgespot/Assets/Analytics/FirebaseCore.framework/Headers/FIRConfiguration.h
