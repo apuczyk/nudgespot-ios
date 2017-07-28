@@ -9,14 +9,14 @@
 
 //  PROD CONFIG
 
-//static NSString * REST_API_ENDPOINT = @"https://api.boomtrain.net/201507";
-//static NSString *const TRACK_API_ENDPOINT = @"https://track.nudgespot.com/android/message_events";
+static NSString * REST_API_ENDPOINT = @"https://api.boomtrain.net/201507";
+static NSString *const TRACK_API_ENDPOINT = @"https://track.nudgespot.com/android/message_events";
 
 // PREPROD CONFIG
 
-static NSString * REST_API_ENDPOINT = @"https://phoenix.nudgespot.com/201507";
-
-static NSString *const TRACK_API_ENDPOINT = @"https://track.phoenix.nudgespot.com/android/message_events";
+//static NSString * REST_API_ENDPOINT = @"https://phoenix.nudgespot.com/201507";
+//
+//static NSString *const TRACK_API_ENDPOINT = @"https://track.phoenix.nudgespot.com/android/message_events";
 
 // LOCALHOST
 
