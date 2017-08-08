@@ -122,8 +122,6 @@
     [self checkEndPoints];
     
     NSString *isRegistered = [BasicUtils getUserDefaultsValueForKey:SHARED_PROP_IS_ANON_USER_EXISTS];
-    
-    if (isRegistered.length) {
         
         // Check if anonymousId token is same or not...
         NSString *visitorFcmToken = [BasicUtils getUserDefaultsValueForKey:CONTACT_TYPE_IOS_Fcm_REGISTRATION_ID_ANON];
@@ -140,21 +138,15 @@
             
         } else {
             
+            NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
+            visitor.registrationToken = registrationToken;
+            
+            [[Nudgespot sharedInstance] setVisitor:visitor];
+            
             if (completionBlock) {
                 completionBlock ([NSString stringWithFormat:@"Vistor already exits %@", isRegistered], nil);
             }
         }
-    } else {
-        
-        NudgespotVisitor *visitor = [[NudgespotVisitor alloc] init];
-        visitor.registrationToken = registrationToken;
-        
-        [[Nudgespot sharedInstance] setVisitor:visitor];
-        
-        [self loginWithAnonymous:visitor completionBlock:completionBlock];
-        
-        DLog(@"Visitor Created %@", visitor.toJSON);
-    }
 
     return self;
 }
