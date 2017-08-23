@@ -94,15 +94,6 @@
                 
                 [dict setObject:userDict forKey:KEY_ACTIVITY_SUBSCRIBER];
             }
-            
-            if (self.timestamp != nil) {
-                
-                [dict setObject:[BasicUtils getStringValueOfUTC:self.timestamp] forKey:KEY_ACTIVITY_TIMESTAMP];
-                
-            }
-            else {
-                [dict setObject:[BasicUtils nowString] forKey:KEY_ACTIVITY_TIMESTAMP];
-            }
                         
             if (self.properties == nil) {
                 self.properties = [[NSMutableDictionary alloc] init];
