@@ -240,6 +240,8 @@ static BTUserAppNotification *sharedManager = nil;
         
         return actionCategory;
     }
+    
+    return nil;
 }
 
 + (NSDictionary *) getUserCategoryDictionary {

@@ -27,6 +27,8 @@ s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 
 s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" => '"$(SRCROOT)/../../Nudgespot/Assets/Messaging"', 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot'}
 
+s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"${PROJECT_DIR}/.."/**' }
+
 s.module_name = "Nudgespot"
 
 s.ios.deployment_target = '9.0'
