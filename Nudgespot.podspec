@@ -29,7 +29,7 @@ s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" =
 
 s.module_name = "Nudgespot"
 
-s.ios.deployment_target = '7.0'
+s.ios.deployment_target = '9.0'
 
 s.requires_arc = true
 
