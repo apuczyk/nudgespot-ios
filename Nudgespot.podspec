@@ -51,6 +51,9 @@ s.resource_bundles = {
 
 s.dependency 'Reachability'
 s.dependency 'AFNetworking'
+s.dependency 'Firebase'
+s.dependency 'Firebase/Analytics'
+s.dependency 'Firebase/Messaging'
 
 # ////*** PCH Content begin here.. ***/////
 s.prefix_header_contents = '#ifdef __OBJC__
