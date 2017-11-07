@@ -25,7 +25,7 @@ s.author           = { 'Nudgespot' => 'dev@nudgespot.com' }
 s.source           = { :git => 'https://github.com/nudgespot/nudgespot-ios.git',
 :tag => s.version.to_s }
 
-s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" => '"$(SRCROOT)/../../Nudgespot/Assets/Analytics" "$(SRCROOT)/../../Nudgespot/Assets/Messaging"', 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot'}
+s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', "FRAMEWORK_SEARCH_PATHS" => '"$(SRCROOT)/../../Nudgespot/Assets/Messaging"', 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Nudgespot/Nudgespot'}
 
 s.module_name = "Nudgespot"
 
@@ -51,6 +51,9 @@ s.resource_bundles = {
 
 s.dependency 'Reachability'
 s.dependency 'AFNetworking'
+s.dependency 'Firebase'
+s.dependency 'Firebase/Analytics'
+s.dependency 'Firebase/Messaging'
 
 # ////*** PCH Content begin here.. ***/////
 s.prefix_header_contents = '#ifdef __OBJC__
