@@ -409,7 +409,7 @@
 
 - (NudgespotSubscriber *) getSubscriber:(NSString *) uid WithCompletion:(void (^)(NudgespotSubscriber *currentSubsciber, id error))completionBlock {
     
-    [NudgespotNetworkManager getSubscriberWithUid:uid success:^(NSURLSessionDataTask *operation, id responseObject) {
+    return [NudgespotNetworkManager getSubscriberWithUid:uid success:^(NSURLSessionDataTask *operation, id responseObject) {
         
         DLog(@"Subscriber response :%@",responseObject);
         
