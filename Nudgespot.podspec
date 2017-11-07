@@ -41,7 +41,7 @@ s.ios.vendored_frameworks = "Nudgespot/Assets/**/*.{framework}"
 
 s.prefix_header_file = 'Example/Pods/Target Support Files/Nudgespot/Nudgespot-prefix.pch'
 
-s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork', 'AddressBook'
+s.frameworks = 'SystemConfiguration', 'Foundation', 'CoreGraphics', 'MobileCoreServices', 'Security', 'AdSupport', 'CFNetwork', 'AddressBook', 'FirebaseMessaging', 'FirebaseCore', 'FirebaseInstanceID'
 
 s.ios.libraries = 'stdc++', 'z', 'sqlite3'
 
